@@ -1,0 +1,104 @@
+{
+    "scenario_1": {
+        "positive_hemocultures": [{
+                "labo_id": "lab_1",
+                "patient_id": "pat_1",
+                "encounter_id": "eds_1",
+                "labo_sample_date": "2021-01-01",
+                "labo_germ_name": "E. Coli",
+                "labo_commensal": "0"
+            },
+            {
+                "labo_id": "lab_2",
+                "patient_id": "pat_1",
+                "encounter_id": "eds_1",
+                "labo_sample_date": "2021-01-12",
+                "labo_germ_name": "E. Coli",
+                "labo_commensal": "0"
+            },
+            {
+                "labo_id": "lab_3",
+                "patient_id": "pat_115156156561",
+                "encounter_id": "eds_1",
+                "labo_sample_date": "2021-01-18",
+                "labo_germ_name": "E. Coli",
+                "labo_commensal": "0"
+            }
+        ]
+    },
+    "scenario_2": {
+        "positive_hemocultures": [{
+                "labo_id": "lab_1",
+                "patient_id": "pat_1",
+                "encounter_id": "eds_1",
+                "labo_sample_date": "2021-01-01",
+                "labo_germ_name": "Staphylococcus epidermidis",
+                "labo_commensal": "1"
+            },
+            {
+                "labo_id": "lab_2",
+                "patient_id": "pat_1",
+                "encounter_id": "eds_1",
+                "labo_sample_date": "2021-01-03",
+                "labo_germ_name": "Staphylococcus epidermidis",
+                "labo_commensal": "1"
+            },
+            {
+                "labo_id": "lab_2",
+                "patient_id": "pat_1",
+                "encounter_id": "eds_1",
+                "labo_sample_date": "2021-01-05",
+                "labo_germ_name": "Staphylococcus epidermidis",
+                "labo_commensal": "1"
+            },
+            {
+                "labo_id": "lab_2",
+                "patient_id": "pat_1",
+                "encounter_id": "eds_1",
+                "labo_sample_date": "2021-01-07",
+                "labo_germ_name": "Staphylococcus epidermidis",
+                "labo_commensal": "1"
+            },
+            {
+                "labo_id": "lab_2",
+                "patient_id": "pat_1",
+                "encounter_id": "eds_1",
+                "labo_sample_date": "2021-01-09",
+                "labo_germ_name": "Staphylococcus epidermidis",
+                "labo_commensal": "1"
+            },
+            {
+                "labo_id": "lab_2",
+                "patient_id": "pat_1",
+                "encounter_id": "eds_1",
+                "labo_sample_date": "2021-01-11",
+                "labo_germ_name": "Staphylococcus epidermidis",
+                "labo_commensal": "1"
+            },
+            {
+                "labo_id": "lab_2",
+                "patient_id": "pat_1",
+                "encounter_id": "eds_1",
+                "labo_sample_date": "2021-01-13",
+                "labo_germ_name": "Staphylococcus epidermidis",
+                "labo_commensal": "1"
+            },
+            {
+                "labo_id": "lab_2",
+                "patient_id": "pat_1",
+                "encounter_id": "eds_1",
+                "labo_sample_date": "2021-01-15",
+                "labo_germ_name": "Staphylococcus epidermidis",
+                "labo_commensal": "1"
+            },
+            {
+                "labo_id": "lab_3",
+                "patient_id": "pat_1",
+                "encounter_id": "eds_1",
+                "labo_sample_date": "2021-01-17",
+                "labo_germ_name": "Staphylococcus epidermidis",
+                "labo_commensal": "1"
+            }
+        ]
+    }
+}

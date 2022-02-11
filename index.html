@@ -1,1 +1,111 @@
-# hob
+<!doctype html>
+<script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/gh/calipho-sib/feature-viewer@v1.1.0/dist/feature-viewer.bundle.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/lodash@4.17.21/lodash.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.1/moment.min.js"></script>
+<script src="./js/impl/hug.js"></script>
+<script src="./js/palette.js"></script>
+<script src="./js/hob.js"></script>
+<script src="./js/vis.js"></script>
+
+</script>
+
+<html lang="en">
+<div class="container">
+    <h2>CLABSI algorithm simulator</h2>
+    <form>
+        <div id="dataset-selector" class="form-group">
+            <select id="form-selector" class="form-control">
+            <option selected>Selet a dataset</option>
+          </select>
+        </div>
+
+
+        <div class="form-group">
+            <label for="exampleFormControlTextarea1">Positive hemocultures</label>
+            <textarea class="form-control" id="pos_hemocultre_txtarea" rows="20"></textarea>
+        </div>
+        <div id="fv_pos_hemo"></div>
+
+        <!--
+
+
+        <div class="form-group">
+            <label for="exampleFormControlTextarea1">Episodes</label>
+            <textarea class="form-control" id="episodes_txtarea" rows="20"></textarea>
+        </div>
+        <div id="fv_episodes"></div>
+
+                -->
+
+    </form>
+</div>
+<script>
+    var parameters = {
+        implementation: "HUG"
+    };
+
+    //Done for optimisation reasons
+    function prepareData(scenarios) {
+        var scenarioKeys = Object.keys(scenarios);
+        scenarioKeys.forEach(function(scenarioKey) {
+            var scenario = scenarios[scenarioKey];
+            scenario["positive_hemocultures"].forEach(function(d) {
+                d.labo_sample_datetime_moment = moment(d.labo_sample_date, "YYYY-MM-DD");
+                //d.labo_patient_id_sample_calendar_day = d.patient_id + "-" + formatMomentDateToStringForGranularity(d.labo_sample_datetime_moment, "day");
+                d.labo_sample_datetime_timestamp = d.labo_sample_datetime_moment.valueOf();
+            })
+        })
+    }
+
+    function fillDropDown(scenarios) {
+        var selector = $("#form-selector");
+        Object.keys(scenarios).forEach(function(scenario_key) {
+            $("<option />", {
+                value: scenario_key,
+                text: scenario_key
+            }).appendTo(selector);
+        })
+    }
+
+    $.getJSON("static/test_scenarios.json", function(scenarios) {
+        prepareData(scenarios)
+        fillDropDown(scenarios);
+        SCENARIOS = scenarios;
+    });
+
+    function convertJSONForTxtArea(jsonArray) {
+
+        var headers = Object.keys(jsonArray[0])
+        var txt = headers.join("\t") + "\n";
+        txt += jsonArray.map(ph => headers.map(h => ph[h]).join("\t")).join("\n");
+        return txt;
+
+    }
+
+    $('#dataset-selector').change(function() {
+
+        var case_id = $('#dataset-selector').find(":selected").text();
+        var positive_hemocultures = SCENARIOS[case_id].positive_hemocultures;
+        var pos_hemo_txt = convertJSONForTxtArea(positive_hemocultures);
+
+        $('#pos_hemocultre_txtarea').val(pos_hemo_txt);
+
+
+        //var episodes = computeBSIEpisodes(parameters, positive_hemocultures).episodes;
+        //$('#episodes_txtarea').val(convertJSONForTxtArea(episodes));
+
+        updateVis($("#fv_pos_hemo"), positive_hemocultures);
+
+        //updateVis($("#fv_episodes"), episodes);
+
+    });
+
+    /*    $('#dataset').bind('input propertychange', function() {
+            updateVis(fv1);
+        });*/
+</script>
+
+</html>
