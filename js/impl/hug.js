@@ -5,6 +5,13 @@ function hug_implementation(parameters, positive_hemocultures) {
 
     var parameters_copy = JSON.parse(JSON.stringify(parameters));
 
+    function keyToGroupEvidences(ep) {
+        return ep.patient_id + ep.encounter_id 
+    }
+
+    function keyToGroupEpisodes(ep) {
+        return ep.patient_id + ep.encounter_id + ep.labo_sample_date
+    }
 
     /** Pour 1 patient donné on ne répéte le même germe si il arrive dans les 14 jours */
     function group_pos_hemoculture_by_episode_evidences(labs_with_positive_hemocultures, not_repeat_in_days) {
@@ -14,7 +21,7 @@ function hug_implementation(parameters, positive_hemocultures) {
         //group by germ first
         Object.keys(pos_hem_group_by_germ).forEach(function(germ) {
             var labs_for_germ = pos_hem_group_by_germ[germ];
-            var pos_hem_group_by_germ_patient = _.groupBy(labs_for_germ, "patient_id");
+            var pos_hem_group_by_germ_patient = _.groupBy(labs_for_germ, keyToGroupEvidences);
 
             //group by patient
             Object.keys(pos_hem_group_by_germ_patient).forEach(function(patient_germs) {
@@ -36,8 +43,10 @@ function hug_implementation(parameters, positive_hemocultures) {
         return _.sortBy(_episode_evidences, "labo_sample_datetime_timestamp");
     }
 
+  
+
     function group_evidences_by_episode(_episode_evidences) {
-        var episodes_group_by_patient = _.groupBy(_episode_evidences, "labo_patient_id_sample_calendar_day");
+        var episodes_group_by_patient = _.groupBy(_episode_evidences, keyToGroupEpisodes);
         var res = [];
 
         Object.keys(episodes_group_by_patient).forEach(function(epi_pat_cal_day) {

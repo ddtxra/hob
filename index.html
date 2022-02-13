@@ -5,6 +5,7 @@
 <script src="https://cdn.jsdelivr.net/gh/calipho-sib/feature-viewer@v1.1.0/dist/feature-viewer.bundle.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/lodash@4.17.21/lodash.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.1/moment.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/ag-grid/Docs-27.0.1-20220211/ag-grid-community.min.js"></script>
 <script src="./js/impl/hug.js"></script>
 <script src="./js/palette.js"></script>
 <script src="./js/hob.js"></script>
@@ -15,98 +16,31 @@
 <html lang="en">
 <div class="container">
     <h2>HOB algorithm simulator</h2>
+    <p>This algorihtm is still a work in progress, if you see issues, please <a target="_blank" href="https://github.com/ddtxra/hob/issues">report</a>.</p>
     <form>
         <div id="dataset-selector" class="form-group">
             <select id="form-selector" class="form-control">
             <option selected>Selet a dataset</option>
           </select>
         </div>
-
-
         <div class="form-group">
             <label for="exampleFormControlTextarea1">Positive hemocultures</label>
-            <textarea class="form-control" id="pos_hemocultre_txtarea" rows="20"></textarea>
+            <div id="myGrid" style="height: 200px; width:1200px;" class="ag-theme-alpine"></div>
+            <!-- <textarea class="form-control" id="pos_hemocultre_txtarea" rows="20"></textarea>-->
         </div>
+        <p>
+        <b>Positive hemocultures</b>
+        </p>
         <div id="fv_pos_hemo"></div>
-
-        <!--
-
-
-        <div class="form-group">
-            <label for="exampleFormControlTextarea1">Episodes</label>
-            <textarea class="form-control" id="episodes_txtarea" rows="20"></textarea>
-        </div>
+        <p>
+        <b>Episodes</b>
+        </p>
         <div id="fv_episodes"></div>
-
-                -->
-
     </form>
 </div>
-<script>
-    var parameters = {
-        implementation: "HUG"
-    };
-
-    //Done for optimisation reasons
-    function prepareData(scenarios) {
-        var scenarioKeys = Object.keys(scenarios);
-        scenarioKeys.forEach(function(scenarioKey) {
-            var scenario = scenarios[scenarioKey];
-            scenario["positive_hemocultures"].forEach(function(d) {
-                d.labo_sample_datetime_moment = moment(d.labo_sample_date, "YYYY-MM-DD");
-                //d.labo_patient_id_sample_calendar_day = d.patient_id + "-" + formatMomentDateToStringForGranularity(d.labo_sample_datetime_moment, "day");
-                d.labo_sample_datetime_timestamp = d.labo_sample_datetime_moment.valueOf();
-            })
-        })
-    }
-
-    function fillDropDown(scenarios) {
-        var selector = $("#form-selector");
-        Object.keys(scenarios).forEach(function(scenario_key) {
-            $("<option />", {
-                value: scenario_key,
-                text: scenario_key
-            }).appendTo(selector);
-        })
-    }
-
-    $.getJSON("static/test_scenarios.json", function(scenarios) {
-        prepareData(scenarios)
-        fillDropDown(scenarios);
-        SCENARIOS = scenarios;
-    });
-
-    function convertJSONForTxtArea(jsonArray) {
-        var headers = Object.keys(jsonArray[0]);
-        headers = headers.filter(h => h !== "labo_sample_datetime_moment");
-        headers = headers.filter(h => h !== "labo_sample_datetime_timestamp");
-        
-        var txt = headers.join("\t") + "\n";
-        txt += jsonArray.map(ph => headers.map(h => ph[h]).join("\t")).join("\n");
-        return txt;
-    }
-
-    $('#dataset-selector').change(function() {
-
-        var case_id = $('#dataset-selector').find(":selected").text();
-        var positive_hemocultures = SCENARIOS[case_id].positive_hemocultures;
-        var pos_hemo_txt = convertJSONForTxtArea(positive_hemocultures);
-
-        $('#pos_hemocultre_txtarea').val(pos_hemo_txt);
-
-
-        //var episodes = computeBSIEpisodes(parameters, positive_hemocultures).episodes;
-        //$('#episodes_txtarea').val(convertJSONForTxtArea(episodes));
-
-        updateVis($("#fv_pos_hemo"), positive_hemocultures);
-
-        //updateVis($("#fv_episodes"), episodes);
-
-    });
-
-    /*    $('#dataset').bind('input propertychange', function() {
-            updateVis(fv1);
-        });*/
-</script>
-
+<script src="./js/app.js"></script>
 </html>
+
+<style>
+    .svgHeader { display: none;}
+</style>
