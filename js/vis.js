@@ -1,7 +1,7 @@
 function updateVis(jqueryDiv, positive_hemocultures, episodes) {
 
     jqueryDiv.empty();
-    var ft = new FeatureViewer.createFeature(365, '#fv1', {
+    var ft = new FeatureViewer.createFeature(365, "#" + jqueryDiv.attr('id'), {
         showAxis: true,
         showSequence: true,
         brushActive: true, //zoom
