@@ -44,10 +44,15 @@ function hug_implementation(parameters, positive_hemocultures) {
     }
 
   
+    
 
     function group_evidences_by_episode(_episode_evidences) {
         var episodes_group_by_patient = _.groupBy(_episode_evidences, keyToGroupEpisodes);
         var res = [];
+
+        function joinUniq(_epi_pat_cal_day, _label) {
+            return _.uniq(episodes_group_by_patient[_epi_pat_cal_day].map(epi => epi[_label]))
+        }
 
         Object.keys(episodes_group_by_patient).forEach(function(epi_pat_cal_day) {
             var episodes_evi = episodes_group_by_patient[epi_pat_cal_day];
@@ -55,7 +60,7 @@ function hug_implementation(parameters, positive_hemocultures) {
             var obj = _.assign(first_ep);
 
             //TODO get first
-            obj.labo_polymicrobial_germs = epi_pat_cal_day, "labo_germ_name";
+            obj.labo_polymicrobial_germs = joinUniq(epi_pat_cal_day, "labo_germ_name");
             obj.labo_polymicrobial_count = obj.labo_polymicrobial_germs.length
             obj.evidences_count = episodes_evi.length
 

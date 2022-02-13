@@ -1,8 +1,6 @@
 function updateVis(positive_hemocultures, episodes) {
 
-    console.log(episodes);
     var columnDefs = [
-        { "field": "labo_id", width: 200},
         { "field": "patient_id", width: 200 },
         { "field": "encounter_id", width: 200 },
         { "field": "labo_sample_date", width: 200 },
@@ -20,10 +18,6 @@ function updateVis(positive_hemocultures, episodes) {
         zoomMax: 1 //define the maximum range of the zoom
     };
 
-    $("#fv_pos_hemo").empty();
-    $("#fv_episodes").empty();
-    $('#myGrid').empty();
-
     const gridDiv = document.querySelector('#myGrid');
     //$("#myGrid").empty();
     var ag = new agGrid.Grid(gridDiv, {
@@ -34,19 +28,19 @@ function updateVis(positive_hemocultures, episodes) {
     var ft_pos_hemo = new FeatureViewer.createFeature(50, "#fv_pos_hemo", fvParams);
     var ft_episodes = new FeatureViewer.createFeature(50, "#fv_episodes", fvParams);
 
-    function addFeature(ft, series){
+    function addFeature(ft, series, epi){
         var patients = _.groupBy(series, "patient_id");
         Object.keys(patients).forEach(pat => {
     
             var pos_hem = patients[pat];
             var feature = pos_hem.map(function(ph) {
                 var day_of_year = ph.labo_sample_datetime_moment.dayOfYear();
+                var label = (epi ? ph.labo_polymicrobial_germs.join("+") : ph.labo_germ_name );
                 return {
                     x: day_of_year,
                     y: day_of_year,
-                    description: ph.labo_germ_name + "@" + ph.encounter_id,
-
-                    color: getColorFromPalette(ph.labo_germ_name)
+                    description: label + "@" + ph.encounter_id,
+                    color: getColorFromPalette(label)
                 }
             });
     
@@ -60,6 +54,6 @@ function updateVis(positive_hemocultures, episodes) {
     }
 
     addFeature(ft_pos_hemo, positive_hemocultures);
-    addFeature(ft_episodes, episodes);
+    addFeature(ft_episodes, episodes, true);
 
 }

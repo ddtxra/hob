@@ -1,364 +1,340 @@
 {
-    "scenario_1": {
-        "positive_hemocultures": [{
-                "labo_id": "lab_1",
-                "patient_id": "patient_1",
-                "encounter_id": "encounter_1",
-                "labo_sample_date": "2021-01-01",
-                "labo_germ_name": "E. Coli",
-                "labo_commensal": "0"
-            },
-            {
-                "labo_id": "lab_2",
-                "patient_id": "patient_1",
-                "encounter_id": "encounter_1",
-                "labo_sample_date": "2021-01-05",
-                "labo_germ_name": "E. Coli",
-                "labo_commensal": "0"
-            },
-            {
-                "labo_id": "lab_3",
-                "patient_id": "patient_2",
-                "encounter_id": "encounter_1",
-                "labo_sample_date": "2021-01-01",
-                "labo_germ_name": "E. Coli",
-                "labo_commensal": "0"
-            },
-            {
-                "labo_id": "lab_3",
-                "patient_id": "patient_2",
-                "encounter_id": "encounter_2",
-                "labo_sample_date": "2021-01-05",
-                "labo_germ_name": "E. Coli",
-                "labo_commensal": "0"
-            },
-            {
-                "labo_id": "lab_5",
-                "patient_id": "patient_3",
-                "encounter_id": "encounter_3",
-                "labo_sample_date": "2021-01-01",
-                "labo_germ_name": "E. Coli",
-                "labo_commensal": "0"
-            },
-            {
-                "labo_id": "lab_6",
-                "patient_id": "patient_3",
-                "encounter_id": "encounter_3",
-                "labo_sample_date": "2021-01-05",
-                "labo_germ_name": "Klebsiella",
-                "labo_commensal": "0"
-            }
-        ]
-    },
-    "scenario_2": {
-        "txt": "In this scenario we see E.Coli (true pathogen) being repeated every day",
-        "positive_hemocultures": [{
-                "labo_id": "lab_1",
-                "patient_id": "patient_1",
-                "encounter_id": "encounter_1",
-                "labo_sample_date": "2021-01-01",
-                "labo_germ_name": "E. Coli",
-                "labo_commensal": "0"
-            },
-            {
-                "labo_id": "lab_2",
-                "patient_id": "patient_1",
-                "encounter_id": "encounter_1",
-                "labo_sample_date": "2021-01-02",
-                "labo_germ_name": "E. Coli",
-                "labo_commensal": "0"
-            },
-            {
-                "labo_id": "lab_2",
-                "patient_id": "patient_1",
-                "encounter_id": "encounter_1",
-                "labo_sample_date": "2021-01-03",
-                "labo_germ_name": "E. Coli",
-                "labo_commensal": "0"
-            },
-            {
-                "labo_id": "lab_2",
-                "patient_id": "patient_1",
-                "encounter_id": "encounter_1",
-                "labo_sample_date": "2021-01-04",
-                "labo_germ_name": "E. Coli",
-                "labo_commensal": "0"
-            },
-            {
-                "labo_id": "lab_2",
-                "patient_id": "patient_1",
-                "encounter_id": "encounter_1",
-                "labo_sample_date": "2021-01-05",
-                "labo_germ_name": "E. Coli",
-                "labo_commensal": "0"
-            },
-            {
-                "labo_id": "lab_2",
-                "patient_id": "patient_1",
-                "encounter_id": "encounter_1",
-                "labo_sample_date": "2021-01-06",
-                "labo_germ_name": "E. Coli",
-                "labo_commensal": "0"
-            },
-            {
-                "labo_id": "lab_2",
-                "patient_id": "patient_1",
-                "encounter_id": "encounter_1",
-                "labo_sample_date": "2021-01-07",
-                "labo_germ_name": "E. Coli",
-                "labo_commensal": "0"
-            },
-            {
-                "labo_id": "lab_2",
-                "patient_id": "patient_1",
-                "encounter_id": "encounter_1",
-                "labo_sample_date": "2021-01-08",
-                "labo_germ_name": "E. Coli",
-                "labo_commensal": "0"
-            },
-            {
-                "labo_id": "lab_3",
-                "patient_id": "patient_1",
-                "encounter_id": "encounter_1",
-                "labo_sample_date": "2021-01-09",
-                "labo_germ_name": "E. Coli",
-                "labo_commensal": "0"
-            },
-            {
-                "labo_id": "lab_3",
-                "patient_id": "patient_1",
-                "encounter_id": "encounter_1",
-                "labo_sample_date": "2021-01-10",
-                "labo_germ_name": "E. Coli",
-                "labo_commensal": "0"
-            },
-            {
-                "labo_id": "lab_3",
-                "patient_id": "patient_1",
-                "encounter_id": "encounter_1",
-                "labo_sample_date": "2021-01-11",
-                "labo_germ_name": "E. Coli",
-                "labo_commensal": "0"
-            },
-            {
-                "labo_id": "lab_3",
-                "patient_id": "patient_1",
-                "encounter_id": "encounter_1",
-                "labo_sample_date": "2021-01-12",
-                "labo_germ_name": "E. Coli",
-                "labo_commensal": "0"
-            },
-            {
-                "labo_id": "lab_3",
-                "patient_id": "patient_1",
-                "encounter_id": "encounter_1",
-                "labo_sample_date": "2021-01-13",
-                "labo_germ_name": "E. Coli",
-                "labo_commensal": "0"
-            },
-            {
-                "labo_id": "lab_3",
-                "patient_id": "patient_1",
-                "encounter_id": "encounter_1",
-                "labo_sample_date": "2021-01-14",
-                "labo_germ_name": "E. Coli",
-                "labo_commensal": "0"
-            },
-            {
-                "labo_id": "lab_3",
-                "patient_id": "patient_1",
-                "encounter_id": "encounter_1",
-                "labo_sample_date": "2021-01-15",
-                "labo_germ_name": "E. Coli",
-                "labo_commensal": "0"
-            },
-            {
-                "labo_id": "lab_3",
-                "patient_id": "patient_1",
-                "encounter_id": "encounter_1",
-                "labo_sample_date": "2021-01-16",
-                "labo_germ_name": "E. Coli",
-                "labo_commensal": "0"
-            },
-            {
-                "labo_id": "lab_3",
-                "patient_id": "patient_1",
-                "encounter_id": "encounter_1",
-                "labo_sample_date": "2021-01-17",
-                "labo_germ_name": "E. Coli",
-                "labo_commensal": "0"
-            },
-            {
-                "labo_id": "lab_3",
-                "patient_id": "patient_1",
-                "encounter_id": "encounter_1",
-                "labo_sample_date": "2021-01-18",
-                "labo_germ_name": "E. Coli",
-                "labo_commensal": "0"
-            },
-            {
-                "labo_id": "lab_3",
-                "patient_id": "patient_1",
-                "encounter_id": "encounter_1",
-                "labo_sample_date": "2021-01-19",
-                "labo_germ_name": "E. Coli",
-                "labo_commensal": "0"
-            },
-            {
-                "labo_id": "lab_3",
-                "patient_id": "patient_1",
-                "encounter_id": "encounter_1",
-                "labo_sample_date": "2021-01-20",
-                "labo_germ_name": "E. Coli",
-                "labo_commensal": "0"
-            },
-            {
-                "labo_id": "lab_3",
-                "patient_id": "patient_1",
-                "encounter_id": "encounter_1",
-                "labo_sample_date": "2021-01-21",
-                "labo_germ_name": "E. Coli",
-                "labo_commensal": "0"
-            },
-            {
-                "labo_id": "lab_3",
-                "patient_id": "patient_1",
-                "encounter_id": "encounter_1",
-                "labo_sample_date": "2021-01-22",
-                "labo_germ_name": "E. Coli",
-                "labo_commensal": "0"
-            },
-            {
-                "labo_id": "lab_3",
-                "patient_id": "patient_1",
-                "encounter_id": "encounter_1",
-                "labo_sample_date": "2021-01-23",
-                "labo_germ_name": "E. Coli",
-                "labo_commensal": "0"
-            },
-            {
-                "labo_id": "lab_3",
-                "patient_id": "patient_1",
-                "encounter_id": "encounter_1",
-                "labo_sample_date": "2021-01-24",
-                "labo_germ_name": "E. Coli",
-                "labo_commensal": "0"
-            },
-            {
-                "labo_id": "lab_3",
-                "patient_id": "patient_1",
-                "encounter_id": "encounter_1",
-                "labo_sample_date": "2021-01-25",
-                "labo_germ_name": "E. Coli",
-                "labo_commensal": "0"
-            },
-            {
-                "labo_id": "lab_3",
-                "patient_id": "patient_1",
-                "encounter_id": "encounter_1",
-                "labo_sample_date": "2021-01-26",
-                "labo_germ_name": "E. Coli",
-                "labo_commensal": "0"
-            },
-            {
-                "labo_id": "lab_3",
-                "patient_id": "patient_1",
-                "encounter_id": "encounter_1",
-                "labo_sample_date": "2021-01-27",
-                "labo_germ_name": "E. Coli",
-                "labo_commensal": "0"
-            },
-            {
-                "labo_id": "lab_3",
-                "patient_id": "patient_1",
-                "encounter_id": "encounter_1",
-                "labo_sample_date": "2021-01-28",
-                "labo_germ_name": "E. Coli",
-                "labo_commensal": "0"
-            },
-            {
-                "labo_id": "lab_3",
-                "patient_id": "patient_1",
-                "encounter_id": "encounter_1",
-                "labo_sample_date": "2021-01-29",
-                "labo_germ_name": "E. Coli",
-                "labo_commensal": "0"
-            }
-        ]
-    },
-    "scenario_3": {
-        "positive_hemocultures": [{
-                "labo_id": "lab_1",
-                "patient_id": "patient_1",
-                "encounter_id": "encounter_1",
-                "labo_sample_date": "2021-01-01",
-                "labo_germ_name": "Staphylococcus epidermidis",
-                "labo_commensal": "1"
-            },
-            {
-                "labo_id": "lab_2",
-                "patient_id": "patient_1",
-                "encounter_id": "encounter_1",
-                "labo_sample_date": "2021-01-03",
-                "labo_germ_name": "Staphylococcus epidermidis",
-                "labo_commensal": "1"
-            },
-            {
-                "labo_id": "lab_2",
-                "patient_id": "patient_1",
-                "encounter_id": "encounter_1",
-                "labo_sample_date": "2021-01-05",
-                "labo_germ_name": "Staphylococcus epidermidis",
-                "labo_commensal": "1"
-            },
-            {
-                "labo_id": "lab_2",
-                "patient_id": "patient_1",
-                "encounter_id": "encounter_1",
-                "labo_sample_date": "2021-01-07",
-                "labo_germ_name": "Staphylococcus epidermidis",
-                "labo_commensal": "1"
-            },
-            {
-                "labo_id": "lab_2",
-                "patient_id": "patient_1",
-                "encounter_id": "encounter_1",
-                "labo_sample_date": "2021-01-09",
-                "labo_germ_name": "Staphylococcus epidermidis",
-                "labo_commensal": "1"
-            },
-            {
-                "labo_id": "lab_2",
-                "patient_id": "patient_1",
-                "encounter_id": "encounter_1",
-                "labo_sample_date": "2021-01-11",
-                "labo_germ_name": "Staphylococcus epidermidis",
-                "labo_commensal": "1"
-            },
-            {
-                "labo_id": "lab_2",
-                "patient_id": "patient_1",
-                "encounter_id": "encounter_1",
-                "labo_sample_date": "2021-01-13",
-                "labo_germ_name": "Staphylococcus epidermidis",
-                "labo_commensal": "1"
-            },
-            {
-                "labo_id": "lab_2",
-                "patient_id": "patient_1",
-                "encounter_id": "encounter_1",
-                "labo_sample_date": "2021-01-15",
-                "labo_germ_name": "Staphylococcus epidermidis",
-                "labo_commensal": "1"
-            },
-            {
-                "labo_id": "lab_3",
-                "patient_id": "patient_1",
-                "encounter_id": "encounter_1",
-                "labo_sample_date": "2021-01-17",
-                "labo_germ_name": "Staphylococcus epidermidis",
-                "labo_commensal": "1"
-            }
-        ]
-    }
+	"scenario (basics)": {
+		"description": "patient_1 has one true pathogen (E.Coli) on day 1 and one on day 5 for the same encounter --> counts as 1 episode because does not repeat for less than < 14 days or different encounter<br>patient_2 has one true pathogen (E.Coli) on day 1 and one on day 5 on different encounters --> counts as 2 episodes because different encounters<br>patient_3 has one true pathogen (E.Coli) on day 1 and another true pathogen (Klebsiella) on day 5 on same encounter --> counts as 2 episodes because different germs",
+		"positive_hemocultures": [{
+				"patient_id": "patient_1",
+				"encounter_id": "encounter_p1e1",
+				"labo_sample_date": "2021-01-01",
+				"labo_germ_name": "E. Coli",
+				"labo_commensal": "0"
+			},
+			{
+				"patient_id": "patient_1",
+				"encounter_id": "encounter_p1e1",
+				"labo_sample_date": "2021-01-05",
+				"labo_germ_name": "E. Coli",
+				"labo_commensal": "0"
+			},
+			{
+				"patient_id": "patient_2",
+				"encounter_id": "encounter_p2e1",
+				"labo_sample_date": "2021-01-01",
+				"labo_germ_name": "E. Coli",
+				"labo_commensal": "0"
+			},
+			{
+				"patient_id": "patient_2",
+				"encounter_id": "encounter_p2e2",
+				"labo_sample_date": "2021-01-05",
+				"labo_germ_name": "E. Coli",
+				"labo_commensal": "0"
+			},
+			{
+				"patient_id": "patient_3",
+				"encounter_id": "encounter_p3e1",
+				"labo_sample_date": "2021-01-01",
+				"labo_germ_name": "E. Coli",
+				"labo_commensal": "0"
+			},
+			{
+				"patient_id": "patient_3",
+				"encounter_id": "encounter_p3e1",
+				"labo_sample_date": "2021-01-05",
+				"labo_germ_name": "Klebsiella",
+				"labo_commensal": "0"
+			}
+		]
+	},
+	"scenario (repeat interval)": {
+		"description": "patient_1 has one true pathogen being repeated every day, but only counts as 1 episode every 14 days.",
+		"positive_hemocultures": [{
+				"patient_id": "patient_1",
+				"encounter_id": "encounter_1",
+				"labo_sample_date": "2021-01-01",
+				"labo_germ_name": "E. Coli",
+				"labo_commensal": "0"
+			},
+			{
+				"patient_id": "patient_1",
+				"encounter_id": "encounter_1",
+				"labo_sample_date": "2021-01-02",
+				"labo_germ_name": "E. Coli",
+				"labo_commensal": "0"
+			},
+			{
+				"patient_id": "patient_1",
+				"encounter_id": "encounter_1",
+				"labo_sample_date": "2021-01-03",
+				"labo_germ_name": "E. Coli",
+				"labo_commensal": "0"
+			},
+			{
+				"patient_id": "patient_1",
+				"encounter_id": "encounter_1",
+				"labo_sample_date": "2021-01-04",
+				"labo_germ_name": "E. Coli",
+				"labo_commensal": "0"
+			},
+			{
+				"patient_id": "patient_1",
+				"encounter_id": "encounter_1",
+				"labo_sample_date": "2021-01-05",
+				"labo_germ_name": "E. Coli",
+				"labo_commensal": "0"
+			},
+			{
+				"patient_id": "patient_1",
+				"encounter_id": "encounter_1",
+				"labo_sample_date": "2021-01-06",
+				"labo_germ_name": "E. Coli",
+				"labo_commensal": "0"
+			},
+			{
+				"patient_id": "patient_1",
+				"encounter_id": "encounter_1",
+				"labo_sample_date": "2021-01-07",
+				"labo_germ_name": "E. Coli",
+				"labo_commensal": "0"
+			},
+			{
+				"patient_id": "patient_1",
+				"encounter_id": "encounter_1",
+				"labo_sample_date": "2021-01-08",
+				"labo_germ_name": "E. Coli",
+				"labo_commensal": "0"
+			},
+			{
+				"patient_id": "patient_1",
+				"encounter_id": "encounter_1",
+				"labo_sample_date": "2021-01-09",
+				"labo_germ_name": "E. Coli",
+				"labo_commensal": "0"
+			},
+			{
+				"patient_id": "patient_1",
+				"encounter_id": "encounter_1",
+				"labo_sample_date": "2021-01-10",
+				"labo_germ_name": "E. Coli",
+				"labo_commensal": "0"
+			},
+			{
+				"patient_id": "patient_1",
+				"encounter_id": "encounter_1",
+				"labo_sample_date": "2021-01-11",
+				"labo_germ_name": "E. Coli",
+				"labo_commensal": "0"
+			},
+			{
+				"patient_id": "patient_1",
+				"encounter_id": "encounter_1",
+				"labo_sample_date": "2021-01-12",
+				"labo_germ_name": "E. Coli",
+				"labo_commensal": "0"
+			},
+			{
+				"patient_id": "patient_1",
+				"encounter_id": "encounter_1",
+				"labo_sample_date": "2021-01-13",
+				"labo_germ_name": "E. Coli",
+				"labo_commensal": "0"
+			},
+			{
+				"patient_id": "patient_1",
+				"encounter_id": "encounter_1",
+				"labo_sample_date": "2021-01-14",
+				"labo_germ_name": "E. Coli",
+				"labo_commensal": "0"
+			},
+			{
+				"patient_id": "patient_1",
+				"encounter_id": "encounter_1",
+				"labo_sample_date": "2021-01-15",
+				"labo_germ_name": "E. Coli",
+				"labo_commensal": "0"
+			},
+			{
+				"patient_id": "patient_1",
+				"encounter_id": "encounter_1",
+				"labo_sample_date": "2021-01-16",
+				"labo_germ_name": "E. Coli",
+				"labo_commensal": "0"
+			},
+			{
+				"patient_id": "patient_1",
+				"encounter_id": "encounter_1",
+				"labo_sample_date": "2021-01-17",
+				"labo_germ_name": "E. Coli",
+				"labo_commensal": "0"
+			},
+			{
+				"patient_id": "patient_1",
+				"encounter_id": "encounter_1",
+				"labo_sample_date": "2021-01-18",
+				"labo_germ_name": "E. Coli",
+				"labo_commensal": "0"
+			},
+			{
+				"patient_id": "patient_1",
+				"encounter_id": "encounter_1",
+				"labo_sample_date": "2021-01-19",
+				"labo_germ_name": "E. Coli",
+				"labo_commensal": "0"
+			},
+			{
+				"patient_id": "patient_1",
+				"encounter_id": "encounter_1",
+				"labo_sample_date": "2021-01-20",
+				"labo_germ_name": "E. Coli",
+				"labo_commensal": "0"
+			},
+			{
+				"patient_id": "patient_1",
+				"encounter_id": "encounter_1",
+				"labo_sample_date": "2021-01-21",
+				"labo_germ_name": "E. Coli",
+				"labo_commensal": "0"
+			},
+			{
+				"patient_id": "patient_1",
+				"encounter_id": "encounter_1",
+				"labo_sample_date": "2021-01-22",
+				"labo_germ_name": "E. Coli",
+				"labo_commensal": "0"
+			},
+			{
+				"patient_id": "patient_1",
+				"encounter_id": "encounter_1",
+				"labo_sample_date": "2021-01-23",
+				"labo_germ_name": "E. Coli",
+				"labo_commensal": "0"
+			},
+			{
+				"patient_id": "patient_1",
+				"encounter_id": "encounter_1",
+				"labo_sample_date": "2021-01-24",
+				"labo_germ_name": "E. Coli",
+				"labo_commensal": "0"
+			},
+			{
+				"patient_id": "patient_1",
+				"encounter_id": "encounter_1",
+				"labo_sample_date": "2021-01-25",
+				"labo_germ_name": "E. Coli",
+				"labo_commensal": "0"
+			},
+			{
+				"patient_id": "patient_1",
+				"encounter_id": "encounter_1",
+				"labo_sample_date": "2021-01-26",
+				"labo_germ_name": "E. Coli",
+				"labo_commensal": "0"
+			},
+			{
+				"patient_id": "patient_1",
+				"encounter_id": "encounter_1",
+				"labo_sample_date": "2021-01-27",
+				"labo_germ_name": "E. Coli",
+				"labo_commensal": "0"
+			},
+			{
+				"patient_id": "patient_1",
+				"encounter_id": "encounter_1",
+				"labo_sample_date": "2021-01-28",
+				"labo_germ_name": "E. Coli",
+				"labo_commensal": "0"
+			},
+			{
+				"patient_id": "patient_1",
+				"encounter_id": "encounter_1",
+				"labo_sample_date": "2021-01-29",
+				"labo_germ_name": "E. Coli",
+				"labo_commensal": "0"
+			}
+		]
+	},
+	"scenario commensals (repeat intervals) (work in progresss...)": {
+        "description": "patient_1 has one commensal repeated every 2 days. &#128679; between 1 and 3 days, repeated commensals should be treated as true pathogenes and therefore the rule of 14 days should apply. Still requires some work. &#128679;",
+		"positive_hemocultures": [{
+				"patient_id": "patient_1",
+				"encounter_id": "encounter_1",
+				"labo_sample_date": "2021-01-01",
+				"labo_germ_name": "Staphylococcus epidermidis",
+				"labo_commensal": "1"
+			},
+			{
+				"patient_id": "patient_1",
+				"encounter_id": "encounter_1",
+				"labo_sample_date": "2021-01-03",
+				"labo_germ_name": "Staphylococcus epidermidis",
+				"labo_commensal": "1"
+			},
+			{
+				"patient_id": "patient_1",
+				"encounter_id": "encounter_1",
+				"labo_sample_date": "2021-01-05",
+				"labo_germ_name": "Staphylococcus epidermidis",
+				"labo_commensal": "1"
+			},
+			{
+				"patient_id": "patient_1",
+				"encounter_id": "encounter_1",
+				"labo_sample_date": "2021-01-07",
+				"labo_germ_name": "Staphylococcus epidermidis",
+				"labo_commensal": "1"
+			},
+			{
+				"patient_id": "patient_1",
+				"encounter_id": "encounter_1",
+				"labo_sample_date": "2021-01-09",
+				"labo_germ_name": "Staphylococcus epidermidis",
+				"labo_commensal": "1"
+			},
+			{
+				"patient_id": "patient_1",
+				"encounter_id": "encounter_1",
+				"labo_sample_date": "2021-01-11",
+				"labo_germ_name": "Staphylococcus epidermidis",
+				"labo_commensal": "1"
+			},
+			{
+				"patient_id": "patient_1",
+				"encounter_id": "encounter_1",
+				"labo_sample_date": "2021-01-13",
+				"labo_germ_name": "Staphylococcus epidermidis",
+				"labo_commensal": "1"
+			},
+			{
+				"patient_id": "patient_1",
+				"encounter_id": "encounter_1",
+				"labo_sample_date": "2021-01-15",
+				"labo_germ_name": "Staphylococcus epidermidis",
+				"labo_commensal": "1"
+			},
+			{
+				"patient_id": "patient_1",
+				"encounter_id": "encounter_1",
+				"labo_sample_date": "2021-01-17",
+				"labo_germ_name": "Staphylococcus epidermidis",
+				"labo_commensal": "1"
+			}
+		]
+	},
+    "scenario polymicrobials": {
+        "description": "patient_1 has 2 true pathogens (E.Coli + Klebsiella) the same day --> counts as 1 polymicrobial episode",
+		"positive_hemocultures": [{
+				"patient_id": "patient_1",
+				"encounter_id": "encounter_1",
+				"labo_sample_date": "2021-01-01",
+				"labo_germ_name": "E.Coli",
+				"labo_commensal": "0"
+			},
+			{
+				"patient_id": "patient_1",
+				"encounter_id": "encounter_1",
+				"labo_sample_date": "2021-01-01",
+				"labo_germ_name": "Klebsiella",
+				"labo_commensal": "0"
+			}
+		]
+	}
 }
