@@ -49,7 +49,8 @@ $('#dataset-selector').change(function() {
     $('#description').html("");
     $("#fv_pos_hemo").empty();
     $("#fv_episodes").empty();
-    $('#myGrid').empty();
+    $('#pos_hemo_grid').empty();
+    $('#episodes_grid').empty();
 
     var scenario = SCENARIOS[case_id];
 
@@ -64,4 +65,26 @@ $('#dataset-selector').change(function() {
 
     updateVis(positive_hemocultures, result.episodes);
 
+});
+
+function showRawTab() {
+    $("#rawDataTab").addClass("active");
+    $("#computedDataTab").removeClass("active");
+    $("#pos_hemo_grid").show();
+    $("#episodes_grid").hide();
+}
+
+function showComputedTab() {
+    $("#computedDataTab").addClass("active");
+    $("#rawDataTab").removeClass("active");
+    $("#pos_hemo_grid").hide();
+    $("#episodes_grid").show();
+}
+
+$('#rawDataTab').click(function() {
+    showRawTab();
+});
+
+$('#computedDataTab').click(function() {
+    showComputedTab();
 });

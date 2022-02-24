@@ -1,14 +1,6 @@
 function updateVis(positive_hemocultures, episodes) {
 
-    var columnDefs = [
-        { "field": "patient_id", width: 200 },
-        { "field": "encounter_id", width: 200 },
-        { "field": "labo_sample_date", width: 200 },
-        { "field": "labo_germ_name", width: 200 },
-        { "field": "labo_commensal", width: 200 }]
-
     // let the grid know which columns and what data to use
-
     var fvParams = {
         showAxis: true,
         showSequence: true,
@@ -18,24 +10,15 @@ function updateVis(positive_hemocultures, episodes) {
         zoomMax: 1 //define the maximum range of the zoom
     };
 
-    const gridDiv = document.querySelector('#myGrid');
-    //$("#myGrid").empty();
-    var ag = new agGrid.Grid(gridDiv, {
-        columnDefs: columnDefs,
-        rowData: positive_hemocultures
-    });
 
-    var ft_pos_hemo = new FeatureViewer.createFeature(50, "#fv_pos_hemo", fvParams);
-    var ft_episodes = new FeatureViewer.createFeature(50, "#fv_episodes", fvParams);
-
-    function addFeature(ft, series, epi){
+    function addFeature(ft, series, epi) {
         var patients = _.groupBy(series, "patient_id");
         Object.keys(patients).forEach(pat => {
-    
+
             var pos_hem = patients[pat];
             var feature = pos_hem.map(function(ph) {
                 var day_of_year = ph.labo_sample_datetime_moment.dayOfYear();
-                var label = (epi ? ph.labo_polymicrobial_germs.join("+") : ph.labo_germ_name );
+                var label = (epi ? ph.labo_polymicrobial_germs.join("+") : ph.labo_germ_name);
                 return {
                     x: day_of_year,
                     y: day_of_year,
@@ -43,17 +26,47 @@ function updateVis(positive_hemocultures, episodes) {
                     color: getColorFromPalette(label)
                 }
             });
-    
+
             ft.addFeature({
                 data: feature,
                 name: pat,
                 type: "rect" // ['rect', 'path', 'line']
             });
-    
+
         });
     }
 
+    const gridDiv = document.querySelector('#pos_hemo_grid');
+    new agGrid.Grid(gridDiv, {
+        columnDefs: [
+            { "field": "patient_id", width: 200 },
+            { "field": "encounter_id", width: 200 },
+            { "field": "labo_sample_date", width: 200 },
+            { "field": "labo_germ_name", width: 200 },
+            { "field": "labo_commensal", width: 200 }
+        ],
+        rowData: positive_hemocultures
+    });
+
+    var ft_pos_hemo = new FeatureViewer.createFeature(50, "#fv_pos_hemo", fvParams);
+
+    const episodes_grid = document.querySelector('#episodes_grid');
+    new agGrid.Grid(episodes_grid, {
+        columnDefs: [
+            { "field": "patient_id", width: 200 },
+            { "field": "encounter_id", width: 200 },
+            { "field": "labo_sample_date", width: 200 },
+            { "field": "labo_polymicrobial_germs", width: 200 },
+            { "field": "labo_polymicrobial_count", width: 200 },
+            { "field": "labo_commensal", width: 200 }
+        ],
+        rowData: episodes
+    });
+    var ft_episodes = new FeatureViewer.createFeature(50, "#fv_episodes", fvParams);
+
     addFeature(ft_pos_hemo, positive_hemocultures);
     addFeature(ft_episodes, episodes, true);
+
+    showRawTab();
 
 }

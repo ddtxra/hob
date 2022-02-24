@@ -16,39 +16,72 @@
 <html lang="en">
 <div class="container">
     <h2>HOB algorithm simulator</h2>
-    <p>This algorihtm is being developed by <a target="_blank" href="https://www.hug.ch/direction-soins/prevention-controle-infections-pci-0">HUG PCI group</a> and is still a work in progress, if you see issues, don't hesitate to <a target="_blank" href="https://github.com/ddtxra/hob/issues">report</a>. The source code of the algorithm can be found <a href="https://github.com/ddtxra/hob/blob/gh-pages/js/impl/hug.js">here</a>.</p>
+    <p>This HOB algorihtm is currently being developed by <a target="_blank" href="https://www.hug.ch/en/prevention-and-control-infection">HUG PCI group</a> and is still a work in progress. If you see issues or have questions, don't hesitate to <a target="_blank"
+            href="https://github.com/ddtxra/hob/issues">open an issue</a>.
+        <br>The source code of the HUG algorithm can be found <a href="https://github.com/ddtxra/hob/blob/gh-pages/js/impl/hug.js">here</a>. Other algorithm implementations can be added, contributions are welcome!
+        <br>Test cases / scenarios can be found and edited
+        <a target="_blank" href="https://github.com/ddtxra/hob/blob/gh-pages/static/test_scenarios.json">here</a> feel free to add yours.
+    </p>
     <form>
+        <p>
+            <b>Choose an algorithm</b>
+        </p>
+        <div id="algo-selector" class="form-group">
+            <select id="algo-form-selector" class="form-control">
+            <option selected>HUG_v1</option>
+          </select>
+        </div>
+        <br>
+        <p>
+            <b>Choose a scenario</b>
+        </p>
         <div id="dataset-selector" class="form-group">
             <select id="form-selector" class="form-control">
             <option selected>Selet a scenario</option>
           </select>
         </div>
-        <b>Description</b>
+        <br>
+        <b>Scenario description</b>
         <p>
-        <span id="description"></span>
+            <span id="description"></span>
         </p>
 
         <div class="form-group" style="display: none;">
             <label for="exampleFormControlTextarea1">Positive hemocultures</label>
-             <textarea class="form-control" id="pos_hemocultre_txtarea" rows="20"></textarea>
+            <textarea class="form-control" id="pos_hemocultre_txtarea" rows="20"></textarea>
         </div>
         <p>
             <b>Positive hemocultures</b>
         </p>
         <div id="fv_pos_hemo"></div>
         <p>
-        <b>Episodes (computed by the algorithm)</b>
+            <b>Episodes (computed by the algorithm)</b>
         </p>
         <div id="fv_episodes"></div>
         <p>
-        <b>Data</b>
+            <b></b>
         </p>
-        <div id="myGrid" style="height: 500px; width:1200px;" class="ag-theme-alpine"></div>
+
+        <ul class="nav nav-tabs">
+            <li class="nav-item">
+                <a id="rawDataTab" href="#" class="nav-link active">Raw data (positive hemocultures)</a>
+            </li>
+            <li class="nav-item">
+                <a id="computedDataTab" href="#" class="nav-link">Computed data (episodes)</a>
+            </li>
+        </ul>
+
+        <div id="pos_hemo_grid" style="height: 500px; width:1200px;" class="ag-theme-alpine"></div>
+        <div id="episodes_grid" style="height: 500px; width:1200px;" class="ag-theme-alpine"></div>
+
     </form>
 </div>
 <script src="./js/app.js"></script>
+
 </html>
 
 <style>
-    .svgHeader { display: none;}
+    .svgHeader {
+        display: none;
+    }
 </style>
