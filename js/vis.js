@@ -36,30 +36,23 @@ function updateVis(positive_hemocultures, episodes) {
         });
     }
 
+
     const gridDiv = document.querySelector('#pos_hemo_grid');
+    const columnDefs = Object.keys(positive_hemocultures[0]).map(function(k) { return { field: k, width: 200 } });
+
     new agGrid.Grid(gridDiv, {
-        columnDefs: [
-            { "field": "patient_id", width: 200 },
-            { "field": "encounter_id", width: 200 },
-            { "field": "labo_sample_date", width: 200 },
-            { "field": "labo_germ_name", width: 200 },
-            { "field": "labo_commensal", width: 200 }
-        ],
+        columnDefs: columnDefs,
         rowData: positive_hemocultures
     });
 
     var ft_pos_hemo = new FeatureViewer.createFeature(50, "#fv_pos_hemo", fvParams);
 
+    const columnDefsForEpisodes = Object.keys(episodes[0]).map(function(k) { return { field: k, width: 200 } });
     const episodes_grid = document.querySelector('#episodes_grid');
+
+
     new agGrid.Grid(episodes_grid, {
-        columnDefs: [
-            { "field": "patient_id", width: 200 },
-            { "field": "encounter_id", width: 200 },
-            { "field": "labo_sample_date", width: 200 },
-            { "field": "labo_polymicrobial_germs", width: 200 },
-            { "field": "labo_polymicrobial_count", width: 200 },
-            { "field": "labo_commensal", width: 200 }
-        ],
+        columnDefs: columnDefsForEpisodes,
         rowData: episodes
     });
     var ft_episodes = new FeatureViewer.createFeature(50, "#fv_episodes", fvParams);
@@ -69,4 +62,26 @@ function updateVis(positive_hemocultures, episodes) {
 
     showRawTab();
 
+    $("#rawDataTab").text("Raw data (" + positive_hemocultures.length + " positive hemocultures)");
+    $("#computedDataTab").text("Computed episodes (" + episodes.length + " episodes)");
+
+
+    /*
+    [
+            { "field": "patient_id", width: 200 },
+            { "field": "encounter_id", width: 200 },
+            { "field": "labo_sample_date", width: 200 },
+            { "field": "labo_polymicrobial_germs", width: 200 },
+            { "field": "labo_polymicrobial_count", width: 200 },
+            { "field": "labo_commensal", width: 200 }
+        ]*/
+
+
+    //  [
+    //    { "field": "patient_id", width: 200 },
+    //    { "field": "encounter_id", width: 200 },
+    //    { "field": "labo_sample_date", width: 200 },
+    //   { "field": "labo_germ_name", width: 200 },
+    //   { "field": "labo_commensal", width: 200 }
+    //],
 }

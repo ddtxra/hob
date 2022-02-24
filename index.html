@@ -15,13 +15,16 @@
 
 <html lang="en">
 <div class="container">
-    <h2>HOB algorithm simulator</h2>
-    <p>This HOB algorihtm is currently being developed by <a target="_blank" href="https://www.hug.ch/en/prevention-and-control-infection">HUG PCI group</a> and is still a work in progress. If you see issues or have questions, don't hesitate to <a target="_blank"
-            href="https://github.com/ddtxra/hob/issues">open an issue</a>.
-        <br>The source code of the HUG algorithm can be found <a href="https://github.com/ddtxra/hob/blob/gh-pages/js/impl/hug.js">here</a>. Other algorithm implementations can be added, contributions are welcome!
-        <br>Test cases / scenarios can be found and edited
-        <a target="_blank" href="https://github.com/ddtxra/hob/blob/gh-pages/static/test_scenarios.json">here</a> feel free to add yours.
+    <h2>Bacteremia episodes algorithm simulator</h2>
+    <p>This simulator is being developed by <a target="_blank" href="https://www.hug.ch/en/prevention-and-control-infection">HUG PCI group</a> and is still a work in progress. If you see issues or have questions, don't hesitate to
+        <a target="_blank" href="https://github.com/ddtxra/hob/issues">open an issue</a>.
+        <br>The source code of the HUG_v1 algorithm can be found <a href="https://github.com/ddtxra/hob/blob/gh-pages/js/impl/hug.js">here</a>. Other algorithm implementations can be added, contributions are welcome.
+        <br>Test scenarios can be found and added
+        <a target="_blank" href="https://github.com/ddtxra/hob/blob/gh-pages/static/test_scenarios.json">here</a> (feel free to add yours).
+        <br>Note: The simulator only deals with the <i>"counting"</i> part: transforming positive hemocultures (raw data) into episodes, taking into account repeated blood cultures, polymicrobial and commensals. The classification of an episode in HOB
+        (hospital-onset bacteremia), secondary, primary, catheter related (CRBSI), catheter associated (CLASI) or contaminant is not part of the simulator.
     </p>
+
     <form>
         <p>
             <b>Choose an algorithm</b>
@@ -41,42 +44,45 @@
           </select>
         </div>
         <br>
-        <b>Scenario description</b>
-        <p>
-            <span id="description"></span>
-        </p>
+        <div class="container">
 
-        <div class="form-group" style="display: none;">
-            <label for="exampleFormControlTextarea1">Positive hemocultures</label>
-            <textarea class="form-control" id="pos_hemocultre_txtarea" rows="20"></textarea>
-        </div>
-        <p>
-            <b>Positive hemocultures</b>
-        </p>
-        <div id="fv_pos_hemo"></div>
-        <p>
-            <b>Episodes (computed by the algorithm)</b>
-        </p>
-        <div id="fv_episodes"></div>
-        <p>
-            <b></b>
-        </p>
+            <b>Scenario description</b>
+            <p>
+                <span id="description"></span>
+            </p>
 
-        <ul class="nav nav-tabs">
-            <li class="nav-item">
-                <a id="rawDataTab" href="#" class="nav-link active">Raw data (positive hemocultures)</a>
-            </li>
-            <li class="nav-item">
-                <a id="computedDataTab" href="#" class="nav-link">Computed data (episodes)</a>
-            </li>
-        </ul>
+            <div class="form-group" style="display: none;">
+                <label for="exampleFormControlTextarea1">Positive hemocultures</label>
+                <textarea class="form-control" id="pos_hemocultre_txtarea" rows="20"></textarea>
+            </div>
+            <p>
+                <b>Positive hemocultures</b>
+            </p>
+            <div id="fv_pos_hemo"></div>
+            <p>
+                <b>Episodes (computed by the algorithm)</b>
+            </p>
+            <div id="fv_episodes"></div>
+            <p>
+                <b></b>
+            </p>
 
-        <div id="pos_hemo_grid" style="height: 500px; width:1200px;" class="ag-theme-alpine"></div>
-        <div id="episodes_grid" style="height: 500px; width:1200px;" class="ag-theme-alpine"></div>
+            <ul class="nav nav-tabs">
+                <li class="nav-item">
+                    <a id="rawDataTab" href="#" class="nav-link active">Raw data (positive hemocultures)</a>
+                </li>
+                <li class="nav-item">
+                    <a id="computedDataTab" href="#" class="nav-link">Computed episodes (episodes)</a>
+                </li>
+            </ul>
+
+            <div id="pos_hemo_grid" style="height: 500px; width:1200px;" class="ag-theme-alpine"></div>
+            <div id="episodes_grid" style="height: 500px; width:1200px;" class="ag-theme-alpine"></div>
+            <div class="container">
 
     </form>
-</div>
-<script src="./js/app.js"></script>
+    </div>
+    <script src="./js/app.js"></script>
 
 </html>
 
