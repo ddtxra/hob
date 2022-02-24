@@ -2,18 +2,6 @@ var parameters = {
     implementation: "HUG"
 };
 
-//Done for optimisation reasons
-function prepareData(scenarios) {
-    var scenarioKeys = Object.keys(scenarios);
-    scenarioKeys.forEach(function(scenarioKey) {
-        var scenario = scenarios[scenarioKey];
-        scenario["positive_hemocultures"].forEach(function(d) {
-            d.labo_sample_datetime_moment = moment(d.labo_sample_date, "YYYY-MM-DD");
-            //d.labo_patient_id_sample_calendar_day = d.patient_id + "-" + formatMomentDateToStringForGranularity(d.labo_sample_datetime_moment, "day");
-            d.labo_sample_datetime_timestamp = d.labo_sample_datetime_moment.valueOf();
-        })
-    })
-}
 
 function fillDropDown(scenarios) {
     var selector = $("#form-selector");
@@ -26,7 +14,6 @@ function fillDropDown(scenarios) {
 }
 
 $.getJSON("static/test_scenarios.json", function(scenarios) {
-    prepareData(scenarios)
     fillDropDown(scenarios);
     SCENARIOS = scenarios;
 });
@@ -53,6 +40,11 @@ $('#dataset-selector').change(function() {
     $('#episodes_grid').empty();
 
     var scenario = SCENARIOS[case_id];
+    if (scenario) {
+        $("#scenarioContainer").show();
+    } else {
+        $("#scenarioContainer").hide();
+    }
 
 
     var positive_hemocultures = scenario.positive_hemocultures;
@@ -60,8 +52,8 @@ $('#dataset-selector').change(function() {
     //$('#pos_hemocultre_txtarea').val(pos_hemo_txt);
     $('#description').html(scenario.description);
 
+
     var result = computeBSIEpisodes(parameters, positive_hemocultures);
-    console.log(result);
 
     updateVis(positive_hemocultures, result.episodes);
 
@@ -88,3 +80,5 @@ $('#rawDataTab').click(function() {
 $('#computedDataTab').click(function() {
     showComputedTab();
 });
+
+$("#scenarioContainer").hide();

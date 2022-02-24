@@ -1,9 +1,9 @@
-function hug_implementation(parameters, positive_hemocultures) {
+function hug_implementation(parameters, positive_hemos) {
+
+    var positive_hemocultures = prepareData(deepCopy(positive_hemos));
 
     var REPEAT_INTERVAL_DAYS_TRUE_PATHOEGENES = parameters.valid_new_cases_days ? parameters.valid_new_cases_days : 14;
     var REPEAT_INTERVAL_DAYS_COMMENSALS = parameters.valid_new_cases_hours ? parameters.valid_new_cases_hours : 3;
-
-    var parameters_copy = JSON.parse(JSON.stringify(parameters));
 
     function keyToGroupEvidences(ep) {
         return ep.patient_id + ep.stay_id
@@ -31,7 +31,7 @@ function hug_implementation(parameters, positive_hemocultures) {
                 var labs_with_same_germ_for_patient_sorted = _.sortBy(labs_with_same_germ_for_patient, "labo_sample_datetime_timestamp");
                 labs_with_same_germ_for_patient_sorted.forEach(function(lab) {
                     //if no valid pos hemoculture before or if the result is bigger than 14 days
-                    if (last_valid_pos_hem_for_patient == null || (lab.labo_sample_datetime_moment).diff(last_valid_pos_hem_for_patient.labo_sample_datetime_moment, "day") >= not_repeat_in_days) {
+                    if (last_valid_pos_hem_for_patient == null || (lab.labo_sample_datetime_moment).clone().diff(last_valid_pos_hem_for_patient.labo_sample_datetime_moment, "day") >= not_repeat_in_days) {
                         _episode_evidences.push(lab)
                         last_valid_pos_hem_for_patient = lab;
                     }
@@ -42,8 +42,6 @@ function hug_implementation(parameters, positive_hemocultures) {
         //sort at the end
         return _.sortBy(_episode_evidences, "labo_sample_datetime_timestamp");
     }
-
-
 
 
     function group_evidences_by_episode(_episode_evidences) {
@@ -98,10 +96,8 @@ function hug_implementation(parameters, positive_hemocultures) {
         episode_evidences_true_pathogenes: episode_evidences_true_pathogenes,
         positive_hemocultures_true_pathogenes: positive_hemocultures_true_pathogenes,
         positive_hemocultures_commensals: positive_hemocultures_commensals,
-        positive_hemocultures: positive_hemocultures,
-        parameters: parameters,
-        parameters_copy: parameters_copy
+        positive_hemocultures: positive_hemos,
+        parameters: parameters
     }
-
 
 }

@@ -1,4 +1,6 @@
-function updateVis(positive_hemocultures, episodes) {
+function updateVis(positive_hemos, episodes) {
+
+    var positive_hemocultures = prepareData(deepCopy((positive_hemos)));
 
     // let the grid know which columns and what data to use
     var fvParams = {
@@ -39,11 +41,11 @@ function updateVis(positive_hemocultures, episodes) {
 
 
     const gridDiv = document.querySelector('#pos_hemo_grid');
-    const columnDefs = Object.keys(positive_hemocultures[0]).map(function(k) { return { field: k, width: 200 } });
+    const columnDefsForPosHemos = Object.keys(positive_hemos[0]).map(function(k) { return { field: k, width: 200 } });
 
     new agGrid.Grid(gridDiv, {
-        columnDefs: columnDefs,
-        rowData: positive_hemocultures
+        columnDefs: columnDefsForPosHemos,
+        rowData: positive_hemos
     });
 
     var timestamps = (positive_hemocultures.map(p => p.labo_sample_datetime_timestamp));
@@ -51,7 +53,7 @@ function updateVis(positive_hemocultures, episodes) {
 
     var ft_pos_hemo = new FeatureViewer.createFeature(fv_length, "#fv_pos_hemo", fvParams);
 
-    const columnDefsForEpisodes = Object.keys(episodes[0]).map(function(k) { return { field: k, width: 200 } });
+    const columnDefsForEpisodes = Object.keys(episodes[0]).map(function(k) { return { field: k, width: 200 } }).filter(f => !f.field.endsWith("moment") && !f.field.endsWith("timestamp"));
     const episodes_grid = document.querySelector('#episodes_grid');
 
 
