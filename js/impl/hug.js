@@ -6,11 +6,11 @@ function hug_implementation(parameters, positive_hemocultures) {
     var parameters_copy = JSON.parse(JSON.stringify(parameters));
 
     function keyToGroupEvidences(ep) {
-        return ep.patient_id + ep.encounter_id 
+        return ep.patient_id + ep.stay_id
     }
 
     function keyToGroupEpisodes(ep) {
-        return ep.patient_id + ep.encounter_id + ep.labo_sample_date
+        return ep.patient_id + ep.stay_id + ep.labo_sample_date
     }
 
     /** Pour 1 patient donné on ne répéte le même germe si il arrive dans les 14 jours */
@@ -43,24 +43,24 @@ function hug_implementation(parameters, positive_hemocultures) {
         return _.sortBy(_episode_evidences, "labo_sample_datetime_timestamp");
     }
 
-  
-    
+
+
 
     function group_evidences_by_episode(_episode_evidences) {
         var episodes_group_by_patient = _.groupBy(_episode_evidences, keyToGroupEpisodes);
         var res = [];
 
-        function joinUniq(_epi_pat_cal_day, _label) {
-            return _.uniq(episodes_group_by_patient[_epi_pat_cal_day].map(epi => epi[_label]))
+        function joinUniq(_epi_patient_cal_day, _label) {
+            return _.uniq(episodes_group_by_patient[_epi_patient_cal_day].map(epi => epi[_label]))
         }
 
-        Object.keys(episodes_group_by_patient).forEach(function(epi_pat_cal_day) {
-            var episodes_evi = episodes_group_by_patient[epi_pat_cal_day];
+        Object.keys(episodes_group_by_patient).forEach(function(epi_patient_cal_day) {
+            var episodes_evi = episodes_group_by_patient[epi_patient_cal_day];
             var first_ep = _.sortBy(episodes_evi, "labo_sample_datetime_timestamp")[0];
             var obj = _.assign(first_ep);
 
             //TODO get first
-            obj.labo_polymicrobial_germs = joinUniq(epi_pat_cal_day, "labo_germ_name");
+            obj.labo_polymicrobial_germs = joinUniq(epi_patient_cal_day, "labo_germ_name");
             obj.labo_polymicrobial_count = obj.labo_polymicrobial_germs.length
             obj.evidences_count = episodes_evi.length
 

@@ -12,17 +12,17 @@ function updateVis(positive_hemocultures, episodes) {
 
 
     function addFeature(ft, series, epi) {
-        var patients = _.groupBy(series, "patient_id");
-        Object.keys(patients).forEach(pat => {
+        var lines = _.groupBy(series, epi ? "patient_id" : function(p) { return p.patient_id + "@" + p.stay_id });
+        Object.keys(lines).forEach(pat => {
 
-            var pos_hem = patients[pat];
+            var pos_hem = lines[pat];
             var feature = pos_hem.map(function(ph) {
                 var day_of_year = ph.labo_sample_datetime_moment.dayOfYear();
                 var label = (epi ? ph.labo_polymicrobial_germs.join("+") : ph.labo_germ_name);
                 return {
                     x: day_of_year,
-                    y: day_of_year,
-                    description: label + "@" + ph.encounter_id,
+                    y: day_of_year + 0.999,
+                    description: label,
                     color: getColorFromPalette(label)
                 }
             });
@@ -30,6 +30,7 @@ function updateVis(positive_hemocultures, episodes) {
             ft.addFeature({
                 data: feature,
                 name: pat,
+                className: "test",
                 type: "rect" // ['rect', 'path', 'line']
             });
 
@@ -45,7 +46,10 @@ function updateVis(positive_hemocultures, episodes) {
         rowData: positive_hemocultures
     });
 
-    var ft_pos_hemo = new FeatureViewer.createFeature(50, "#fv_pos_hemo", fvParams);
+    var timestamps = (positive_hemocultures.map(p => p.labo_sample_datetime_timestamp));
+    var fv_length = Math.round((Math.max(...timestamps) - Math.min(...timestamps)) / 1000 / 60 / 60 / 24) + 3;
+
+    var ft_pos_hemo = new FeatureViewer.createFeature(fv_length, "#fv_pos_hemo", fvParams);
 
     const columnDefsForEpisodes = Object.keys(episodes[0]).map(function(k) { return { field: k, width: 200 } });
     const episodes_grid = document.querySelector('#episodes_grid');
@@ -55,7 +59,7 @@ function updateVis(positive_hemocultures, episodes) {
         columnDefs: columnDefsForEpisodes,
         rowData: episodes
     });
-    var ft_episodes = new FeatureViewer.createFeature(50, "#fv_episodes", fvParams);
+    var ft_episodes = new FeatureViewer.createFeature(fv_length, "#fv_episodes", fvParams);
 
     addFeature(ft_pos_hemo, positive_hemocultures);
     addFeature(ft_episodes, episodes, true);
@@ -69,7 +73,7 @@ function updateVis(positive_hemocultures, episodes) {
     /*
     [
             { "field": "patient_id", width: 200 },
-            { "field": "encounter_id", width: 200 },
+            { "field": "stay_id", width: 200 },
             { "field": "labo_sample_date", width: 200 },
             { "field": "labo_polymicrobial_germs", width: 200 },
             { "field": "labo_polymicrobial_count", width: 200 },
@@ -79,7 +83,7 @@ function updateVis(positive_hemocultures, episodes) {
 
     //  [
     //    { "field": "patient_id", width: 200 },
-    //    { "field": "encounter_id", width: 200 },
+    //    { "field": "stay_id", width: 200 },
     //    { "field": "labo_sample_date", width: 200 },
     //   { "field": "labo_germ_name", width: 200 },
     //   { "field": "labo_commensal", width: 200 }
