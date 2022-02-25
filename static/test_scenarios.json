@@ -402,7 +402,7 @@
         ]
     },
      "scenario polymicrobials_4": {
-        "description": "mnco: ca devrait etre un contaminant",
+        "description":  "mnco:should only be one episode because there is always a microbial link between pos. hemocultures",
         "positive_hemocultures": [{
                 "patient_id": "patient_1",
                 "stay_id": "stay_A",
