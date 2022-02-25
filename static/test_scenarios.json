@@ -252,7 +252,7 @@
             }
         ]
     },
-    "scenario commensals (repeat intervals) (work in progresss...)": {
+    "scenario commensals (repeat intervals) (requires some work?)": {
         "description": "patient_1 has one commensal repeated every 2 days. &#128679; between 1 and 3 days, repeated commensals should be treated as true pathogenes and therefore the rule of 14 days should apply. Still requires some work. &#128679;",
         "positive_hemocultures": [{
                 "patient_id": "patient_1",
@@ -337,7 +337,7 @@
             }
         ]
     },
-    "scenario polymicrobials_2": {
+    "scenario polymicrobials 2 (requires some work?)": {
         "description": "mnco:Should only be one episode because E.Coli makes the link (requires some adjustment)",
         "positive_hemocultures": [{
                 "patient_id": "patient_1",
@@ -362,7 +362,7 @@
             }
         ]
     },
-     "scenario polymicrobials_3": {
+     "scenario polymicrobials 3 (requires some work?)": {
         "description": "mnco:should only be one episode because there is always a microbial link between pos. hemocultures",
         "positive_hemocultures": [{
                 "patient_id": "patient_1",
@@ -401,7 +401,7 @@
             }
         ]
     },
-     "scenario polymicrobials_4": {
+     "scenario polymicrobials 4 (requires some work?)": {
         "description":  "mnco:should only be one episode because there is always a microbial link between pos. hemocultures",
         "positive_hemocultures": [{
                 "patient_id": "patient_1",
