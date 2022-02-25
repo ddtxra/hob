@@ -253,7 +253,7 @@
         ]
     },
     "scenario 2 different commensals": {
-        "description": "should count as 2 episodes for patient_1 (true pathogenes)",
+        "description": "should count as 2 episodes for patient_1 (true pathogenes), while for patient_2 it will also be 2 episodes, but both episodes will be classified as contaminants by the algorithm.",
         "positive_hemocultures": [{
                 "patient_id": "patient_1",
                 "stay_id": "stay_A",
