@@ -252,7 +252,7 @@
             }
         ]
     },
-    "scenario commensals (repeat intervals) (requires some work?)": {
+    "scenario 2 different commensals": {
         "description": "should count as 2 episodes for patient_1 (true pathogenes)",
         "positive_hemocultures": [{
                 "patient_id": "patient_1",
