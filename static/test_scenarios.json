@@ -253,6 +253,52 @@
         ]
     },
     "scenario commensals (repeat intervals) (requires some work?)": {
+        "description": "should count as 2 episodes for patient_1 (true pathogenes)",
+        "positive_hemocultures": [{
+                "patient_id": "patient_1",
+                "stay_id": "stay_A",
+                "labo_sample_date": "2021-01-01",
+                "labo_germ_name": "Staphylococcus epidermidis",
+                "labo_commensal": "1"
+            },
+            {
+                "patient_id": "patient_1",
+                "stay_id": "stay_A",
+                "labo_sample_date": "2021-01-02",
+                "labo_germ_name": "Staphylococcus capitis",
+                "labo_commensal": "1"
+            },
+            {
+                "patient_id": "patient_1",
+                "stay_id": "stay_A",
+                "labo_sample_date": "2021-01-03",
+                "labo_germ_name": "Staphylococcus epidermidis",
+                "labo_commensal": "1"
+            },
+            {
+                "patient_id": "patient_1",
+                "stay_id": "stay_A",
+                "labo_sample_date": "2021-01-04",
+                "labo_germ_name": "Staphylococcus capitis",
+                "labo_commensal": "1"
+            },
+            {
+                "patient_id": "patient_2",
+                "stay_id": "stay_A",
+                "labo_sample_date": "2021-01-01",
+                "labo_germ_name": "Staphylococcus epidermidis",
+                "labo_commensal": "1"
+            },
+            {
+                "patient_id": "patient_2",
+                "stay_id": "stay_A",
+                "labo_sample_date": "2021-01-02",
+                "labo_germ_name": "Staphylococcus capitis",
+                "labo_commensal": "1"
+            }
+        ]
+    },
+    "scenario commensals (repeat intervals) (requires some work?)": {
         "description": "patient_1 has one commensal repeated every 2 days. &#128679; between 1 and 3 days, repeated commensals should be treated as true pathogenes and therefore the rule of 14 days should apply. Still requires some work. &#128679;",
         "positive_hemocultures": [{
                 "patient_id": "patient_1",
