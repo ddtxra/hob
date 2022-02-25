@@ -284,14 +284,14 @@
             },
             {
                 "patient_id": "patient_2",
-                "stay_id": "stay_A",
+                "stay_id": "stay_B",
                 "labo_sample_date": "2021-01-01",
                 "labo_germ_name": "Staphylococcus epidermidis",
                 "labo_commensal": "1"
             },
             {
                 "patient_id": "patient_2",
-                "stay_id": "stay_A",
+                "stay_id": "stay_B",
                 "labo_sample_date": "2021-01-02",
                 "labo_germ_name": "Staphylococcus capitis",
                 "labo_commensal": "1"
