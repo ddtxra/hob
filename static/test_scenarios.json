@@ -338,7 +338,7 @@
         ]
     },
     "scenario polymicrobials_2": {
-        "description": "normalement ça devrait être 1 seul épisode",
+        "description": "mnco:Should only be one episode because E.Coli makes the link (requires some adjustment)",
         "positive_hemocultures": [{
                 "patient_id": "patient_1",
                 "stay_id": "stay_A",
@@ -363,7 +363,7 @@
         ]
     },
      "scenario polymicrobials_3": {
-        "description": "ça devrait aussi compter comme un seul épisode",
+        "description": "mnco:should only be one episode because there is always a microbial link between pos. hemocultures",
         "positive_hemocultures": [{
                 "patient_id": "patient_1",
                 "stay_id": "stay_A",
