@@ -336,5 +336,69 @@
                 "labo_commensal": "0"
             }
         ]
+    },
+    "scenario polymicrobials_2": {
+        "description": "normalement ça devrait être 1 seul épisode",
+        "positive_hemocultures": [{
+                "patient_id": "patient_1",
+                "stay_id": "stay_A",
+                "labo_sample_date": "2021-01-01",
+                "labo_germ_name": "E.Coli",
+                "labo_commensal": "0"
+            },
+            {
+                "patient_id": "patient_1",
+                "stay_id": "stay_A",
+                "labo_sample_date": "2021-01-02",
+                "labo_germ_name": "E.Coli",
+                "labo_commensal": "0"
+            },
+            {
+                "patient_id": "patient_1",
+                "stay_id": "stay_A",
+                "labo_sample_date": "2021-01-02",
+                "labo_germ_name": "Klebsiella",
+                "labo_commensal": "0"
+            }
+        ]
+    },
+     "scenario polymicrobials_3": {
+        "description": "ça devrait aussi compter comme un seul épisode",
+        "positive_hemocultures": [{
+                "patient_id": "patient_1",
+                "stay_id": "stay_A",
+                "labo_sample_date": "2021-01-01",
+                "labo_germ_name": "E.Coli",
+                "labo_commensal": "0"
+            },
+            {
+                "patient_id": "patient_1",
+                "stay_id": "stay_A",
+                "labo_sample_date": "2021-01-02",
+                "labo_germ_name": "E.Coli",
+                "labo_commensal": "0"
+            },
+            {
+                "patient_id": "patient_1",
+                "stay_id": "stay_A",
+                "labo_sample_date": "2021-01-02",
+                "labo_germ_name": "Klebsiella",
+                "labo_commensal": "0"
+            },
+            {
+                "patient_id": "patient_1",
+                "stay_id": "stay_A",
+                "labo_sample_date": "2021-01-05",
+                "labo_germ_name": "Klebsiella",
+                "labo_commensal": "0"
+            },
+            {
+                "patient_id": "patient_1",
+                "stay_id": "stay_A",
+                "labo_sample_date": "2021-01-05",
+                "labo_germ_name": "Enterococcus faecalis",
+                "labo_commensal": "0"
+            }
+        ]
     }
 }
