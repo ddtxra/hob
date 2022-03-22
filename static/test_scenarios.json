@@ -42,6 +42,20 @@
                 "labo_sample_date": "2021-01-05",
                 "labo_germ_name": "Klebsiella",
                 "labo_commensal": "0"
+            },
+            {
+                "patient_id": "patient_4",
+                "stay_id": "stay_E",
+                "labo_sample_date": "2021-01-03",
+                "labo_germ_name": "E. Coli",
+                "labo_commensal": "0"
+            },
+            {
+                "patient_id": "patient_4",
+                "stay_id": "stay_E",
+                "labo_sample_date": "2021-01-04",
+                "labo_germ_name": "Klebsiella",
+                "labo_commensal": "0"
             }
         ]
     },
