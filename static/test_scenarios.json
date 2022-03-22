@@ -59,7 +59,7 @@
             }
         ]
     },
-    "scenario (repeat interval)": {
+    "scenario repeat interval (long HOB)": {
         "description": "patient_1 has one true pathogen being repeated every day, but only counts as 1 episode every 14 days.",
         "positive_hemocultures": [{
                 "patient_id": "patient_1",
