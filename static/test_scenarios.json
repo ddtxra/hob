@@ -1,6 +1,6 @@
 {
     "scenario (basics)": {
-        "description": "patient_1 has one true pathogen (E.Coli) on day 1 and one on day 5 for the same stay --> counts as 1 episode because does not repeat for less than < 14 days or different stay<br>patient_2 has one true pathogen (E.Coli) on day 1 and one on day 5 on different stays --> counts as 2 episodes because different stays<br>patient_3 has one true pathogen (E.Coli) on day 1 and another true pathogen (Klebsiella) on day 5 on same stay --> counts as 2 episodes because different germs",
+        "description": "patient_1 has one true pathogen (E.Coli) on day 1 and one on day 5 for the same stay --> counts as 1 episode because does not repeat for less than < 14 days or different stay<br>patient_2 has one true pathogen (E.Coli) on day 1 and one on day 5 on different stays --> counts as 2 episodes because different stays<br>patient_3 has one true pathogen (E.Coli) on day 1 and another true pathogen (Klebsiella) on day 5 on same stay --> counts as 2 episodes because different germs<br>PRAISE:patient_2 only keep the 14 days rule without taking into account the admission.PRAISE: F<br>PRAISE: patient_5 should have a polymicrobial one day 1. Paitent 6 would be 2 bacteremias (1 for Coli) and 1 for (Klebsiella) because Coli is a copy strain.",
         "positive_hemocultures": [{
                 "patient_id": "patient_1",
                 "stay_id": "stay_A",
@@ -55,6 +55,94 @@
                 "stay_id": "stay_E",
                 "labo_sample_date": "2021-01-04",
                 "labo_germ_name": "Klebsiella",
+                "labo_commensal": "0"
+            },
+            {
+                "patient_id": "patient_5",
+                "stay_id": "stay_E",
+                "labo_sample_date": "2021-01-01",
+                "labo_germ_name": "E. Coli",
+                "labo_commensal": "0"
+            },
+            {
+                "patient_id": "patient_5",
+                "stay_id": "stay_E",
+                "labo_sample_date": "2021-01-03",
+                "labo_germ_name": "Klebsiella",
+                "labo_commensal": "0"
+            },
+            {
+                "patient_id": "patient_5",
+                "stay_id": "stay_E",
+                "labo_sample_date": "2021-01-04",
+                "labo_germ_name": "E. Coli",
+                "labo_commensal": "0"
+            },
+
+            {
+                "patient_id": "patient_6",
+                "stay_id": "stay_E",
+                "labo_sample_date": "2021-01-01",
+                "labo_germ_name": "E. Coli",
+                "labo_commensal": "0"
+            },
+            {
+                "patient_id": "patient_6",
+                "stay_id": "stay_E",
+                "labo_sample_date": "2021-01-04",
+                "labo_germ_name": "Klebsiella",
+                "labo_commensal": "0"
+            },
+            {
+                "patient_id": "patient_6",
+                "stay_id": "stay_E",
+                "labo_sample_date": "2021-01-05",
+                "labo_germ_name": "E. Coli",
+                "labo_commensal": "0"
+            },
+
+            {
+                "patient_id": "patient_dani",
+                "stay_id": "stay_E",
+                "labo_sample_date": "2021-01-01",
+                "labo_germ_name": "E. Coli",
+                "labo_commensal": "0"
+            },
+            {
+                "patient_id": "patient_dani",
+                "stay_id": "stay_E",
+                "labo_sample_date": "2021-01-04",
+                "labo_germ_name": "Klebsiella",
+                "labo_commensal": "0"
+            },
+            {
+                "patient_id": "patient_dani",
+                "stay_id": "stay_E",
+                "labo_sample_date": "2021-01-04",
+                "labo_germ_name": "E. Coli",
+                "labo_commensal": "0"
+            },
+
+
+            {
+                "patient_id": "patient_maaike",
+                "stay_id": "stay_E",
+                "labo_sample_date": "2021-01-01",
+                "labo_germ_name": "PathA",
+                "labo_commensal": "0"
+            },
+            {
+                "patient_id": "patient_maaike",
+                "stay_id": "stay_E",
+                "labo_sample_date": "2021-01-02",
+                "labo_germ_name": "PathB",
+                "labo_commensal": "0"
+            },
+            {
+                "patient_id": "patient_maaike",
+                "stay_id": "stay_E",
+                "labo_sample_date": "2021-01-15",
+                "labo_germ_name": "PathB",
                 "labo_commensal": "0"
             }
         ]
@@ -423,7 +511,7 @@
         ]
     },
     "scenario polymicrobials 3 (requires some work?)": {
-        "description": "mnco:should only be one episode because there is always a microbial link between pos. hemocultures",
+        "description": "mnco:should only be one episode because there is always a microbial link between pos. hemocultures. PRAISE: 2 episodes. 1 polimicrobial on day 1. 1 ent. faecalis on day 5.",
         "positive_hemocultures": [{
                 "patient_id": "patient_1",
                 "stay_id": "stay_A",
@@ -661,7 +749,7 @@
         ]
     },
     "poly commensals (real)": {
-        "description": "mnco says the day 4 should be a polymicrobial, because the 6th there is a epi + capi (the epi makes the link). The 7th should be the next one and also polymicrobial. (3 days window is a nightmare, should be 14 days...)",
+        "description": "mnco says the day 4 should be a polymicrobial, because the 6th there is a epi + capi (the epi makes the link). The 7th should be the next one and also polymicrobial. (3 days window is a nightmare, should be 14 days...)<br>Seven: Do solitary commensals create copy strains?",
         "positive_hemocultures": [{
                 "patient_id": "patient_1",
                 "stay_id": "stay_A",
@@ -773,6 +861,56 @@
                 "labo_commensal": "1"
             }
 
+        ]
+    },
+    "seven case": {
+        "description": "Seven: Which timestamp for commensal HOB should considered the date of event?",
+        "positive_hemocultures": [{
+                "patient_id": "patient_1",
+                "stay_id": "stay_A",
+                "labo_sample_date": "2021-01-01",
+                "labo_germ_name": "commensalA",
+                "labo_commensal": "1"
+            },
+            {
+                "patient_id": "patient_1",
+                "stay_id": "stay_A",
+                "labo_sample_date": "2021-01-03",
+                "labo_germ_name": "commensalA",
+                "labo_commensal": "1"
+            },
+            {
+                "patient_id": "patient_1",
+                "stay_id": "stay_A",
+                "labo_sample_date": "2021-01-05",
+                "labo_germ_name": "commensalB",
+                "labo_commensal": "1"
+            },
+            {
+                "patient_id": "patient_1",
+                "stay_id": "stay_A",
+                "labo_sample_date": "2021-01-06",
+                "labo_germ_name": "commensalB",
+                "labo_commensal": "1"
+            }
+        ]
+    },
+    "seven case 2": {
+        "description": "",
+        "positive_hemocultures": [{
+                "patient_id": "patient_1",
+                "stay_id": "stay_A",
+                "labo_sample_date": "2021-01-01",
+                "labo_germ_name": "pathA",
+                "labo_commensal": "0"
+            },
+            {
+                "patient_id": "patient_1",
+                "stay_id": "stay_A",
+                "labo_sample_date": "2021-01-02",
+                "labo_germ_name": "pathB",
+                "labo_commensal": "0"
+            }
         ]
     }
 }
