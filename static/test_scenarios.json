@@ -422,7 +422,7 @@
             }
         ]
     },
-     "scenario polymicrobials 3 (requires some work?)": {
+    "scenario polymicrobials 3 (requires some work?)": {
         "description": "mnco:should only be one episode because there is always a microbial link between pos. hemocultures",
         "positive_hemocultures": [{
                 "patient_id": "patient_1",
@@ -461,8 +461,8 @@
             }
         ]
     },
-     "scenario polymicrobials 4 (requires some work?)": {
-        "description":  "mnco:should only be one episode because there is always a microbial link between pos. hemocultures",
+    "scenario polymicrobials 4 (requires some work?)": {
+        "description": "mnco:should only be one episode because there is always a microbial link between pos. hemocultures",
         "positive_hemocultures": [{
                 "patient_id": "patient_1",
                 "stay_id": "stay_A",
@@ -501,163 +501,211 @@
         ]
     },
 
-	"hob case vignettes (case 1 and 2)": {
+    "hob case vignettes (case 1 and 2)": {
         "description": "case 1 corresponds to patient 1, while case 2 corresponds to patient 2",
-		"positive_hemocultures": [{
-				"patient_id": "patient_1",
-				"stay_id": "case_1",
-				"labo_sample_date": "2021-01-05",
-				"labo_germ_name": "PathA",
-				"labo_commensal": "0"
-			},
-			{
-				"patient_id": "patient_1",
-				"stay_id": "case_1",
-				"labo_sample_date": "2021-01-07",
-				"labo_germ_name": "PathB",
-				"labo_commensal": "0"
-			},
-			{
-				"patient_id": "patient_2",
-				"stay_id": "case_2",
-				"labo_sample_date": "2021-01-05",
-				"labo_germ_name": "PathA",
-				"labo_commensal": "0"
-			},
-			{
-				"patient_id": "patient_2",
-				"stay_id": "case_2",
-				"labo_sample_date": "2021-01-05",
-				"labo_germ_name": "PathB",
-				"labo_commensal": "0"
-			},
-			{
-				"patient_id": "patient_2",
-				"stay_id": "case_2",
-				"labo_sample_date": "2021-01-09",
-				"labo_germ_name": "PathC",
-				"labo_commensal": "0"
-			}
-		]
-	},
-	"hob case vignettes (case 3)": {
-		"description": "",
-		"positive_hemocultures": [{
-				"patient_id": "patient_1",
-				"stay_id": "case_3",
-				"labo_sample_date": "2021-01-05",
-				"labo_germ_name": "PathA",
-				"labo_commensal": "0"
-			},
-			{
-				"patient_id": "patient_1",
-				"stay_id": "case_3",
-				"labo_sample_date": "2021-01-05",
-				"labo_germ_name": "ContX",
-				"labo_commensal": "1"
-			},
-			{
-				"patient_id": "patient_1",
-				"stay_id": "case_3",
-				"labo_sample_date": "2021-01-06",
-				"labo_germ_name": "PathA",
-				"labo_commensal": "0"
-			},
-			{
-				"patient_id": "patient_1",
-				"stay_id": "case_3",
-				"labo_sample_date": "2021-01-06",
-				"labo_germ_name": "ContX",
-				"labo_commensal": "1"
-			},
-			{
-				"patient_id": "patient_1",
-				"stay_id": "case_3",
-				"labo_sample_date": "2021-01-13",
-				"labo_germ_name": "ContY",
-				"labo_commensal": "1"
-			},
-			{
-				"patient_id": "patient_1",
-				"stay_id": "case_3",
-				"labo_sample_date": "2021-01-15",
-				"labo_germ_name": "ContY",
-				"labo_commensal": "1"
-			}
+        "positive_hemocultures": [{
+                "patient_id": "patient_1",
+                "stay_id": "case_1",
+                "labo_sample_date": "2021-01-05",
+                "labo_germ_name": "PathA",
+                "labo_commensal": "0"
+            },
+            {
+                "patient_id": "patient_1",
+                "stay_id": "case_1",
+                "labo_sample_date": "2021-01-07",
+                "labo_germ_name": "PathB",
+                "labo_commensal": "0"
+            },
+            {
+                "patient_id": "patient_2",
+                "stay_id": "case_2",
+                "labo_sample_date": "2021-01-05",
+                "labo_germ_name": "PathA",
+                "labo_commensal": "0"
+            },
+            {
+                "patient_id": "patient_2",
+                "stay_id": "case_2",
+                "labo_sample_date": "2021-01-05",
+                "labo_germ_name": "PathB",
+                "labo_commensal": "0"
+            },
+            {
+                "patient_id": "patient_2",
+                "stay_id": "case_2",
+                "labo_sample_date": "2021-01-09",
+                "labo_germ_name": "PathC",
+                "labo_commensal": "0"
+            }
+        ]
+    },
+    "hob case vignettes (case 3)": {
+        "description": "",
+        "positive_hemocultures": [{
+                "patient_id": "patient_1",
+                "stay_id": "case_3",
+                "labo_sample_date": "2021-01-05",
+                "labo_germ_name": "PathA",
+                "labo_commensal": "0"
+            },
+            {
+                "patient_id": "patient_1",
+                "stay_id": "case_3",
+                "labo_sample_date": "2021-01-05",
+                "labo_germ_name": "ContX",
+                "labo_commensal": "1"
+            },
+            {
+                "patient_id": "patient_1",
+                "stay_id": "case_3",
+                "labo_sample_date": "2021-01-06",
+                "labo_germ_name": "PathA",
+                "labo_commensal": "0"
+            },
+            {
+                "patient_id": "patient_1",
+                "stay_id": "case_3",
+                "labo_sample_date": "2021-01-06",
+                "labo_germ_name": "ContX",
+                "labo_commensal": "1"
+            },
+            {
+                "patient_id": "patient_1",
+                "stay_id": "case_3",
+                "labo_sample_date": "2021-01-13",
+                "labo_germ_name": "ContY",
+                "labo_commensal": "1"
+            },
+            {
+                "patient_id": "patient_1",
+                "stay_id": "case_3",
+                "labo_sample_date": "2021-01-15",
+                "labo_germ_name": "ContY",
+                "labo_commensal": "1"
+            }
 
-		]
-	},
-	"hob case vignettes (case 4 and 5)": {
-		"description": "",
-		"positive_hemocultures": [{
-				"patient_id": "patient_4",
-				"stay_id": "case_4",
-				"labo_sample_date": "2021-01-05",
-				"labo_germ_name": "PathA",
-				"labo_commensal": "0"
-			},
-			{
-				"patient_id": "patient_4",
-				"stay_id": "case_4",
-				"labo_sample_date": "2021-01-17",
-				"labo_germ_name": "PathA",
-				"labo_commensal": "0"
-			},
-			{
-				"patient_id": "patient_4",
-				"stay_id": "case_4",
-				"labo_sample_date": "2021-01-23",
-				"labo_germ_name": "PathA",
-				"labo_commensal": "0"
-			},
-			{
-				"patient_id": "patient_5",
-				"stay_id": "case_5",
-				"labo_sample_date": "2021-01-02",
-				"labo_germ_name": "PathA",
-				"labo_commensal": "0"
-			},
-			{
-				"patient_id": "patient_5",
-				"stay_id": "case_5",
-				"labo_sample_date": "2021-01-04",
-				"labo_germ_name": "ContX",
-				"labo_commensal": "1"
-			},
-			{
-				"patient_id": "patient_5",
-				"stay_id": "case_5",
-				"labo_sample_date": "2021-01-05",
-				"labo_germ_name": "ContX",
-				"labo_commensal": "1"
-			},
-			{
-				"patient_id": "patient_5",
-				"stay_id": "case_5",
-				"labo_sample_date": "2021-01-06",
-				"labo_germ_name": "PathA",
-				"labo_commensal": "0"
-			}
+        ]
+    },
+    "hob case vignettes (case 4 and 5)": {
+        "description": "",
+        "positive_hemocultures": [{
+                "patient_id": "patient_4",
+                "stay_id": "case_4",
+                "labo_sample_date": "2021-01-05",
+                "labo_germ_name": "PathA",
+                "labo_commensal": "0"
+            },
+            {
+                "patient_id": "patient_4",
+                "stay_id": "case_4",
+                "labo_sample_date": "2021-01-17",
+                "labo_germ_name": "PathA",
+                "labo_commensal": "0"
+            },
+            {
+                "patient_id": "patient_4",
+                "stay_id": "case_4",
+                "labo_sample_date": "2021-01-23",
+                "labo_germ_name": "PathA",
+                "labo_commensal": "0"
+            },
+            {
+                "patient_id": "patient_5",
+                "stay_id": "case_5",
+                "labo_sample_date": "2021-01-02",
+                "labo_germ_name": "PathA",
+                "labo_commensal": "0"
+            },
+            {
+                "patient_id": "patient_5",
+                "stay_id": "case_5",
+                "labo_sample_date": "2021-01-04",
+                "labo_germ_name": "ContX",
+                "labo_commensal": "1"
+            },
+            {
+                "patient_id": "patient_5",
+                "stay_id": "case_5",
+                "labo_sample_date": "2021-01-05",
+                "labo_germ_name": "ContX",
+                "labo_commensal": "1"
+            },
+            {
+                "patient_id": "patient_5",
+                "stay_id": "case_5",
+                "labo_sample_date": "2021-01-06",
+                "labo_germ_name": "PathA",
+                "labo_commensal": "0"
+            }
 
-		]
-	},
-	"hob case vignettes (case 6)": {
-		"description": "",
-		"positive_hemocultures": [{
-				"patient_id": "patient_6",
-				"stay_id": "stay_A",
-				"labo_sample_date": "2021-01-05",
-				"labo_germ_name": "PathA",
-				"labo_commensal": "0"
-			},
-			{
-				"patient_id": "patient_6",
-				"stay_id": "stay_B",
-				"labo_sample_date": "2021-01-14",
-				"labo_germ_name": "PathA",
-				"labo_commensal": "0"
-			}
+        ]
+    },
+    "hob case vignettes (case 6)": {
+        "description": "",
+        "positive_hemocultures": [{
+                "patient_id": "patient_6",
+                "stay_id": "stay_A",
+                "labo_sample_date": "2021-01-05",
+                "labo_germ_name": "PathA",
+                "labo_commensal": "0"
+            },
+            {
+                "patient_id": "patient_6",
+                "stay_id": "stay_B",
+                "labo_sample_date": "2021-01-14",
+                "labo_germ_name": "PathA",
+                "labo_commensal": "0"
+            }
 
-		]
-	}
+        ]
+    },
+    "poly commensals": {
+        "description": "mnco says the day 4 should be a polymicrobial, because the 6th there is a epi + capi (the epi makes the link). The 7th should be the next one and also polymicrobial. (3 days window is a nightmare...)",
+        "positive_hemocultures": [{
+                "patient_id": "patient_1",
+                "stay_id": "stay_A",
+                "labo_sample_date": "2021-01-01",
+                "labo_germ_name": "Staphylococcus epidermidis",
+                "labo_commensal": "1"
+            },
+            {
+                "patient_id": "patient_1",
+                "stay_id": "stay_A",
+                "labo_sample_date": "2021-01-04",
+                "labo_germ_name": "Staphylococcus epidermidis",
+                "labo_commensal": "1"
+            },
+            {
+                "patient_id": "patient_1",
+                "stay_id": "stay_A",
+                "labo_sample_date": "2021-01-06",
+                "labo_germ_name": "Staphylococcus epidermidis",
+                "labo_commensal": "1"
+            },
+            {
+                "patient_id": "patient_1",
+                "stay_id": "stay_A",
+                "labo_sample_date": "2021-01-06",
+                "labo_germ_name": "Staphylococcus capitis",
+                "labo_commensal": "1"
+            },
+            {
+                "patient_id": "patient_1",
+                "stay_id": "stay_A",
+                "labo_sample_date": "2021-01-07",
+                "labo_germ_name": "Staphylococcus capitis",
+                "labo_commensal": "1"
+            },
+
+            {
+                "patient_id": "patient_1",
+                "stay_id": "stay_A",
+                "labo_sample_date": "2021-01-08",
+                "labo_germ_name": "Staphylococcus epidermidis",
+                "labo_commensal": "1"
+            }
+
+        ]
+    }
 }
