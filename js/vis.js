@@ -49,7 +49,7 @@ function updateVis(positive_hemos, episodes) {
     });
 
     var timestamps = (positive_hemocultures.map(p => p.labo_sample_datetime_timestamp));
-    var fv_length = Math.round((Math.max(...timestamps) - Math.min(...timestamps)) / 1000 / 60 / 60 / 24) + 3;
+    var fv_length = Math.round((Math.max(...timestamps) - Math.min(...timestamps)) / 1000 / 60 / 60 / 24) + 7;
 
     var ft_pos_hemo = new FeatureViewer.createFeature(fv_length, "#fv_pos_hemo", fvParams);
 
