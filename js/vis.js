@@ -15,7 +15,7 @@ function updateVis(positive_hemos, episodes) {
 
     function addFeature(ft, series, epi) {
         var lines = _.groupBy(series, epi ? "patient_id" : function(p) { return p.patient_id + "@" + p.stay_id });
-        Object.keys(lines).forEach(pat => {
+        Object.keys(lines).sort().forEach(pat => {
 
             var pos_hem = lines[pat];
             var feature = pos_hem.map(function(ph) {
@@ -71,23 +71,4 @@ function updateVis(positive_hemos, episodes) {
     $("#rawDataTab").text("Raw data (" + positive_hemocultures.length + " positive hemocultures)");
     $("#computedDataTab").text("Computed episodes (" + episodes.length + " episodes)");
 
-
-    /*
-    [
-            { "field": "patient_id", width: 200 },
-            { "field": "stay_id", width: 200 },
-            { "field": "labo_sample_date", width: 200 },
-            { "field": "labo_polymicrobial_germs", width: 200 },
-            { "field": "labo_polymicrobial_count", width: 200 },
-            { "field": "labo_commensal", width: 200 }
-        ]*/
-
-
-    //  [
-    //    { "field": "patient_id", width: 200 },
-    //    { "field": "stay_id", width: 200 },
-    //    { "field": "labo_sample_date", width: 200 },
-    //   { "field": "labo_germ_name", width: 200 },
-    //   { "field": "labo_commensal", width: 200 }
-    //],
 }
