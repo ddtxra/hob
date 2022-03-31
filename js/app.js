@@ -1,8 +1,3 @@
-var parameters = {
-    implementation: "HUG"
-};
-
-
 function fillDropDown(scenarios) {
     var selector = $("#form-selector");
     Object.keys(scenarios).forEach(function(scenario_key) {
@@ -17,21 +12,15 @@ $.getJSON("static/test_scenarios.json", function(scenarios) {
     fillDropDown(scenarios);
     SCENARIOS = scenarios;
 });
-/*
 
-function convertJSONForTxtArea(jsonArray) {
-    var headers = Object.keys(jsonArray[0]);
-    headers = headers.filter(h => h !== "labo_sample_datetime_moment");
-    headers = headers.filter(h => h !== "labo_sample_datetime_timestamp");
-    
-    var txt = headers.join("\t") + "\n";
-    txt += jsonArray.map(ph => headers.map(h => ph[h]).join("\t")).join("\n");
-    return txt;
-}*/
 
-$('#dataset-selector').change(function() {
+function selectionChanged() {
 
     var case_id = $('#dataset-selector').find(":selected").text();
+    var algo = $('#algo-selector').find(":selected").val();
+    var parameters = {
+        implementation: algo
+    };
 
     $('#description').html("");
     $("#fv_pos_hemo").empty();
@@ -54,10 +43,9 @@ $('#dataset-selector').change(function() {
 
 
     var result = computeBSIEpisodes(parameters, positive_hemocultures);
-
     updateVis(positive_hemocultures, result.episodes);
+}
 
-});
 
 function showRawTab() {
     $("#rawDataTab").addClass("active");
@@ -82,3 +70,7 @@ $('#computedDataTab').click(function() {
 });
 
 $("#scenarioContainer").hide();
+
+// listeners
+$('#dataset-selector').change(selectionChanged);
+$('#algo-selector').change(selectionChanged);

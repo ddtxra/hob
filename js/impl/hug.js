@@ -78,10 +78,10 @@ function hug_implementation(parameters, positive_hemos) {
 
     }
 
-    if(false && run_at_hug_environment) { // at HUG we use a special unit and we have the labo_id and not classified commensals for new germs
+    if (false && run_at_hug_environment) { // at HUG we use a special unit and we have the labo_id and not classified commensals for new germs
         var positive_hemocultures_true_pathogenes = positive_hemocultures.filter(c => c.labo_commensal != "1" || c.labo_special_unit);
         var positive_hemocultures_commensals = positive_hemocultures.filter(c => positive_hemocultures_true_pathogenes.map(l => l.labo_id).indexOf(c.labo_id) == -1)
-    }else { //simulator is simpler
+    } else { //simulator is simpler
         var positive_hemocultures_true_pathogenes = positive_hemocultures.filter(c => c.labo_commensal != "1");
         var positive_hemocultures_commensals = positive_hemocultures.filter(c => c.labo_commensal == "1");
     }
@@ -90,7 +90,8 @@ function hug_implementation(parameters, positive_hemos) {
     var episode_evidences_commensals = group_pos_hemoculture_by_episode_evidences(positive_hemocultures_commensals, REPEAT_INTERVAL_DAYS_COMMENSALS)
 
     var episode_evidences = episode_evidences_true_pathogenes.concat(episode_evidences_commensals)
-    var episodes = group_evidences_by_episode(episode_evidences)
+    var episodes = group_evidences_by_episode(episode_evidences);
+
 
     return {
         episodes: episodes,
