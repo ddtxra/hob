@@ -933,30 +933,79 @@
     "seven case e-mail": {
         "description": "",
         "positive_hemocultures": [{
-                "patient_id": "patient_1",
+                "patient_id": "patient_1.1",
                 "stay_id": "stay_A",
                 "labo_sample_date": "2021-01-04",
                 "labo_germ_name": "pathA",
                 "labo_commensal": "0"
             },
             {
-                "patient_id": "patient_1",
+                "patient_id": "patient_1.1",
                 "stay_id": "stay_A",
                 "labo_sample_date": "2021-01-05",
                 "labo_germ_name": "pathB",
                 "labo_commensal": "0"
             },
             {
-                "patient_id": "patient_1",
+                "patient_id": "patient_1.1",
                 "stay_id": "stay_A",
                 "labo_sample_date": "2021-01-06",
                 "labo_germ_name": "comA",
                 "labo_commensal": "1"
             },
             {
-                "patient_id": "patient_1",
+                "patient_id": "patient_1.1",
                 "stay_id": "stay_A",
                 "labo_sample_date": "2021-01-08",
+                "labo_germ_name": "comA",
+                "labo_commensal": "1"
+            },
+            {
+                "patient_id": "patient_1.2",
+                "stay_id": "stay_A",
+                "labo_sample_date": "2021-01-04",
+                "labo_germ_name": "pathA",
+                "labo_commensal": "0"
+            },
+            {
+                "patient_id": "patient_1.2",
+                "stay_id": "stay_A",
+                "labo_sample_date": "2021-01-05",
+                "labo_germ_name": "pathB",
+                "labo_commensal": "0"
+            },
+            {
+                "patient_id": "patient_1.2",
+                "stay_id": "stay_A",
+                "labo_sample_date": "2021-01-06",
+                "labo_germ_name": "comA",
+                "labo_commensal": "1"
+            },
+            {
+                "patient_id": "patient_1.2",
+                "stay_id": "stay_A",
+                "labo_sample_date": "2021-01-08",
+                "labo_germ_name": "comB",
+                "labo_commensal": "1"
+            },
+            {
+                "patient_id": "patient_1.3",
+                "stay_id": "stay_C",
+                "labo_sample_date": "2021-01-04",
+                "labo_germ_name": "pathA",
+                "labo_commensal": "0"
+            },
+            {
+                "patient_id": "patient_1.3",
+                "stay_id": "stay_C",
+                "labo_sample_date": "2021-01-05",
+                "labo_germ_name": "pathB",
+                "labo_commensal": "0"
+            },
+            {
+                "patient_id": "patient_1.3",
+                "stay_id": "stay_C",
+                "labo_sample_date": "2021-01-06",
                 "labo_germ_name": "comA",
                 "labo_commensal": "1"
             },
@@ -981,6 +1030,67 @@
                 "labo_germ_name": "pathC",
                 "labo_commensal": "0"
             }
-        ]
+
+        ],
+        "expected_episodes": {
+            "description": "patient_1.1 has 2 commensals on day 6 and 8, so those 2 commensals count as 1 single true pathogen on day 6 (because commensals are less than 3 days apart). All the 3 pathogenes are grouped together because they are within 3 days, so it is just one polymicrobial episode (pathA+pathB+comA).<br>patient_1.2 same as patient 1.1 even if the commensal is not the same?<br>patient_1.3 not in repeated commensal, so it stays solitary?<br>patient_2 pathA and pathB are a polymicrobial episode and pathC is after 3 days of the first valid true pathogene, therefore it is one episode by itself.",
+            "data": [{
+                    "patient_id": "patient_1.1",
+                    "labo_sample_date": "2021-01-04",
+                    "labo_polymicrobial_germs": [
+                        "patA",
+                        "patB",
+                        "cA"
+                    ]
+                },
+                {
+                    "patient_id": "patient_1.2",
+                    "labo_sample_date": "2021-01-04",
+                    "labo_polymicrobial_germs": [
+                        "pA",
+                        "pB",
+                        "cA",
+                        "cB"
+                    ]
+                },
+                {
+                    "patient_id": "patient_1.3",
+                    "labo_sample_date": "2021-01-04",
+                    "labo_polymicrobial_germs": [
+                        "pathA",
+                        "pathB"
+                    ]
+                },
+                {
+                    "patient_id": "patient_1.3",
+                    "labo_sample_date": "2021-01-06",
+                    "labo_polymicrobial_germs": [
+                        "comA"
+                    ]
+                },
+                {
+                    "patient_id": "patient_2",
+                    "labo_sample_date": "2021-01-03",
+                    "labo_commensal": "1",
+                    "labo_polymicrobial_germs": [
+                        "pathA",
+                        "pathB"
+                    ],
+                    "labo_polymicrobial_count": 1,
+                    "evidences_count": 1
+                },
+                {
+                    "patient_id": "patient_2",
+                    "labo_sample_date": "2021-01-06",
+                    "labo_commensal": "1",
+                    "labo_polymicrobial_germs": [
+                        "pathC"
+                    ],
+                    "labo_polymicrobial_count": 1,
+                    "evidences_count": 1
+                }
+
+            ]
+        }
     }
 }

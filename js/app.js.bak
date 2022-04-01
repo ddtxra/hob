@@ -24,8 +24,8 @@ function selectionChanged() {
 
     $('#description').html("");
     $("#fv_pos_hemo").empty();
-    $("#fv_episodes").empty();
     $("#fv_expected").empty();
+    $("#fv_computed").empty();
     $('#pos_hemo_grid').empty();
     $('#episodes_grid').empty();
 
@@ -44,7 +44,7 @@ function selectionChanged() {
 
 
     var result = computeBSIEpisodes(parameters, positive_hemocultures);
-    updateVis(positive_hemocultures, result.episodes, scenario.expected_episodes);
+    updateVis(positive_hemocultures, scenario.expected_episodes, result.episodes);
 }
 
 

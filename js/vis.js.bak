@@ -1,4 +1,4 @@
-function updateVis(positive_hemos, episodes, expected) {
+function updateVis(positive_hemos, expected_episodes, computed_episodes) {
 
     var positive_hemocultures = prepareData(deepCopy((positive_hemos)));
 
@@ -51,26 +51,32 @@ function updateVis(positive_hemos, episodes, expected) {
     var timestamps = (positive_hemocultures.map(p => p.labo_sample_datetime_timestamp));
     var fv_length = Math.round((Math.max(...timestamps) - Math.min(...timestamps)) / 1000 / 60 / 60 / 24) + 7;
 
-    const columnDefsForEpisodes = Object.keys(episodes[0]).map(function(k) { return { field: k, width: 200 } }).filter(f => !f.field.endsWith("moment") && !f.field.endsWith("timestamp"));
-    const episodes_grid = document.querySelector('#episodes_grid');
+    var ft_pos_hemo = new FeatureViewer.createFeature(fv_length, "#fv_pos_hemo", fvParams);
 
-    new agGrid.Grid(episodes_grid, {
-        columnDefs: columnDefsForEpisodes,
-        rowData: episodes
+    const computed_columnDefsForEpisodes = Object.keys(computed_episodes[0]).map(function(k) { return { field: k, width: 200 } }).filter(f => !f.field.endsWith("moment") && !f.field.endsWith("timestamp"));
+    const computed_episodes_grid = document.querySelector('#computed_episodes_grid');
+
+
+    new agGrid.Grid(computed_episodes_grid, {
+        columnDefs: computed_columnDefsForEpisodes,
+        rowData: computed_episodes
     });
+    var computed_ft_episodes = new FeatureViewer.createFeature(fv_length, "#fv_computed", fvParams);
 
+    var ft_expected = new FeatureViewer.createFeature(fv_length, "#fv_expected", fvParams);
 
-    addFeature(new FeatureViewer.createFeature(fv_length, "#fv_pos_hemo", fvParams), positive_hemocultures);
-    addFeature(new FeatureViewer.createFeature(fv_length, "#fv_episodes", fvParams), episodes, true);
-    if (expected && expected.data && expected.data.length > 0) {
-        addFeature(new FeatureViewer.createFeature(fv_length, "#fv_expected", fvParams), prepareData(expected.data), true);
+    addFeature(ft_pos_hemo, positive_hemocultures);
+    addFeature(computed_ft_episodes, computed_episodes, true);
+    if (expected_episodes) {
+        //TODO explanation$("#rawDataTab").text("Raw data (" + positive_hemocultures.length + " positive hemocultures)");
+        if (expected_episodes.data) {
+            addFeature(ft_expected, expected_episodes.data, true);
+        }
     }
 
     showRawTab();
 
     $("#rawDataTab").text("Raw data (" + positive_hemocultures.length + " positive hemocultures)");
-    $("#computedDataTab").text("Computed episodes (" + episodes.length + " episodes)");
-    $("#explanation_expected").html(expected.description ? expected.description : "");
-
+    $("#computedDataTab").text("Computed episodes (" + computed_episodes.length + " computed_episodes)");
 
 }
