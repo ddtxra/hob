@@ -1053,14 +1053,14 @@
                 },
                 {
                     "patient_id": "patient_1.2",
-                    "labo_sample_date": "2021-01-04",
+                    "labo_sample_date": "2021-01-06",
                     "labo_polymicrobial_germs": [
                         "comA"
                     ]
                 },
                 {
                     "patient_id": "patient_1.2",
-                    "labo_sample_date": "2021-01-04",
+                    "labo_sample_date": "2021-01-08",
                     "labo_polymicrobial_germs": [
                         "comB"
                     ]
