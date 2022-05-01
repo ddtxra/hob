@@ -1,5 +1,5 @@
 {
-    "scenario (basics)": {
+    "scenario (basics) 101": {
         "description": "patient_1 has one true pathogen (E.Coli) on day 1 and one on day 5 for the same stay --> counts as 1 episode because does not repeat for less than < 14 days or different stay<br>patient_2 has one true pathogen (E.Coli) on day 1 and one on day 5 on different stays --> counts as 2 episodes because different stays<br>patient_3 has one true pathogen (E.Coli) on day 1 and another true pathogen (Klebsiella) on day 5 on same stay --> counts as 2 episodes because different germs<br>PRAISE:patient_2 only keep the 14 days rule without taking into account the admission.PRAISE: F<br>PRAISE: patient_5 should have a polymicrobial one day 1. Paitent 6 would be 2 bacteremias (1 for Coli) and 1 for (Klebsiella) because Coli is a copy strain.",
         "positive_hemocultures": [{
                 "patient_id": "patient_1",
