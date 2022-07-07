@@ -20,7 +20,7 @@ function updateVis(positive_hemos, episodes, expected) {
             var pos_hem = lines[pat];
             var feature = pos_hem.map(function(ph) {
                 var day_of_year = ph.labo_sample_datetime_moment.dayOfYear();
-                var label = (epi ? ph.labo_polymicrobial_germs.join("+") : ph.labo_germ_name);
+                var label = ((epi && ph.labo_polymicrobial_germs) ? ph.labo_polymicrobial_germs.join("+") : ph.labo_germ_name);
                 return {
                     x: day_of_year,
                     y: day_of_year + 0.999,
@@ -35,7 +35,6 @@ function updateVis(positive_hemos, episodes, expected) {
                 className: "test",
                 type: "rect" // ['rect', 'path', 'line']
             });
-
         });
     }
 
@@ -70,7 +69,9 @@ function updateVis(positive_hemos, episodes, expected) {
 
     $("#rawDataTab").text("Raw data (" + positive_hemocultures.length + " positive hemocultures)");
     $("#computedDataTab").text("Computed episodes (" + episodes.length + " episodes)");
-    $("#explanation_expected").html(expected.description ? expected.description : "");
-
-
+    if (expected && expected.description) {
+        $("#explanation_expected").html(expected.description);
+    } else {
+        $("#explanation_expected").html("");
+    }
 }
