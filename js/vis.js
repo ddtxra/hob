@@ -1,3 +1,5 @@
+
+
 function updateVis(positive_hemos, episodes, expected) {
 
     var positive_hemocultures = prepareData(deepCopy((positive_hemos)));
@@ -67,37 +69,8 @@ function updateVis(positive_hemos, episodes, expected) {
 
     showRawTab();
 
-    var categories = _.uniq(positive_hemocultures.map(ph => ph.patient_id + "@" + ph.stay_id));
-    Highcharts.ganttChart('highchart_gantt', {
-        yAxis: {
-            categories: categories
-        },
-        series: [{
-            data: [{
-                start: Date.UTC(2018, 11, 1),
-                end: Date.UTC(2018, 11, 2),
-                y: 0,
-                label: "dadas"
-            }, {
-                start: Date.UTC(2018, 11, 2),
-                end: Date.UTC(2018, 11, 5),
-                y: 1,
-            }, {
-                start: Date.UTC(2018, 11, 8),
-                end: Date.UTC(2018, 11, 9),
-                y: 2,
-                assignee: 'TorsteinHonsi'
-            }, {
-                start: Date.UTC(2018, 11, 9),
-                end: Date.UTC(2018, 11, 19),
-                y: 1,
-            }, {
-                start: Date.UTC(2018, 11, 10),
-                end: Date.UTC(2018, 11, 23),
-                y: 2
-            }]
-        }]
-    });
+
+    drawHighcharts("highchart_gantt", positive_hemocultures)
 
     $("#rawDataTab").text("Raw data (" + positive_hemocultures.length + " positive hemocultures)");
     $("#computedDataTab").text("Computed episodes (" + episodes.length + " episodes)");
