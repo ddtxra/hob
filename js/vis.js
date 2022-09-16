@@ -1,5 +1,3 @@
-
-
 function updateVis(positive_hemos, episodes, expected) {
 
     var positive_hemocultures = prepareData(deepCopy((positive_hemos)));
@@ -61,16 +59,22 @@ function updateVis(positive_hemos, episodes, expected) {
     });
 
 
-    addFeature(new FeatureViewer.createFeature(fv_length, "#fv_pos_hemo", fvParams), positive_hemocultures);
-    addFeature(new FeatureViewer.createFeature(fv_length, "#fv_episodes", fvParams), episodes, true);
+    //addFeature(new FeatureViewer.createFeature(fv_length, "#fv_pos_hemo", fvParams), positive_hemocultures);
+    drawHighcharts("fv_pos_hemo", positive_hemocultures)
+
+    //addFeature(new FeatureViewer.createFeature(fv_length, "#fv_episodes", fvParams), episodes, true);
+    drawHighcharts("fv_episodes", episodes)
+
     if (expected && expected.data && expected.data.length > 0) {
-        addFeature(new FeatureViewer.createFeature(fv_length, "#fv_expected", fvParams), prepareData(expected.data), true);
+        drawHighcharts("fv_expected", episodes)
+
+        //addFeature(new FeatureViewer.createFeature(fv_length, "#fv_expected", fvParams), prepareData(expected.data), true);
     }
+
 
     showRawTab();
 
 
-    drawHighcharts("highchart_gantt", positive_hemocultures)
 
     $("#rawDataTab").text("Raw data (" + positive_hemocultures.length + " positive hemocultures)");
     $("#computedDataTab").text("Computed episodes (" + episodes.length + " episodes)");

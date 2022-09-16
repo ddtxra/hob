@@ -1,0 +1,2 @@
+"scenario commensals (repeat intervals) (requires some work?)": {
+    "description": "patient_1 has one commensal repeated every 2 days. &#128679; between 1 and 3 days, repeated commensals should be treated as true pathogenes and therefore the rule of 14 days should apply. Still requires some work. &#128679;",
