@@ -1,5 +1,5 @@
-patient_id  stay_id stay_begin_date labo_sample_date    labo_germ_name
-patient_1	stay_A	2021-01-01  2021-01-01	pathA
+patient_id  stay_id stay_begin_date labo_sample_date  labo_germ_name
+patient_1 stay_A  2021-01-01  2021-01-01  pathA
 patient_1	stay_A	2021-01-01  2021-01-05	pathA
 patient_2	stay_B	2021-01-01  2021-01-01	pathA
 patient_2	stay_C	2021-01-01  2021-01-05	pathA
