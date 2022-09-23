@@ -1,0 +1,1505 @@
+[{
+        "description": "scenario (basics) 101 patient_1001",
+        "patient_id": "",
+        "stay_id": "",
+        "sample_date": "",
+        "lab_result": "",
+        "commensal": ""
+    },
+    {
+        "description": "",
+        "patient_id": "patient_1001",
+        "stay_id": "stay_A",
+        "sample_date": "2021-01-01",
+        "lab_result": "E. Coli",
+        "commensal": "0"
+    },
+    {
+        "description": "",
+        "patient_id": "patient_1001",
+        "stay_id": "stay_A",
+        "sample_date": "2021-01-05",
+        "lab_result": "E. Coli",
+        "commensal": "0"
+    },
+    {
+        "description": "scenario (basics) 101 patient_1002",
+        "patient_id": "",
+        "stay_id": "",
+        "sample_date": "",
+        "lab_result": "",
+        "commensal": ""
+    },
+    {
+        "description": "",
+        "patient_id": "patient_1002",
+        "stay_id": "stay_B",
+        "sample_date": "2021-01-01",
+        "lab_result": "E. Coli",
+        "commensal": "0"
+    },
+    {
+        "description": "",
+        "patient_id": "patient_1002",
+        "stay_id": "stay_C",
+        "sample_date": "2021-01-05",
+        "lab_result": "E. Coli",
+        "commensal": "0"
+    },
+    {
+        "description": "scenario (basics) 101 patient_1003",
+        "patient_id": "",
+        "stay_id": "",
+        "sample_date": "",
+        "lab_result": "",
+        "commensal": ""
+    },
+    {
+        "description": "",
+        "patient_id": "patient_1003",
+        "stay_id": "stay_D",
+        "sample_date": "2021-01-01",
+        "lab_result": "E. Coli",
+        "commensal": "0"
+    },
+    {
+        "description": "",
+        "patient_id": "patient_1003",
+        "stay_id": "stay_D",
+        "sample_date": "2021-01-05",
+        "lab_result": "Klebsiella",
+        "commensal": "0"
+    },
+    {
+        "description": "scenario (basics) 101 patient_1004",
+        "patient_id": "",
+        "stay_id": "",
+        "sample_date": "",
+        "lab_result": "",
+        "commensal": ""
+    },
+    {
+        "description": "",
+        "patient_id": "patient_1004",
+        "stay_id": "stay_E",
+        "sample_date": "2021-01-03",
+        "lab_result": "E. Coli",
+        "commensal": "0"
+    },
+    {
+        "description": "",
+        "patient_id": "patient_1004",
+        "stay_id": "stay_E",
+        "sample_date": "2021-01-04",
+        "lab_result": "Klebsiella",
+        "commensal": "0"
+    },
+    {
+        "description": "scenario (basics) 101 patient_1005",
+        "patient_id": "",
+        "stay_id": "",
+        "sample_date": "",
+        "lab_result": "",
+        "commensal": ""
+    },
+    {
+        "description": "",
+        "patient_id": "patient_1005",
+        "stay_id": "stay_E",
+        "sample_date": "2021-01-01",
+        "lab_result": "E. Coli",
+        "commensal": "0"
+    },
+    {
+        "description": "",
+        "patient_id": "patient_1005",
+        "stay_id": "stay_E",
+        "sample_date": "2021-01-03",
+        "lab_result": "Klebsiella",
+        "commensal": "0"
+    },
+    {
+        "description": "",
+        "patient_id": "patient_1005",
+        "stay_id": "stay_E",
+        "sample_date": "2021-01-04",
+        "lab_result": "E. Coli",
+        "commensal": "0"
+    },
+    {
+        "description": "scenario (basics) 101 patient_1006",
+        "patient_id": "",
+        "stay_id": "",
+        "sample_date": "",
+        "lab_result": "",
+        "commensal": ""
+    },
+    {
+        "description": "",
+        "patient_id": "patient_1006",
+        "stay_id": "stay_E",
+        "sample_date": "2021-01-01",
+        "lab_result": "E. Coli",
+        "commensal": "0"
+    },
+    {
+        "description": "",
+        "patient_id": "patient_1006",
+        "stay_id": "stay_E",
+        "sample_date": "2021-01-04",
+        "lab_result": "Klebsiella",
+        "commensal": "0"
+    },
+    {
+        "description": "",
+        "patient_id": "patient_1006",
+        "stay_id": "stay_E",
+        "sample_date": "2021-01-05",
+        "lab_result": "E. Coli",
+        "commensal": "0"
+    },
+    {
+        "description": "scenario (basics) 101 patient_1007",
+        "patient_id": "",
+        "stay_id": "",
+        "sample_date": "",
+        "lab_result": "",
+        "commensal": ""
+    },
+    {
+        "description": "",
+        "patient_id": "patient_1007",
+        "stay_id": "stay_E",
+        "sample_date": "2021-01-01",
+        "lab_result": "E. Coli",
+        "commensal": "0"
+    },
+    {
+        "description": "",
+        "patient_id": "patient_1007",
+        "stay_id": "stay_E",
+        "sample_date": "2021-01-04",
+        "lab_result": "Klebsiella",
+        "commensal": "0"
+    },
+    {
+        "description": "",
+        "patient_id": "patient_1007",
+        "stay_id": "stay_E",
+        "sample_date": "2021-01-04",
+        "lab_result": "E. Coli",
+        "commensal": "0"
+    },
+    {
+        "description": "scenario (basics) 101 patient_1008",
+        "patient_id": "",
+        "stay_id": "",
+        "sample_date": "",
+        "lab_result": "",
+        "commensal": ""
+    },
+    {
+        "description": "",
+        "patient_id": "patient_1008",
+        "stay_id": "stay_E",
+        "sample_date": "2021-01-01",
+        "lab_result": "PathA",
+        "commensal": "0"
+    },
+    {
+        "description": "",
+        "patient_id": "patient_1008",
+        "stay_id": "stay_E",
+        "sample_date": "2021-01-02",
+        "lab_result": "PathB",
+        "commensal": "0"
+    },
+    {
+        "description": "",
+        "patient_id": "patient_1008",
+        "stay_id": "stay_E",
+        "sample_date": "2021-01-15",
+        "lab_result": "PathB",
+        "commensal": "0"
+    },
+    {
+        "description": "scenario repeat interval (long HOB) patient_1009",
+        "patient_id": "",
+        "stay_id": "",
+        "sample_date": "",
+        "lab_result": "",
+        "commensal": ""
+    },
+    {
+        "description": "",
+        "patient_id": "patient_1009",
+        "stay_id": "stay_A",
+        "sample_date": "2021-01-01",
+        "lab_result": "E. Coli",
+        "commensal": "0"
+    },
+    {
+        "description": "",
+        "patient_id": "patient_1009",
+        "stay_id": "stay_A",
+        "sample_date": "2021-01-02",
+        "lab_result": "E. Coli",
+        "commensal": "0"
+    },
+    {
+        "description": "",
+        "patient_id": "patient_1009",
+        "stay_id": "stay_A",
+        "sample_date": "2021-01-03",
+        "lab_result": "E. Coli",
+        "commensal": "0"
+    },
+    {
+        "description": "",
+        "patient_id": "patient_1009",
+        "stay_id": "stay_A",
+        "sample_date": "2021-01-04",
+        "lab_result": "E. Coli",
+        "commensal": "0"
+    },
+    {
+        "description": "",
+        "patient_id": "patient_1009",
+        "stay_id": "stay_A",
+        "sample_date": "2021-01-05",
+        "lab_result": "E. Coli",
+        "commensal": "0"
+    },
+    {
+        "description": "",
+        "patient_id": "patient_1009",
+        "stay_id": "stay_A",
+        "sample_date": "2021-01-06",
+        "lab_result": "E. Coli",
+        "commensal": "0"
+    },
+    {
+        "description": "",
+        "patient_id": "patient_1009",
+        "stay_id": "stay_A",
+        "sample_date": "2021-01-07",
+        "lab_result": "E. Coli",
+        "commensal": "0"
+    },
+    {
+        "description": "",
+        "patient_id": "patient_1009",
+        "stay_id": "stay_A",
+        "sample_date": "2021-01-08",
+        "lab_result": "E. Coli",
+        "commensal": "0"
+    },
+    {
+        "description": "",
+        "patient_id": "patient_1009",
+        "stay_id": "stay_A",
+        "sample_date": "2021-01-09",
+        "lab_result": "E. Coli",
+        "commensal": "0"
+    },
+    {
+        "description": "",
+        "patient_id": "patient_1009",
+        "stay_id": "stay_A",
+        "sample_date": "2021-01-10",
+        "lab_result": "E. Coli",
+        "commensal": "0"
+    },
+    {
+        "description": "",
+        "patient_id": "patient_1009",
+        "stay_id": "stay_A",
+        "sample_date": "2021-01-11",
+        "lab_result": "E. Coli",
+        "commensal": "0"
+    },
+    {
+        "description": "",
+        "patient_id": "patient_1009",
+        "stay_id": "stay_A",
+        "sample_date": "2021-01-12",
+        "lab_result": "E. Coli",
+        "commensal": "0"
+    },
+    {
+        "description": "",
+        "patient_id": "patient_1009",
+        "stay_id": "stay_A",
+        "sample_date": "2021-01-13",
+        "lab_result": "E. Coli",
+        "commensal": "0"
+    },
+    {
+        "description": "",
+        "patient_id": "patient_1009",
+        "stay_id": "stay_A",
+        "sample_date": "2021-01-14",
+        "lab_result": "E. Coli",
+        "commensal": "0"
+    },
+    {
+        "description": "",
+        "patient_id": "patient_1009",
+        "stay_id": "stay_A",
+        "sample_date": "2021-01-15",
+        "lab_result": "E. Coli",
+        "commensal": "0"
+    },
+    {
+        "description": "",
+        "patient_id": "patient_1009",
+        "stay_id": "stay_A",
+        "sample_date": "2021-01-16",
+        "lab_result": "E. Coli",
+        "commensal": "0"
+    },
+    {
+        "description": "",
+        "patient_id": "patient_1009",
+        "stay_id": "stay_A",
+        "sample_date": "2021-01-17",
+        "lab_result": "E. Coli",
+        "commensal": "0"
+    },
+    {
+        "description": "",
+        "patient_id": "patient_1009",
+        "stay_id": "stay_A",
+        "sample_date": "2021-01-18",
+        "lab_result": "E. Coli",
+        "commensal": "0"
+    },
+    {
+        "description": "",
+        "patient_id": "patient_1009",
+        "stay_id": "stay_A",
+        "sample_date": "2021-01-19",
+        "lab_result": "E. Coli",
+        "commensal": "0"
+    },
+    {
+        "description": "",
+        "patient_id": "patient_1009",
+        "stay_id": "stay_A",
+        "sample_date": "2021-01-20",
+        "lab_result": "E. Coli",
+        "commensal": "0"
+    },
+    {
+        "description": "",
+        "patient_id": "patient_1009",
+        "stay_id": "stay_A",
+        "sample_date": "2021-01-21",
+        "lab_result": "E. Coli",
+        "commensal": "0"
+    },
+    {
+        "description": "",
+        "patient_id": "patient_1009",
+        "stay_id": "stay_A",
+        "sample_date": "2021-01-22",
+        "lab_result": "E. Coli",
+        "commensal": "0"
+    },
+    {
+        "description": "",
+        "patient_id": "patient_1009",
+        "stay_id": "stay_A",
+        "sample_date": "2021-01-23",
+        "lab_result": "E. Coli",
+        "commensal": "0"
+    },
+    {
+        "description": "",
+        "patient_id": "patient_1009",
+        "stay_id": "stay_A",
+        "sample_date": "2021-01-24",
+        "lab_result": "E. Coli",
+        "commensal": "0"
+    },
+    {
+        "description": "",
+        "patient_id": "patient_1009",
+        "stay_id": "stay_A",
+        "sample_date": "2021-01-25",
+        "lab_result": "E. Coli",
+        "commensal": "0"
+    },
+    {
+        "description": "",
+        "patient_id": "patient_1009",
+        "stay_id": "stay_A",
+        "sample_date": "2021-01-26",
+        "lab_result": "E. Coli",
+        "commensal": "0"
+    },
+    {
+        "description": "",
+        "patient_id": "patient_1009",
+        "stay_id": "stay_A",
+        "sample_date": "2021-01-27",
+        "lab_result": "E. Coli",
+        "commensal": "0"
+    },
+    {
+        "description": "",
+        "patient_id": "patient_1009",
+        "stay_id": "stay_A",
+        "sample_date": "2021-01-28",
+        "lab_result": "E. Coli",
+        "commensal": "0"
+    },
+    {
+        "description": "",
+        "patient_id": "patient_1009",
+        "stay_id": "stay_A",
+        "sample_date": "2021-01-29",
+        "lab_result": "E. Coli",
+        "commensal": "0"
+    },
+    {
+        "description": "scenario 2 different commensals patient_1010",
+        "patient_id": "",
+        "stay_id": "",
+        "sample_date": "",
+        "lab_result": "",
+        "commensal": ""
+    },
+    {
+        "description": "",
+        "patient_id": "patient_1010",
+        "stay_id": "stay_A",
+        "sample_date": "2021-01-01",
+        "lab_result": "Staphylococcus epidermidis",
+        "commensal": "1"
+    },
+    {
+        "description": "",
+        "patient_id": "patient_1010",
+        "stay_id": "stay_A",
+        "sample_date": "2021-01-02",
+        "lab_result": "Staphylococcus capitis",
+        "commensal": "1"
+    },
+    {
+        "description": "",
+        "patient_id": "patient_1010",
+        "stay_id": "stay_A",
+        "sample_date": "2021-01-03",
+        "lab_result": "Staphylococcus epidermidis",
+        "commensal": "1"
+    },
+    {
+        "description": "",
+        "patient_id": "patient_1010",
+        "stay_id": "stay_A",
+        "sample_date": "2021-01-04",
+        "lab_result": "Staphylococcus capitis",
+        "commensal": "1"
+    },
+    {
+        "description": "scenario 2 different commensals patient_1011",
+        "patient_id": "",
+        "stay_id": "",
+        "sample_date": "",
+        "lab_result": "",
+        "commensal": ""
+    },
+    {
+        "description": "",
+        "patient_id": "patient_1011",
+        "stay_id": "stay_B",
+        "sample_date": "2021-01-01",
+        "lab_result": "Staphylococcus epidermidis",
+        "commensal": "1"
+    },
+    {
+        "description": "",
+        "patient_id": "patient_1011",
+        "stay_id": "stay_B",
+        "sample_date": "2021-01-02",
+        "lab_result": "Staphylococcus capitis",
+        "commensal": "1"
+    },
+    {
+        "description": "scenario commensals (repeat intervals) (requires some work?) patient_1012",
+        "patient_id": "",
+        "stay_id": "",
+        "sample_date": "",
+        "lab_result": "",
+        "commensal": ""
+    },
+    {
+        "description": "",
+        "patient_id": "patient_1012",
+        "stay_id": "stay_A",
+        "sample_date": "2021-01-01",
+        "lab_result": "Staphylococcus epidermidis",
+        "commensal": "1"
+    },
+    {
+        "description": "",
+        "patient_id": "patient_1012",
+        "stay_id": "stay_A",
+        "sample_date": "2021-01-03",
+        "lab_result": "Staphylococcus epidermidis",
+        "commensal": "1"
+    },
+    {
+        "description": "",
+        "patient_id": "patient_1012",
+        "stay_id": "stay_A",
+        "sample_date": "2021-01-05",
+        "lab_result": "Staphylococcus epidermidis",
+        "commensal": "1"
+    },
+    {
+        "description": "",
+        "patient_id": "patient_1012",
+        "stay_id": "stay_A",
+        "sample_date": "2021-01-07",
+        "lab_result": "Staphylococcus epidermidis",
+        "commensal": "1"
+    },
+    {
+        "description": "",
+        "patient_id": "patient_1012",
+        "stay_id": "stay_A",
+        "sample_date": "2021-01-09",
+        "lab_result": "Staphylococcus epidermidis",
+        "commensal": "1"
+    },
+    {
+        "description": "",
+        "patient_id": "patient_1012",
+        "stay_id": "stay_A",
+        "sample_date": "2021-01-11",
+        "lab_result": "Staphylococcus epidermidis",
+        "commensal": "1"
+    },
+    {
+        "description": "",
+        "patient_id": "patient_1012",
+        "stay_id": "stay_A",
+        "sample_date": "2021-01-13",
+        "lab_result": "Staphylococcus epidermidis",
+        "commensal": "1"
+    },
+    {
+        "description": "",
+        "patient_id": "patient_1012",
+        "stay_id": "stay_A",
+        "sample_date": "2021-01-15",
+        "lab_result": "Staphylococcus epidermidis",
+        "commensal": "1"
+    },
+    {
+        "description": "",
+        "patient_id": "patient_1012",
+        "stay_id": "stay_A",
+        "sample_date": "2021-01-17",
+        "lab_result": "Staphylococcus epidermidis",
+        "commensal": "1"
+    },
+    {
+        "description": "scenario commensals (repeat intervals) (requires some work?) patient_1013",
+        "patient_id": "",
+        "stay_id": "",
+        "sample_date": "",
+        "lab_result": "",
+        "commensal": ""
+    },
+    {
+        "description": "",
+        "patient_id": "patient_1013",
+        "stay_id": "stay_B",
+        "sample_date": "2021-01-01",
+        "lab_result": "Staphylococcus epidermidis",
+        "commensal": "1"
+    },
+    {
+        "description": "",
+        "patient_id": "patient_1013",
+        "stay_id": "stay_B",
+        "sample_date": "2021-01-05",
+        "lab_result": "Staphylococcus epidermidis",
+        "commensal": "1"
+    },
+    {
+        "description": "",
+        "patient_id": "patient_1013",
+        "stay_id": "stay_B",
+        "sample_date": "2021-01-09",
+        "lab_result": "Staphylococcus epidermidis",
+        "commensal": "1"
+    },
+    {
+        "description": "",
+        "patient_id": "patient_1013",
+        "stay_id": "stay_B",
+        "sample_date": "2021-01-13",
+        "lab_result": "Staphylococcus epidermidis",
+        "commensal": "1"
+    },
+    {
+        "description": "",
+        "patient_id": "patient_1013",
+        "stay_id": "stay_B",
+        "sample_date": "2021-01-17",
+        "lab_result": "Staphylococcus epidermidis",
+        "commensal": "1"
+    },
+    {
+        "description": "scenario polymicrobials patient_1014",
+        "patient_id": "",
+        "stay_id": "",
+        "sample_date": "",
+        "lab_result": "",
+        "commensal": ""
+    },
+    {
+        "description": "",
+        "patient_id": "patient_1014",
+        "stay_id": "stay_A",
+        "sample_date": "2021-01-01",
+        "lab_result": "E.Coli",
+        "commensal": "0"
+    },
+    {
+        "description": "",
+        "patient_id": "patient_1014",
+        "stay_id": "stay_A",
+        "sample_date": "2021-01-01",
+        "lab_result": "Klebsiella",
+        "commensal": "0"
+    },
+    {
+        "description": "scenario polymicrobials 2 (requires some work?) patient_1015",
+        "patient_id": "",
+        "stay_id": "",
+        "sample_date": "",
+        "lab_result": "",
+        "commensal": ""
+    },
+    {
+        "description": "",
+        "patient_id": "patient_1015",
+        "stay_id": "stay_A",
+        "sample_date": "2021-01-01",
+        "lab_result": "E.Coli",
+        "commensal": "0"
+    },
+    {
+        "description": "",
+        "patient_id": "patient_1015",
+        "stay_id": "stay_A",
+        "sample_date": "2021-01-02",
+        "lab_result": "E.Coli",
+        "commensal": "0"
+    },
+    {
+        "description": "",
+        "patient_id": "patient_1015",
+        "stay_id": "stay_A",
+        "sample_date": "2021-01-02",
+        "lab_result": "Klebsiella",
+        "commensal": "0"
+    },
+    {
+        "description": "Polymicrobial with commensals (IN PROGRESS) patient_1016",
+        "patient_id": "",
+        "stay_id": "",
+        "sample_date": "",
+        "lab_result": "",
+        "commensal": ""
+    },
+    {
+        "description": "",
+        "patient_id": "patient_1016",
+        "stay_id": "",
+        "sample_date": "2021-01-01",
+        "lab_result": "pathA",
+        "commensal": "0"
+    },
+    {
+        "description": "",
+        "patient_id": "patient_1016",
+        "stay_id": "",
+        "sample_date": "2021-01-02",
+        "lab_result": "pathB",
+        "commensal": "0"
+    },
+    {
+        "description": "Polymicrobial with commensals (IN PROGRESS) patient_1017",
+        "patient_id": "",
+        "stay_id": "",
+        "sample_date": "",
+        "lab_result": "",
+        "commensal": ""
+    },
+    {
+        "description": "",
+        "patient_id": "patient_1017",
+        "stay_id": "",
+        "sample_date": "2021-01-01",
+        "lab_result": "pathA",
+        "commensal": "0"
+    },
+    {
+        "description": "",
+        "patient_id": "patient_1017",
+        "stay_id": "",
+        "sample_date": "2021-01-02",
+        "lab_result": "pathA",
+        "commensal": "0"
+    },
+    {
+        "description": "",
+        "patient_id": "patient_1017",
+        "stay_id": "",
+        "sample_date": "2021-01-02",
+        "lab_result": "pathB",
+        "commensal": "0"
+    },
+    {
+        "description": "",
+        "patient_id": "patient_1017",
+        "stay_id": "",
+        "sample_date": "2021-01-05",
+        "lab_result": "pathB",
+        "commensal": "0"
+    },
+    {
+        "description": "",
+        "patient_id": "patient_1017",
+        "stay_id": "",
+        "sample_date": "2021-01-05",
+        "lab_result": "pathC",
+        "commensal": "0"
+    },
+    {
+        "description": "Polymicrobial with commensals (IN PROGRESS) patient_1018",
+        "patient_id": "",
+        "stay_id": "",
+        "sample_date": "",
+        "lab_result": "",
+        "commensal": ""
+    },
+    {
+        "description": "",
+        "patient_id": "patient_1018",
+        "stay_id": "",
+        "sample_date": "2021-01-01",
+        "lab_result": "pathA",
+        "commensal": "0"
+    },
+    {
+        "description": "",
+        "patient_id": "patient_1018",
+        "stay_id": "",
+        "sample_date": "2021-01-02",
+        "lab_result": "pathA",
+        "commensal": "0"
+    },
+    {
+        "description": "",
+        "patient_id": "patient_1018",
+        "stay_id": "",
+        "sample_date": "2021-01-02",
+        "lab_result": "pathB",
+        "commensal": "0"
+    },
+    {
+        "description": "",
+        "patient_id": "patient_1018",
+        "stay_id": "",
+        "sample_date": "2021-01-05",
+        "lab_result": "pathB",
+        "commensal": "0"
+    },
+    {
+        "description": "",
+        "patient_id": "patient_1018",
+        "stay_id": "",
+        "sample_date": "2021-01-05",
+        "lab_result": "pathC",
+        "commensal": "0"
+    },
+    {
+        "description": "",
+        "patient_id": "patient_1018",
+        "stay_id": "",
+        "sample_date": "2021-01-16",
+        "lab_result": "pathC",
+        "commensal": "0"
+    },
+    {
+        "description": "Polymicrobial with commensals (IN PROGRESS) patient_1019",
+        "patient_id": "patient_1019",
+        "stay_id": "",
+        "sample_date": "",
+        "lab_result": "",
+        "commensal": ""
+    },
+    {
+        "description": "",
+        "patient_id": "patient_1019",
+        "stay_id": "",
+        "sample_date": "2021-01-01",
+        "lab_result": "pathA",
+        "commensal": "0"
+    },
+    {
+        "description": "",
+        "patient_id": "patient_1019",
+        "stay_id": "",
+        "sample_date": "2021-01-02",
+        "lab_result": "pathA",
+        "commensal": "0"
+    },
+    {
+        "description": "",
+        "patient_id": "patient_1019",
+        "stay_id": "",
+        "sample_date": "2021-01-02",
+        "lab_result": "pathB",
+        "commensal": "0"
+    },
+    {
+        "description": "",
+        "patient_id": "patient_1019",
+        "stay_id": "",
+        "sample_date": "2021-01-05",
+        "lab_result": "pathB",
+        "commensal": "0"
+    },
+    {
+        "description": "",
+        "patient_id": "patient_1019",
+        "stay_id": "",
+        "sample_date": "2021-01-05",
+        "lab_result": "comA",
+        "commensal": "0"
+    },
+    {
+        "description": "Polymicrobial with commensals (IN PROGRESS) patient_1020",
+        "patient_id": "",
+        "stay_id": "",
+        "sample_date": "",
+        "lab_result": "",
+        "commensal": ""
+    },
+    {
+        "description": "",
+        "patient_id": "patient_1020",
+        "stay_id": "",
+        "sample_date": "2021-01-01",
+        "lab_result": "pathA",
+        "commensal": "0"
+    },
+    {
+        "description": "",
+        "patient_id": "patient_1020",
+        "stay_id": "",
+        "sample_date": "2021-01-02",
+        "lab_result": "pathA",
+        "commensal": "0"
+    },
+    {
+        "description": "",
+        "patient_id": "patient_1020",
+        "stay_id": "",
+        "sample_date": "2021-01-02",
+        "lab_result": "pathB",
+        "commensal": "0"
+    },
+    {
+        "description": "",
+        "patient_id": "patient_1020",
+        "stay_id": "",
+        "sample_date": "2021-01-05",
+        "lab_result": "pathB",
+        "commensal": "0"
+    },
+    {
+        "description": "",
+        "patient_id": "patient_1020",
+        "stay_id": "",
+        "sample_date": "2021-01-06",
+        "lab_result": "comA",
+        "commensal": "0"
+    },
+    {
+        "description": "scenario polymicrobials 4 (requires some work?) patient_1021",
+        "patient_id": "",
+        "stay_id": "",
+        "sample_date": "",
+        "lab_result": "",
+        "commensal": ""
+    },
+    {
+        "description": "",
+        "patient_id": "patient_1021",
+        "stay_id": "stay_A",
+        "sample_date": "2021-01-01",
+        "lab_result": "E.Coli",
+        "commensal": "0"
+    },
+    {
+        "description": "",
+        "patient_id": "patient_1021",
+        "stay_id": "stay_A",
+        "sample_date": "2021-01-02",
+        "lab_result": "E.Coli",
+        "commensal": "0"
+    },
+    {
+        "description": "",
+        "patient_id": "patient_1021",
+        "stay_id": "stay_A",
+        "sample_date": "2021-01-02",
+        "lab_result": "Klebsiella",
+        "commensal": "0"
+    },
+    {
+        "description": "",
+        "patient_id": "patient_1021",
+        "stay_id": "stay_A",
+        "sample_date": "2021-01-05",
+        "lab_result": "Klebsiella",
+        "commensal": "0"
+    },
+    {
+        "description": "",
+        "patient_id": "patient_1021",
+        "stay_id": "stay_A",
+        "sample_date": "2021-01-05",
+        "lab_result": "Staph. Epidermidis",
+        "commensal": "1"
+    },
+    {
+        "description": "hob case vignettes (case 1 and 2) patient_1022",
+        "patient_id": "",
+        "stay_id": "",
+        "sample_date": "",
+        "lab_result": "",
+        "commensal": ""
+    },
+    {
+        "description": "",
+        "patient_id": "patient_1022",
+        "stay_id": "case_1",
+        "sample_date": "2021-01-05",
+        "lab_result": "PathA",
+        "commensal": "0"
+    },
+    {
+        "description": "",
+        "patient_id": "patient_1022",
+        "stay_id": "case_1",
+        "sample_date": "2021-01-07",
+        "lab_result": "PathB",
+        "commensal": "0"
+    },
+    {
+        "description": "hob case vignettes (case 1 and 2) patient_1023",
+        "patient_id": "",
+        "stay_id": "",
+        "sample_date": "",
+        "lab_result": "",
+        "commensal": ""
+    },
+    {
+        "description": "",
+        "patient_id": "patient_1023",
+        "stay_id": "case_2",
+        "sample_date": "2021-01-05",
+        "lab_result": "PathA",
+        "commensal": "0"
+    },
+    {
+        "description": "",
+        "patient_id": "patient_1023",
+        "stay_id": "case_2",
+        "sample_date": "2021-01-05",
+        "lab_result": "PathB",
+        "commensal": "0"
+    },
+    {
+        "description": "",
+        "patient_id": "patient_1023",
+        "stay_id": "case_2",
+        "sample_date": "2021-01-09",
+        "lab_result": "PathC",
+        "commensal": "0"
+    },
+    {
+        "description": "hob case vignettes (case 3) patient_1024",
+        "patient_id": "",
+        "stay_id": "",
+        "sample_date": "",
+        "lab_result": "",
+        "commensal": ""
+    },
+    {
+        "description": "",
+        "patient_id": "patient_1024",
+        "stay_id": "case_3",
+        "sample_date": "2021-01-05",
+        "lab_result": "PathA",
+        "commensal": "0"
+    },
+    {
+        "description": "",
+        "patient_id": "patient_1024",
+        "stay_id": "case_3",
+        "sample_date": "2021-01-05",
+        "lab_result": "ContX",
+        "commensal": "1"
+    },
+    {
+        "description": "",
+        "patient_id": "patient_1024",
+        "stay_id": "case_3",
+        "sample_date": "2021-01-06",
+        "lab_result": "PathA",
+        "commensal": "0"
+    },
+    {
+        "description": "",
+        "patient_id": "patient_1024",
+        "stay_id": "case_3",
+        "sample_date": "2021-01-06",
+        "lab_result": "ContX",
+        "commensal": "1"
+    },
+    {
+        "description": "",
+        "patient_id": "patient_1024",
+        "stay_id": "case_3",
+        "sample_date": "2021-01-13",
+        "lab_result": "ContY",
+        "commensal": "1"
+    },
+    {
+        "description": "",
+        "patient_id": "patient_1024",
+        "stay_id": "case_3",
+        "sample_date": "2021-01-15",
+        "lab_result": "ContY",
+        "commensal": "1"
+    },
+    {
+        "description": "hob case vignettes (case 4 and 5) patient_1025",
+        "patient_id": "",
+        "stay_id": "",
+        "sample_date": "",
+        "lab_result": "",
+        "commensal": ""
+    },
+    {
+        "description": "",
+        "patient_id": "patient_1025",
+        "stay_id": "case_4",
+        "sample_date": "2021-01-05",
+        "lab_result": "PathA",
+        "commensal": "0"
+    },
+    {
+        "description": "",
+        "patient_id": "patient_1025",
+        "stay_id": "case_4",
+        "sample_date": "2021-01-17",
+        "lab_result": "PathA",
+        "commensal": "0"
+    },
+    {
+        "description": "",
+        "patient_id": "patient_1025",
+        "stay_id": "case_4",
+        "sample_date": "2021-01-23",
+        "lab_result": "PathA",
+        "commensal": "0"
+    },
+    {
+        "description": "hob case vignettes (case 4 and 5) patient_1026",
+        "patient_id": "",
+        "stay_id": "",
+        "sample_date": "",
+        "lab_result": "",
+        "commensal": ""
+    },
+    {
+        "description": "",
+        "patient_id": "patient_1026",
+        "stay_id": "case_5",
+        "sample_date": "2021-01-02",
+        "lab_result": "PathA",
+        "commensal": "0"
+    },
+    {
+        "description": "",
+        "patient_id": "patient_1026",
+        "stay_id": "case_5",
+        "sample_date": "2021-01-04",
+        "lab_result": "ContX",
+        "commensal": "1"
+    },
+    {
+        "description": "",
+        "patient_id": "patient_1026",
+        "stay_id": "case_5",
+        "sample_date": "2021-01-05",
+        "lab_result": "ContX",
+        "commensal": "1"
+    },
+    {
+        "description": "",
+        "patient_id": "patient_1026",
+        "stay_id": "case_5",
+        "sample_date": "2021-01-06",
+        "lab_result": "PathA",
+        "commensal": "0"
+    },
+    {
+        "description": "hob case vignettes (case 6) patient_1027",
+        "patient_id": "",
+        "stay_id": "",
+        "sample_date": "",
+        "lab_result": "",
+        "commensal": ""
+    },
+    {
+        "description": "",
+        "patient_id": "patient_1027",
+        "stay_id": "stay_A",
+        "sample_date": "2021-01-05",
+        "lab_result": "PathA",
+        "commensal": "0"
+    },
+    {
+        "description": "",
+        "patient_id": "patient_1027",
+        "stay_id": "stay_B",
+        "sample_date": "2021-01-14",
+        "lab_result": "PathA",
+        "commensal": "0"
+    },
+    {
+        "description": "poly commensals (real) patient_1028",
+        "patient_id": "",
+        "stay_id": "",
+        "sample_date": "",
+        "lab_result": "",
+        "commensal": ""
+    },
+    {
+        "description": "",
+        "patient_id": "patient_1028",
+        "stay_id": "stay_A",
+        "sample_date": "2021-01-01",
+        "lab_result": "Staphylococcus epidermidis",
+        "commensal": "1"
+    },
+    {
+        "description": "",
+        "patient_id": "patient_1028",
+        "stay_id": "stay_A",
+        "sample_date": "2021-01-04",
+        "lab_result": "Staphylococcus epidermidis",
+        "commensal": "1"
+    },
+    {
+        "description": "",
+        "patient_id": "patient_1028",
+        "stay_id": "stay_A",
+        "sample_date": "2021-01-06",
+        "lab_result": "Staphylococcus epidermidis",
+        "commensal": "1"
+    },
+    {
+        "description": "",
+        "patient_id": "patient_1028",
+        "stay_id": "stay_A",
+        "sample_date": "2021-01-06",
+        "lab_result": "Staphylococcus capitis",
+        "commensal": "1"
+    },
+    {
+        "description": "",
+        "patient_id": "patient_1028",
+        "stay_id": "stay_A",
+        "sample_date": "2021-01-07",
+        "lab_result": "Staphylococcus capitis",
+        "commensal": "1"
+    },
+    {
+        "description": "",
+        "patient_id": "patient_1028",
+        "stay_id": "stay_A",
+        "sample_date": "2021-01-08",
+        "lab_result": "Staphylococcus epidermidis",
+        "commensal": "1"
+    },
+    {
+        "description": "poly commensals (fake) patient_1029",
+        "patient_id": "",
+        "stay_id": "",
+        "sample_date": "",
+        "lab_result": "",
+        "commensal": ""
+    },
+    {
+        "description": "",
+        "patient_id": "patient_1029",
+        "stay_id": "stay_A",
+        "sample_date": "2021-01-01",
+        "lab_result": "Staphylococcus epidermidis",
+        "commensal": "1"
+    },
+    {
+        "description": "",
+        "patient_id": "patient_1029",
+        "stay_id": "stay_A",
+        "sample_date": "2021-01-02",
+        "lab_result": "Staphylococcus epidermidis",
+        "commensal": "1"
+    },
+    {
+        "description": "poly commensals (fake2) patient_1030",
+        "patient_id": "",
+        "stay_id": "",
+        "sample_date": "",
+        "lab_result": "",
+        "commensal": ""
+    },
+    {
+        "description": "",
+        "patient_id": "patient_1030",
+        "stay_id": "stay_A",
+        "sample_date": "2021-01-01",
+        "lab_result": "Staphylococcus epidermidis",
+        "commensal": "1"
+    },
+    {
+        "description": "",
+        "patient_id": "patient_1030",
+        "stay_id": "stay_A",
+        "sample_date": "2021-01-02",
+        "lab_result": "Staphylococcus capitis",
+        "commensal": "1"
+    },
+    {
+        "description": "",
+        "patient_id": "patient_1030",
+        "stay_id": "stay_A",
+        "sample_date": "2021-01-06",
+        "lab_result": "Staphylococcus epidermidis",
+        "commensal": "1"
+    },
+    {
+        "description": "",
+        "patient_id": "patient_1030",
+        "stay_id": "stay_A",
+        "sample_date": "2021-01-06",
+        "lab_result": "Staphylococcus capitis",
+        "commensal": "1"
+    },
+    {
+        "description": "",
+        "patient_id": "patient_1030",
+        "stay_id": "stay_A",
+        "sample_date": "2021-01-07",
+        "lab_result": "Staphylococcus capitis",
+        "commensal": "1"
+    },
+    {
+        "description": "",
+        "patient_id": "patient_1030",
+        "stay_id": "stay_A",
+        "sample_date": "2021-01-08",
+        "lab_result": "Staphylococcus epidermidis",
+        "commensal": "1"
+    },
+    {
+        "description": "seven case patient_1031",
+        "patient_id": "",
+        "stay_id": "",
+        "sample_date": "",
+        "lab_result": "",
+        "commensal": ""
+    },
+    {
+        "description": "",
+        "patient_id": "patient_1031",
+        "stay_id": "stay_A",
+        "sample_date": "2021-01-01",
+        "lab_result": "commensalA",
+        "commensal": "1"
+    },
+    {
+        "description": "",
+        "patient_id": "patient_1031",
+        "stay_id": "stay_A",
+        "sample_date": "2021-01-03",
+        "lab_result": "commensalA",
+        "commensal": "1"
+    },
+    {
+        "description": "",
+        "patient_id": "patient_1031",
+        "stay_id": "stay_A",
+        "sample_date": "2021-01-05",
+        "lab_result": "commensalB",
+        "commensal": "1"
+    },
+    {
+        "description": "",
+        "patient_id": "patient_1031",
+        "stay_id": "stay_A",
+        "sample_date": "2021-01-06",
+        "lab_result": "commensalB",
+        "commensal": "1"
+    },
+    {
+        "description": "seven case e-mail patient_1032",
+        "patient_id": "",
+        "stay_id": "",
+        "sample_date": "",
+        "lab_result": "",
+        "commensal": ""
+    },
+    {
+        "description": "",
+        "patient_id": "patient_1032",
+        "stay_id": "stay_A",
+        "sample_date": "2021-01-04",
+        "lab_result": "pathA",
+        "commensal": "0"
+    },
+    {
+        "description": "",
+        "patient_id": "patient_1032",
+        "stay_id": "stay_A",
+        "sample_date": "2021-01-05",
+        "lab_result": "pathB",
+        "commensal": "0"
+    },
+    {
+        "description": "",
+        "patient_id": "patient_1032",
+        "stay_id": "stay_A",
+        "sample_date": "2021-01-06",
+        "lab_result": "comA",
+        "commensal": "1"
+    },
+    {
+        "description": "",
+        "patient_id": "patient_1032",
+        "stay_id": "stay_A",
+        "sample_date": "2021-01-08",
+        "lab_result": "comA",
+        "commensal": "1"
+    },
+    {
+        "description": "seven case e-mail patient_1033",
+        "patient_id": "",
+        "stay_id": "",
+        "sample_date": "",
+        "lab_result": "",
+        "commensal": ""
+    },
+    {
+        "description": "",
+        "patient_id": "patient_1033",
+        "stay_id": "stay_B",
+        "sample_date": "2021-01-04",
+        "lab_result": "pathA",
+        "commensal": "0"
+    },
+    {
+        "description": "",
+        "patient_id": "patient_1033",
+        "stay_id": "stay_B",
+        "sample_date": "2021-01-05",
+        "lab_result": "pathB",
+        "commensal": "0"
+    },
+    {
+        "description": "",
+        "patient_id": "patient_1033",
+        "stay_id": "stay_B",
+        "sample_date": "2021-01-06",
+        "lab_result": "comA",
+        "commensal": "1"
+    },
+    {
+        "description": "",
+        "patient_id": "patient_1033",
+        "stay_id": "stay_B",
+        "sample_date": "2021-01-08",
+        "lab_result": "comB",
+        "commensal": "1"
+    },
+    {
+        "description": "seven case e-mail patient_1034",
+        "patient_id": "",
+        "stay_id": "",
+        "sample_date": "",
+        "lab_result": "",
+        "commensal": ""
+    },
+    {
+        "description": "",
+        "patient_id": "patient_1034",
+        "stay_id": "stay_C",
+        "sample_date": "2021-01-04",
+        "lab_result": "pathA",
+        "commensal": "0"
+    },
+    {
+        "description": "",
+        "patient_id": "patient_1034",
+        "stay_id": "stay_C",
+        "sample_date": "2021-01-05",
+        "lab_result": "pathB",
+        "commensal": "0"
+    },
+    {
+        "description": "",
+        "patient_id": "patient_1034",
+        "stay_id": "stay_C",
+        "sample_date": "2021-01-06",
+        "lab_result": "comA",
+        "commensal": "1"
+    },
+    {
+        "description": "seven case e-mail patient_1035",
+        "patient_id": "",
+        "stay_id": "",
+        "sample_date": "",
+        "lab_result": "",
+        "commensal": ""
+    },
+    {
+        "description": "",
+        "patient_id": "patient_1035",
+        "stay_id": "stay_D",
+        "sample_date": "2021-01-03",
+        "lab_result": "pathA",
+        "commensal": "0"
+    },
+    {
+        "description": "",
+        "patient_id": "patient_1035",
+        "stay_id": "stay_D",
+        "sample_date": "2021-01-05",
+        "lab_result": "pathB",
+        "commensal": "0"
+    }
+]

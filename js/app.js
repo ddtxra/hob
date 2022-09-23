@@ -1,22 +1,13 @@
-function fillDropDown(scenarios) {
-    var selector = $("#form-selector");
-    Object.keys(scenarios).forEach(function(scenario_key) {
-        $("<option />", {
-            value: scenario_key,
-            text: scenario_key
-        }).appendTo(selector);
-    })
-}
-
-$.getJSON("static/test_scenarios.json", function(scenarios) {
-    fillDropDown(scenarios);
-    SCENARIOS = scenarios;
+$.getJSON("static/cases.json", function(cases) {
+    console.log(cases)
+    var cases = _.groupBy(cases, "patient_id");
+    showCase(cases["patient_1019"]);
 });
 
 
-function selectionChanged() {
+function showCase(cas) {
 
-    var case_id = $('#dataset-selector').find(":selected").text();
+    var positive_hemocultures = cas.filter(c => c.description == "");
     var algo = $('#algo-selector').find(":selected").val();
     var parameters = {
         implementation: algo
@@ -29,22 +20,13 @@ function selectionChanged() {
     $('#pos_hemo_grid').empty();
     $('#episodes_grid').empty();
 
-    var scenario = SCENARIOS[case_id];
-    if (scenario) {
-        $("#scenarioContainer").show();
-    } else {
-        $("#scenarioContainer").hide();
-    }
-
-
-    var positive_hemocultures = scenario.positive_hemocultures;
     //var pos_hemo_txt = convertJSONForTxtArea(positive_hemocultures);
     //$('#pos_hemocultre_txtarea').val(pos_hemo_txt);
-    $('#description').html(scenario.description);
-
+    $('#description').html(cas.filter(c => c.description != "")[0].description);
 
     var result = computeBSIEpisodes(parameters, positive_hemocultures);
-    updateVis(positive_hemocultures, result.episodes, scenario.expected_episodes);
+
+    updateVis(positive_hemocultures, result.episodes);
 }
 
 
@@ -69,9 +51,3 @@ $('#rawDataTab').click(function() {
 $('#computedDataTab').click(function() {
     showComputedTab();
 });
-
-$("#scenarioContainer").hide();
-
-// listeners
-$('#dataset-selector').change(selectionChanged);
-$('#algo-selector').change(selectionChanged);
