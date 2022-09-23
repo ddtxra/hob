@@ -1,5 +1,3 @@
-
-
 function updateVis(positive_hemos, episodes, expected) {
 
     var positive_hemocultures = prepareData(deepCopy((positive_hemos)));
@@ -68,9 +66,6 @@ function updateVis(positive_hemos, episodes, expected) {
     }
 
     showRawTab();
-
-
-    drawHighcharts("highchart_gantt", positive_hemocultures)
 
     $("#rawDataTab").text("Raw data (" + positive_hemocultures.length + " positive hemocultures)");
     $("#computedDataTab").text("Computed episodes (" + episodes.length + " episodes)");
