@@ -5,7 +5,6 @@
 <script src="js/lib/feature-viewer.bundle.js"></script>
 <script src="js/lib/lodash.min.js"></script>
 <script src="js/lib/moment.min.js"></script>
-<script src="js/lib/ag-grid-community.min.js"></script>
 <script src="js/impl/hug.js"></script>
 <script src="js/impl/hug-v2.js"></script>
 <script src="js/impl/praise.js"></script>
@@ -33,14 +32,6 @@
         <p>
             <b>Choose an algorithm</b>
         </p>
-        <div id="algo-selector" class="form-group">
-            <select id="algo-form-selector" class="form-control">
-            <option value="HUG" selected>HUG_v0</option>
-            <option value="PRAISE">PRAISE_v0</option>
-            <option value="HUGV2">HUG_v2</option>
-            <option value="template">template</option>
-        </select>
-        </div>
         <br>
         <div class="container" id="scenarioContainer">
             <p>
@@ -49,19 +40,6 @@
             <div id="fv_pos_hemo"></div>
             <div id="fv_episodes"></div>
             <div id="fv_classification"></div>
-
-            <ul class="nav nav-tabs">
-                <li class="nav-item">
-                    <a id="rawDataTab" href="#" class="nav-link active">Raw data (positive hemocultures)</a>
-                </li>
-                <li class="nav-item">
-                    <a id="computedDataTab" href="#" class="nav-link">Computed episodes (episodes)</a>
-                </li>
-
-            </ul>
-
-            <div id="pos_hemo_grid" style="height: 500px; width:1200px;" class="ag-theme-alpine"></div>
-            <div id="episodes_grid" style="height: 500px; width:1200px;" class="ag-theme-alpine"></div>
             <div class="container">
 
     </form>
