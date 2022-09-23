@@ -1,0 +1,190 @@
+description	patient_id	stay_id	sample_date	lab_result	commensal
+scenario (basics) 101					
+	patient_1001	stay_A	2021-01-01	E. Coli	0
+	patient_1001	stay_A	2021-01-05	E. Coli	0
+scenario (basics) 101					
+	patient_1002	stay_B	2021-01-01	E. Coli	0
+	patient_1002	stay_C	2021-01-05	E. Coli	0
+scenario (basics) 101					
+	patient_1003	stay_D	2021-01-01	E. Coli	0
+	patient_1003	stay_D	2021-01-05	Klebsiella	0
+scenario (basics) 101					
+	patient_1004	stay_E	2021-01-03	E. Coli	0
+	patient_1004	stay_E	2021-01-04	Klebsiella	0
+scenario (basics) 101					
+	patient_1005	stay_E	2021-01-01	E. Coli	0
+	patient_1005	stay_E	2021-01-03	Klebsiella	0
+	patient_1005	stay_E	2021-01-04	E. Coli	0
+scenario (basics) 101					
+	patient_1006	stay_E	2021-01-01	E. Coli	0
+	patient_1006	stay_E	2021-01-04	Klebsiella	0
+	patient_1006	stay_E	2021-01-05	E. Coli	0
+scenario (basics) 101					
+	patient_1007	stay_E	2021-01-01	E. Coli	0
+	patient_1007	stay_E	2021-01-04	Klebsiella	0
+	patient_1007	stay_E	2021-01-04	E. Coli	0
+scenario (basics) 101					
+	patient_1008	stay_E	2021-01-01	PathA	0
+	patient_1008	stay_E	2021-01-02	PathB	0
+	patient_1008	stay_E	2021-01-15	PathB	0
+scenario repeat interval (long HOB)					
+	patient_1009	stay_A	2021-01-01	E. Coli	0
+	patient_1009	stay_A	2021-01-02	E. Coli	0
+	patient_1009	stay_A	2021-01-03	E. Coli	0
+	patient_1009	stay_A	2021-01-04	E. Coli	0
+	patient_1009	stay_A	2021-01-05	E. Coli	0
+	patient_1009	stay_A	2021-01-06	E. Coli	0
+	patient_1009	stay_A	2021-01-07	E. Coli	0
+	patient_1009	stay_A	2021-01-08	E. Coli	0
+	patient_1009	stay_A	2021-01-09	E. Coli	0
+	patient_1009	stay_A	2021-01-10	E. Coli	0
+	patient_1009	stay_A	2021-01-11	E. Coli	0
+	patient_1009	stay_A	2021-01-12	E. Coli	0
+	patient_1009	stay_A	2021-01-13	E. Coli	0
+	patient_1009	stay_A	2021-01-14	E. Coli	0
+	patient_1009	stay_A	2021-01-15	E. Coli	0
+	patient_1009	stay_A	2021-01-16	E. Coli	0
+	patient_1009	stay_A	2021-01-17	E. Coli	0
+	patient_1009	stay_A	2021-01-18	E. Coli	0
+	patient_1009	stay_A	2021-01-19	E. Coli	0
+	patient_1009	stay_A	2021-01-20	E. Coli	0
+	patient_1009	stay_A	2021-01-21	E. Coli	0
+	patient_1009	stay_A	2021-01-22	E. Coli	0
+	patient_1009	stay_A	2021-01-23	E. Coli	0
+	patient_1009	stay_A	2021-01-24	E. Coli	0
+	patient_1009	stay_A	2021-01-25	E. Coli	0
+	patient_1009	stay_A	2021-01-26	E. Coli	0
+	patient_1009	stay_A	2021-01-27	E. Coli	0
+	patient_1009	stay_A	2021-01-28	E. Coli	0
+	patient_1009	stay_A	2021-01-29	E. Coli	0
+scenario 2 different commensals					
+	patient_1010	stay_A	2021-01-01	Staphylococcus epidermidis	1
+	patient_1010	stay_A	2021-01-02	Staphylococcus capitis	1
+	patient_1010	stay_A	2021-01-03	Staphylococcus epidermidis	1
+	patient_1010	stay_A	2021-01-04	Staphylococcus capitis	1
+scenario 2 different commensals					
+	patient_1011	stay_B	2021-01-01	Staphylococcus epidermidis	1
+	patient_1011	stay_B	2021-01-02	Staphylococcus capitis	1
+scenario commensals (repeat intervals) (requires some work?)					
+	patient_1012	stay_A	2021-01-01	Staphylococcus epidermidis	1
+	patient_1012	stay_A	2021-01-03	Staphylococcus epidermidis	1
+	patient_1012	stay_A	2021-01-05	Staphylococcus epidermidis	1
+	patient_1012	stay_A	2021-01-07	Staphylococcus epidermidis	1
+	patient_1012	stay_A	2021-01-09	Staphylococcus epidermidis	1
+	patient_1012	stay_A	2021-01-11	Staphylococcus epidermidis	1
+	patient_1012	stay_A	2021-01-13	Staphylococcus epidermidis	1
+	patient_1012	stay_A	2021-01-15	Staphylococcus epidermidis	1
+	patient_1012	stay_A	2021-01-17	Staphylococcus epidermidis	1
+scenario commensals (repeat intervals) (requires some work?)					
+	patient_1013	stay_B	2021-01-01	Staphylococcus epidermidis	1
+	patient_1013	stay_B	2021-01-05	Staphylococcus epidermidis	1
+	patient_1013	stay_B	2021-01-09	Staphylococcus epidermidis	1
+	patient_1013	stay_B	2021-01-13	Staphylococcus epidermidis	1
+	patient_1013	stay_B	2021-01-17	Staphylococcus epidermidis	1
+scenario polymicrobials					
+	patient_1014	stay_A	2021-01-01	E.Coli	0
+	patient_1014	stay_A	2021-01-01	Klebsiella	0
+scenario polymicrobials 2 (requires some work?)					
+	patient_1015	stay_A	2021-01-01	E.Coli	0
+	patient_1015	stay_A	2021-01-02	E.Coli	0
+	patient_1015	stay_A	2021-01-02	Klebsiella	0
+Polymicrobial with commensals (IN PROGRESS)					
+	patient_1016		2021-01-01	pathA	0
+	patient_1016		2021-01-02	pathB	0
+Polymicrobial with commensals (IN PROGRESS)					
+	patient_1017		2021-01-01	pathA	0
+	patient_1017		2021-01-02	pathA	0
+	patient_1017		2021-01-02	pathB	0
+	patient_1017		2021-01-05	pathB	0
+	patient_1017		2021-01-05	pathC	0
+Polymicrobial with commensals (IN PROGRESS)					
+	patient_1018		2021-01-01	pathA	0
+	patient_1018		2021-01-02	pathA	0
+	patient_1018		2021-01-02	pathB	0
+	patient_1018		2021-01-05	pathB	0
+	patient_1018		2021-01-05	pathC	0
+	patient_1018		2021-01-16	pathC	0
+Polymicrobial with commensals (IN PROGRESS)					
+	patient_1019		2021-01-01	pathA	0
+	patient_1019		2021-01-02	pathA	0
+	patient_1019		2021-01-02	pathB	0
+	patient_1019		2021-01-05	pathB	0
+	patient_1019		2021-01-05	comA	0
+Polymicrobial with commensals (IN PROGRESS)					
+	patient_1020		2021-01-01	pathA	0
+	patient_1020		2021-01-02	pathA	0
+	patient_1020		2021-01-02	pathB	0
+	patient_1020		2021-01-05	pathB	0
+	patient_1020		2021-01-06	comA	0
+scenario polymicrobials 4 (requires some work?)					
+	patient_1021	stay_A	2021-01-01	E.Coli	0
+	patient_1021	stay_A	2021-01-02	E.Coli	0
+	patient_1021	stay_A	2021-01-02	Klebsiella	0
+	patient_1021	stay_A	2021-01-05	Klebsiella	0
+	patient_1021	stay_A	2021-01-05	Staph. Epidermidis	1
+hob case vignettes (case 1 and 2)					
+	patient_1022	case_1	2021-01-05	PathA	0
+	patient_1022	case_1	2021-01-07	PathB	0
+hob case vignettes (case 1 and 2)					
+	patient_1023	case_2	2021-01-05	PathA	0
+	patient_1023	case_2	2021-01-05	PathB	0
+	patient_1023	case_2	2021-01-09	PathC	0
+hob case vignettes (case 3)					
+	patient_1024	case_3	2021-01-05	PathA	0
+	patient_1024	case_3	2021-01-05	ContX	1
+	patient_1024	case_3	2021-01-06	PathA	0
+	patient_1024	case_3	2021-01-06	ContX	1
+	patient_1024	case_3	2021-01-13	ContY	1
+	patient_1024	case_3	2021-01-15	ContY	1
+hob case vignettes (case 4 and 5)					
+	patient_1025	case_4	2021-01-05	PathA	0
+	patient_1025	case_4	2021-01-17	PathA	0
+	patient_1025	case_4	2021-01-23	PathA	0
+hob case vignettes (case 4 and 5)					
+	patient_1026	case_5	2021-01-02	PathA	0
+	patient_1026	case_5	2021-01-04	ContX	1
+	patient_1026	case_5	2021-01-05	ContX	1
+	patient_1026	case_5	2021-01-06	PathA	0
+hob case vignettes (case 6)					
+	patient_1027	stay_A	2021-01-05	PathA	0
+	patient_1027	stay_B	2021-01-14	PathA	0
+poly commensals (real)					
+	patient_1028	stay_A	2021-01-01	Staphylococcus epidermidis	1
+	patient_1028	stay_A	2021-01-04	Staphylococcus epidermidis	1
+	patient_1028	stay_A	2021-01-06	Staphylococcus epidermidis	1
+	patient_1028	stay_A	2021-01-06	Staphylococcus capitis	1
+	patient_1028	stay_A	2021-01-07	Staphylococcus capitis	1
+	patient_1028	stay_A	2021-01-08	Staphylococcus epidermidis	1
+poly commensals (fake)					
+	patient_1029	stay_A	2021-01-01	Staphylococcus epidermidis	1
+	patient_1029	stay_A	2021-01-02	Staphylococcus epidermidis	1
+poly commensals (fake2)					
+	patient_1030	stay_A	2021-01-01	Staphylococcus epidermidis	1
+	patient_1030	stay_A	2021-01-02	Staphylococcus capitis	1
+	patient_1030	stay_A	2021-01-06	Staphylococcus epidermidis	1
+	patient_1030	stay_A	2021-01-06	Staphylococcus capitis	1
+	patient_1030	stay_A	2021-01-07	Staphylococcus capitis	1
+	patient_1030	stay_A	2021-01-08	Staphylococcus epidermidis	1
+seven case					
+	patient_1031	stay_A	2021-01-01	commensalA	1
+	patient_1031	stay_A	2021-01-03	commensalA	1
+	patient_1031	stay_A	2021-01-05	commensalB	1
+	patient_1031	stay_A	2021-01-06	commensalB	1
+seven case e-mail					
+	patient_1032	stay_A	2021-01-04	pathA	0
+	patient_1032	stay_A	2021-01-05	pathB	0
+	patient_1032	stay_A	2021-01-06	comA	1
+	patient_1032	stay_A	2021-01-08	comA	1
+seven case e-mail					
+	patient_1033	stay_B	2021-01-04	pathA	0
+	patient_1033	stay_B	2021-01-05	pathB	0
+	patient_1033	stay_B	2021-01-06	comA	1
+	patient_1033	stay_B	2021-01-08	comB	1
+seven case e-mail					
+	patient_1034	stay_C	2021-01-04	pathA	0
+	patient_1034	stay_C	2021-01-05	pathB	0
+	patient_1034	stay_C	2021-01-06	comA	1
+seven case e-mail					
+	patient_1035	stay_D	2021-01-03	pathA	0
+	patient_1035	stay_D	2021-01-05	pathB	0
+	patient_1035	stay_D	2021-01-06	pathC	0
