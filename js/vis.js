@@ -60,7 +60,9 @@ function updateVis(positive_hemos, episodes, expected) {
 
 
     addFeature(new FeatureViewer.createFeature(fv_length, "#fv_pos_hemo", fvParams), positive_hemocultures);
-    //addFeature(new FeatureViewer.createFeature(fv_length, "#fv_episodes", fvParams), episodes, true);
+    addFeature(new FeatureViewer.createFeature(fv_length, "#fv_episodes", fvParams), episodes, true);
+    addFeature(new FeatureViewer.createFeature(fv_length, "#fv_classification", fvParams), episodes, true);
+
     /*if (expected && expected.data && expected.data.length > 0) {
         addFeature(new FeatureViewer.createFeature(fv_length, "#fv_expected", fvParams), prepareData(expected.data), true);
     }*/
