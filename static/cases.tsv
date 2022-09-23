@@ -1,4 +1,4 @@
-description	patient_id	stay_id	sample_date	lab_result	commensal
+description	patient_id	stay_id	labo_sample_date	labo_germ_name	labo_commensal
 scenario (basics) 101 patient_1001					
 	patient_1001	stay_A	2021-01-01	E. Coli	0
 	patient_1001	stay_A	2021-01-05	E. Coli	0
