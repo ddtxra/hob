@@ -1,4 +1,4 @@
-function updateVis(patient_id, positive_hemos, expected) {
+function updateVis(patient_id, description, positive_hemos, expected) {
 
 
     var episodes_hug_v0 = computeBSIEpisodes({
@@ -15,7 +15,6 @@ function updateVis(patient_id, positive_hemos, expected) {
     }, positive_hemos)["episodes"];
 
 
-    console.log(episodes_hug_v0);
     
     var positive_hemocultures = prepareData(deepCopy((positive_hemos)));
 
@@ -84,7 +83,7 @@ function updateVis(patient_id, positive_hemos, expected) {
 
     var div_id =  "fv_pos_hemo_" + patient_id;
 
-    $('#fv_pos_hemo').append($('<span>' + patient_id + '</span><div style="margin-top: -35px;" id=' + div_id+ '></div>'));
+    $('#fv_pos_hemo').append($('<p>' + patient_id + ': ' + description + '</p><div style="margin-top: -35px;" id=' + div_id+ '></div>'));
     var feat_v = new FeatureViewer.createFeature(fv_length, "#" + div_id, fvParams);
 
     addPositiveHemocultures(feat_v, positive_hemocultures);

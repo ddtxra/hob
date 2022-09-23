@@ -18,8 +18,5 @@ function showCases(cases) {
 }
 
 function showCase(patient_id, description, positive_hemocultures) {
-    //var pos_hemo_txt = convertJSONForTxtArea(positive_hemocultures);
-    //$('#pos_hemocultre_txtarea').val(pos_hemo_txt);
-    $('#description').html(description);
-    updateVis(patient_id, positive_hemocultures);
+    updateVis(patient_id, description, positive_hemocultures);
 }
