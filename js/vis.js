@@ -1,21 +1,6 @@
-function updateVis(patient_id, description, positive_hemos, expected) {
+function updateVis(patient_id, description, positive_hemos, episodes_implementations, expected) {
 
 
-    var episodes_hug_v0 = computeBSIEpisodes({
-        implementation: "HUG" //HUGV0
-    }, positive_hemos)["episodes"];
-
-
-    var episodes_hug_v2 = computeBSIEpisodes({
-        implementation: "HUGV2" //HUGV2
-    }, positive_hemos)["episodes"];
-
-    var episodes_praise = computeBSIEpisodes({
-        implementation: "HUGV2" //PRAISE
-    }, positive_hemos)["episodes"];
-
-
-    
     var positive_hemocultures = prepareData(deepCopy((positive_hemos)));
 
 
@@ -35,7 +20,7 @@ function updateVis(patient_id, description, positive_hemos, expected) {
             var pos_hem = lines[pat];
             var feature_pos_hemo = pos_hem.map(function(ph) {
                 var day_of_year = ph.labo_sample_datetime_moment.dayOfYear();
-                var label = ((false && ph.labo_polymicrobial_germs) ? ph.labo_polymicrobial_germs.join("+") : ph.labo_germ_name);
+                var label = ((false && ph.episode_germs) ? ph.episode_germs.join("+") : ph.labo_germ_name);
                 return {
                     x: day_of_year,
                     y: day_of_year + 0.999,
@@ -43,23 +28,26 @@ function updateVis(patient_id, description, positive_hemos, expected) {
                     color: getColorFromPalette(label)
                 }
             });
-    
+
+
+            console.log(feature_pos_hemo);
+
             ft.addFeature({
                 data: feature_pos_hemo,
                 name: pat,
                 className: "test",
                 type: "rect" // ['rect', 'path', 'line']
             });
-    
+
         });
-       
+
     }
 
-    function addEpisodes(ft, episodes, name){
+    function addEpisodes(ft, episodes, name) {
 
         var feature_episodes = episodes.map(function(ph) {
             var day_of_year = ph.labo_sample_datetime_moment.dayOfYear();
-            var label = ((true && ph.labo_polymicrobial_germs) ? ph.labo_polymicrobial_germs.join("+") : ph.labo_germ_name);
+            var label = ((true && ph.episode_germs) ? ph.episode_germs.join("+") : ph.labo_germ_name);
             return {
                 x: day_of_year,
                 y: day_of_year + 0.999,
@@ -76,21 +64,29 @@ function updateVis(patient_id, description, positive_hemos, expected) {
         });
     }
 
-
-
     var timestamps = (positive_hemocultures.map(p => p.labo_sample_datetime_timestamp));
     var fv_length = Math.round((Math.max(...timestamps) - Math.min(...timestamps)) / 1000 / 60 / 60 / 24) + 7;
+    //var fv_length = 30;
+    var fv_length = Math.max(fv_length, 10);
 
-    var div_id =  "fv_pos_hemo_" + patient_id;
+    var div_id = "fv_pos_hemo_" + patient_id;
 
-    $('#fv_pos_hemo').append($('<p>' + patient_id + ': ' + description + '</p><div style="margin-top: -35px;" id=' + div_id+ '></div>'));
+    $('#fv_pos_hemo').append($('<div class="panel panel-default"><p>' + patient_id + ': ' + description + '</p><div style="margin-top: -35px;" id=' + div_id + '></div></div>'));
     var feat_v = new FeatureViewer.createFeature(fv_length, "#" + div_id, fvParams);
 
     addPositiveHemocultures(feat_v, positive_hemocultures);
-    addEpisodes(feat_v, episodes_hug_v0, "episodes HUG_v0");
-    addEpisodes(feat_v, episodes_hug_v2, "episodes HUG_v2");
-    addEpisodes(feat_v, episodes_praise, "episodes praise");
-    
+
+    feat_v.addFeature({
+        data: [{ x: 1, y: fv_length }],
+        name: "EPISODES",
+        description: "paf",
+        color: "green",
+        type: "path" // ['rect', 'path', 'line']
+    });
+
+    episodes_implementations.forEach(function(epi) {
+        addEpisodes(feat_v, epi.episodes, epi.name);
+    });
     //addFeature(new FeatureViewer.createFeature(fv_length, "#fv_classification", fvParams), episodes, true);
 
     /*if (expected && expected.data && expected.data.length > 0) {

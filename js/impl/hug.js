@@ -58,8 +58,8 @@ function hug_implementation(parameters, positive_hemos) {
             var obj = _.assign(first_ep);
 
             //TODO get first
-            obj.labo_polymicrobial_germs = joinUniq(epi_patient_cal_day, "labo_germ_name");
-            obj.labo_polymicrobial_count = obj.labo_polymicrobial_germs.length
+            obj.episode_germs = joinUniq(epi_patient_cal_day, "labo_germ_name");
+            obj.episode_germs_count = obj.episode_germs.length
             obj.evidences_count = episodes_evi.length
 
             res.push(obj);
@@ -93,15 +93,20 @@ function hug_implementation(parameters, positive_hemos) {
     var episodes = group_evidences_by_episode(episode_evidences);
 
 
+
+    console.log("Results for simplified episodes")
+    console.log(episodes)
+    console.log("----")
+
     return {
-        episodes: episodes,
-        //episode_evidences: episode_evidences,
-        episode_evidences_commensals: episode_evidences_commensals,
-        episode_evidences_true_pathogenes: episode_evidences_true_pathogenes,
-        positive_hemocultures_true_pathogenes: positive_hemocultures_true_pathogenes,
-        positive_hemocultures_commensals: positive_hemocultures_commensals,
-        positive_hemocultures: positive_hemos,
-        parameters: parameters
+        episodes: episodes //,
+            //episode_evidences: episode_evidences,
+            /*episode_evidences_commensals: episode_evidences_commensals,
+            episode_evidences_true_pathogenes: episode_evidences_true_pathogenes,
+            positive_hemocultures_true_pathogenes: positive_hemocultures_true_pathogenes,
+            positive_hemocultures_commensals: positive_hemocultures_commensals,
+            positive_hemocultures: positive_hemos,
+            parameters: parameters*/
     }
 
 }

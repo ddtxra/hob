@@ -20,7 +20,7 @@ function updateVis(positive_hemos, expected_episodes, computed_episodes) {
             var pos_hem = lines[pat];
             var feature = pos_hem.map(function(ph) {
                 var day_of_year = ph.labo_sample_datetime_moment.dayOfYear();
-                var label = (epi ? ph.labo_polymicrobial_germs.join("+") : ph.labo_germ_name);
+                var label = (epi ? ph.episode_germs.join("+") : ph.labo_germ_name);
                 return {
                     x: day_of_year,
                     y: day_of_year + 0.999,

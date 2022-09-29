@@ -1,5 +1,8 @@
-$.getJSON("static/cases.json", function(cases) {
-    showCases(cases);
+$.get("static/single_case.tsv", function(tsv_cases) {
+    //$.get("static/cases.tsv", function(tsv_cases) {
+
+    var json_cases = parseTSVAndConvertToJSON(tsv_cases, "\t");
+    showCases(json_cases);
 });
 
 function showCases(cases) {
@@ -18,5 +21,54 @@ function showCases(cases) {
 }
 
 function showCase(patient_id, description, positive_hemocultures) {
-    updateVis(patient_id, description, positive_hemocultures);
+
+    let algos = [{ name: "HUG", description: "HUG_SIMPLIFIED" },
+        { name: "HUGV2", description: "HUGV2" },
+        { name: "PRAISE", description: "PRAISE" }
+    ]
+
+    let episodes_implementations = algos.map(function(algo) {
+        let episodes = computeBSIEpisodes({
+            implementation: algo.name
+        }, positive_hemocultures)["episodes"];
+
+        console.log("algo " + algo.name);
+        console.log(episodes);
+        console.log("----------");
+
+        return {
+            name: algo.description,
+            episodes: episodes
+        }
+    })
+
+
+    updateVis(patient_id, description, positive_hemocultures, episodes_implementations);
+}
+
+
+function parseTSVAndConvertToJSON(cases_tsv, separator) {
+    separator = separator ? separator : "\t";
+    let lines = cases_tsv.replace(/\r/gm, '').split("\n");
+    let column_names = lines[0].split(separator);
+
+    ["patient_id", "stay_id", "labo_sample_date", "labo_germ_name", "labo_commensal"].forEach(function(col) {
+        if (column_names.indexOf(col) == -1) {
+            var msg = "Can't find " + col + " in tsv file";
+            window.alert(msg);
+            throw Error(msg);
+        }
+    })
+
+    let result = [];
+    for (let current_line = 1; current_line < lines.length; current_line++) {
+        let values = lines[current_line].split(separator);
+        let object = {};
+        for (let c = 0; c < column_names.length; c++) {
+            let col_name = column_names[c];
+            object[col_name] = values[c];
+        }
+        result.push(object)
+    }
+    return result;
 }

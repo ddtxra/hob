@@ -58,8 +58,8 @@ function hug_implementation(parameters, positive_hemos) {
             var obj = _.assign(first_ep);
 
             //TODO get first
-            obj.labo_polymicrobial_germs = joinUniq(epi_patient_cal_day, "labo_germ_name");
-            obj.labo_polymicrobial_count = obj.labo_polymicrobial_germs.length
+            obj.episode_germs = joinUniq(epi_patient_cal_day, "labo_germ_name");
+            obj.episode_germs_count = obj.episode_germs.length
             obj.evidences_count = episodes_evi.length
 
             res.push(obj);

@@ -14,11 +14,11 @@ function template_implementation(parameters, positive_hemos) {
             "labo_commensal": "0",
             "labo_sample_datetime_moment": date,
             "labo_sample_datetime_timestamp": date.valueOf(),
-            "labo_polymicrobial_germs": [
+            "episode_germs": [
                 "pathA",
                 "pathB"
             ],
-            "labo_polymicrobial_count": 1,
+            "episode_germs_count": 1,
             "evidences_count": 1
         }]
     }
