@@ -54,7 +54,7 @@ function parseTSVAndConvertToJSON(cases_tsv, separator) {
 
     ["patient_id", "stay_id", "labo_sample_date", "labo_germ_name", "labo_commensal"].forEach(function(col) {
         if (column_names.indexOf(col) == -1) {
-            var msg = "Can't find " + col + " in tsv file";
+            let msg = "Can't find " + col + " in tsv file";
             window.alert(msg);
             throw Error(msg);
         }
