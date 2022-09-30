@@ -3,7 +3,7 @@ function hug_implementation_v2(parameters, positive_hemos) {
     var VALID_NEW_CASES_DAYS = parameters.valid_new_cases_days ? parameters.valid_new_cases_days : 14;
     var DAYS_TO_AGG_COMMENSALS_TOGETHER = 3;
 
-    var positive_hemocultures = prepareData(deepCopy(positive_hemos));
+    var positive_hemocultures = deepCopy(positive_hemos);
 
     var date_str = "2021-01-02";
     var date = moment(date_str);
@@ -38,51 +38,59 @@ function hug_implementation_v2(parameters, positive_hemos) {
     }
 
 
+
+    function buildEpisodeFromPositiveHemoculture(pos_hemoculture) {
+        //TODO pass just required attributes
+        return new Episode(pos_hemoculture);
+    }
+
     function filterBSICases(pos_hemocultures) {
 
-        let cases = {};
+        let episodes_to_investigate = {};
         let common_skin_commensals = {};
 
-        pos_hemocultures.forEach(function(l) {
+        pos_hemocultures.forEach(function(current_ph) {
 
-            let patient_stay = "P-" + l.patient_id + "-S-" + l.stay_id;
-            if (!cases[patient_stay]) {
-                cases[patient_stay] = [];
+            let patient_stay = "P-" + current_ph.patient_id + "-S-" + current_ph.stay_id;
+            if (!episodes_to_investigate[patient_stay]) {
+                episodes_to_investigate[patient_stay] = [];
             }
 
             //If it is not a commansal or we don't know if it is one, we treat him as true BSI
-            if (l.labo_commensal == "0" || l.labo_commensal == "-1") {
+            if (current_ph.labo_commensal == "0" || current_ph.labo_commensal == "-1") {
                 //If it is empty push the first
-                if (cases[patient_stay].length == 0) {
+                if (episodes_to_investigate[patient_stay].length == 0) {
 
-                    let epi = deepCopy(l);
-                    epi.distinct_germs = [];
-                    epi.ph_evidences = [];
-
-                    epi.distinct_germs.push(l.labo_germ_name)
-
-                    epi.distinct_germs = _.uniq(epi.distinct_germs);
-                    epi.ph_evidences.push(l);
-                    cases[patient_stay].push(epi);
+                    let epi = buildEpisodeFromPositiveHemoculture(current_ph);
+                    episodes_to_investigate[patient_stay].push(epi);
                 }
+
                 //If not empty let's find the cases that are still valid (no more than 14 days)
-                else if (cases[patient_stay].length > 0) {
+                else if (episodes_to_investigate[patient_stay].length > 0) {
 
-                    var valid_cases = cases[patient_stay].filter(c => (l.days - c.days) <= VALID_NEW_CASES_DAYS);
-                    console.log("still valid")
-                    console.log(valid_cases);
-                    valid_cases.forEach(function(epi) {
-                        if (_.includes(epi.distinct_germs, l.labo_germ_name) || epi.days == l.days) {
-
-                            epi.distinct_germs = _.uniq(epi.distinct_germs);
-                            epi.ph_evidences.push(l);
-                            cases[patient_stay].push(epi);
-
+                    let current_ph_processed = false;
+                    let episodes_to_investigate_still_open = episodes_to_investigate[patient_stay].filter(c => (current_ph.days - c.days) < VALID_NEW_CASES_DAYS);
+                    episodes_to_investigate_still_open.forEach(function(episode_open) {
+                        //If it is the same germ or it is the same day we add a copy strain evidence (same germ within the 14 days)
+                        if (episode_open.containsGerm(current_ph.labo_germ_name)) {
+                            episode_open.addCopyStrainEvidence(current_ph);
+                            current_ph_processed = true;
+                        }
+                        //If it a different germ, but on the same day
+                        else if (episode_open.labo_sample_date == current_ph.labo_sample_date) {
+                            episode_open.addPolymicrobialEvidence(current_ph);
+                            current_ph_processed = true;
                         }
                     })
 
+                    if (!current_ph_processed) {
+                        let epi = buildEpisodeFromPositiveHemoculture(current_ph);
+                        episodes_to_investigate[patient_stay].push(epi);
+                    }
 
-                    //TODO check if cases can not be merged !
+
+
+                    //TODO check if cases can be merged !
 
                 }
 
@@ -103,54 +111,53 @@ function hug_implementation_v2(parameters, positive_hemos) {
                                     let cases_with_different_germ = cases[patient_stay].filter(c => c.labo_germ_name != l.labo_germ_name);
                                 }*/
 
-            } else if (l.labo_commensal == "1") {
+            } else if (current_ph.labo_commensal == "1") {
 
 
                 //TODO remove me!
-                l.episode_germs = [];
+                current_ph.distinct_germs = [];
 
                 if (!common_skin_commensals[patient_stay]) {
                     common_skin_commensals[patient_stay] = [];
                 }
 
-                let commensals_for_patient_same_germ = common_skin_commensals[patient_stay].filter(c => c.labo_germ_name == l.labo_germ_name);
+                let commensals_for_patient_same_germ = common_skin_commensals[patient_stay].filter(c => c.labo_germ_name == current_ph.labo_germ_name);
                 let last_commensals_for_patient = commensals_for_patient_same_germ[commensals_for_patient_same_germ.length - 1];
                 let valid_commensal_cases = common_skin_commensals[patient_stay].filter(c => c.used_for_cases);
                 let last_valid_commensal_case = valid_commensal_cases[valid_commensal_cases.length - 1];
-                let existing_case_in_same_day = cases[patient_stay].filter(c => c.days == l.days).length > 0;
+                let existing_case_in_same_day = episodes_to_investigate[patient_stay].filter(c => c.days == current_ph.days).length > 0;
 
-                if (last_valid_commensal_case) {
-                    console.log((l.days - last_valid_commensal_case.days))
-                }
+                /*if (last_valid_commensal_case) {
+                    console.log((current_ph.days - last_valid_commensal_case.days))
+                }*/
 
                 //if there is not a valid commensal used as true pathogene yet OR
                 // that the last
-                if ((!last_valid_commensal_case || ((l.days - last_valid_commensal_case.days) > VALID_NEW_CASES_DAYS)) && !existing_case_in_same_day) {
+                if ((!last_valid_commensal_case || ((current_ph.days - last_valid_commensal_case.days) > VALID_NEW_CASES_DAYS)) && !existing_case_in_same_day) {
 
 
-
-                    let existing_case_in_same_day_of_last_commensal = last_commensals_for_patient ? cases[patient_stay].map(c => c.days).indexOf(last_commensals_for_patient.days) != -1 : false;
+                    let existing_case_in_same_day_of_last_commensal = last_commensals_for_patient ? episodes_to_investigate[patient_stay].map(c => c.days).indexOf(last_commensals_for_patient.days) != -1 : false;
                     if (last_commensals_for_patient && !last_commensals_for_patient.used_for_cases && !existing_case_in_same_day_of_last_commensal) {
 
                         //Check the time between last commensal and this one
                         let time1 = moment(last_commensals_for_patient.labo_sample_date);
-                        let time2 = moment(l.labo_sample_date);
+                        let time2 = moment(current_ph.labo_sample_date);
                         let diff = time2.diff(time1, 'days');
 
                         //Should be more than one hour and less than 3*24 hours (3 days)
                         if (diff >= 1 && diff <= DAYS_TO_AGG_COMMENSALS_TOGETHER) {
                             last_commensals_for_patient.used_for_cases = true;
                             //Add the commensal to the cases
-                            cases[patient_stay].push(last_commensals_for_patient);
+                            episodes_to_investigate[patient_stay].push(buildEpisodeFromPositiveHemoculture(last_commensals_for_patient));
                         }
                     }
                 }
                 //Add the commensal to the list
-                common_skin_commensals[patient_stay].push(l);
+                common_skin_commensals[patient_stay].push(current_ph);
             }
         });
 
-        return cases;
+        return episodes_to_investigate;
     }
 
 
@@ -171,8 +178,8 @@ function hug_implementation_v2(parameters, positive_hemos) {
             var germs = _.uniq([]
                 .concat(pos_hemocultures_for_stay.filter(ph => parseInt(ph.days) == parseInt(episodeClone.days)).map(e => e.labo_germ_name))
             );
-            episodeClone.episode_germs_count = germs.length;
-            episodeClone.episode_germs = germs;
+            episodeClone.distinct_germs_count = germs.length;
+            episodeClone.distinct_germs = germs;
         }
         return episodeClone;
     }
@@ -192,13 +199,13 @@ function hug_implementation_v2(parameters, positive_hemos) {
 
     var casesMap = filterBSICases(positive_hemocultures);
 
-    console.log("paf");
-    console.log(casesMap);
+    //    console.log("paf");
+    //    console.log(casesMap);
 
     var cases = mapKeysToArray(casesMap)
 
-    console.log("Pos hemo");
-    console.log(JSON.stringify(cases, null, 2))
+    //    console.log("Pos hemo");
+    //    console.log(JSON.stringify(cases, null, 2))
 
 
     /*var exportData = {

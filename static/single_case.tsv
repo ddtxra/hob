@@ -1,4 +1,8 @@
 description	patient_id	stay_id	labo_sample_date	labo_germ_name	labo_commensal
-Two positive hemocultures with a different pathogene in the same days counts as 1 polymicrobial episode for both HUG and PRAISE	patient_10041
-	patient_10041		2021-01-04	pathA	0
-	patient_10041		2021-01-04	pathB	0
+Two positive hemocultures with a same pathogene should not be repeated within 14 days from the first episode	patient_1001
+	patient_1001	stay_A	2021-01-01	pathA	0
+	patient_1001	stay_A	2021-01-05	pathA	0
+	patient_1001	stay_A	2021-01-10	pathA	0
+	patient_1001	stay_A	2021-01-14	pathA	0
+	patient_1001	stay_A	2021-01-15	pathA	0	
+	patient_1001	stay_A	2021-01-16	pathA	0	

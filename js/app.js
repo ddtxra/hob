@@ -1,5 +1,5 @@
-$.get("static/single_case.tsv", function(tsv_cases) {
-    //$.get("static/cases.tsv", function(tsv_cases) {
+//$.get("static/single_case.tsv", function(tsv_cases) {
+$.get("static/cases.tsv", function(tsv_cases) {
 
     var json_cases = parseTSVAndConvertToJSON(tsv_cases, "\t");
     showCases(json_cases);
@@ -23,14 +23,14 @@ function showCases(cases) {
 function showCase(patient_id, description, positive_hemocultures) {
 
     let algos = [{ name: "HUG", description: "HUG_SIMPLIFIED" },
-        { name: "HUGV2", description: "HUGV2" },
-        { name: "PRAISE", description: "PRAISE" }
+        { name: "HUGV2", description: "HUGV2" } //,
+        // { name: "PRAISE", description: "PRAISE" }
     ]
 
     let episodes_implementations = algos.map(function(algo) {
         let episodes = computeBSIEpisodes({
             implementation: algo.name
-        }, positive_hemocultures)["episodes"];
+        }, deepCopy(positive_hemocultures))["episodes"];
 
         console.log("algo " + algo.name);
         console.log(episodes);
@@ -68,7 +68,9 @@ function parseTSVAndConvertToJSON(cases_tsv, separator) {
             let col_name = column_names[c];
             object[col_name] = values[c];
         }
-        result.push(object)
+
+        let ph = new PositiveHemoculture(object.description, object.patient_id, object.stay_id, object.labo_sample_date, object.labo_germ_name, object.labo_commensal);
+        result.push(ph)
     }
     return result;
 }

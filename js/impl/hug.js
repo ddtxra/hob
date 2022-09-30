@@ -1,6 +1,7 @@
 function hug_implementation(parameters, positive_hemos) {
 
-    var positive_hemocultures = prepareData(deepCopy(positive_hemos));
+    var positive_hemocultures = deepCopy(positive_hemos);
+
 
     var REPEAT_INTERVAL_DAYS_TRUE_PATHOEGENES = parameters.valid_new_cases_days ? parameters.valid_new_cases_days : 14;
     var REPEAT_INTERVAL_DAYS_COMMENSALS = parameters.valid_new_cases_hours ? parameters.valid_new_cases_hours : 3;
@@ -58,8 +59,8 @@ function hug_implementation(parameters, positive_hemos) {
             var obj = _.assign(first_ep);
 
             //TODO get first
-            obj.episode_germs = joinUniq(epi_patient_cal_day, "labo_germ_name");
-            obj.episode_germs_count = obj.episode_germs.length
+            obj.distinct_germs = joinUniq(epi_patient_cal_day, "labo_germ_name");
+            obj.distinct_germs_count = obj.distinct_germs.length
             obj.evidences_count = episodes_evi.length
 
             res.push(obj);
@@ -92,11 +93,6 @@ function hug_implementation(parameters, positive_hemos) {
     var episode_evidences = episode_evidences_true_pathogenes.concat(episode_evidences_commensals)
     var episodes = group_evidences_by_episode(episode_evidences);
 
-
-
-    console.log("Results for simplified episodes")
-    console.log(episodes)
-    console.log("----")
 
     return {
         episodes: episodes //,

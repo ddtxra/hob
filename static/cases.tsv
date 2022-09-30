@@ -2,6 +2,10 @@ description	patient_id	stay_id	labo_sample_date	labo_germ_name	labo_commensal
 Two positive hemocultures with a same pathogene should not be repeated within 14 days from the first episode	patient_1001
 	patient_1001	stay_A	2021-01-01	pathA	0
 	patient_1001	stay_A	2021-01-05	pathA	0
+	patient_1001	stay_A	2021-01-10	pathA	0
+	patient_1001	stay_A	2021-01-14	pathA	0
+	patient_1001	stay_A	2021-01-15	pathA	0	
+	patient_1001	stay_A	2021-01-16	pathA	0	
 If the two positive hemocultures appear in different stays for the same patient it should count as 2 episodes to investigate for HUG <span style='color:red'> but only 1 for PRAISE </span>	patient_1002					
 	patient_1002	stay_B	2021-01-01	pathA	0
 	patient_1002	stay_C	2021-01-05	pathA	0
@@ -11,9 +15,18 @@ Two positive hemocultures with a different pathogene should count as 2 episodes	
 Two positive hemocultures with a different pathogene in two different days should count as 2 episodes for HUG because there is no link between pathogenes <span style='color:red'> but only 1 for PRAISE because they are within the 3 days time window</span>	patient_1004					
 	patient_1004	stay_E	2021-01-04	pathA	0
 	patient_1004	stay_E	2021-01-05	pathB	0
-Two positive hemocultures with a different pathogene in the same days counts as 1 polymicrobial episode for both HUG and PRAISE	patient_10041
+Two positive hemocultures with a different pathogene in the same day counts as 1 polymicrobial episode for both HUG and PRAISE	patient_10041
 	patient_10041		2021-01-04	pathA	0
 	patient_10041		2021-01-04	pathB	0
+Three or more positive hemocultures with a different pathogene in the same day counts as 1 polymicrobial episode for both HUG and PRAISE	patient_10042
+	patient_10042		2021-01-04	pathA	0
+	patient_10042		2021-01-04	pathB	0
+	patient_10042		2021-01-04	pathC	0
+Three or more positive hemocultures with a different pathogene in the same day counts as 1 polymicrobial episode for both HUG and PRAISE <span style='color:red'> TO BE FIXED !!!!!!!!! </span>	patient_10043
+	patient_10043		2021-01-04	pathA	0
+	patient_10043		2021-01-05	pathB	0
+	patient_10043		2021-01-06	pathA	0
+	patient_10043		2021-01-06	pathC	0
 scenario (basics) 101 patient_1005	patient_1005					
 	patient_1005	stay_E	2021-01-01	pathA	0
 	patient_1005	stay_E	2021-01-03	pathB	0

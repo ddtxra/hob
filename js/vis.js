@@ -1,7 +1,7 @@
 function updateVis(patient_id, description, positive_hemos, episodes_implementations, expected) {
 
 
-    var positive_hemocultures = prepareData(deepCopy((positive_hemos)));
+    var positive_hemocultures = deepCopy((positive_hemos));
 
 
     // let the grid know which columns and what data to use
@@ -20,7 +20,7 @@ function updateVis(patient_id, description, positive_hemos, episodes_implementat
             var pos_hem = lines[pat];
             var feature_pos_hemo = pos_hem.map(function(ph) {
                 var day_of_year = ph.labo_sample_datetime_moment.dayOfYear();
-                var label = ((false && ph.episode_germs) ? ph.episode_germs.join("+") : ph.labo_germ_name);
+                var label = ((false && ph.distinct_germs) ? ph.distinct_germs.join("+") : ph.labo_germ_name);
                 return {
                     x: day_of_year,
                     y: day_of_year + 0.999,
@@ -29,8 +29,6 @@ function updateVis(patient_id, description, positive_hemos, episodes_implementat
                 }
             });
 
-
-            console.log(feature_pos_hemo);
 
             ft.addFeature({
                 data: feature_pos_hemo,
@@ -45,9 +43,9 @@ function updateVis(patient_id, description, positive_hemos, episodes_implementat
 
     function addEpisodes(ft, episodes, name) {
 
-        var feature_episodes = episodes.map(function(ph) {
-            var day_of_year = ph.labo_sample_datetime_moment.dayOfYear();
-            var label = ((true && ph.episode_germs) ? ph.episode_germs.join("+") : ph.labo_germ_name);
+        let feature_episodes = episodes.map(function(ph) {
+            let day_of_year = ph.labo_sample_datetime_moment.dayOfYear();
+            let label = ((ph.distinct_germs) ? ph.distinct_germs.join("+") : ph.labo_germ_name);
             return {
                 x: day_of_year,
                 y: day_of_year + 0.999,
@@ -87,6 +85,7 @@ function updateVis(patient_id, description, positive_hemos, episodes_implementat
     episodes_implementations.forEach(function(epi) {
         addEpisodes(feat_v, epi.episodes, epi.name);
     });
+
     //addFeature(new FeatureViewer.createFeature(fv_length, "#fv_classification", fvParams), episodes, true);
 
     /*if (expected && expected.data && expected.data.length > 0) {
