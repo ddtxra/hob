@@ -19,22 +19,66 @@
 <html lang="en">
 <div class="container">
     <h2>Bacteremia episodes algorithm simulator</h2>
-    <p>This simulator is being developed by <a target="_blank" href="https://www.hug.ch/en/prevention-and-control-infection">HUG PCI group</a> and is still a work in progress. If you see issues or have questions, don't hesitate to
-        <a target="_blank" href="https://github.com/ddtxra/hob/issues">open an issue</a>.
-        <br>The source code of the HUG_v0 algorithm can be found <a href="https://github.com/ddtxra/hob/blob/gh-pages/js/impl/hug.js">here</a>. Other algorithm implementations can be added, contributions are welcome.
-        <br>Test scenarios can be found and added
-        <a target="_blank" href="https://github.com/ddtxra/hob/blob/gh-pages/static/test_scenarios.json">here</a> (feel free to add yours).
-        <br>Note: The simulator only deals with the identification of bacteremias (the "counting" part): It transforms positive hemocultures (raw data) into episodes, taking into account repeated blood cultures, copy strains, polymicrobial and commensals.
-        The classification of an episode in HOB (hospital-onset bacteremia), secondary, primary, catheter related (CRBSI), catheter associated (CLASI) or contaminant is not part of the simulator.
+    <p>This simulator is being developed by <a target="_blank" href="https://www.hug.ch/en/prevention-and-control-infection">HUG PCI group</a> and is still a work in progress.
+        <br>The source code can be found <a href="https://github.com/ddtxra/hob/blob/gh-pages/js/impl/hug.js">here</a>.
     </p>
+    <div class="form-group">
+        <label for="exampleFormControlTextarea1">Data (copy paste your own data)</label>
+        <textarea style="font-size: 10px;" rows="6" class="form-control" id="dataText" rows="3"></textarea>
+        <button style="margin-top: 10px;" id="compute" type="button" class="btn btn-outline-secondary">Recompute with this data</button>
+    </div>
 
     <form>
         <br>
         <div class="container" id="scenarioContainer">
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th scope="col">Algorithm</th>
+                        <th scope="col">#Patients</th>
+                        <th scope="col">#Stays</th>
+                        <th scope="col">#Positive hemocultures</th>
+                        <th scope="col">#Episodes identified</th>
+                        <th scope="col">#BSI</th>
+                        <th scope="col">#HOB (requires date of admission)</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr id="HUG_SIMPLIFIED_ROW">
+                        <th scope="row">HUG_SIMPLIFIED</th>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr id="HUGV2_ROW">
+                        <th scope="row">HUG_V2</th>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr id="PRAISE_ROW">
+                        <th scope="row">PRAISE</th>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                </tbody>
+            </table>
+
             <div id="fv_pos_hemo"></div>
             <div class="container">
     </form>
     </div>
+
     <script src="./js/app.js"></script>
 
 </html>

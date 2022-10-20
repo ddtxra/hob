@@ -1,7 +1,13 @@
 //$.get("static/single_case.tsv", function(tsv_cases) {
 $.get("static/cases.tsv", function(tsv_cases) {
+    $("#dataText").val(tsv_cases);
+    let json_cases = parseTSVAndConvertToJSON(tsv_cases, "\t");
+    showCases(json_cases);
+});
 
-    var json_cases = parseTSVAndConvertToJSON(tsv_cases, "\t");
+
+$("#compute").click(function() {
+    let json_cases = parseTSVAndConvertToJSON($("#dataText").val(), "\t");
     showCases(json_cases);
 });
 
@@ -11,16 +17,44 @@ function showCases(cases) {
     $("#fv_pos_hemo").empty();
     $("#fv_episodes").empty();
     $("#fv_expected").empty();
-    var algo = $('#algo-selector').find(":selected").val();
+
+    let tableData = {};
+
 
     cases.filter(c => c.description != "").forEach(function(c) {
-        var positive_hemocultures = cases.filter(p => ((c.patient_id == p.patient_id) && (p.description == "")));
-        showCase(c.patient_id, c.description, positive_hemocultures)
+        let positive_hemocultures = cases.filter(p => ((c.patient_id == p.patient_id) && (p.description == "")));
+        let episode_implementations = getEpsiodesForAllAglorithms(positive_hemocultures);
+        updateVis(c.patient_id, c.description, positive_hemocultures, episode_implementations);
+
+        //for each impl
+        episode_implementations.forEach(impl => {
+            if (!tableData[impl.name]) {
+                tableData[impl.name] = { "episodes_count": 0 };
+            }
+            tableData[impl.name]["episodes_count"] = (tableData[impl.name]["episodes_count"] + impl.episodes.length);
+        })
     })
+
+
+    Object.keys(tableData).forEach(key => {
+        $("#" + key + "_ROW").find("td:eq(0)").text(_.uniq(cases.map(c => c.patient_id)).length)
+        $("#" + key + "_ROW").find("td:eq(1)").text(_.uniq(cases.filter(p => (p.description == "")).map(c => c.patient_id + "#" + c.stay_id)).length)
+        $("#" + key + "_ROW").find("td:eq(2)").text(cases.filter(p => (p.description == "")).length)
+
+        if (key == "HUG_SIMPLIFIED") {
+            $("#" + key + "_ROW").find("td:eq(4)").text(tableData[key].episodes_count)
+        } else {
+            $("#" + key + "_ROW").find("td:eq(3)").text(tableData[key].episodes_count)
+        }
+    })
+
+
+    //$("#" + algo.description + "_ROW").find("td:eq(1)").text(episodes.length)
+
 
 }
 
-function showCase(patient_id, description, positive_hemocultures) {
+function getEpsiodesForAllAglorithms(positive_hemocultures) {
 
     let algos = [{ name: "HUG", description: "HUG_SIMPLIFIED" },
         { name: "HUGV2", description: "HUGV2" } //,
@@ -32,10 +66,6 @@ function showCase(patient_id, description, positive_hemocultures) {
             implementation: algo.name
         }, deepCopy(positive_hemocultures))["episodes"];
 
-        console.log("algo " + algo.name);
-        console.log(episodes);
-        console.log("----------");
-
         return {
             name: algo.description,
             episodes: episodes
@@ -43,7 +73,7 @@ function showCase(patient_id, description, positive_hemocultures) {
     })
 
 
-    updateVis(patient_id, description, positive_hemocultures, episodes_implementations);
+    return episodes_implementations;
 }
 
 
