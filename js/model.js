@@ -1,7 +1,20 @@
+class Scenario {
+
+    constructor(description) {
+        this.description = description;
+        this.positive_hemocultures = [];
+    }
+
+    addPositiveHemoculture(positive_hemoculture) {
+        return this.positive_hemocultures.push(positive_hemoculture);
+    }
+
+}
+
+
 class PositiveHemoculture {
 
-    constructor(description, patient_id, stay_id, labo_sample_date, labo_germ_name, labo_commensal) {
-        this.description = description;
+    constructor(patient_id, stay_id, labo_sample_date, labo_germ_name, labo_commensal) {
         this.patient_id = patient_id;
         this.stay_id = stay_id;
         this.labo_sample_date = labo_sample_date;

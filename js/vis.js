@@ -1,8 +1,6 @@
-function updateVis(patient_id, description, positive_hemos, episodes_implementations, expected) {
-
+function updateVis(scenario_id, description, positive_hemos, episodes_implementations, expected) {
 
     var positive_hemocultures = deepCopy((positive_hemos));
-
 
     // let the grid know which columns and what data to use
     var fvParams = {
@@ -67,9 +65,9 @@ function updateVis(patient_id, description, positive_hemos, episodes_implementat
     //var fv_length = 30;
     var fv_length = Math.max(fv_length, 10);
 
-    var div_id = "fv_pos_hemo_" + patient_id;
+    var div_id = "fv_pos_hemo_" + scenario_id;
 
-    $('#fv_pos_hemo').append($('<div class="panel panel-default"><p>' + patient_id + ': ' + description + '</p><div style="margin-top: -35px;" id=' + div_id + '></div></div>'));
+    $('#fv_pos_hemo').append($('<div class="panel panel-default"><p>' + description + '</p><div style="margin-top: -35px;" id=' + div_id + '></div></div>'));
     var feat_v = new FeatureViewer.createFeature(fv_length, "#" + div_id, fvParams);
 
     addPositiveHemocultures(feat_v, positive_hemocultures);

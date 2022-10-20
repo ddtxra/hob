@@ -23,9 +23,9 @@
         <br>The source code can be found <a href="https://github.com/ddtxra/hob/blob/gh-pages/js/impl/hug.js">here</a>.
     </p>
     <div class="form-group">
-        <label for="exampleFormControlTextarea1">Data (copy paste your own data)</label>
+        <label for="exampleFormControlTextarea1">Data (copy paste your own data, use tabs to separate values). Use #to separate scenarios</label>
         <textarea style="font-size: 10px;" rows="6" class="form-control" id="dataText" rows="3"></textarea>
-        <button style="margin-top: 10px;" id="compute" type="button" class="btn btn-outline-secondary">Recompute with this data</button>
+        <button style="margin-top: 10px;" id="compute" type="button" class="btn btn-outline-secondary">Re-compute with text data</button>
     </div>
 
     <form>
@@ -82,6 +82,24 @@
     <script src="./js/app.js"></script>
 
 </html>
+
+<script>
+    document.getElementById('dataText').addEventListener('keydown', function(e) {
+        if (e.key == 'Tab') {
+            e.preventDefault();
+            var start = this.selectionStart;
+            var end = this.selectionEnd;
+
+            // set textarea value to: text before caret + tab + text after caret
+            this.value = this.value.substring(0, start) +
+                "\t" + this.value.substring(end);
+
+            // put caret at right position again
+            this.selectionStart =
+                this.selectionEnd = start + 1;
+        }
+    });
+</script>
 
 <style>
     .svgHeader {

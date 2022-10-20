@@ -1,17 +1,17 @@
 //$.get("static/single_case.tsv", function(tsv_cases) {
 $.get("static/cases.tsv", function(tsv_cases) {
     $("#dataText").val(tsv_cases);
-    let json_cases = parseTSVAndConvertToJSON(tsv_cases, "\t");
-    showCases(json_cases);
+    let json_scenarios = parseTSVAndConvertToJSON(tsv_cases, "\t");
+    showScenarios(json_scenarios);
 });
 
 
 $("#compute").click(function() {
-    let json_cases = parseTSVAndConvertToJSON($("#dataText").val(), "\t");
-    showCases(json_cases);
+    let json_scenarios = parseTSVAndConvertToJSON($("#dataText").val(), "\t");
+    showScenarios(json_scenarios);
 });
 
-function showCases(cases) {
+function showScenarios(scenarios) {
 
     $('#description').html("");
     $("#fv_pos_hemo").empty();
@@ -19,12 +19,12 @@ function showCases(cases) {
     $("#fv_expected").empty();
 
     let tableData = {};
+    var scenarioCounter = 0;
 
+    scenarios.forEach(function(s) {
 
-    cases.filter(c => c.description != "").forEach(function(c) {
-        let positive_hemocultures = cases.filter(p => ((c.patient_id == p.patient_id) && (p.description == "")));
-        let episode_implementations = getEpsiodesForAllAglorithms(positive_hemocultures);
-        updateVis(c.patient_id, c.description, positive_hemocultures, episode_implementations);
+        let episode_implementations = getEpsiodesForAllAglorithms(s.positive_hemocultures);
+        updateVis(scenarioCounter++, s.description, s.positive_hemocultures, episode_implementations);
 
         //for each impl
         episode_implementations.forEach(impl => {
@@ -37,9 +37,9 @@ function showCases(cases) {
 
 
     Object.keys(tableData).forEach(key => {
-        $("#" + key + "_ROW").find("td:eq(0)").text(_.uniq(cases.map(c => c.patient_id)).length)
-        $("#" + key + "_ROW").find("td:eq(1)").text(_.uniq(cases.filter(p => (p.description == "")).map(c => c.patient_id + "#" + c.stay_id)).length)
-        $("#" + key + "_ROW").find("td:eq(2)").text(cases.filter(p => (p.description == "")).length)
+        $("#" + key + "_ROW").find("td:eq(0)").text(_.uniq(scenarios.map(c => c.patient_id)).length)
+        $("#" + key + "_ROW").find("td:eq(1)").text(_.uniq(scenarios.filter(p => (p.description == "")).map(c => c.patient_id + "#" + c.stay_id)).length)
+        $("#" + key + "_ROW").find("td:eq(2)").text(scenarios.filter(p => (p.description == "")).length)
 
         if (key == "HUG_SIMPLIFIED") {
             $("#" + key + "_ROW").find("td:eq(4)").text(tableData[key].episodes_count)
@@ -90,17 +90,32 @@ function parseTSVAndConvertToJSON(cases_tsv, separator) {
         }
     })
 
-    let result = [];
+    let scenarios = [];
+    let current_scenario = new Scenario("");
     for (let current_line = 1; current_line < lines.length; current_line++) {
-        let values = lines[current_line].split(separator);
-        let object = {};
-        for (let c = 0; c < column_names.length; c++) {
-            let col_name = column_names[c];
-            object[col_name] = values[c];
+
+
+        if (lines[current_line].trim() == "") {
+            continue;
+        } else if (lines[current_line].startsWith("#")) {
+            current_scenario = new Scenario(lines[current_line].replace("#", "").trim());
+            scenarios.push(current_scenario);
+
+        } else {
+            let values = lines[current_line].split(separator);
+
+            let object = {};
+            for (let c = 0; c < column_names.length; c++) {
+                let col_name = column_names[c];
+                object[col_name] = values[c];
+            }
+
+            let ph = new PositiveHemoculture(object.patient_id, object.stay_id, object.labo_sample_date, object.labo_germ_name, object.labo_commensal);
+            current_scenario.addPositiveHemoculture(ph);
+
         }
 
-        let ph = new PositiveHemoculture(object.description, object.patient_id, object.stay_id, object.labo_sample_date, object.labo_germ_name, object.labo_commensal);
-        result.push(ph)
     }
-    return result;
+
+    return scenarios;
 }
