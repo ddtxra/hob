@@ -1,0 +1,2138 @@
+patient_id	stay_id	labo_sample_date	labo_germ_name	labo_commensal
+591276	14964269	27-03-2018	Enterobacter cloacae Complex	0
+591276	14964269	27-03-2018	Enterobacter cloacae Complex	0
+591276	15617261	05-08-2019	Klebsiella pneumoniae complexe	0
+591276	15617261	05-08-2019	Enterococcus faecalis	0
+591276	15617261	05-08-2019	Citrobacter freundii/braakii	0
+591276	15617261	05-08-2019	Proteus mirabilis	0
+591276	15617261	05-08-2019	Proteus mirabilis	0
+591276	15617261	05-08-2019	Enterococcus faecalis	0
+591276	15617261	05-08-2019	Klebsiella pneumoniae complexe	0
+591276	15617261	05-08-2019	Citrobacter freundii/braakii	0
+439370	16141008	12-09-2020	Escherichia coli	0
+98564734	16116629	09-11-2020	Staphylococcus epidermidis	1
+98564734	16116629	10-11-2020	Staphylococcus epidermidis	1
+98564734	16116629	11-11-2020	Staphylococcus epidermidis	1
+98564734	16116629	12-11-2020	Staphylococcus epidermidis	1
+98564734	16116629	12-11-2020	Staphylococcus epidermidis	1
+98564734	16116629	13-11-2020	Staphylococcus epidermidis	1
+98564734	16116629	13-11-2020	Staphylococcus epidermidis	1
+98564734	16116629	15-11-2020	Staphylococcus epidermidis	1
+98564734	16116629	16-11-2020	Staphylococcus epidermidis	1
+98564734	16116629	17-11-2020	Staphylococcus epidermidis	1
+356686	16194319	17-11-2020	Staphylococcus epidermidis	1
+98564734	16116629	18-11-2020	Staphylococcus epidermidis	1
+98564734	16116629	03-12-2020	Staphylococcus epidermidis	1
+98564734	16116629	03-12-2020	Staphylococcus epidermidis	1
+98564734	16116629	03-12-2020	Staphylococcus hominis	1
+98564734	16116629	04-12-2020	Staphylococcus epidermidis	1
+98564734	16116629	05-12-2020	Staphylococcus epidermidis	1
+281494	16258333	06-12-2020	Staphylococcus epidermidis	1
+98559229	16276448	15-12-2020	Staphylococcus epidermidis	1
+98559229	16276448	16-12-2020	Staphylococcus epidermidis	1
+98559229	16276448	16-12-2020	Staphylococcus epidermidis	1
+97152839	16322704	27-12-2020	S- aureus méticilline-sensible (MSSA)	0
+874804	16275807	27-12-2020	S- aureus méticilline-sensible (MSSA)	0
+874804	16275807	27-12-2020	S- aureus méticilline-sensible (MSSA)	0
+874804	16275807	28-12-2020	S- aureus méticilline-sensible (MSSA)	0
+874804	16275807	28-12-2020	S- aureus méticilline-sensible (MSSA)	0
+874804	16275807	28-12-2020	S- aureus méticilline-sensible (MSSA)	0
+874804	16275807	28-12-2020	S- aureus méticilline-sensible (MSSA)	0
+874804	16275807	29-12-2020	S- aureus méticilline-sensible (MSSA)	0
+97152839	16322704	30-12-2020	S- aureus méticilline-sensible (MSSA)	0
+874804	16275807	31-12-2020	S- aureus méticilline-sensible (MSSA)	0
+356686	16194319	01-01-2021	Stenotrophomonas maltophilia	0
+356686	16194319	01-01-2021	Stenotrophomonas maltophilia	0
+97152839	16322704	01-01-2021	S- aureus méticilline-sensible (MSSA)	0
+1053994	16327763	01-01-2021	Staphylococcus epidermidis	1
+1053994	16327763	01-01-2021	Staphylococcus hominis	1
+98580818	16301857	01-01-2021	Staphylococcus epidermidis	1
+98580818	16301857	01-01-2021	Staphylococcus epidermidis	1
+97562228	16328290	02-01-2021	Escherichia coli	0
+97562228	16328290	02-01-2021	Escherichia coli	0
+97151540	16328249	02-01-2021	Klebsiella pneumoniae complexe	0
+97151540	16328249	02-01-2021	Klebsiella pneumoniae complexe	0
+97485318	16328569	02-01-2021	Finegoldia magna (Peptostreptococcus magnus)	0
+97485318	16328569	02-01-2021	Finegoldia magna (Peptostreptococcus magnus)	0
+97485318	16328569	02-01-2021	Finegoldia magna (Peptostreptococcus magnus)	0
+97485318	16328569	02-01-2021	Helcococcus kunzii	0
+845540	16316679	02-01-2021	Escherichia coli	0
+40641	16328658	02-01-2021	Enterococcus faecalis	0
+40641	16328658	02-01-2021	Enterococcus faecalis	0
+97289657	16328782	02-01-2021	Klebsiella pneumoniae complexe	0
+97152839	16322704	03-01-2021	Bacillus cereus complexe	1
+97178862	16328892	03-01-2021	Enterococcus faecalis	0
+97178862	16328892	03-01-2021	Enterococcus faecalis	0
+40641	16328658	03-01-2021	Enterococcus faecalis	0
+40641	16328658	03-01-2021	Enterococcus faecalis	0
+40641	16328658	04-01-2021	Enterococcus faecalis	0
+40641	16328658	04-01-2021	Enterococcus faecalis	0
+244048	16319652	04-01-2021	Staphylococcus epidermidis	1
+97024040	16328578	04-01-2021	Escherichia coli	0
+885336	16331429	04-01-2021	Bacteroides thetaiotaomicron	0
+885336	16331429	04-01-2021	Alistipes onderdonckii	0
+904370	16314580	04-01-2021	Proteus mirabilis	0
+4939	16331474	05-01-2021	Staphylococcus epidermidis	1
+4939	16331474	05-01-2021	Staphylococcus epidermidis	1
+4939	16331474	05-01-2021	Staphylococcus epidermidis	1
+98574698	16231104	05-01-2021	Staphylococcus epidermidis	1
+97107654	16273961	05-01-2021	Staphylococcus hominis	1
+97984593	16334320	06-01-2021	S- aureus méticilline-sensible (MSSA)	0
+871093	16326745	06-01-2021	Escherichia coli	0
+526846	16335342	06-01-2021	Escherichia coli	0
+11268	15961177	06-01-2021	Escherichia coli	0
+579253	16335404	06-01-2021	Escherichia coli	0
+579253	16335404	06-01-2021	Escherichia coli	0
+97012311	16334162	07-01-2021	Escherichia coli	0
+1063335	16335833	07-01-2021	Pseudomonas aeruginosa	0
+1063335	16335833	07-01-2021	Pseudomonas aeruginosa	0
+4762	16319962	07-01-2021	Enterobacter cloacae Complex	0
+4762	16319962	07-01-2021	Klebsiella oxytoca/Raoultella sp	0
+98559229	16276448	07-01-2021	Enterococcus faecalis	0
+98559229	16276448	07-01-2021	Lactobacillus rhamnosus	0
+98559229	16276448	07-01-2021	Staphylococcus epidermidis	1
+4762	16319962	07-01-2021	Enterobacter cloacae Complex	0
+29864	16321863	07-01-2021	S- aureus méticilline-sensible (MSSA)	0
+97206707	16336897	07-01-2021	Escherichia coli	0
+299445	16335139	07-01-2021	Escherichia coli	0
+299445	16335139	07-01-2021	Escherichia coli	0
+453021	16337174	07-01-2021	Enterococcus faecium	0
+397770	16302060	08-01-2021	Pseudomonas aeruginosa	0
+397770	16302060	08-01-2021	Pseudomonas aeruginosa	0
+397770	16302060	08-01-2021	Enterococcus faecium	0
+397770	16302060	08-01-2021	Enterococcus faecium	0
+397770	16302060	08-01-2021	Pseudomonas aeruginosa	0
+397770	16302060	08-01-2021	Pseudomonas aeruginosa	0
+4762	16319962	08-01-2021	Klebsiella oxytoca/Raoultella sp	0
+34837	16339164	08-01-2021	Escherichia coli	0
+34837	16339164	08-01-2021	Escherichia coli	0
+97625894	16327142	09-01-2021	Escherichia coli	0
+331197	16339493	09-01-2021	Proteus mirabilis	0
+331197	16339493	09-01-2021	Proteus mirabilis	0
+331197	16339493	09-01-2021	Escherichia coli	0
+96734	16303887	09-01-2021	Citrobacter koseri (C-diversus)	0
+311426	16321324	10-01-2021	Bacteroides fragilis	0
+311426	16321324	10-01-2021	Peptostreptococcus anaerobius	-1
+311426	16321324	10-01-2021	Bacteroides fragilis	0
+338043	16340099	10-01-2021	Enterobacter cloacae Complex	0
+338043	16340099	10-01-2021	Enterobacter cloacae Complex	0
+82359	16340440	11-01-2021	Escherichia coli	0
+82359	16340440	11-01-2021	Escherichia coli	0
+97442373	16337227	12-01-2021	S- aureus méticilline-sensible (MSSA)	0
+97442373	16337227	12-01-2021	S- aureus méticilline-sensible (MSSA)	0
+622268	16343589	12-01-2021	Eikenella corrodens	0
+622268	16343589	12-01-2021	Peptoniphilus harei	0
+622268	16343589	12-01-2021	Peptoniphilus harei	0
+119426	16344009	12-01-2021	Escherichia coli	0
+119426	16344009	12-01-2021	Escherichia coli	0
+622268	16343589	12-01-2021	Anaerococcus murdochii	0
+102356	16343066	12-01-2021	Escherichia coli	0
+97442373	16337227	12-01-2021	S- aureus méticilline-sensible (MSSA)	0
+97442373	16337227	12-01-2021	S- aureus méticilline-sensible (MSSA)	0
+96044180	16344582	12-01-2021	Klebsiella pneumoniae complexe	0
+96044180	16344582	12-01-2021	Klebsiella pneumoniae complexe	0
+96044180	16344582	13-01-2021	Klebsiella pneumoniae complexe	0
+142883	16345184	13-01-2021	Staphylococcus epidermidis	1
+493655	16346536	13-01-2021	Peptoniphilus harei	0
+97786894	16346911	13-01-2021	Abiotrophia defectiva (Streptococcus defectivus)	0
+119426	16344009	14-01-2021	Escherichia coli	0
+119426	16344009	14-01-2021	Escherichia coli	0
+97786894	16347790	14-01-2021	Abiotrophia defectiva (Streptococcus defectivus)	0
+97786894	16347790	14-01-2021	Abiotrophia defectiva (Streptococcus defectivus)	0
+444919	16348605	14-01-2021	Staphylococcus capitis	1
+97757267	16216996	14-01-2021	Staphylococcus epidermidis	1
+160914	16349739	15-01-2021	Anaerococcus sp	0
+160914	16349739	15-01-2021	Anaerococcus sp	0
+235630	16350206	15-01-2021	S- aureus méticilline-sensible (MSSA)	0
+235630	16350206	16-01-2021	S- aureus méticilline-sensible (MSSA)	0
+164905	16351570	16-01-2021	Aggregatibacter actinomycetemcomitans (Actinobacillus actinomycetemcomitans)	-1
+1001797	16351485	16-01-2021	S- aureus méticilline-sensible (MSSA)	0
+1001797	16351485	16-01-2021	Granulicatella adiacens	1
+1001797	16351485	16-01-2021	S- aureus méticilline-sensible (MSSA)	0
+1001797	16351485	16-01-2021	Granulicatella adiacens	1
+1001797	16351485	16-01-2021	S- aureus méticilline-sensible (MSSA)	0
+1001797	16351485	16-01-2021	Atopobium parvulum	1
+1001797	16351485	16-01-2021	Atopobium parvulum	1
+1001797	16351485	16-01-2021	S- aureus méticilline-sensible (MSSA)	0
+1001797	16351485	16-01-2021	S- aureus méticilline-sensible (MSSA)	0
+97434126	16351770	16-01-2021	Enterococcus faecalis	0
+97434126	16351770	16-01-2021	Enterococcus faecalis	0
+1001797	16351485	17-01-2021	S- aureus méticilline-sensible (MSSA)	0
+98591381	16140965	17-01-2021	Escherichia coli sérotype K1	0
+98591381	16140965	17-01-2021	Escherichia coli	0
+97037075	16352309	17-01-2021	S- aureus méticilline-sensible (MSSA)	0
+97037075	16352309	17-01-2021	S- aureus méticilline-sensible (MSSA)	0
+97037075	16352309	17-01-2021	S- aureus méticilline-sensible (MSSA)	0
+97037075	16352309	17-01-2021	S- aureus méticilline-sensible (MSSA)	0
+97875576	16352506	17-01-2021	Escherichia coli	0
+97875576	16352506	17-01-2021	Escherichia coli	0
+781019	16352523	17-01-2021	Enterococcus faecalis	0
+781019	16352523	17-01-2021	Enterococcus faecalis	0
+1001797	16351485	18-01-2021	S- aureus méticilline-sensible (MSSA)	0
+97786894	16347790	18-01-2021	Staphylococcus hominis	1
+98567144	16325171	18-01-2021	Staphylococcus haemolyticus	1
+97037075	16352309	18-01-2021	S- aureus méticilline-sensible (MSSA)	0
+97037075	16352309	18-01-2021	S- aureus méticilline-sensible (MSSA)	0
+620997	16335432	18-01-2021	Klebsiella pneumoniae complexe	0
+620997	16335432	18-01-2021	Klebsiella pneumoniae complexe	0
+97562632	16317909	18-01-2021	Staphylococcus epidermidis	1
+97037075	16352309	18-01-2021	S- aureus méticilline-sensible (MSSA)	0
+468351	16353709	18-01-2021	Enterococcus faecalis	0
+468351	16353709	18-01-2021	Enterococcus faecalis	0
+294934	16348922	18-01-2021	Proteus vulgaris complexe	0
+294934	16348922	18-01-2021	Escherichia coli	0
+468351	16353709	18-01-2021	Enterococcus faecalis	0
+468351	16353709	18-01-2021	Enterococcus faecalis	0
+750425	16352560	18-01-2021	Escherichia coli	0
+750425	16352560	18-01-2021	Achromobacter xylosoxidans	0
+215832	16352923	18-01-2021	Escherichia coli	0
+215832	16352923	18-01-2021	Escherichia coli	0
+97037075	16352309	18-01-2021	S- aureus méticilline-sensible (MSSA)	0
+97037075	16352309	18-01-2021	S- aureus méticilline-sensible (MSSA)	0
+97037075	16352309	18-01-2021	S- aureus méticilline-sensible (MSSA)	0
+97774954	16355006	19-01-2021	Escherichia coli	0
+620997	16335432	19-01-2021	Klebsiella pneumoniae complexe	0
+620997	16335432	19-01-2021	Klebsiella pneumoniae complexe	0
+97562632	16317909	19-01-2021	Staphylococcus epidermidis	1
+97562632	16317909	19-01-2021	Staphylococcus epidermidis	1
+1001797	16351485	20-01-2021	Staphylococcus hominis	1
+1001797	16351485	20-01-2021	Staphylococcus hominis	1
+468351	16353709	20-01-2021	Enterococcus faecalis	0
+468351	16353709	20-01-2021	Enterococcus faecalis	0
+97562632	16317909	20-01-2021	Staphylococcus epidermidis	1
+97562632	16317909	21-01-2021	Staphylococcus epidermidis	1
+796127	16359590	21-01-2021	Staphylococcus epidermidis	1
+796127	16359590	21-01-2021	Dermabacter hominis	1
+385458	16361488	21-01-2021	Klebsiella pneumoniae complexe	0
+468351	16353709	22-01-2021	Enterococcus faecalis	0
+899606	16363900	22-01-2021	Staphylococcus epidermidis	1
+966022	16325155	24-01-2021	Bacteroides fragilis	0
+966022	16325155	24-01-2021	Bacteroides fragilis	0
+585216	16357385	24-01-2021	Enterococcus faecalis	0
+585216	16357385	24-01-2021	Enterococcus faecalis	0
+317532	16355709	24-01-2021	Micrococcus luteus	1
+197912	16309374	24-01-2021	Staphylococcus epidermidis	1
+421933	16365196	24-01-2021	Aeromonas sp	0
+585216	16357385	25-01-2021	Enterococcus faecalis	0
+585216	16357385	25-01-2021	Enterococcus faecalis	0
+41371	16367663	26-01-2021	Staphylococcus epidermidis	1
+97046269	16367849	26-01-2021	Staphylococcus capitis	1
+585216	16357385	26-01-2021	Enterococcus faecalis	0
+279818	16363955	27-01-2021	Escherichia coli	0
+279818	16363955	27-01-2021	Escherichia coli	0
+440730	16369681	27-01-2021	Micrococcus luteus	1
+394042	16369745	27-01-2021	Escherichia coli	0
+394042	16369745	27-01-2021	Escherichia coli	0
+55682	16339623	28-01-2021	Enterococcus faecium	0
+97124698	16371832	28-01-2021	Escherichia coli	0
+97124698	16371832	28-01-2021	Aeromonas sp	0
+97124698	16371832	28-01-2021	Escherichia coli	0
+1081136	16368615	28-01-2021	Staphylococcus epidermidis	1
+98567427	16333458	28-01-2021	Pseudomonas aeruginosa	0
+98567427	16333458	28-01-2021	Pseudomonas aeruginosa	0
+98535751	15889873	28-01-2021	Escherichia coli	0
+98535751	15889873	28-01-2021	Escherichia coli	0
+98567427	16333458	28-01-2021	Pseudomonas aeruginosa	0
+325694	16364239	28-01-2021	Klebsiella pneumoniae complexe	0
+325694	16364239	28-01-2021	Klebsiella pneumoniae complexe	0
+531591	16349971	29-01-2021	Enterococcus faecalis	0
+531591	16349971	29-01-2021	Escherichia coli	0
+531591	16349971	29-01-2021	Enterococcus faecalis	0
+531591	16349971	29-01-2021	Enterococcus faecalis	0
+531591	16349971	29-01-2021	Enterococcus faecalis	0
+97224826	16375964	29-01-2021	Micrococcus luteus	1
+37867	16376077	30-01-2021	S- aureus méticilline-sensible (MSSA)	0
+37867	16376077	30-01-2021	S- aureus méticilline-sensible (MSSA)	0
+37867	16376077	30-01-2021	S- aureus méticilline-sensible (MSSA)	0
+113795	16334159	30-01-2021	S- aureus méticilline-sensible (MSSA)	0
+113795	16334159	30-01-2021	S- aureus méticilline-sensible (MSSA)	0
+387602	16376655	30-01-2021	Escherichia coli	0
+387602	16376655	30-01-2021	Escherichia coli	0
+113795	16334159	30-01-2021	S- aureus méticilline-sensible (MSSA)	0
+113795	16334159	30-01-2021	S- aureus méticilline-sensible (MSSA)	0
+113795	16334159	30-01-2021	S- aureus méticilline-sensible (MSSA)	0
+113795	16334159	30-01-2021	S- aureus méticilline-sensible (MSSA)	0
+350858	16376957	31-01-2021	Escherichia coli	0
+350858	16376957	31-01-2021	Escherichia coli	0
+270411	16351273	31-01-2021	Staphylococcus epidermidis	1
+591276	15930725	31-01-2021	Staphylococcus epidermidis	1
+591276	15930725	31-01-2021	Streptococcus oralis (groupe mitis)	1
+142883	16377570	31-01-2021	S- aureus méticilline-sensible (MSSA)	0
+142883	16377570	31-01-2021	S- aureus méticilline-sensible (MSSA)	0
+63327	16376933	31-01-2021	Klebsiella pneumoniae complexe	0
+63327	16376933	31-01-2021	Klebsiella pneumoniae complexe	0
+63327	16376933	31-01-2021	Klebsiella pneumoniae complexe	0
+142883	16377570	31-01-2021	S- aureus méticilline-sensible (MSSA)	0
+142883	16377570	31-01-2021	S- aureus méticilline-sensible (MSSA)	0
+142883	16377570	01-02-2021	S- aureus méticilline-sensible (MSSA)	0
+381311	16379772	01-02-2021	Escherichia coli	0
+381311	16379772	01-02-2021	Escherichia coli	0
+503698	16379812	01-02-2021	Aerococcus urinae	0
+503698	16379812	01-02-2021	Actinotignum schaalii / sanguinis	1
+503698	16379812	01-02-2021	Aerococcus urinae	0
+98576037	16333191	02-02-2021	Staphylococcus epidermidis	1
+142883	16377570	02-02-2021	S- aureus méticilline-sensible (MSSA)	0
+97017348	16374987	02-02-2021	Klebsiella oxytoca complexe/Raoultella sp	-1
+97017348	16374987	02-02-2021	Klebsiella oxytoca complexe/Raoultella sp	-1
+589894	16382349	02-02-2021	Escherichia coli	0
+97540767	16379112	02-02-2021	Enterococcus faecalis	0
+98576037	16333191	02-02-2021	Staphylococcus epidermidis	1
+98576037	16333191	02-02-2021	Staphylococcus epidermidis	1
+84404	16357303	03-02-2021	Staphylococcus epidermidis	1
+841764	16382467	03-02-2021	Streptococcus anginosus Group	1
+841764	16382467	03-02-2021	Streptococcus anginosus Group	1
+84404	16357303	03-02-2021	Staphylococcus epidermidis	1
+98654763	16371279	03-02-2021	Staphylococcus warneri	1
+98576037	16333191	03-02-2021	Staphylococcus epidermidis	1
+98576037	16333191	03-02-2021	Staphylococcus epidermidis	1
+8231	16383546	03-02-2021	Escherichia coli	0
+8231	16383546	03-02-2021	Escherichia coli	0
+817802	16383384	03-02-2021	Klebsiella pneumoniae complexe	0
+817802	16383384	03-02-2021	Klebsiella pneumoniae complexe	0
+97480860	16384514	03-02-2021	Escherichia coli	0
+97480860	16384514	03-02-2021	Escherichia coli	0
+97540767	16379112	03-02-2021	Enterococcus faecalis	0
+97540767	16379112	03-02-2021	Enterococcus faecalis	0
+93662	16384779	03-02-2021	Escherichia coli	0
+98654414	16384808	04-02-2021	Staphylococcus epidermidis	1
+97540767	16379112	04-02-2021	Enterococcus faecalis	0
+97540767	16379112	04-02-2021	Enterococcus faecalis	0
+98576037	16333191	04-02-2021	Staphylococcus epidermidis	1
+98576037	16333191	04-02-2021	Staphylococcus epidermidis	1
+423235	16365086	04-02-2021	S- aureus méticilline-sensible (MSSA)	0
+423235	16365086	04-02-2021	S- aureus méticilline-sensible (MSSA)	0
+84404	16357303	04-02-2021	Staphylococcus epidermidis	1
+97611230	16386877	04-02-2021	Escherichia coli	0
+206358	16387912	05-02-2021	Anaerococcus octavius	-1
+206358	16387912	05-02-2021	Staphylococcus epidermidis	1
+98656624	16387011	05-02-2021	Staphylococcus epidermidis	1
+98656624	16387011	05-02-2021	Staphylococcus warneri	1
+1104368	16386809	05-02-2021	Veillonella sp	0
+1104368	16386809	05-02-2021	Veillonella sp	0
+458065	16374723	06-02-2021	Escherichia coli	0
+458065	16374723	06-02-2021	Escherichia coli	0
+98649091	16357604	06-02-2021	Streptococcus oralis (groupe mitis)	1
+1084166	16390000	06-02-2021	Streptococcus oralis (groupe mitis)	1
+1084166	16390000	06-02-2021	Streptococcus oralis (groupe mitis)	1
+98657031	16390093	07-02-2021	Escherichia coli	0
+414317	16390298	07-02-2021	Staphylococcus epidermidis	1
+706610	16389444	07-02-2021	Staphylococcus epidermidis	1
+97143350	16390757	07-02-2021	Staphylococcus epidermidis	1
+97245687	16390790	08-02-2021	Klebsiella oxytoca/Raoultella sp	0
+97245687	16390790	08-02-2021	Klebsiella oxytoca/Raoultella sp	0
+874804	16380809	08-02-2021	Pseudomonas aeruginosa	0
+874804	16380809	08-02-2021	Pseudomonas aeruginosa	0
+98564734	16116629	08-02-2021	Enterococcus faecium	0
+98564734	16116629	08-02-2021	Enterococcus faecium	0
+340934	16392844	08-02-2021	S- aureus méticilline-sensible (MSSA)	0
+340934	16392844	08-02-2021	S- aureus méticilline-sensible (MSSA)	0
+340934	16392844	08-02-2021	Enterococcus faecalis	0
+340934	16392844	08-02-2021	Enterococcus faecalis	0
+340934	16392844	08-02-2021	Candida albicans	0
+340934	16392844	08-02-2021	S- aureus méticilline-sensible (MSSA)	0
+98592146	16349818	09-02-2021	Staphylococcus epidermidis	1
+13828	16394420	09-02-2021	Staphylococcus hominis	1
+13828	16394420	09-02-2021	Globicatella sanguinis	-1
+13828	16394420	09-02-2021	Aerococcus viridans	0
+13828	16394420	09-02-2021	Arthrobacter sp	0
+13828	16394420	09-02-2021	Aerococcus urinae	0
+874804	16394784	09-02-2021	Pseudomonas aeruginosa	0
+874804	16394784	09-02-2021	Pseudomonas aeruginosa	0
+98591381	16140965	09-02-2021	Escherichia coli sérotype K1	0
+356686	16194319	09-02-2021	Bacteroides fragilis	0
+261303	16395760	10-02-2021	Klebsiella pneumoniae complexe	0
+261303	16395760	10-02-2021	Klebsiella pneumoniae complexe	0
+97138675	16352878	10-02-2021	Klebsiella pneumoniae complexe	0
+581336	15213105	10-02-2021	Streptococcus pneumoniae	0
+581336	15213105	10-02-2021	Streptococcus pneumoniae	0
+97138675	16352878	10-02-2021	Klebsiella pneumoniae complexe	0
+673636	16397393	10-02-2021	S- aureus méticilline-sensible (MSSA)	0
+673636	16397393	10-02-2021	S- aureus méticilline-sensible (MSSA)	0
+153122	16397477	10-02-2021	Streptococcus agalactiae groupe B	0
+153122	16397477	10-02-2021	Streptococcus agalactiae groupe B	0
+97308243	16397493	11-02-2021	Staphylococcus haemolyticus	1
+673636	16397393	11-02-2021	S- aureus méticilline-sensible (MSSA)	0
+673636	16397393	11-02-2021	S- aureus méticilline-sensible (MSSA)	0
+386659	16364291	11-02-2021	Escherichia coli	0
+386659	16364291	11-02-2021	Escherichia coli	0
+386659	16364291	11-02-2021	Escherichia coli	0
+386659	16364291	11-02-2021	Escherichia coli	0
+765599	16398939	11-02-2021	Actinomyces odontolyticus	0
+765599	16398939	11-02-2021	Staphylococcus capitis	1
+97297777	16399658	11-02-2021	Klebsiella pneumoniae complexe	0
+97297777	16399658	11-02-2021	Klebsiella pneumoniae complexe	0
+98657977	16399149	11-02-2021	Bacteroides fragilis	0
+119748	16400053	12-02-2021	S- aureus méticilline-sensible (MSSA)	0
+119748	16400053	12-02-2021	S- aureus méticilline-sensible (MSSA)	0
+582600	16371786	12-02-2021	Citrobacter koseri (C-diversus)	0
+582600	16371786	12-02-2021	Escherichia coli	0
+582600	16371786	12-02-2021	Escherichia coli	0
+582600	16371786	12-02-2021	Citrobacter koseri (C-diversus)	0
+531591	16349971	12-02-2021	Escherichia coli	0
+531591	16349971	12-02-2021	Escherichia coli	0
+97160628	16401568	12-02-2021	Escherichia coli	0
+97160628	16401568	12-02-2021	Escherichia coli	0
+97504876	16401606	12-02-2021	Staphylococcus epidermidis	1
+97504876	16401606	12-02-2021	Staphylococcus epidermidis	1
+97504876	16401606	12-02-2021	Brevibacterium casei	0
+97504876	16401606	12-02-2021	Staphylococcus epidermidis	1
+263912	16372054	13-02-2021	Klebsiella oxytoca complexe/Raoultella sp	-1
+263912	16372054	13-02-2021	Klebsiella oxytoca complexe/Raoultella sp	-1
+386659	16364291	13-02-2021	Escherichia coli	0
+386659	16364291	13-02-2021	Escherichia coli	0
+386659	16364291	13-02-2021	Escherichia coli	0
+386659	16364291	13-02-2021	Escherichia coli	0
+119748	16400053	13-02-2021	S- aureus méticilline-sensible (MSSA)	0
+97504876	16401606	13-02-2021	Staphylococcus epidermidis	1
+97504876	16401606	13-02-2021	Brevibacterium casei	0
+618411	16397232	13-02-2021	Staphylococcus hominis	1
+618411	16397232	13-02-2021	Staphylococcus epidermidis	1
+403951	16368597	13-02-2021	Corynebacterium sp	1
+1104368	16386809	14-02-2021	Sphingomonas sp	-1
+340934	16392844	14-02-2021	Candida albicans	0
+119748	16400053	14-02-2021	S- aureus méticilline-sensible (MSSA)	0
+97504876	16401606	14-02-2021	Brevibacterium casei	0
+1125149	16390118	15-02-2021	Staphylococcus epidermidis	1
+1125149	16390118	15-02-2021	Staphylococcus epidermidis	1
+618411	16397232	15-02-2021	Candida albicans	0
+618411	16397232	15-02-2021	Candida albicans	0
+582808	16404623	15-02-2021	Corynebacterium striatum	1
+210001	16370247	15-02-2021	Escherichia coli	0
+114180	16404947	16-02-2021	Staphylococcus epidermidis	1
+98589001	16361721	16-02-2021	Staphylococcus epidermidis	1
+618411	16397232	16-02-2021	Candida albicans	0
+750058	16109841	16-02-2021	Klebsiella oxytoca/Raoultella sp	0
+824113	16405805	16-02-2021	Escherichia coli	0
+824113	16405805	16-02-2021	Escherichia coli	0
+97504876	16401606	16-02-2021	Brevibacterium casei	0
+582808	16404623	16-02-2021	S- aureus méticilline-sensible (MSSA)	0
+582808	16404623	16-02-2021	S- aureus méticilline-sensible (MSSA)	0
+582808	16404623	16-02-2021	S- aureus méticilline-sensible (MSSA)	0
+582808	16404623	16-02-2021	S- aureus méticilline-sensible (MSSA)	0
+1002803	16404250	16-02-2021	Escherichia coli	0
+1002803	16404250	16-02-2021	Escherichia coli	0
+820478	16406880	16-02-2021	Escherichia coli	0
+447817	16406958	16-02-2021	Escherichia coli	0
+447817	16406958	16-02-2021	Escherichia coli	0
+340934	16392844	16-02-2021	Candida albicans	0
+380019	16407010	16-02-2021	Escherichia coli 2	0
+380019	16407010	16-02-2021	Escherichia coli	0
+380019	16407010	16-02-2021	Escherichia coli	0
+615966	16406911	16-02-2021	Escherichia coli	0
+615966	16406911	16-02-2021	Escherichia coli	0
+97504876	16401606	17-02-2021	Brevibacterium casei	0
+114180	16404947	17-02-2021	Staphylococcus epidermidis	1
+114180	16404947	17-02-2021	Staphylococcus epidermidis	1
+98589001	16361721	17-02-2021	Staphylococcus epidermidis	1
+98589001	16361721	17-02-2021	Staphylococcus epidermidis	1
+357413	16408975	17-02-2021	Staphylococcus epidermidis	1
+97297547	16409097	17-02-2021	Kocuria kristinae	1
+98589001	16361721	18-02-2021	Staphylococcus epidermidis	1
+98589001	16361721	18-02-2021	Staphylococcus epidermidis	1
+97504876	16401606	18-02-2021	Brevibacterium casei	0
+97504876	16401606	18-02-2021	Brevibacterium casei	0
+97138684	16406859	18-02-2021	Staphylococcus epidermidis	1
+2163	15326274	18-02-2021	Campylobacter fetus	0
+2163	15326274	18-02-2021	Campylobacter fetus	0
+2163	15326274	18-02-2021	Campylobacter fetus	0
+2163	15326274	18-02-2021	Campylobacter fetus	0
+110206	16410595	18-02-2021	Escherichia coli	0
+821563	16410876	19-02-2021	Morganella morganii	0
+821563	16410876	19-02-2021	Bacteroides fragilis	0
+226833	16406152	19-02-2021	Escherichia coli	0
+226833	16406152	19-02-2021	Escherichia coli	0
+97504876	16401606	19-02-2021	Brevibacterium casei	0
+97504876	16401606	19-02-2021	Staphylococcus epidermidis	1
+536834	16409722	19-02-2021	Escherichia coli	0
+536834	16409722	19-02-2021	Escherichia coli	0
+536834	16409722	19-02-2021	Escherichia coli	0
+536834	16409722	19-02-2021	Escherichia coli	0
+84244	16334324	19-02-2021	Morganella morganii	0
+226833	16406152	19-02-2021	Escherichia coli	0
+226833	16406152	19-02-2021	Escherichia coli	0
+226833	16406152	19-02-2021	Escherichia coli	0
+97138684	16406859	19-02-2021	Staphylococcus epidermidis	1
+97294586	16412621	20-02-2021	Propionibacterium acnes (Cutibacterium a-)	1
+139076	16412734	20-02-2021	Staphylococcus epidermidis	1
+864197	16412738	20-02-2021	Staphylococcus capitis	1
+97009910	16413208	21-02-2021	Brevibacterium ravenspurgense	-1
+278683	16409587	21-02-2021	Staphylococcus hominis	1
+278683	16409587	21-02-2021	Staphylococcus hominis	1
+98179	16413813	21-02-2021	Escherichia coli	0
+98179	16413813	21-02-2021	Escherichia coli	0
+98574526	16413517	21-02-2021	Leptotrichia trevisanii	0
+232675	16414026	21-02-2021	Escherichia coli	0
+940389	16415877	22-02-2021	Streptococcus agalactiae groupe B	0
+97207907	16402416	22-02-2021	Enterococcus faecalis	0
+898010	16396073	23-02-2021	Enterobacter cloacae Complex	0
+898010	16396073	23-02-2021	Enterobacter cloacae Complex	0
+1131724	16417268	23-02-2021	Escherichia coli	0
+1131724	16417268	23-02-2021	Escherichia coli	0
+85252	16418079	23-02-2021	Veillonella sp	0
+98544901	16418105	24-02-2021	Escherichia coli	0
+164673	16419401	24-02-2021	S- aureus méticilline-sensible (MSSA)	0
+164673	16419401	24-02-2021	S- aureus méticilline-sensible (MSSA)	0
+514051	16418903	24-02-2021	Streptococcus gordonii (groupe mitis)	1
+105925	16419854	24-02-2021	Escherichia coli	0
+113795	16334159	24-02-2021	Staphylococcus epidermidis	1
+164673	16419401	24-02-2021	S- aureus méticilline-sensible (MSSA)	0
+164673	16419401	24-02-2021	S- aureus méticilline-sensible (MSSA)	0
+96082567	16419903	24-02-2021	Clostridium perfringens	0
+96082567	16419903	24-02-2021	Bacteroides thetaiotaomicron	0
+98659625	16420012	24-02-2021	Staphylococcus epidermidis	1
+338940	16402066	25-02-2021	Abiotrophia defectiva (Streptococcus defectivus)	0
+338940	16402066	25-02-2021	Rothia mucilaginosa (ancien Stomatococcus mucilaginosus)	1
+282413	16370482	25-02-2021	Pseudomonas aeruginosa	0
+754806	16374852	25-02-2021	Haemophilus parainfluenzae	0
+754806	16374852	25-02-2021	Haemophilus parainfluenzae	0
+1081136	16420110	25-02-2021	Staphylococcus epidermidis	1
+164673	16419401	25-02-2021	S- aureus méticilline-sensible (MSSA)	0
+97408472	16370912	25-02-2021	Staphylococcus epidermidis	1
+97408472	16370912	25-02-2021	Staphylococcus epidermidis	1
+500420	16413472	25-02-2021	Abiotrophia defectiva (Streptococcus defectivus)	0
+460421	16421222	25-02-2021	Streptococcus oralis (groupe mitis)	1
+460421	16421222	25-02-2021	Streptococcus oralis (groupe mitis)	1
+460421	16421222	25-02-2021	Streptococcus oralis (groupe mitis)	1
+113795	16334159	25-02-2021	Staphylococcus epidermidis	1
+113795	16334159	25-02-2021	Staphylococcus epidermidis	1
+548837	16409283	25-02-2021	Streptococcus agalactiae groupe B	0
+98660567	16421680	26-02-2021	Streptococcus mitis (groupe mitis)	1
+98660567	16421680	26-02-2021	Streptococcus mitis (groupe mitis)	1
+164673	16419401	26-02-2021	S- aureus méticilline-sensible (MSSA)	0
+347100	16404575	26-02-2021	Escherichia coli	0
+347100	16404575	26-02-2021	Streptococcus mitis (groupe mitis)	1
+347100	16404575	26-02-2021	Proteus vulgaris complexe	0
+347100	16404575	26-02-2021	Streptococcus mitis (groupe mitis)	1
+347100	16404575	26-02-2021	Proteus vulgaris complexe	0
+339857	16421904	26-02-2021	Escherichia coli	0
+339857	16421904	26-02-2021	Escherichia coli	0
+339857	16421904	26-02-2021	Escherichia coli	0
+410086	16423540	26-02-2021	Klebsiella pneumoniae complexe	0
+410086	16423540	26-02-2021	Klebsiella pneumoniae complexe	0
+458065	16374723	26-02-2021	Escherichia coli	0
+458065	16374723	26-02-2021	Escherichia coli	0
+113795	16334159	27-02-2021	Staphylococcus epidermidis	1
+113795	16334159	27-02-2021	Staphylococcus epidermidis	1
+113795	16334159	27-02-2021	Staphylococcus epidermidis	1
+113795	16334159	27-02-2021	Staphylococcus epidermidis	1
+439370	16183270	28-02-2021	Staphylococcus epidermidis	1
+439370	16183270	28-02-2021	Proteus mirabilis	0
+439370	16183270	28-02-2021	Staphylococcus epidermidis	1
+439370	16183270	28-02-2021	Proteus mirabilis	0
+1110874	16415277	28-02-2021	Staphylococcus epidermidis	1
+113795	16334159	28-02-2021	Staphylococcus epidermidis	1
+113795	16334159	28-02-2021	Staphylococcus epidermidis	1
+113795	16334159	01-03-2021	Staphylococcus epidermidis	1
+113795	16334159	01-03-2021	Staphylococcus epidermidis	1
+418545	16419739	01-03-2021	Staphylococcus epidermidis	1
+97090165	16427213	02-03-2021	Streptococcus pneumoniae	0
+97090165	16427213	02-03-2021	Streptococcus pneumoniae	0
+1090023	16421244	02-03-2021	Enterobacter cloacae Complex	0
+1090023	16421244	02-03-2021	Enterobacter cloacae Complex	0
+97826638	16411953	02-03-2021	Staphylococcus epidermidis	1
+113795	16334159	02-03-2021	Staphylococcus epidermidis	1
+846281	16413963	02-03-2021	Streptococcus sanguinis (groupe mitis)	1
+97826638	16411953	03-03-2021	Staphylococcus epidermidis	1
+97826638	16411953	03-03-2021	Staphylococcus epidermidis	1
+763873	16431036	03-03-2021	Escherichia coli	0
+763873	16431036	03-03-2021	Escherichia coli	0
+98643979	16431126	03-03-2021	Escherichia coli	0
+97826638	16411953	04-03-2021	Staphylococcus epidermidis	1
+97826638	16411953	04-03-2021	Staphylococcus epidermidis	1
+1046336	16431218	04-03-2021	Escherichia coli	0
+1046336	16431218	04-03-2021	Escherichia coli	0
+911875	16374506	04-03-2021	S- aureus méticilline-sensible (MSSA)	0
+911875	16374506	04-03-2021	S- aureus méticilline-sensible (MSSA)	0
+98578614	16373419	04-03-2021	Campylobacter fetus	0
+97667842	16432910	04-03-2021	Campylobacter fetus	0
+97667842	16310756	04-03-2021	Campylobacter fetus	0
+97667842	16310756	04-03-2021	Campylobacter fetus	0
+414870	16429021	04-03-2021	Propionibacterium acnes (Cutibacterium a-)	1
+98643979	16431126	04-03-2021	Escherichia coli	0
+809830	16419016	04-03-2021	Klebsiella pneumoniae complexe	0
+911875	16433956	05-03-2021	S- aureus méticilline-sensible (MSSA)	0
+911875	16433956	05-03-2021	S- aureus méticilline-sensible (MSSA)	0
+911875	16433956	05-03-2021	S- aureus méticilline-sensible (MSSA)	0
+911875	16433956	05-03-2021	S- aureus méticilline-sensible (MSSA)	0
+98653307	16434966	06-03-2021	Escherichia coli	0
+98653307	16434966	06-03-2021	Escherichia coli	0
+911875	16433956	06-03-2021	S- aureus méticilline-sensible (MSSA)	0
+911875	16433956	06-03-2021	S- aureus méticilline-sensible (MSSA)	0
+911875	16433956	06-03-2021	S- aureus méticilline-sensible (MSSA)	0
+97707150	16431406	06-03-2021	Escherichia coli	0
+911875	16433956	06-03-2021	S- aureus méticilline-sensible (MSSA)	0
+911875	16433956	06-03-2021	S- aureus méticilline-sensible (MSSA)	0
+911875	16433956	06-03-2021	S- aureus méticilline-sensible (MSSA)	0
+358541	16435326	06-03-2021	S- aureus méticilline-sensible (MSSA)	0
+358541	16435326	06-03-2021	S- aureus méticilline-sensible (MSSA)	0
+850386	16435677	07-03-2021	Staphylococcus lugdunensis	1
+97408472	16370912	07-03-2021	Klebsiella oxytoca complexe/Raoultella sp	-1
+96081124	16392996	07-03-2021	Escherichia coli	0
+488427	16345843	07-03-2021	Enterococcus faecalis	0
+358541	16435326	07-03-2021	S- aureus méticilline-sensible (MSSA)	0
+358541	16435326	07-03-2021	S- aureus méticilline-sensible (MSSA)	0
+488427	16345843	07-03-2021	Enterococcus faecalis	0
+488427	16345843	07-03-2021	Enterococcus faecalis	0
+84244	16334324	08-03-2021	Staphylococcus epidermidis	1
+911875	16433956	08-03-2021	Staphylococcus epidermidis	1
+358541	16435326	08-03-2021	S- aureus méticilline-sensible (MSSA)	0
+358541	16435326	08-03-2021	S- aureus méticilline-sensible (MSSA)	0
+98507100	16437486	08-03-2021	Fusobacterium nucleatum/naviforme	0
+834641	16438000	08-03-2021	Bacteroides uniformis	0
+98658101	16417832	09-03-2021	Klebsiella pneumoniae complexe	0
+358541	16435326	09-03-2021	S- aureus méticilline-sensible (MSSA)	0
+358541	16435326	09-03-2021	S- aureus méticilline-sensible (MSSA)	0
+602087	16437806	09-03-2021	Candida fabianii (n- nom: Cyberlindnera fabianii)	-1
+602087	16437806	09-03-2021	Candida fabianii (n- nom: Cyberlindnera fabianii)	-1
+358541	16435326	10-03-2021	S- aureus méticilline-sensible (MSSA)	0
+98658101	16417832	10-03-2021	Klebsiella pneumoniae complexe	0
+98658101	16417832	10-03-2021	Klebsiella pneumoniae complexe	0
+26777	16442451	10-03-2021	Citrobacter freundii/braakii	0
+26777	16442451	10-03-2021	Citrobacter freundii/braakii	0
+203861	16442502	10-03-2021	Micrococcus sp	1
+358541	16435326	11-03-2021	S- aureus méticilline-sensible (MSSA)	0
+358541	16435326	11-03-2021	S- aureus méticilline-sensible (MSSA)	0
+84244	16334324	11-03-2021	Enterococcus faecium	0
+745223	16442552	11-03-2021	Escherichia coli	0
+745223	16442552	11-03-2021	Escherichia coli	0
+62219	16312592	11-03-2021	Streptococcus beta hemolytique groupe C	0
+62219	16312592	11-03-2021	S- aureus méticilline-sensible (MSSA)	0
+62219	16312592	11-03-2021	S- aureus méticilline-sensible (MSSA)	0
+62219	16312592	11-03-2021	Streptococcus beta hemolytique groupe C	0
+497529	16438280	11-03-2021	S- aureus méticilline-sensible (MSSA)	0
+497529	16438280	11-03-2021	S- aureus méticilline-sensible (MSSA)	0
+46570	16370216	11-03-2021	Staphylococcus epidermidis	1
+97251135	16443322	11-03-2021	Escherichia coli	0
+62219	16443475	11-03-2021	S- aureus méticilline-sensible (MSSA)	0
+62219	16443475	11-03-2021	Streptococcus beta hemolytique groupe C	0
+62219	16443475	11-03-2021	S- aureus méticilline-sensible (MSSA)	0
+62219	16443475	11-03-2021	Streptococcus beta hemolytique groupe C	0
+97320406	16444419	11-03-2021	Staphylococcus capitis	1
+811826	16420706	11-03-2021	Escherichia coli	0
+811826	16420706	11-03-2021	Klebsiella pneumoniae complexe	0
+811826	16420706	11-03-2021	Klebsiella pneumoniae complexe	0
+811826	16420706	11-03-2021	Escherichia coli	0
+497529	16438280	12-03-2021	S- aureus méticilline-sensible (MSSA)	0
+497529	16438280	12-03-2021	S- aureus méticilline-sensible (MSSA)	0
+98659284	16410824	12-03-2021	Streptococcus anginosus Group	1
+98663172	16444483	12-03-2021	Enterococcus faecalis	0
+562938	16446153	12-03-2021	Escherichia coli	0
+562938	16446153	12-03-2021	Escherichia coli	0
+46570	16370216	12-03-2021	Streptococcus oralis (groupe mitis)	1
+259368	16446276	12-03-2021	Escherichia coli	0
+259368	16446276	12-03-2021	Escherichia coli	0
+794187	16425311	12-03-2021	Escherichia coli	0
+794187	16425311	12-03-2021	Streptococcus vestibularis (salivarius groupe)	-1
+284144	16424769	12-03-2021	Staphylococcus epidermidis	1
+284144	16424769	12-03-2021	Staphylococcus epidermidis	1
+270660	16446458	13-03-2021	Micrococcus sp	1
+98661922	16443500	13-03-2021	Haemophilus influenzae sérotype b	0
+179793	16446630	13-03-2021	Streptococcus mitis ou S- oralis  S- peroris S- pseudopneumoniae	1
+179793	16446630	13-03-2021	Streptococcus salivarius (groupe salivarius)	1
+179793	16446630	13-03-2021	Streptococcus vestibularis (salivarius groupe)	-1
+179793	16446630	13-03-2021	Streptococcus salivarius (groupe salivarius)	1
+179793	16446630	13-03-2021	Streptococcus vestibularis (salivarius groupe)	-1
+179793	16446630	13-03-2021	Veillonella sp	0
+179793	16446630	13-03-2021	Streptococcus parasanguinis	1
+1077125	16446791	13-03-2021	Klebsiella pneumoniae complexe	0
+475743	16429067	13-03-2021	Pseudomonas aeruginosa	0
+97165770	16447098	13-03-2021	Escherichia coli	0
+97165770	16447098	13-03-2021	Escherichia coli	0
+23929	16447183	13-03-2021	Escherichia coli	0
+504930	16447748	14-03-2021	Moraxella osloensis	0
+3557	16429780	15-03-2021	Klebsiella pneumoniae complexe	0
+288762	16448037	15-03-2021	Staphylococcus epidermidis	1
+105859	16448806	15-03-2021	Escherichia coli	0
+105859	16448806	15-03-2021	Escherichia coli	0
+97220472	16447605	15-03-2021	Roseomonas mucosa	0
+97778390	16411958	16-03-2021	Enterococcus faecalis	0
+475743	16429067	16-03-2021	Pseudomonas aeruginosa	0
+475743	16429067	16-03-2021	Pseudomonas aeruginosa	0
+560477	16425840	16-03-2021	Escherichia coli	0
+560477	16425840	16-03-2021	Escherichia coli	0
+564989	16451936	16-03-2021	Enterobacter cloacae Complex	0
+564989	16451936	16-03-2021	Enterobacter cloacae Complex	0
+1016735	16452193	17-03-2021	Escherichia coli	0
+424516	16442134	17-03-2021	Escherichia coli	0
+97292902	16454007	17-03-2021	Enterococcus faecalis	0
+97292902	16454007	17-03-2021	Enterococcus faecalis	0
+79752	16455198	18-03-2021	Escherichia coli	0
+1099416	16455990	18-03-2021	Salmonella sp	0
+305929	16435624	18-03-2021	Staphylococcus epidermidis	1
+97017944	16455777	18-03-2021	Escherichia coli	0
+97017944	16455777	18-03-2021	Escherichia coli	0
+227880	16456174	18-03-2021	S- aureus méticilline-sensible (MSSA)	0
+227880	16456174	18-03-2021	S- aureus méticilline-sensible (MSSA)	0
+97564480	16419569	19-03-2021	Escherichia coli	0
+97564480	16419569	19-03-2021	Escherichia coli	0
+98557184	16457338	19-03-2021	Staphylococcus epidermidis	1
+97473149	16419935	19-03-2021	Bacteroides fragilis	0
+214632	16457837	19-03-2021	Enterococcus faecalis	0
+214632	16457837	19-03-2021	Enterococcus faecalis	0
+785162	16457919	19-03-2021	Escherichia coli	0
+785162	16457919	19-03-2021	Escherichia coli	0
+227880	16456174	19-03-2021	S- aureus méticilline-sensible (MSSA)	0
+227880	16456174	19-03-2021	S- aureus méticilline-sensible (MSSA)	0
+227880	16456174	20-03-2021	S- aureus méticilline-sensible (MSSA)	0
+227880	16456174	20-03-2021	S- aureus méticilline-sensible (MSSA)	0
+98663810	16450166	20-03-2021	Klebsiella aerogenes (anc- Enterobacter a-)	0
+98663810	16450166	20-03-2021	Klebsiella aerogenes (anc- Enterobacter a-)	0
+20040	16424557	20-03-2021	Staphylococcus epidermidis	1
+98664708	16458509	20-03-2021	Streptococcus agalactiae groupe B	0
+98664708	16458509	20-03-2021	Streptococcus agalactiae groupe B	0
+98557184	16458648	20-03-2021	Staphylococcus epidermidis	1
+98557184	16458648	20-03-2021	Staphylococcus epidermidis	1
+98648315	16458927	20-03-2021	Escherichia coli	0
+127975	16448557	20-03-2021	Escherichia coli	0
+127975	16448557	20-03-2021	Escherichia coli	0
+127975	16448557	20-03-2021	Gemella morbillorum	0
+369577	16459076	20-03-2021	Fusobacterium sp	0
+98662219	16459122	21-03-2021	Streptococcus gordonii (groupe mitis)	1
+98662219	16459122	21-03-2021	Staphylococcus epidermidis	1
+475743	16429067	21-03-2021	Pseudomonas aeruginosa	0
+17552	16453117	21-03-2021	Klebsiella oxytoca complexe/Raoultella sp	-1
+98663810	16450166	21-03-2021	Staphylococcus epidermidis	1
+98663810	16450166	21-03-2021	Klebsiella aerogenes (anc- Enterobacter a-)	0
+355220	16460576	22-03-2021	Escherichia coli	0
+355220	16460576	22-03-2021	Escherichia coli	0
+79194	16461007	22-03-2021	Klebsiella aerogenes (anc- Enterobacter a-)	0
+934	16460624	22-03-2021	Staphylococcus epidermidis	1
+98557184	16458648	22-03-2021	Staphylococcus epidermidis	1
+69589	16452670	22-03-2021	S- aureus méticilline-sensible (MSSA)	0
+98663811	16450167	22-03-2021	Staphylococcus epidermidis	1
+250517	16462153	23-03-2021	Escherichia coli	0
+250517	16462153	23-03-2021	Escherichia coli	0
+13368	16411704	23-03-2021	Serratia marcescens complexe	0
+13368	16411704	23-03-2021	Serratia marcescens complexe	0
+98637480	16436505	23-03-2021	Staphylococcus epidermidis	1
+911875	16374506	23-03-2021	Pseudomonas aeruginosa	0
+911875	16374506	23-03-2021	Pseudomonas aeruginosa	0
+934	16460624	23-03-2021	Staphylococcus epidermidis	1
+934	16460624	23-03-2021	Staphylococcus epidermidis	1
+398677	16456765	23-03-2021	Klebsiella aerogenes (anc- Enterobacter a-)	0
+98557184	16458648	23-03-2021	Staphylococcus epidermidis	1
+530362	16456288	23-03-2021	Cupriavidus sp	-1
+530362	16456288	23-03-2021	Finegoldia magna (Peptostreptococcus magnus)	0
+251090	16441288	24-03-2021	S- aureus méticilline-sensible (MSSA)	0
+97178862	16465137	24-03-2021	Enterococcus faecalis	0
+97178862	16465137	24-03-2021	Enterococcus faecalis	0
+98635931	16446571	24-03-2021	Klebsiella aerogenes (anc- Enterobacter a-)	0
+98635931	16446571	24-03-2021	Klebsiella aerogenes (anc- Enterobacter a-)	0
+735435	16465164	24-03-2021	Moraxella sp	0
+735435	16465164	24-03-2021	Neisseria macacae	0
+735435	16465164	24-03-2021	Streptococcus salivarius (groupe salivarius)	1
+97323211	15534359	24-03-2021	Pseudomonas aeruginosa	0
+98637480	16436505	24-03-2021	Staphylococcus epidermidis	1
+288643	16465848	24-03-2021	Escherichia coli	0
+288643	16465848	24-03-2021	Escherichia coli	0
+98557184	16458648	24-03-2021	Staphylococcus epidermidis	1
+98663811	16450167	24-03-2021	Staphylococcus epidermidis	1
+355220	16460576	24-03-2021	Escherichia coli	0
+543563	16444617	24-03-2021	Proteus mirabilis	0
+98637480	16436505	25-03-2021	Staphylococcus epidermidis	1
+98637480	16436505	25-03-2021	Staphylococcus epidermidis	1
+98635931	16446571	25-03-2021	Klebsiella aerogenes (anc- Enterobacter a-)	0
+735435	16465164	25-03-2021	Streptococcus gallolyticus complexe	0
+735435	16465164	25-03-2021	Streptococcus gallolyticus complexe	0
+436381	16467791	25-03-2021	S- aureus méticilline-sensible (MSSA)	0
+436381	16467791	25-03-2021	S- aureus méticilline-sensible (MSSA)	0
+97178862	16465137	25-03-2021	Enterococcus faecalis	0
+97178862	16465137	25-03-2021	Enterococcus faecalis	0
+98663811	16450167	25-03-2021	Staphylococcus epidermidis	1
+869709	16468635	25-03-2021	Escherichia coli	0
+97178862	16465137	26-03-2021	Enterococcus faecalis	0
+97178862	16465137	26-03-2021	Enterococcus faecalis	0
+346471	16469450	26-03-2021	Enterobacter cloacae Complex	0
+975951	16470564	26-03-2021	S- aureus méticilline-sensible (MSSA)	0
+975951	16470564	26-03-2021	S- aureus méticilline-sensible (MSSA)	0
+934	16460624	26-03-2021	Staphylococcus epidermidis	1
+251090	16441288	26-03-2021	S- aureus méticilline-sensible (MSSA)	0
+97559979	16470833	26-03-2021	Micrococcus luteus	1
+584368	16470932	27-03-2021	Streptococcus pyogenes groupe A	0
+97178862	16465137	27-03-2021	Enterococcus faecalis	0
+97178862	16465137	27-03-2021	Enterococcus faecalis	0
+735435	16465164	27-03-2021	Escherichia coli	0
+735435	16465164	27-03-2021	Enterobacter cloacae Complex	0
+141727	16471122	27-03-2021	Moraxella sp	0
+808681	16471541	27-03-2021	S- aureus méticilline-sensible (MSSA)	0
+808681	16471541	27-03-2021	S- aureus méticilline-sensible (MSSA)	0
+414581	16471971	28-03-2021	Escherichia coli	0
+414581	16471971	28-03-2021	Escherichia coli	0
+263844	16443724	28-03-2021	Pseudomonas aeruginosa	0
+263844	16443724	28-03-2021	Pseudomonas aeruginosa	0
+808681	16471541	28-03-2021	S- aureus méticilline-sensible (MSSA)	0
+97216873	16472605	28-03-2021	Campylobacter fetus	0
+280204	16467677	28-03-2021	Bifidobacterium scardovii	0
+934	16460624	28-03-2021	Proteus mirabilis	0
+934	16460624	28-03-2021	Proteus mirabilis	0
+536478	16472909	29-03-2021	S- aureus méticilline-sensible (MSSA)	0
+536478	16472909	29-03-2021	S- aureus méticilline-sensible (MSSA)	0
+808681	16471541	29-03-2021	S- aureus méticilline-sensible (MSSA)	0
+97910468	16474906	29-03-2021	Staphylococcus capitis	1
+431559	16473990	29-03-2021	Escherichia coli	0
+431559	16473990	29-03-2021	Escherichia coli	0
+214425	16475360	29-03-2021	Staphylococcus warneri	1
+428972	16442399	30-03-2021	Pseudomonas aeruginosa	0
+428972	16442399	30-03-2021	Staphylococcus haemolyticus	1
+428972	16442399	30-03-2021	Pseudomonas aeruginosa	0
+428972	16442399	30-03-2021	Staphylococcus haemolyticus	1
+934	16460624	30-03-2021	Proteus mirabilis	0
+812267	16476661	30-03-2021	Escherichia coli	0
+808681	16471541	30-03-2021	S- aureus méticilline-sensible (MSSA)	0
+934	16460624	30-03-2021	Staphylococcus epidermidis	1
+808681	16471541	31-03-2021	S- aureus méticilline-sensible (MSSA)	0
+334385	16480448	31-03-2021	Micrococcus luteus	1
+808681	16471541	01-04-2021	S- aureus méticilline-sensible (MSSA)	0
+1063775	16483160	02-04-2021	Staphylococcus capitis	1
+860906	16482928	02-04-2021	Escherichia coli	0
+860906	16482928	02-04-2021	Escherichia coli	0
+98511414	16483408	02-04-2021	Staphylococcus epidermidis	1
+214034	16484426	03-04-2021	Escherichia coli	0
+214034	16484426	03-04-2021	Escherichia coli	0
+439370	16128517	03-04-2021	Escherichia coli	0
+115547	16462963	03-04-2021	Klebsiella pneumoniae complexe	0
+115547	16462963	03-04-2021	Klebsiella pneumoniae complexe	0
+98549265	16485630	04-04-2021	Klebsiella oxytoca complexe/Raoultella sp	-1
+98549265	16485630	04-04-2021	Escherichia coli	0
+98549265	16485630	04-04-2021	Klebsiella oxytoca complexe/Raoultella sp	-1
+98549265	16485630	04-04-2021	Escherichia coli	0
+172299	16473256	04-04-2021	Staphylococcus epidermidis	1
+273756	16485736	04-04-2021	Flavonifractor plautii	0
+924826	16476453	04-04-2021	Staphylococcus epidermidis	1
+98657563	16486060	04-04-2021	Proteus mirabilis	0
+47087	16486052	04-04-2021	Bacteroides fragilis	0
+47087	16486052	04-04-2021	Streptococcus anginosus Group	1
+47087	16486052	04-04-2021	Streptococcus anginosus Group	1
+413686	16486086	04-04-2021	S- aureus méticilline-sensible (MSSA)	0
+413686	16486086	04-04-2021	S- aureus méticilline-sensible (MSSA)	0
+569090	16486464	04-04-2021	Escherichia coli	0
+569090	16486464	04-04-2021	Escherichia coli	0
+602990	16486544	04-04-2021	Staphylococcus epidermidis	1
+413686	16486086	05-04-2021	S- aureus méticilline-sensible (MSSA)	0
+413686	16486086	05-04-2021	S- aureus méticilline-sensible (MSSA)	0
+413686	16486086	05-04-2021	S- aureus méticilline-sensible (MSSA)	0
+413686	16486086	05-04-2021	S- aureus méticilline-sensible (MSSA)	0
+97007083	16453342	05-04-2021	Rothia mucilaginosa (ancien Stomatococcus mucilaginosus)	1
+337101	16487404	05-04-2021	S- aureus méticilline-sensible (MSSA)	0
+337101	16487404	05-04-2021	S- aureus méticilline-sensible (MSSA)	0
+385816	16487577	06-04-2021	Pseudomonas aeruginosa	0
+385816	16487577	06-04-2021	Actinomyces meyeri	-1
+385816	16487577	06-04-2021	Pseudomonas aeruginosa	0
+98641635	16448096	06-04-2021	Enterococcus faecalis	0
+413686	16486086	06-04-2021	S- aureus méticilline-sensible (MSSA)	0
+413686	16486086	06-04-2021	S- aureus méticilline-sensible (MSSA)	0
+871495	16487514	06-04-2021	Staphylococcus capitis	1
+871495	16487514	06-04-2021	Staphylococcus epidermidis	1
+871495	16487514	06-04-2021	Staphylococcus haemolyticus	1
+871495	16487514	06-04-2021	Staphylococcus hominis	1
+871495	16487514	06-04-2021	Corynebacterium sp	1
+97072592	16458073	06-04-2021	Bacteroides ovatus	0
+98641635	16448096	06-04-2021	Enterococcus faecalis	0
+98641635	16448096	06-04-2021	Enterococcus faecalis	0
+205757	16489197	06-04-2021	Escherichia coli	0
+205757	16489197	06-04-2021	Escherichia coli	0
+337101	16487404	06-04-2021	S- aureus méticilline-sensible (MSSA)	0
+98641635	16448096	06-04-2021	Enterococcus faecalis	0
+98641635	16448096	06-04-2021	Enterococcus faecalis	0
+467589	16451465	06-04-2021	S- aureus méticilline-résistant (MRSA)	0
+98641635	16448096	07-04-2021	Enterococcus faecalis	0
+337101	16487404	07-04-2021	S- aureus méticilline-sensible (MSSA)	0
+337101	16487404	07-04-2021	S- aureus méticilline-sensible (MSSA)	0
+413686	16486086	07-04-2021	S- aureus méticilline-sensible (MSSA)	0
+98641635	16448096	07-04-2021	Enterococcus faecalis	0
+440577	16439313	07-04-2021	Hungatella hathewayi (ancien Clostridium h-)	0
+440577	16439313	07-04-2021	Escherichia coli	0
+97184124	16490753	07-04-2021	Staphylococcus hominis	1
+802601	16491114	07-04-2021	Klebsiella pneumoniae complexe	0
+802601	16491114	07-04-2021	Klebsiella pneumoniae complexe	0
+97849486	15276316	07-04-2021	Staphylococcus epidermidis	1
+98641635	16448096	07-04-2021	Enterococcus faecalis	0
+98641635	16448096	07-04-2021	Enterococcus faecalis	0
+431778	16491237	07-04-2021	Escherichia coli	0
+431778	16491237	07-04-2021	Escherichia coli	0
+386659	16491272	07-04-2021	Escherichia coli	0
+96048650	16491167	07-04-2021	Actinomyces neuii	1
+98641635	16448096	07-04-2021	Enterococcus faecalis	0
+98641635	16448096	08-04-2021	Enterococcus faecalis	0
+98641635	16448096	08-04-2021	Enterococcus faecalis	0
+413686	16486086	08-04-2021	S- aureus méticilline-sensible (MSSA)	0
+98641635	16448096	08-04-2021	Enterococcus faecalis	0
+98641635	16448096	08-04-2021	Enterococcus faecalis	0
+600068	16467616	08-04-2021	Klebsiella aerogenes (anc- Enterobacter a-)	0
+600068	16467616	09-04-2021	Serratia marcescens complexe	0
+600068	16467616	09-04-2021	Serratia marcescens complexe	0
+600068	16467616	09-04-2021	Klebsiella aerogenes (anc- Enterobacter a-)	0
+263912	16494133	09-04-2021	Klebsiella oxytoca complexe/Raoultella sp	-1
+98641635	16448096	09-04-2021	Enterococcus faecalis	0
+98662460	16456151	09-04-2021	Staphylococcus epidermidis	1
+600068	16467616	10-04-2021	Serratia marcescens complexe	0
+600068	16467616	10-04-2021	Serratia marcescens complexe	0
+880071	16488983	10-04-2021	Pseudomonas aeruginosa	0
+880071	16488983	10-04-2021	Pseudomonas aeruginosa	0
+98641635	16448096	10-04-2021	Enterococcus faecalis	0
+290646	16495457	10-04-2021	Escherichia coli	0
+290646	16495457	10-04-2021	Escherichia coli	0
+98664033	16478089	10-04-2021	Staphylococcus epidermidis	1
+97532462	16496072	10-04-2021	Streptococcus pneumoniae	0
+98641635	16448096	11-04-2021	Enterococcus faecalis	0
+215323	16495886	11-04-2021	S- aureus méticilline-sensible (MSSA)	0
+97559452	16496550	11-04-2021	Escherichia coli	0
+43294	16497749	12-04-2021	Bacteroides thetaiotaomicron	0
+43294	16497749	12-04-2021	Bacteroides thetaiotaomicron	0
+96025960	16495484	12-04-2021	Haemophilus influenzae sérotype b	0
+109496	16384816	12-04-2021	Enterococcus faecium	0
+155108	16472826	12-04-2021	Candida albicans	0
+1031082	16498320	12-04-2021	Escherichia coli	0
+458065	16495824	12-04-2021	Escherichia coli	0
+458065	16495824	12-04-2021	Escherichia coli	0
+425205	16466638	13-04-2021	Escherichia coli	0
+458065	16495824	13-04-2021	Escherichia coli	0
+358774	16500011	13-04-2021	Propionibacterium acnes (Cutibacterium a-)	1
+610637	16501488	14-04-2021	Proteus mirabilis	0
+610637	16501488	14-04-2021	Proteus mirabilis	0
+155108	16472826	14-04-2021	S- aureus méticilline-résistant (MRSA)	0
+734595	16479273	14-04-2021	Klebsiella pneumoniae complexe	0
+734595	16479273	14-04-2021	Escherichia coli	0
+734595	16479273	14-04-2021	Escherichia coli	0
+734595	16479273	14-04-2021	Klebsiella pneumoniae complexe	0
+229051	16502518	14-04-2021	Gemella morbillorum	0
+576573	16461001	14-04-2021	Pseudomonas putida complexe	0
+576573	16461001	14-04-2021	Pseudomonas putida complexe	0
+573322	16502831	15-04-2021	Klebsiella oxytoca complexe/Raoultella sp	-1
+436381	16467791	15-04-2021	Streptococcus parasanguinis	1
+436381	16467791	15-04-2021	Staphylococcus epidermidis	1
+97031316	16504894	16-04-2021	Streptococcus pyogenes groupe A	0
+97031316	16504894	16-04-2021	Streptococcus pyogenes groupe A	0
+108882	16481505	16-04-2021	Escherichia coli	0
+98668528	16493473	16-04-2021	Staphylococcus epidermidis	1
+446671	16505846	16-04-2021	Aeromonas sp	0
+446671	16505846	16-04-2021	Klebsiella pneumoniae complexe	0
+446671	16505846	16-04-2021	Klebsiella pneumoniae complexe	0
+446671	16505846	16-04-2021	Aeromonas sp	0
+576174	16506652	16-04-2021	Escherichia coli	0
+1037888	16491455	17-04-2021	Staphylococcus capitis	1
+97033215	16492767	17-04-2021	Staphylococcus hominis	1
+936557	16506830	17-04-2021	S- aureus méticilline-sensible (MSSA)	0
+936557	16506830	17-04-2021	S- aureus méticilline-sensible (MSSA)	0
+187574	16507068	17-04-2021	Micrococcus luteus	1
+98668528	16493473	17-04-2021	Staphylococcus epidermidis	1
+98668528	16493473	17-04-2021	Staphylococcus epidermidis	1
+98668528	16493473	17-04-2021	Staphylococcus epidermidis	1
+98668528	16493473	17-04-2021	Staphylococcus epidermidis	1
+942959	16507290	17-04-2021	Salmonella sérogroupe D (non-Typhi)	0
+942959	16507290	17-04-2021	Salmonella sérogroupe D (non-Typhi)	0
+146749	16506855	17-04-2021	Bacteroides fragilis	0
+97874564	16507496	17-04-2021	S- aureus méticilline-sensible (MSSA)	0
+97874564	16507496	17-04-2021	S- aureus méticilline-sensible (MSSA)	0
+98668528	16493473	17-04-2021	Staphylococcus epidermidis	1
+98668528	16493473	17-04-2021	Staphylococcus epidermidis	1
+97874564	16507496	18-04-2021	S- aureus méticilline-sensible (MSSA)	0
+97874564	16507496	18-04-2021	S- aureus méticilline-sensible (MSSA)	0
+86978	16498812	18-04-2021	Fusobacterium sp	0
+369807	16496448	18-04-2021	Staphylococcus hominis	1
+369807	16496448	18-04-2021	Staphylococcus epidermidis	1
+369807	16496448	18-04-2021	Staphylococcus capitis	1
+369807	16496448	18-04-2021	Staphylococcus epidermidis 2	1
+369807	16496448	18-04-2021	Staphylococcus epidermidis	1
+97874564	16507496	19-04-2021	S- aureus méticilline-sensible (MSSA)	0
+153224	16502812	19-04-2021	Staphylococcus hominis	1
+214472	16508637	19-04-2021	Morganella morganii	0
+214472	16508637	19-04-2021	Aerococcus urinae	0
+214472	16508637	19-04-2021	Morganella morganii	0
+963394	16509068	19-04-2021	Streptococcus pneumoniae	0
+963394	16509068	19-04-2021	Escherichia coli	0
+963394	16509068	19-04-2021	Streptococcus pneumoniae	0
+963394	16509068	19-04-2021	Escherichia coli	0
+204235	16509616	19-04-2021	Escherichia coli	0
+204235	16509616	19-04-2021	Escherichia coli	0
+97874564	16507496	20-04-2021	S- aureus méticilline-sensible (MSSA)	0
+300765	16504248	20-04-2021	Staphylococcus epidermidis	1
+97462957	16508143	20-04-2021	S- aureus méticilline-sensible (MSSA)	0
+97462957	16508143	20-04-2021	Streptococcus anginosus Group	1
+98717351	16509208	21-04-2021	Pseudomonas aeruginosa	0
+97874564	16507496	21-04-2021	S- aureus méticilline-sensible (MSSA)	0
+97874564	16507496	21-04-2021	S- aureus méticilline-sensible (MSSA)	0
+97261050	16493043	22-04-2021	Enterobacter cloacae Complex	0
+97261050	16493043	22-04-2021	Klebsiella oxytoca complexe/Raoultella sp	-1
+97874564	16507496	22-04-2021	S- aureus méticilline-sensible (MSSA)	0
+145664	16515024	22-04-2021	Escherichia coli	0
+145664	16515024	22-04-2021	Escherichia coli	0
+25885	16510191	22-04-2021	Enterococcus faecium	0
+531369	16516720	23-04-2021	Staphylococcus hominis	1
+515828	16516640	23-04-2021	Escherichia coli	0
+146749	16506855	23-04-2021	Enterococcus faecalis	0
+228324	16498964	23-04-2021	Klebsiella pneumoniae complexe	0
+98717351	16509208	23-04-2021	Achromobacter xylosoxidans	0
+98527491	16518839	24-04-2021	Escherichia coli	0
+98510461	16502163	24-04-2021	Streptococcus mitis (groupe mitis)	1
+1010091	16503790	24-04-2021	Fusobacterium sp	0
+108882	16481505	24-04-2021	Stenotrophomonas maltophilia	0
+108882	16481505	24-04-2021	Stenotrophomonas maltophilia	0
+97005089	16493035	24-04-2021	Staphylococcus epidermidis	1
+97005089	16493035	24-04-2021	Pseudomonas aeruginosa	0
+97005089	16493035	24-04-2021	Staphylococcus epidermidis	1
+97005089	16493035	24-04-2021	Pseudomonas aeruginosa	0
+97005089	16493035	24-04-2021	Staphylococcus epidermidis	1
+97005089	16493035	24-04-2021	Pseudomonas aeruginosa	0
+279886	16518765	24-04-2021	S- aureus méticilline-sensible (MSSA)	0
+279886	16518765	24-04-2021	S- aureus méticilline-sensible (MSSA)	0
+279886	16518765	25-04-2021	S- aureus méticilline-sensible (MSSA)	0
+279886	16518765	25-04-2021	S- aureus méticilline-sensible (MSSA)	0
+98717269	16508330	25-04-2021	Staphylococcus epidermidis	1
+279886	16518765	25-04-2021	S- aureus méticilline-sensible (MSSA)	0
+279886	16518765	25-04-2021	S- aureus méticilline-sensible (MSSA)	0
+428627	16520200	25-04-2021	Serratia marcescens complexe	0
+812737	16520295	26-04-2021	S- aureus méticilline-sensible (MSSA)	0
+812737	16520295	26-04-2021	S- aureus méticilline-sensible (MSSA)	0
+97079410	16206039	26-04-2021	Enterobacter cloacae Complex	0
+519224	16508655	26-04-2021	Klebsiella pneumoniae complexe	0
+519224	16508655	26-04-2021	Klebsiella pneumoniae complexe	0
+97108588	16521816	26-04-2021	Streptococcus agalactiae groupe B	0
+97108588	16521816	26-04-2021	Streptococcus agalactiae groupe B	0
+98527491	16518839	26-04-2021	Escherichia coli	0
+353625	16520421	26-04-2021	S- aureus méticilline-sensible (MSSA)	0
+353625	16520421	26-04-2021	S- aureus méticilline-sensible (MSSA)	0
+98647192	16460389	26-04-2021	Streptococcus mitis (groupe mitis)	1
+98647192	16460389	26-04-2021	Streptococcus mitis (groupe mitis)	1
+98587525	16493006	27-04-2021	Granulicatella adiacens	1
+98587525	16493006	27-04-2021	Streptococcus mitis (groupe mitis)	1
+355220	16519940	27-04-2021	Escherichia coli	0
+355220	16519940	27-04-2021	Escherichia coli	0
+279886	16518765	27-04-2021	S- aureus méticilline-sensible (MSSA)	0
+279886	16518765	27-04-2021	S- aureus méticilline-sensible (MSSA)	0
+279886	16518765	27-04-2021	S- aureus méticilline-sensible (MSSA)	0
+439370	16523163	27-04-2021	Escherichia coli	0
+258924	16523096	27-04-2021	Escherichia coli	0
+258924	16523096	27-04-2021	Escherichia coli	0
+355220	16519940	27-04-2021	Escherichia coli	0
+98587525	16493006	27-04-2021	Streptococcus mitis (groupe mitis)	1
+98587525	16493006	27-04-2021	Enterococcus faecalis	0
+98587525	16493006	27-04-2021	Streptococcus mitis (groupe mitis)	1
+97005089	16493035	28-04-2021	Staphylococcus epidermidis	1
+97005089	16493035	28-04-2021	Pseudomonas aeruginosa	0
+279886	16518765	28-04-2021	S- aureus méticilline-sensible (MSSA)	0
+279886	16518765	28-04-2021	S- aureus méticilline-sensible (MSSA)	0
+279886	16518765	28-04-2021	S- aureus méticilline-sensible (MSSA)	0
+97552948	16407623	28-04-2021	Enterococcus faecium	0
+97552948	16407623	28-04-2021	Enterococcus faecium	0
+97552948	16407623	28-04-2021	Proteus mirabilis	0
+97552948	16407623	28-04-2021	Proteus mirabilis	0
+347720	16526333	28-04-2021	Streptococcus mitis ou S- oralis  S- peroris S- pseudopneumoniae	1
+279886	16518765	29-04-2021	S- aureus méticilline-sensible (MSSA)	0
+241177	16527433	29-04-2021	S- aureus méticilline-sensible (MSSA)	0
+241177	16527433	29-04-2021	S- aureus méticilline-sensible (MSSA)	0
+241177	16527433	29-04-2021	S- aureus méticilline-sensible (MSSA)	0
+279886	16518765	29-04-2021	S- aureus méticilline-sensible (MSSA)	0
+279886	16518765	29-04-2021	S- aureus méticilline-sensible (MSSA)	0
+279886	16518765	30-04-2021	S- aureus méticilline-sensible (MSSA)	0
+279886	16518765	30-04-2021	S- aureus méticilline-sensible (MSSA)	0
+97340794	16475088	30-04-2021	Streptococcus oralis (groupe mitis)	1
+97653402	16493044	30-04-2021	Rothia mucilaginosa (ancien Stomatococcus mucilaginosus)	1
+97653402	16493044	30-04-2021	Staphylococcus epidermidis	1
+97653402	16493044	30-04-2021	Rothia mucilaginosa (ancien Stomatococcus mucilaginosus)	1
+97653402	16493044	30-04-2021	Staphylococcus epidermidis	1
+308622	16528321	30-04-2021	S- aureus méticilline-sensible (MSSA)	0
+308622	16528321	30-04-2021	Proteus mirabilis	0
+308622	16528321	30-04-2021	S- aureus méticilline-sensible (MSSA)	0
+308622	16528321	30-04-2021	Proteus mirabilis	0
+241177	16527433	30-04-2021	S- aureus méticilline-sensible (MSSA)	0
+97653402	16493044	30-04-2021	Corynebacterium jeikeium (C- groupe JK)	1
+97653402	16493044	30-04-2021	Corynebacterium jeikeium (C- groupe JK)	1
+739347	16524773	30-04-2021	Klebsiella oxytoca complexe/Raoultella sp	-1
+739347	16524773	30-04-2021	Enterococcus avium	0
+739347	16524773	30-04-2021	Escherichia coli	0
+739347	16524773	30-04-2021	Klebsiella oxytoca complexe/Raoultella sp	-1
+739347	16524773	30-04-2021	Enterococcus avium	0
+739347	16524773	30-04-2021	Escherichia coli	0
+97340794	16475088	01-05-2021	Streptococcus oralis (groupe mitis)	1
+97653402	16493044	01-05-2021	Staphylococcus epidermidis	1
+279886	16518765	01-05-2021	S- aureus méticilline-sensible (MSSA)	0
+279886	16518765	01-05-2021	S- aureus méticilline-sensible (MSSA)	0
+107760	16530533	01-05-2021	Escherichia coli	0
+308622	16528321	01-05-2021	Proteus mirabilis	0
+279886	16518765	01-05-2021	S- aureus méticilline-sensible (MSSA)	0
+97140727	16527266	01-05-2021	Micrococcus luteus	1
+241177	16527433	01-05-2021	S- aureus méticilline-sensible (MSSA)	0
+241177	16527433	01-05-2021	S- aureus méticilline-sensible (MSSA)	0
+91645	16530298	02-05-2021	Escherichia coli	0
+91645	16530298	02-05-2021	Escherichia coli	0
+183681	16531748	02-05-2021	Streptococcus pyogenes groupe A	0
+183681	16531748	02-05-2021	Streptococcus pyogenes groupe A	0
+98591381	16140965	02-05-2021	Bacillus cereus complexe	1
+221008	16528374	02-05-2021	Enterococcus faecalis	0
+221008	16528374	02-05-2021	Klebsiella pneumoniae complexe	0
+369763	16531377	02-05-2021	Enterococcus faecalis	0
+369763	16531377	02-05-2021	Enterococcus faecalis	0
+98591381	16140965	02-05-2021	Bacillus cereus complexe	1
+369763	16531377	03-05-2021	Enterococcus faecalis	0
+369763	16531377	03-05-2021	Enterococcus faecalis	0
+404665	16532718	03-05-2021	Escherichia coli	0
+404665	16532718	03-05-2021	Escherichia coli	0
+774465	16533756	03-05-2021	Escherichia coli	0
+774465	16533756	03-05-2021	Escherichia coli	0
+221008	16533625	03-05-2021	Klebsiella pneumoniae complexe	0
+242994	16533226	04-05-2021	Hafnia alvei	0
+63327	16535661	04-05-2021	Klebsiella oxytoca complexe/Raoultella sp	-1
+63327	16535661	04-05-2021	Escherichia coli	0
+63327	16535661	04-05-2021	Escherichia coli	0
+392148	16536148	04-05-2021	Klebsiella pneumoniae complexe	0
+98718565	16536884	05-05-2021	Staphylococcus epidermidis	1
+834787	16537816	05-05-2021	Staphylococcus capitis	1
+98510461	16502163	05-05-2021	Escherichia coli	0
+450860	16538136	05-05-2021	Proteus mirabilis	0
+492498	16538277	06-05-2021	Parvimonas micra (ancien Peptostreptococcus micros)	1
+441458	16539410	06-05-2021	Actinomyces turicensis	0
+441458	16539410	06-05-2021	Peptoniphilus harei	0
+441458	16539410	06-05-2021	Actinomyces turicensis	0
+1927	16515483	06-05-2021	Pseudomonas aeruginosa	0
+1927	16515483	06-05-2021	Pseudomonas aeruginosa	0
+155266	16540232	06-05-2021	Aerococcus urinae	0
+41775	16502634	06-05-2021	S- aureus méticilline-sensible (MSSA)	0
+41775	16502634	06-05-2021	S- aureus méticilline-sensible (MSSA)	0
+94618	16540720	07-05-2021	Escherichia coli	0
+94618	16540720	07-05-2021	Escherichia coli	0
+486993	16542233	07-05-2021	Escherichia coli	0
+486993	16542233	07-05-2021	Escherichia coli	0
+98720888	16537921	08-05-2021	Staphylococcus epidermidis	1
+153224	16542126	08-05-2021	Escherichia coli	0
+153224	16542126	08-05-2021	Escherichia coli	0
+1022074	16542355	08-05-2021	Escherichia coli	0
+1022074	16542355	08-05-2021	Escherichia coli	0
+97239444	16542542	08-05-2021	Escherichia coli	0
+258924	16523096	08-05-2021	Enterococcus faecium	0
+258924	16523096	08-05-2021	Enterococcus faecium	0
+97894980	16506129	09-05-2021	Streptococcus mitis ou S- oralis  S- peroris S- pseudopneumoniae	1
+97894980	16506129	09-05-2021	Streptococcus mitis ou S- oralis  S- peroris S- pseudopneumoniae	1
+440853	16518754	09-05-2021	Staphylococcus epidermidis	1
+97130723	16545313	10-05-2021	Staphylococcus epidermidis	1
+880504	16545885	10-05-2021	Enterococcus faecalis	0
+880504	16545885	10-05-2021	Enterococcus faecalis	0
+880504	16545885	10-05-2021	Enterococcus faecalis	0
+880504	16545885	10-05-2021	Enterococcus faecalis	0
+880504	16545885	11-05-2021	Enterococcus faecalis	0
+880504	16545885	11-05-2021	Enterococcus faecalis	0
+98542778	16546486	11-05-2021	Neisseria subflava	-1
+98542778	16546486	11-05-2021	Rothia sp	-1
+98721643	16543755	11-05-2021	Staphylococcus epidermidis	1
+98721643	16543755	11-05-2021	Staphylococcus epidermidis	1
+81585	16548338	11-05-2021	Escherichia coli	0
+81585	16548338	11-05-2021	Escherichia coli	0
+120443	16546073	12-05-2021	S- aureus méticilline-sensible (MSSA)	0
+120443	16546073	12-05-2021	S- aureus méticilline-sensible (MSSA)	0
+120443	16546073	13-05-2021	S- aureus méticilline-sensible (MSSA)	0
+585212	16550881	13-05-2021	Dermabacter hominis	1
+323651	16550970	13-05-2021	Streptococcus anginosus Group	1
+323651	16550970	13-05-2021	Pseudomonas citronellolis	-1
+323651	16550970	13-05-2021	Bacteroides fragilis	0
+323651	16550970	13-05-2021	Streptococcus anginosus Group	1
+120443	16546073	13-05-2021	S- aureus méticilline-sensible (MSSA)	0
+97308413	16508764	13-05-2021	Staphylococcus epidermidis	1
+127377	16551425	13-05-2021	Escherichia coli	0
+127377	16551425	13-05-2021	Escherichia coli	0
+555122	16550777	13-05-2021	Streptococcus salivarius groupe	-1
+555122	16550777	13-05-2021	Streptococcus salivarius groupe	-1
+98720877	16541767	14-05-2021	Propionibacterium acnes (Cutibacterium a-)	1
+440853	16518754	14-05-2021	S- aureus méticilline-résistant (MRSA)	0
+440853	16518754	14-05-2021	S- aureus méticilline-résistant (MRSA)	0
+97738995	16547442	15-05-2021	S- aureus méticilline-sensible (MSSA)	0
+98722696	16553555	15-05-2021	Parabacteroides distasonis	0
+576749	16528180	15-05-2021	Klebsiella pneumoniae complexe	0
+576749	16528180	15-05-2021	Klebsiella pneumoniae complexe	0
+864191	16553949	15-05-2021	Escherichia coli	0
+864191	16553949	15-05-2021	Escherichia coli	0
+864191	16553949	16-05-2021	Escherichia coli	0
+864191	16553949	16-05-2021	Escherichia coli	0
+842309	16554171	16-05-2021	Staphylococcus hominis	1
+842309	16554171	16-05-2021	Streptococcus mitis ou S- oralis  S- peroris S- pseudopneumoniae	1
+97738995	16547442	16-05-2021	S- aureus méticilline-sensible (MSSA)	0
+97738995	16547442	16-05-2021	S- aureus méticilline-sensible (MSSA)	0
+97738995	16547442	16-05-2021	S- aureus méticilline-sensible (MSSA)	0
+97738995	16547442	16-05-2021	S- aureus méticilline-sensible (MSSA)	0
+992208	16504582	16-05-2021	Serratia marcescens complexe	0
+45900	16528209	17-05-2021	Streptococcus mitis ou S- oralis  S- peroris S- pseudopneumoniae	1
+45900	16528209	17-05-2021	Streptococcus mitis ou S- oralis  S- peroris S- pseudopneumoniae	1
+97738995	16547442	18-05-2021	S- aureus méticilline-sensible (MSSA)	0
+97414818	16526116	18-05-2021	Streptococcus mitis ou S- oralis  S- peroris S- pseudopneumoniae	1
+565547	16533871	18-05-2021	Staphylococcus epidermidis	1
+242994	16335796	18-05-2021	Enterococcus faecium	0
+209281	16527978	18-05-2021	Staphylococcus epidermidis	1
+377558	16555265	18-05-2021	Streptococcus mitis ou S- oralis  S- peroris S- pseudopneumoniae	1
+98722446	16551143	18-05-2021	Staphylococcus epidermidis	1
+97738995	16547442	19-05-2021	S- aureus méticilline-sensible (MSSA)	0
+253608	16449334	19-05-2021	Staphylococcus epidermidis	1
+97414818	16526116	19-05-2021	Streptococcus mitis ou S- oralis  S- peroris S- pseudopneumoniae	1
+63327	16535661	19-05-2021	Klebsiella pneumoniae complexe	0
+576749	16528180	19-05-2021	Candida glabrata (n-nom: Nakaseomyces glabrataa)	0
+576749	16528180	19-05-2021	Candida glabrata (n-nom: Nakaseomyces glabrataa)	0
+576749	16528180	19-05-2021	Candida glabrata (n-nom: Nakaseomyces glabrataa)	0
+576749	16528180	19-05-2021	Enterococcus faecium	0
+576749	16528180	19-05-2021	Candida glabrata (n-nom: Nakaseomyces glabrataa)	0
+98722446	16551143	20-05-2021	Staphylococcus epidermidis	1
+576749	16528180	20-05-2021	Candida glabrata (n-nom: Nakaseomyces glabrataa)	0
+576749	16528180	20-05-2021	Staphylococcus epidermidis	1
+576749	16528180	20-05-2021	Candida glabrata (n-nom: Nakaseomyces glabrataa)	0
+548108	16562778	20-05-2021	Streptococcus pneumoniae	0
+548108	16562778	20-05-2021	Streptococcus pneumoniae	0
+98722446	16562990	20-05-2021	Staphylococcus epidermidis	1
+98574698	16552099	21-05-2021	Staphylococcus epidermidis	1
+98574698	16552099	21-05-2021	Staphylococcus epidermidis	1
+533926	16537657	21-05-2021	Enterococcus faecalis	0
+98574698	16552099	21-05-2021	Staphylococcus epidermidis	1
+98574698	16552099	21-05-2021	Staphylococcus epidermidis	1
+763765	16563775	21-05-2021	Klebsiella oxytoca complexe/Raoultella sp	-1
+763765	16563775	21-05-2021	Klebsiella oxytoca complexe/Raoultella sp	-1
+97103397	16563824	21-05-2021	Streptococcus pneumoniae	0
+97103397	16563824	21-05-2021	Streptococcus pneumoniae	0
+576749	16528180	21-05-2021	Candida glabrata (n-nom: Nakaseomyces glabrataa)	0
+98574698	16552099	21-05-2021	Staphylococcus epidermidis	1
+98574698	16552099	21-05-2021	Staphylococcus epidermidis	1
+794187	16526114	21-05-2021	Proteus vulgaris complexe	0
+794187	16526114	21-05-2021	Proteus vulgaris complexe	0
+367048	16553237	21-05-2021	Escherichia coli	0
+367048	16553237	21-05-2021	Escherichia coli	0
+98574698	16552099	22-05-2021	Staphylococcus epidermidis	1
+318045	16565097	22-05-2021	Pseudomonas aeruginosa	0
+318045	16565097	22-05-2021	Pseudomonas aeruginosa	0
+541432	16558043	22-05-2021	Staphylococcus epidermidis	1
+541432	16558043	22-05-2021	Staphylococcus epidermidis	1
+992208	16504582	22-05-2021	Serratia marcescens complexe	0
+610676	16565290	22-05-2021	Escherichia coli	0
+610676	16565290	22-05-2021	Escherichia coli	0
+98574698	16552099	23-05-2021	Staphylococcus epidermidis	1
+98574698	16552099	23-05-2021	Staphylococcus epidermidis	1
+1070439	16521135	23-05-2021	Staphylococcus epidermidis	1
+98562787	16542816	23-05-2021	Klebsiella pneumoniae complexe	0
+992208	16504582	23-05-2021	Serratia marcescens complexe	0
+979410	16527728	23-05-2021	Stenotrophomonas maltophilia	0
+97107189	16566396	23-05-2021	Klebsiella pneumoniae complexe	0
+97107189	16566396	23-05-2021	Klebsiella pneumoniae complexe	0
+170123	16531935	23-05-2021	Staphylococcus epidermidis	1
+170123	16531935	23-05-2021	Staphylococcus epidermidis	1
+98645167	16566483	24-05-2021	Corynebacterium diphtheriae	-1
+98490917	16552003	24-05-2021	Escherichia coli	0
+98490917	16552003	24-05-2021	Escherichia coli	0
+98645167	16566483	24-05-2021	Corynebacterium diphtheriae	-1
+185589	16566933	24-05-2021	Escherichia coli	0
+576749	16528180	24-05-2021	Candida glabrata (n-nom: Nakaseomyces glabrataa)	0
+576749	16528180	24-05-2021	Candida glabrata (n-nom: Nakaseomyces glabrataa)	0
+98313568	16566971	24-05-2021	Escherichia coli	0
+1022343	16541887	25-05-2021	Micrococcus luteus	1
+318292	16567665	25-05-2021	Streptococcus pyogenes groupe A	0
+318292	16567665	25-05-2021	Streptococcus pyogenes groupe A	0
+331542	16546723	25-05-2021	Staphylococcus epidermidis	1
+170123	16531935	25-05-2021	Staphylococcus epidermidis	1
+170123	16531935	25-05-2021	Staphylococcus epidermidis	1
+170123	16531935	25-05-2021	Staphylococcus epidermidis	1
+170123	16531935	25-05-2021	Staphylococcus epidermidis	1
+537452	16567202	25-05-2021	Proteus mirabilis	0
+979410	16527728	25-05-2021	Stenotrophomonas maltophilia	0
+1070439	16521135	25-05-2021	Staphylococcus epidermidis	1
+331542	16546723	25-05-2021	Staphylococcus epidermidis	1
+331542	16546723	25-05-2021	Staphylococcus epidermidis	1
+331542	16546723	25-05-2021	Staphylococcus epidermidis	1
+537452	16567202	26-05-2021	Staphylococcus capitis	1
+98498964	16569989	26-05-2021	Staphylococcus epidermidis	1
+576749	16528180	26-05-2021	Staphylococcus epidermidis	1
+170123	16531935	27-05-2021	Staphylococcus epidermidis	1
+295146	16572097	27-05-2021	Fusobacterium nucleatum/naviforme	0
+540071	16572546	27-05-2021	Klebsiella pneumoniae complexe	0
+540071	16572546	27-05-2021	Klebsiella pneumoniae complexe	0
+515791	16572642	27-05-2021	Escherichia coli	0
+515791	16572642	27-05-2021	Escherichia coli	0
+627271	16572789	27-05-2021	Klebsiella oxytoca complexe/Raoultella sp	-1
+627271	16572789	27-05-2021	Klebsiella oxytoca complexe/Raoultella sp	-1
+136272	16572954	27-05-2021	Streptococcus sanguinis (groupe mitis)	1
+136272	16572954	27-05-2021	Streptococcus sanguinis (groupe mitis)	1
+515791	16572642	28-05-2021	Lactobacillus gasseri	0
+97595235	16573008	28-05-2021	Staphylococcus epidermidis	1
+170123	16531935	28-05-2021	Staphylococcus epidermidis	1
+1133437	16562403	28-05-2021	Clostridium perfringens	0
+97007083	16568590	28-05-2021	Streptococcus mitis ou S- oralis  S- peroris S- pseudopneumoniae	1
+136272	16572954	28-05-2021	Streptococcus sanguinis (groupe mitis)	1
+136272	16572954	28-05-2021	Streptococcus sanguinis (groupe mitis)	1
+1013926	16572990	28-05-2021	Escherichia coli	0
+1013926	16572990	28-05-2021	Escherichia coli	0
+98724177	16566393	28-05-2021	Klebsiella pneumoniae complexe	0
+109560	16563164	29-05-2021	Bacteroides intestinalis	0
+109560	16563164	29-05-2021	Bacteroides intestinalis	0
+1013926	16572990	29-05-2021	Escherichia coli	0
+1013926	16572990	29-05-2021	Escherichia coli	0
+98724177	16566393	29-05-2021	Klebsiella pneumoniae complexe	0
+98723727	16563146	29-05-2021	Pseudomonas aeruginosa	0
+98725160	16575187	29-05-2021	Citrobacter freundii/braakii	0
+98725160	16575187	29-05-2021	Streptococcus anginosus Group	1
+97237195	16564956	30-05-2021	Escherichia coli	0
+97237195	16564956	30-05-2021	Escherichia coli	0
+98724177	16566393	30-05-2021	Klebsiella pneumoniae complexe	0
+170123	16531935	30-05-2021	Staphylococcus epidermidis	1
+97505477	16558248	30-05-2021	Streptococcus anginosus Group	1
+253511	16539749	30-05-2021	Gemella morbillorum	0
+253511	16539749	30-05-2021	Bacteroides fragilis	0
+253511	16539749	30-05-2021	Eggerthella lenta	0
+2163	16575958	30-05-2021	Campylobacter fetus	0
+13047	16577125	31-05-2021	Escherichia coli	0
+1093400	16577172	31-05-2021	Salmonella sérogroupe D (non-Typhi)	0
+1093400	16577172	31-05-2021	S- aureus méticilline-sensible (MSSA)	0
+1093400	16577172	31-05-2021	Salmonella sérogroupe D (non-Typhi)	0
+779630	16578074	31-05-2021	Enterobacter cloacae Complex	0
+779630	16578074	31-05-2021	Enterobacter cloacae Complex	0
+482532	16577228	31-05-2021	Micrococcus luteus	1
+98724177	16566393	01-06-2021	Staphylococcus epidermidis	1
+323565	16558465	01-06-2021	Klebsiella pneumoniae complexe	0
+323565	16558465	01-06-2021	Klebsiella pneumoniae complexe	0
+98574698	16552099	01-06-2021	Staphylococcus epidermidis	1
+98574698	16552099	01-06-2021	Staphylococcus capitis	1
+98405974	16572819	02-06-2021	Staphylococcus epidermidis	1
+98725757	16580852	02-06-2021	Paracoccus yeei	-1
+450860	16581752	02-06-2021	Klebsiella pneumoniae complexe	0
+756798	16582606	03-06-2021	Escherichia coli	0
+756798	16582606	03-06-2021	Escherichia coli	0
+214034	16583355	03-06-2021	Clostridium tertium	0
+214034	16583355	03-06-2021	Clostridium tertium	0
+214034	16583355	03-06-2021	Clostridium tertium	0
+214034	16583355	03-06-2021	Clostridium tertium	0
+313555	16583610	03-06-2021	Escherichia coli	0
+313555	16583610	03-06-2021	Escherichia coli	0
+187322	16583419	03-06-2021	Klebsiella pneumoniae complexe	0
+187322	16583419	03-06-2021	Klebsiella pneumoniae complexe	0
+98405974	16578831	04-06-2021	Staphylococcus epidermidis	1
+98405974	16578831	04-06-2021	Staphylococcus epidermidis	1
+97434091	16568239	04-06-2021	Staphylococcus epidermidis	1
+98722906	16555307	04-06-2021	Enterobacter cloacae Complex	0
+98722906	16555307	04-06-2021	Enterobacter cloacae Complex	0
+273480	16585626	04-06-2021	Escherichia coli	0
+1110874	16415277	05-06-2021	Pseudomonas aeruginosa	0
+1110874	16415277	05-06-2021	Pseudomonas aeruginosa	0
+97552948	16586117	05-06-2021	S- aureus méticilline-sensible (MSSA)	0
+98405974	16578831	05-06-2021	Staphylococcus epidermidis	1
+486993	16586185	05-06-2021	Escherichia coli	0
+486993	16586185	05-06-2021	Escherichia coli	0
+1110874	16415277	06-06-2021	Pseudomonas aeruginosa	0
+43019	16532302	06-06-2021	Staphylococcus epidermidis	1
+43019	16532302	06-06-2021	Staphylococcus epidermidis	1
+1056585	16567427	06-06-2021	Bacillus cereus complexe	1
+1056585	16567427	06-06-2021	Bacillus cereus complexe	1
+1056585	16567427	06-06-2021	Granulicatella adiacens	1
+98405974	16578831	06-06-2021	Staphylococcus epidermidis	1
+97552948	16586117	06-06-2021	S- aureus méticilline-sensible (MSSA)	0
+97552948	16586117	06-06-2021	S- aureus méticilline-sensible (MSSA)	0
+43019	16532302	07-06-2021	Staphylococcus epidermidis	1
+1056585	16567427	07-06-2021	Bacillus cereus complexe	1
+97552948	16586117	07-06-2021	S- aureus méticilline-sensible (MSSA)	0
+189341	16581132	07-06-2021	Streptococcus mitis ou S- oralis  S- peroris S- pseudopneumoniae	1
+189341	16581132	07-06-2021	Streptococcus mitis ou S- oralis  S- peroris S- pseudopneumoniae	1
+98405974	16578831	07-06-2021	Staphylococcus epidermidis	1
+98725918	16581969	08-06-2021	S- aureus méticilline-sensible (MSSA)	0
+992208	16504582	08-06-2021	Staphylococcus epidermidis	1
+242994	16556732	08-06-2021	Enterococcus faecalis	0
+242994	16556732	08-06-2021	Enterococcus faecium	0
+242994	16556732	08-06-2021	Enterococcus faecalis	0
+242994	16556732	08-06-2021	Enterococcus faecium	0
+242994	16556732	08-06-2021	Enterococcus faecalis	0
+242994	16556732	08-06-2021	Enterococcus faecium	0
+242994	16556732	08-06-2021	Enterococcus faecalis	0
+242994	16556732	08-06-2021	Enterococcus faecium	0
+98496136	16586702	08-06-2021	Staphylococcus epidermidis	1
+151977	16585193	09-06-2021	Staphylococcus haemolyticus 2	-1
+151977	16585193	09-06-2021	Staphylococcus epidermidis	1
+151977	16585193	09-06-2021	Staphylococcus haemolyticus	1
+151977	16585193	09-06-2021	Staphylococcus haemolyticus	1
+151977	16585193	09-06-2021	Staphylococcus epidermidis	1
+324433	16569936	09-06-2021	Micrococcus luteus	1
+98405974	16578831	09-06-2021	Staphylococcus epidermidis	1
+97468478	16591923	10-06-2021	Staphylococcus hominis	1
+98405974	16578831	10-06-2021	Staphylococcus epidermidis	1
+97505477	16576079	10-06-2021	Citrobacter freundii	0
+97505477	16576079	10-06-2021	Enterococcus faecium	0
+91119	16594242	10-06-2021	Streptococcus anginosus Group	1
+91119	16594242	10-06-2021	Streptococcus anginosus Group	1
+178915	16594370	11-06-2021	Escherichia coli	0
+178915	16594370	11-06-2021	Escherichia coli	0
+98727449	16594374	11-06-2021	Klebsiella pneumoniae complexe	0
+98727449	16594374	11-06-2021	Klebsiella pneumoniae complexe	0
+98405974	16578831	11-06-2021	Staphylococcus epidermidis	1
+97445908	16594196	11-06-2021	S- aureus méticilline-sensible (MSSA)	0
+97445908	16594196	11-06-2021	S- aureus méticilline-sensible (MSSA)	0
+619552	16596222	11-06-2021	Micrococcus luteus	1
+804618	16595607	11-06-2021	Escherichia coli	0
+804618	16595607	11-06-2021	Escherichia coli	0
+97445908	16594196	12-06-2021	S- aureus méticilline-sensible (MSSA)	0
+97445908	16594196	12-06-2021	S- aureus méticilline-sensible (MSSA)	0
+98572501	16545801	12-06-2021	Escherichia coli	0
+98572501	16545801	12-06-2021	Escherichia coli	0
+98405974	16578831	12-06-2021	Staphylococcus epidermidis	1
+780265	16595342	12-06-2021	Enterococcus faecalis	0
+780265	16595342	12-06-2021	Proteus vulgaris complexe	0
+780265	16595342	12-06-2021	Escherichia coli	0
+780265	16595342	12-06-2021	Enterococcus avium	0
+780265	16595342	12-06-2021	Proteus vulgaris complexe	0
+780265	16595342	12-06-2021	Escherichia coli	0
+97026622	16552621	13-06-2021	Enterococcus faecalis	0
+97026622	16552621	13-06-2021	Klebsiella aerogenes (anc- Enterobacter a-)	0
+97026622	16552621	13-06-2021	Enterococcus faecalis	0
+97026622	16552621	13-06-2021	Klebsiella aerogenes (anc- Enterobacter a-)	0
+97445908	16594196	13-06-2021	S- aureus méticilline-sensible (MSSA)	0
+723652	16597181	13-06-2021	Staphylococcus epidermidis	1
+98546520	16597103	13-06-2021	Enterococcus faecalis	0
+568083	16597257	13-06-2021	S- aureus méticilline-résistant (MRSA)	0
+137463	16597322	13-06-2021	S- aureus méticilline-sensible (MSSA)	0
+137463	16597322	13-06-2021	S- aureus méticilline-sensible (MSSA)	0
+98405974	16578831	13-06-2021	Staphylococcus epidermidis	1
+104524	16586971	13-06-2021	S- aureus méticilline-sensible (MSSA)	0
+104524	16586971	13-06-2021	S- aureus méticilline-sensible (MSSA)	0
+104524	16586971	13-06-2021	S- aureus méticilline-sensible (MSSA)	0
+137463	16597322	13-06-2021	S- aureus méticilline-sensible (MSSA)	0
+104524	16586971	14-06-2021	S- aureus méticilline-sensible (MSSA)	0
+104524	16586971	14-06-2021	S- aureus méticilline-sensible (MSSA)	0
+98405974	16578831	14-06-2021	Staphylococcus epidermidis	1
+97026622	16552621	14-06-2021	Klebsiella aerogenes (anc- Enterobacter a-)	0
+97026622	16552621	14-06-2021	Pseudomonas aeruginosa	0
+97081103	16570703	15-06-2021	Staphylococcus epidermidis	1
+97081103	16570703	15-06-2021	Staphylococcus epidermidis	1
+127189	16583604	15-06-2021	Acinetobacter sp	0
+127189	16583604	15-06-2021	Bacteroides uniformis	0
+127189	16583604	15-06-2021	Bacteroides uniformis	0
+97026622	16552621	15-06-2021	Klebsiella aerogenes (anc- Enterobacter a-)	0
+97026622	16552621	15-06-2021	Klebsiella aerogenes (anc- Enterobacter a-)	0
+21885	16601164	15-06-2021	Enterococcus faecalis	0
+1110874	16415277	15-06-2021	Staphylococcus epidermidis	1
+172377	16601305	16-06-2021	Escherichia coli	0
+992208	16504582	16-06-2021	Klebsiella pneumoniae complexe	0
+992208	16504582	16-06-2021	Klebsiella pneumoniae complexe	0
+26777	16602129	16-06-2021	Enterobacter cloacae Complex	0
+26777	16602129	16-06-2021	Enterobacter cloacae Complex	0
+155211	16602304	17-06-2021	Pseudomonas putida complexe	0
+500490	16573688	17-06-2021	Staphylococcus epidermidis	1
+97129129	16604852	18-06-2021	Escherichia coli	0
+434309	16591114	18-06-2021	Staphylococcus epidermidis	1
+434309	16591114	18-06-2021	Staphylococcus epidermidis	1
+98005933	16581397	18-06-2021	Staphylococcus epidermidis	1
+563000	16605835	18-06-2021	S- aureus méticilline-sensible (MSSA)	0
+127423	16606763	19-06-2021	Escherichia coli	0
+127423	16606763	19-06-2021	Escherichia coli	0
+98729033	16606812	19-06-2021	Streptococcus anginosus Group	1
+1129596	16598228	19-06-2021	Fusobacterium nucleatum/naviforme	0
+97120891	16606958	19-06-2021	Escherichia coli	0
+97120891	16606958	19-06-2021	Gemella morbillorum	0
+161799	16607322	19-06-2021	Escherichia coli	0
+161799	16607322	19-06-2021	Escherichia coli	0
+97120891	16606958	20-06-2021	Parabacteroides distasonis	0
+97527030	16607390	20-06-2021	Capnocytophaga canimorsus	0
+102877	16607414	20-06-2021	Citrobacter freundii/braakii	0
+102877	16607414	20-06-2021	Enterobacter cloacae Complex	0
+102877	16607414	20-06-2021	Enterobacter cloacae Complex	0
+102877	16607414	20-06-2021	Citrobacter freundii/braakii	0
+102877	16607414	20-06-2021	Enterobacter cloacae Complex	0
+102877	16607414	20-06-2021	Enterobacter cloacae Complex	0
+563000	16605835	20-06-2021	S- aureus méticilline-sensible (MSSA)	0
+563000	16605835	20-06-2021	S- aureus méticilline-sensible (MSSA)	0
+97120891	16606958	20-06-2021	Pseudomonas aeruginosa	0
+97120891	16606958	20-06-2021	Bacteroides thetaiotaomicron	0
+97120891	16606958	20-06-2021	Pseudomonas aeruginosa	0
+97120891	16606958	20-06-2021	Bacteroides thetaiotaomicron	0
+176707	16607863	20-06-2021	Escherichia coli	0
+176707	16607863	20-06-2021	Escherichia coli	0
+95301	16608048	20-06-2021	Escherichia coli	0
+95301	16608048	20-06-2021	Escherichia coli	0
+102877	16607414	20-06-2021	Citrobacter freundii/braakii	0
+102877	16607414	20-06-2021	Enterobacter cloacae Complex	0
+97055894	16608033	21-06-2021	Escherichia coli	0
+97055894	16608033	21-06-2021	Escherichia coli	0
+97717732	16591221	21-06-2021	Staphylococcus epidermidis	1
+97717732	16591221	21-06-2021	Staphylococcus epidermidis	1
+176707	16607863	21-06-2021	Escherichia coli	0
+541847	16577539	21-06-2021	Enterococcus faecalis	0
+541847	16577539	21-06-2021	Enterococcus faecalis	0
+541847	16577539	21-06-2021	Enterococcus faecalis	0
+541847	16577539	21-06-2021	Enterococcus faecalis	0
+102877	16607414	21-06-2021	Citrobacter freundii/braakii	0
+102877	16607414	21-06-2021	Enterobacter cloacae Complex	0
+305691	16608998	21-06-2021	Staphylococcus epidermidis	1
+123346	16609239	21-06-2021	Streptococcus anginosus Group	1
+123346	16609239	21-06-2021	Streptococcus anginosus Group	1
+98727724	16596360	21-06-2021	Staphylococcus epidermidis	1
+97775949	16605314	22-06-2021	Cronobacter sp	0
+97775949	16605314	22-06-2021	Cronobacter sp	0
+541847	16577539	22-06-2021	Enterococcus faecalis	0
+541847	16577539	22-06-2021	Enterococcus faecalis	0
+97717732	16591221	22-06-2021	Staphylococcus epidermidis	1
+513053	16610104	22-06-2021	Escherichia coli	0
+401614	16589173	22-06-2021	Escherichia coli	0
+401614	16589173	22-06-2021	Escherichia coli	0
+97120891	16606958	22-06-2021	Bacteroides thetaiotaomicron	0
+97120891	16606958	22-06-2021	Bacteroides cellulosilyticus	0
+97717732	16591221	22-06-2021	Staphylococcus epidermidis	1
+97717732	16591221	22-06-2021	Staphylococcus epidermidis	1
+434309	16591114	22-06-2021	Staphylococcus epidermidis	1
+434309	16591114	22-06-2021	Staphylococcus epidermidis	1
+325941	16611618	22-06-2021	Stenotrophomonas maltophilia	0
+325941	16611618	22-06-2021	Haemophilus parainfluenzae	0
+325941	16611618	22-06-2021	Stenotrophomonas maltophilia	0
+313555	16612688	23-06-2021	Escherichia coli	0
+313555	16612688	23-06-2021	Escherichia coli	0
+97178862	16615222	24-06-2021	Enterococcus faecalis	0
+97178862	16615222	24-06-2021	Enterococcus faecalis	0
+97178862	16615222	24-06-2021	Enterococcus faecalis	0
+97178862	16615222	24-06-2021	Enterococcus faecalis	0
+98575146	16606038	25-06-2021	Staphylococcus capitis	1
+392201	16617174	25-06-2021	Klebsiella pneumoniae complexe	0
+97120891	16606958	25-06-2021	Candida albicans	0
+453021	16617270	25-06-2021	Enterococcus faecium	0
+453021	16617270	25-06-2021	Pseudomonas aeruginosa	0
+453021	16617270	25-06-2021	Pseudomonas aeruginosa	0
+453021	16617270	25-06-2021	Enterococcus faecium	0
+97092862	16617366	26-06-2021	Streptococcus mitis ou S- oralis  S- peroris S- pseudopneumoniae	1
+97103954	16617791	26-06-2021	Clostridium cadaveris	0
+99124	16617821	26-06-2021	Staphylococcus hominis	1
+97028792	16604759	27-06-2021	Enterobacter cloacae Complex	0
+97028792	16604759	27-06-2021	Enterobacter cloacae Complex	0
+97028792	16604759	27-06-2021	Enterobacter cloacae Complex	0
+97028792	16604759	27-06-2021	Enterobacter cloacae Complex	0
+97112224	16618705	28-06-2021	Escherichia coli	0
+97112224	16618705	28-06-2021	Escherichia coli	0
+148351	16611964	28-06-2021	Enterococcus faecalis	0
+97005089	16617301	28-06-2021	Staphylococcus epidermidis	1
+911875	16619505	28-06-2021	Enterobacter cloacae Complex	0
+911875	16619505	28-06-2021	Citrobacter freundii/braakii	0
+911875	16619505	28-06-2021	Enterococcus faecium	0
+911875	16619505	28-06-2021	Hafnia alvei	0
+911875	16619505	28-06-2021	Klebsiella pneumoniae complexe	0
+911875	16619505	28-06-2021	Hafnia alvei	0
+911875	16619505	28-06-2021	Enterobacter cloacae Complex	0
+911875	16619505	28-06-2021	Enterococcus faecium	0
+911875	16619505	28-06-2021	Citrobacter freundii/braakii	0
+911875	16619505	28-06-2021	Klebsiella oxytoca complexe/Raoultella sp	-1
+911875	16619505	28-06-2021	Klebsiella pneumoniae complexe	0
+911875	16619505	28-06-2021	Enterobacter cloacae Complex	0
+911875	16619505	28-06-2021	Citrobacter freundii/braakii	0
+911875	16619505	28-06-2021	Hafnia alvei	0
+911875	16619505	28-06-2021	Enterococcus avium	0
+911875	16619505	28-06-2021	Enterobacter cloacae Complex	0
+911875	16619505	28-06-2021	Klebsiella pneumoniae complexe	0
+911875	16619505	28-06-2021	Hafnia alvei	0
+911875	16619505	28-06-2021	Enterococcus avium	0
+522797	16595999	28-06-2021	Escherichia coli	0
+979410	16601584	28-06-2021	Staphylococcus epidermidis	1
+979410	16601584	28-06-2021	Klebsiella oxytoca complexe/Raoultella sp	-1
+979410	16601584	28-06-2021	Staphylococcus epidermidis	1
+979410	16601584	28-06-2021	Klebsiella oxytoca complexe/Raoultella sp	-1
+979410	16601584	28-06-2021	Streptococcus vestibularis (salivarius groupe)	-1
+45298	16620498	28-06-2021	Streptococcus pneumoniae	0
+45298	16620498	28-06-2021	Streptococcus pneumoniae	0
+911875	16619505	28-06-2021	Enterococcus avium	0
+911875	16619505	28-06-2021	Enterococcus avium	0
+979410	16601584	29-06-2021	Staphylococcus epidermidis	1
+979410	16601584	29-06-2021	Staphylococcus epidermidis	1
+979410	16601584	29-06-2021	Staphylococcus epidermidis	1
+911875	16619505	29-06-2021	Enterococcus faecium	0
+911875	16619505	29-06-2021	Enterococcus avium	0
+911875	16619505	29-06-2021	Bacteroides thetaiotaomicron	0
+979410	16601584	29-06-2021	Staphylococcus epidermidis	1
+979410	16601584	29-06-2021	Staphylococcus epidermidis	1
+980356	16621442	29-06-2021	Candida albicans	0
+980356	16621442	29-06-2021	Candida albicans	0
+980356	16621442	29-06-2021	Candida albicans	0
+980356	16621442	29-06-2021	Candida albicans	0
+98499745	16609820	29-06-2021	Enterococcus faecalis	0
+98499745	16609820	29-06-2021	Enterobacter cloacae Complex	0
+98499745	16609820	29-06-2021	Escherichia coli	0
+98499745	16609820	29-06-2021	Enterobacter cloacae Complex	0
+98499745	16609820	29-06-2021	Enterococcus faecalis	0
+98499745	16609820	29-06-2021	Escherichia coli	0
+98499745	16609820	29-06-2021	Enterobacter cloacae Complex	0
+98499745	16609820	29-06-2021	Enterococcus faecalis	0
+98499745	16609820	29-06-2021	Escherichia coli	0
+98499745	16609820	29-06-2021	Escherichia coli	0
+98499745	16609820	29-06-2021	Enterobacter cloacae Complex	0
+98499745	16609820	29-06-2021	Enterococcus faecalis	0
+431319	16622301	29-06-2021	Streptococcus agalactiae groupe B	0
+431319	16622301	29-06-2021	Streptococcus agalactiae groupe B	0
+267060	16622307	30-06-2021	Enterobacter cloacae Complex	0
+267060	16622307	30-06-2021	Klebsiella pneumoniae complexe	0
+267060	16622307	30-06-2021	Enterobacter cloacae Complex	0
+979410	16601584	30-06-2021	Staphylococcus epidermidis	1
+448684	16622166	30-06-2021	Propionibacterium acnes (Cutibacterium a-)	1
+911875	16619505	30-06-2021	Enterococcus avium	0
+512568	16616307	30-06-2021	Escherichia coli	0
+49618	16623719	30-06-2021	Escherichia coli	0
+49618	16623719	30-06-2021	Escherichia coli	0
+267060	16623820	30-06-2021	Enterobacter cloacae Complex	0
+267060	16623820	30-06-2021	Enterobacter cloacae Complex	0
+147883	16624061	30-06-2021	Enterococcus faecium	0
+98499745	16609820	30-06-2021	Enterococcus faecalis	0
+98499745	16609820	30-06-2021	Enterobacter cloacae Complex	0
+98499745	16609820	30-06-2021	Enterococcus faecalis	0
+883195	16616910	01-07-2021	Escherichia coli	0
+883195	16616910	01-07-2021	Escherichia coli	0
+701870	16624209	01-07-2021	Bacteroides fragilis	0
+267060	16623820	01-07-2021	Enterobacter cloacae Complex	0
+980356	16621442	01-07-2021	Candida albicans	0
+980356	16621442	01-07-2021	Candida albicans	0
+756762	16626200	01-07-2021	Streptococcus dysgalactiae	0
+196612	16625678	02-07-2021	Enterococcus faecalis	0
+226346	16595266	02-07-2021	Actinomyces neuii	1
+98499745	16609820	02-07-2021	Enterococcus faecalis	0
+98730683	16625773	02-07-2021	Staphylococcus hominis	1
+98731679	16626452	02-07-2021	Campylobacter jejuni	0
+98731679	16626452	02-07-2021	Campylobacter jejuni	0
+97046167	16624081	02-07-2021	Escherichia coli	0
+97135464	16628085	02-07-2021	Bacteroides fragilis	0
+196612	16625678	02-07-2021	Enterococcus faecalis	0
+422570	16628450	02-07-2021	Streptococcus pneumoniae	0
+422570	16628450	02-07-2021	Streptococcus pneumoniae	0
+331542	16581174	02-07-2021	Pseudomonas aeruginosa	0
+331542	16581174	02-07-2021	Pseudomonas aeruginosa	0
+331542	16581174	03-07-2021	Pseudomonas aeruginosa	0
+900779	16628454	03-07-2021	Escherichia coli	0
+900779	16628454	03-07-2021	Escherichia coli	0
+900779	16628454	03-07-2021	Escherichia coli	0
+451388	16612486	03-07-2021	Klebsiella pneumoniae complexe	0
+451388	16612486	03-07-2021	Klebsiella pneumoniae complexe	0
+1014194	16626239	03-07-2021	Candida albicans	0
+97432685	16629230	03-07-2021	Candida glabrata (n-nom: Nakaseomyces glabrataa)	0
+97324455	16629989	04-07-2021	Escherichia coli	0
+289473	16630394	04-07-2021	Streptococcus pneumoniae	0
+289473	16630394	04-07-2021	Streptococcus pneumoniae	0
+98499745	16609820	05-07-2021	Stenotrophomonas maltophilia	0
+75822	16631340	05-07-2021	Citrobacter koseri (C-diversus)	0
+887940	16632130	05-07-2021	Escherichia coli	0
+887940	16632130	05-07-2021	Escherichia coli	0
+95808	16632350	06-07-2021	S- aureus méticilline-sensible (MSSA)	0
+95808	16632350	06-07-2021	S- aureus méticilline-sensible (MSSA)	0
+98732492	16632347	06-07-2021	Escherichia coli	0
+618256	16605301	06-07-2021	Escherichia coli	0
+95808	16632350	06-07-2021	S- aureus méticilline-sensible (MSSA)	0
+95808	16632350	06-07-2021	S- aureus méticilline-sensible (MSSA)	0
+380019	16615326	06-07-2021	Escherichia coli	0
+380019	16615326	06-07-2021	Escherichia coli	0
+97599551	16634047	06-07-2021	Enterobacter cloacae Complex	0
+97599551	16634047	06-07-2021	Staphylococcus hominis	1
+97531198	16633977	06-07-2021	Staphylococcus warneri	1
+97531198	16633977	06-07-2021	Staphylococcus capitis	1
+97531198	16633977	06-07-2021	Staphylococcus haemolyticus	1
+95808	16632350	07-07-2021	S- aureus méticilline-sensible (MSSA)	0
+266303	16588035	07-07-2021	Staphylococcus epidermidis	1
+618256	16605301	07-07-2021	Escherichia coli	0
+618256	16605301	07-07-2021	Escherichia coli	0
+264833	16605574	08-07-2021	Proteus mirabilis	0
+264833	16605574	08-07-2021	Aerococcus sanguinicola	0
+264833	16605574	08-07-2021	Proteus mirabilis	0
+351017	16630354	08-07-2021	Pseudomonas aeruginosa	0
+351017	16630354	08-07-2021	Pseudomonas aeruginosa	0
+266303	16588035	08-07-2021	Staphylococcus epidermidis	1
+266303	16588035	08-07-2021	Staphylococcus epidermidis	1
+618256	16605301	08-07-2021	Escherichia coli	0
+95808	16632350	09-07-2021	S- aureus méticilline-sensible (MSSA)	0
+98732243	16630360	09-07-2021	S- aureus méticilline-sensible (MSSA)	0
+98732243	16630360	09-07-2021	Staphylococcus epidermidis	1
+504682	16640351	10-07-2021	Escherichia coli	0
+504682	16640351	10-07-2021	Escherichia coli	0
+577316	16630968	10-07-2021	Klebsiella pneumoniae complexe	0
+577316	16630968	10-07-2021	Klebsiella pneumoniae complexe	0
+266303	16588035	11-07-2021	Staphylococcus capitis	1
+980356	16621442	12-07-2021	Staphylococcus epidermidis	1
+52505	16641957	12-07-2021	Escherichia coli	0
+52505	16641957	12-07-2021	Escherichia coli	0
+409498	16606778	12-07-2021	Staphylococcus epidermidis	1
+409498	16606778	12-07-2021	Staphylococcus epidermidis	1
+97217776	16615313	12-07-2021	Morganella morganii	0
+97217776	16615313	12-07-2021	Bacteroides fragilis	0
+97217776	16615313	12-07-2021	Peptoniphilus harei	0
+98725556	16615952	12-07-2021	Klebsiella pneumoniae complexe	0
+421068	16643518	12-07-2021	Streptococcus agalactiae groupe B	0
+421068	16643518	12-07-2021	Streptococcus agalactiae groupe B	0
+171168	16643707	12-07-2021	Escherichia coli	0
+98570974	16643754	13-07-2021	Escherichia coli	0
+172299	16645125	13-07-2021	Proteus mirabilis	0
+172299	16645125	13-07-2021	Proteus mirabilis	0
+104686	16637623	13-07-2021	Enterococcus faecium	0
+104686	16637623	13-07-2021	Hungatella hathewayi (ancien Clostridium h-)	0
+48000	16637964	14-07-2021	Klebsiella aerogenes (anc- Enterobacter a-)	0
+97601409	16639830	14-07-2021	Klebsiella pneumoniae complexe	0
+97217776	16615313	14-07-2021	Morganella morganii	0
+97217776	16615313	14-07-2021	Morganella morganii	0
+97217776	16615313	14-07-2021	Proteus mirabilis	0
+225981	16646321	14-07-2021	Escherichia coli	0
+98726231	16584507	15-07-2021	Candida albicans	0
+1009218	16647496	15-07-2021	Clostridium innocuum	0
+1009218	16647496	15-07-2021	Bifidobacterium longum	0
+1009218	16647496	15-07-2021	Bifidobacterium longum	0
+409498	16606778	15-07-2021	Staphylococcus epidermidis	1
+194482	16646482	15-07-2021	Enterococcus faecalis	0
+194482	16646482	15-07-2021	Enterococcus faecalis	0
+264502	16614504	15-07-2021	Escherichia coli	0
+264502	16614504	15-07-2021	Escherichia coli	0
+98734441	16646417	15-07-2021	Enterococcus faecalis	0
+98734441	16646417	15-07-2021	Enterococcus faecalis	0
+98734441	16646417	15-07-2021	Enterococcus faecalis	0
+194482	16646482	15-07-2021	Enterococcus faecalis	0
+98734441	16646417	16-07-2021	Enterococcus faecalis	0
+98734441	16646417	16-07-2021	Enterococcus faecalis	0
+97022375	16620529	16-07-2021	Lactobacillus paracasei	0
+194482	16646482	16-07-2021	Enterococcus faecalis	0
+97307199	16649618	16-07-2021	Staphylococcus pettenkoferi	1
+526875	16572318	16-07-2021	Escherichia coli	0
+526875	16572318	16-07-2021	Escherichia coli	0
+97109826	16644773	16-07-2021	Proteus mirabilis	0
+97109826	16644773	16-07-2021	Anaerococcus vaginalis	0
+98734441	16646417	17-07-2021	Enterococcus faecalis	0
+47087	16652105	17-07-2021	S- aureus méticilline-sensible (MSSA)	0
+47087	16652105	17-07-2021	S- aureus méticilline-sensible (MSSA)	0
+47087	16652105	18-07-2021	S- aureus méticilline-sensible (MSSA)	0
+47087	16652105	18-07-2021	S- aureus méticilline-sensible (MSSA)	0
+1133489	16651631	18-07-2021	Escherichia coli	0
+1133489	16651631	18-07-2021	Escherichia coli	0
+620150	16653058	19-07-2021	Escherichia coli	0
+620150	16653058	19-07-2021	Escherichia coli	0
+1133489	16651631	19-07-2021	Escherichia coli	0
+1133489	16651631	19-07-2021	Escherichia coli	0
+98732162	16629868	19-07-2021	Staphylococcus epidermidis	1
+98653131	16654368	19-07-2021	Escherichia coli	0
+494549	16654553	19-07-2021	S- aureus méticilline-sensible (MSSA)	0
+494549	16654553	19-07-2021	S- aureus méticilline-sensible (MSSA)	0
+98658196	16626793	20-07-2021	Staphylococcus epidermidis	1
+450696	16655131	20-07-2021	Staphylococcus epidermidis	1
+450696	16655131	20-07-2021	Staphylococcus epidermidis	1
+578180	16655382	20-07-2021	Escherichia coli	0
+631344	16575459	20-07-2021	Klebsiella pneumoniae complexe	0
+97014874	16654328	20-07-2021	Staphylococcus epidermidis	1
+97014874	16654328	20-07-2021	Staphylococcus epidermidis	1
+426200	16654106	21-07-2021	Enterococcus faecalis	0
+426200	16654106	21-07-2021	Enterococcus faecalis	0
+450696	16655131	21-07-2021	Staphylococcus epidermidis	1
+97717732	16591221	21-07-2021	Proteus vulgaris complexe	0
+97717732	16591221	21-07-2021	Proteus vulgaris complexe	0
+97103954	16652736	21-07-2021	Streptococcus sanguinis (groupe mitis)	1
+98735783	16656548	22-07-2021	Staphylococcus epidermidis	1
+887172	16659326	22-07-2021	Escherichia coli	0
+97427265	16654881	23-07-2021	Escherichia coli	0
+97204515	16650653	23-07-2021	S- aureus méticilline-sensible (MSSA)	0
+97204515	16650653	23-07-2021	S- aureus méticilline-sensible (MSSA)	0
+97204515	16650653	23-07-2021	S- aureus méticilline-sensible (MSSA)	0
+97204515	16650653	23-07-2021	S- aureus méticilline-sensible (MSSA)	0
+21270	16660312	23-07-2021	S- aureus méticilline-sensible (MSSA)	0
+71136	16661454	23-07-2021	Enterococcus faecalis	0
+71136	16661454	23-07-2021	Proteus mirabilis	0
+71136	16661454	23-07-2021	Klebsiella pneumoniae complexe	0
+71136	16661454	23-07-2021	Proteus mirabilis	0
+71136	16661454	23-07-2021	Klebsiella pneumoniae complexe	0
+71136	16661454	23-07-2021	Enterococcus faecalis	0
+97600245	16662696	23-07-2021	Staphylococcus hominis	1
+21270	16660312	24-07-2021	S- aureus méticilline-sensible (MSSA)	0
+97348247	16636930	24-07-2021	Enterobacter cloacae Complex	0
+97348247	16636930	24-07-2021	Enterobacter cloacae Complex	0
+98736571	16663114	24-07-2021	Klebsiella pneumoniae complexe	0
+21270	16660312	24-07-2021	S- aureus méticilline-sensible (MSSA)	0
+603744	16662752	24-07-2021	Actinomyces oris	0
+290646	16663763	25-07-2021	Escherichia coli	0
+290646	16663763	25-07-2021	Escherichia coli	0
+21270	16660312	25-07-2021	S- aureus méticilline-sensible (MSSA)	0
+444298	16657094	25-07-2021	Escherichia coli	0
+444298	16657094	25-07-2021	Escherichia coli	0
+97578636	16587660	25-07-2021	Staphylococcus epidermidis	1
+97578636	16587660	25-07-2021	Staphylococcus epidermidis	1
+195351	16642140	25-07-2021	Serratia marcescens complexe	0
+195351	16642140	25-07-2021	Serratia marcescens complexe	0
+97578636	16587660	25-07-2021	Staphylococcus epidermidis	1
+97578636	16587660	25-07-2021	Staphylococcus epidermidis	1
+21270	16660312	26-07-2021	S- aureus méticilline-sensible (MSSA)	0
+97578636	16587660	26-07-2021	Staphylococcus epidermidis	1
+97578636	16587660	26-07-2021	Staphylococcus epidermidis	1
+97578636	16587660	26-07-2021	Staphylococcus epidermidis	1
+259546	16665623	26-07-2021	Streptococcus agalactiae groupe B	0
+259546	16665623	26-07-2021	Streptococcus agalactiae groupe B	0
+259546	16665623	26-07-2021	Streptococcus agalactiae groupe B	0
+259546	16665623	26-07-2021	S- aureus méticilline-sensible (MSSA)	0
+97202528	16666102	26-07-2021	Streptococcus gallolyticus complexe	0
+97202528	16666102	26-07-2021	Streptococcus gallolyticus complexe	0
+259546	16665623	26-07-2021	Streptococcus agalactiae groupe B	0
+259546	16665623	26-07-2021	Streptococcus agalactiae groupe B	0
+422672	16645213	26-07-2021	Mycobacterium sp, voir commentaire	-1
+422672	16677683	26-07-2021	Mycobacterium avium, par séquençage	-1
+422672	16645213	26-07-2021	Mycobacterium sp, voir commentaire	-1
+422672	16677683	26-07-2021	Mycobacterium avium, par séquençage	-1
+97578636	16587660	26-07-2021	Staphylococcus epidermidis	1
+98734422	16646281	26-07-2021	Staphylococcus epidermidis	1
+21270	16660312	27-07-2021	S- aureus méticilline-sensible (MSSA)	0
+228324	16642584	27-07-2021	Escherichia coli	0
+228324	16642584	27-07-2021	Escherichia coli	0
+105414	16633862	27-07-2021	Pseudomonas aeruginosa	0
+105414	16633862	27-07-2021	Pseudomonas aeruginosa	0
+98496136	16665618	27-07-2021	Staphylococcus epidermidis	1
+94283	16668943	28-07-2021	Staphylococcus epidermidis	1
+401935	16668055	28-07-2021	Staphylococcus haemolyticus	1
+279398	16669720	28-07-2021	Candida glabrata (n-nom: Nakaseomyces glabrataa)	0
+279398	16669720	28-07-2021	Candida glabrata (n-nom: Nakaseomyces glabrataa)	0
+279398	16669720	28-07-2021	Candida glabrata (n-nom: Nakaseomyces glabrataa)	0
+316243	16666263	28-07-2021	Enterococcus faecalis	0
+316243	16666263	28-07-2021	Staphylococcus epidermidis	1
+515230	16662730	28-07-2021	Enterococcus faecalis	0
+8801	16669833	29-07-2021	Pseudomonas aeruginosa	0
+8801	16669833	29-07-2021	Pseudomonas aeruginosa	0
+8801	16669833	29-07-2021	Pseudomonas aeruginosa	0
+207695	16669845	29-07-2021	Proteus mirabilis	0
+279398	16669720	29-07-2021	Candida glabrata (n-nom: Nakaseomyces glabrataa)	0
+279398	16669720	29-07-2021	Candida glabrata (n-nom: Nakaseomyces glabrataa)	0
+475743	16429067	29-07-2021	Candida parapsilosis	0
+161235	16651370	29-07-2021	Enterococcus faecium	0
+279398	16669720	29-07-2021	Candida glabrata (n-nom: Nakaseomyces glabrataa)	0
+279398	16669720	29-07-2021	Candida glabrata (n-nom: Nakaseomyces glabrataa)	0
+368750	16671399	29-07-2021	Citrobacter freundii/braakii	0
+368750	16671399	29-07-2021	Citrobacter freundii/braakii	0
+600068	16518357	30-07-2021	Pseudomonas aeruginosa	0
+600068	16518357	30-07-2021	Staphylococcus epidermidis	1
+168925	16672524	30-07-2021	Escherichia coli	0
+168925	16672524	30-07-2021	Escherichia coli	0
+475743	16429067	30-07-2021	Candida parapsilosis	0
+97585775	16673637	30-07-2021	Escherichia coli	0
+97191615	16671846	31-07-2021	Staphylococcus epidermidis	1
+475743	16429067	31-07-2021	Candida parapsilosis	0
+97191615	16671846	31-07-2021	Staphylococcus epidermidis	1
+1127704	16673318	31-07-2021	Escherichia coli	0
+98497863	16596171	31-07-2021	Staphylococcus epidermidis	1
+172699	16674800	01-08-2021	S- aureus méticilline-sensible (MSSA)	0
+172699	16674800	01-08-2021	S- aureus méticilline-sensible (MSSA)	0
+172699	16674800	01-08-2021	S- aureus méticilline-sensible (MSSA)	0
+99467	16669009	01-08-2021	Klebsiella oxytoca complexe/Raoultella sp	-1
+99467	16669009	01-08-2021	Klebsiella oxytoca complexe/Raoultella sp	-1
+142560	16675332	01-08-2021	Proteus mirabilis	0
+142560	16675332	01-08-2021	S- aureus méticilline-sensible (MSSA)	0
+142560	16675332	01-08-2021	S- aureus méticilline-sensible (MSSA)	0
+142560	16675332	01-08-2021	Proteus mirabilis	0
+359781	16675683	01-08-2021	Escherichia coli	0
+233328	16675709	01-08-2021	Staphylococcus capitis	1
+233328	16675709	01-08-2021	Staphylococcus capitis	1
+137248	16675717	02-08-2021	Streptococcus beta hemolytique	-1
+418529	16675721	02-08-2021	S- aureus méticilline-résistant (MRSA)	0
+418529	16675721	02-08-2021	S- aureus méticilline-résistant (MRSA)	0
+109811	16676008	02-08-2021	Streptococcus beta hemolytique groupe C	0
+109811	16676008	02-08-2021	Proteus vulgaris complexe	0
+109811	16676008	02-08-2021	Streptococcus beta hemolytique groupe C	0
+109811	16676008	02-08-2021	Proteus vulgaris complexe	0
+266815	16676066	02-08-2021	Staphylococcus capitis	1
+97774323	16647275	02-08-2021	Escherichia coli	0
+97774323	16647275	03-08-2021	Enterococcus faecium	0
+97774323	16647275	03-08-2021	Escherichia coli	0
+97774323	16647275	03-08-2021	Enterococcus faecium	0
+97774323	16647275	03-08-2021	Escherichia coli	0
+112407	16638609	03-08-2021	Klebsiella pneumoniae complexe	0
+112407	16638609	03-08-2021	Klebsiella pneumoniae complexe	0
+98738495	16677611	03-08-2021	S- aureus méticilline-sensible (MSSA)	0
+98738495	16677611	03-08-2021	S- aureus méticilline-sensible (MSSA)	0
+82255	16612868	03-08-2021	Escherichia coli	0
+1126320	16671915	03-08-2021	Citrobacter koseri (C-diversus)	0
+1126320	16671915	03-08-2021	Citrobacter koseri (C-diversus)	0
+179495	16654667	03-08-2021	Staphylococcus epidermidis	1
+97418893	16678120	03-08-2021	Escherichia coli	0
+100291	16678174	04-08-2021	Aggregatibacter aphrophilus (Haemophilus a-/para-)	0
+97146640	16658738	04-08-2021	Pseudomonas putida	-1
+97146640	16658738	04-08-2021	Pseudomonas putida complexe	0
+97746246	16660043	04-08-2021	Klebsiella pneumoniae complexe	0
+97746246	16660043	04-08-2021	Klebsiella pneumoniae complexe	0
+422672	16677683	04-08-2021	Mycobacterium avium, par séquençage	-1
+306076	16665055	04-08-2021	Lactobacillus paracasei	0
+1126320	16671915	04-08-2021	Citrobacter koseri (C-diversus)	0
+1126320	16671915	04-08-2021	Citrobacter koseri (C-diversus)	0
+97506117	16676011	04-08-2021	Escherichia coli	0
+97506117	16676011	05-08-2021	Escherichia coli	0
+97506117	16676011	05-08-2021	Escherichia coli	0
+1126320	16671915	05-08-2021	Citrobacter koseri (C-diversus)	0
+1126320	16671915	05-08-2021	Citrobacter koseri (C-diversus)	0
+476668	16681025	05-08-2021	Staphylococcus hominis	1
+422672	16677683	05-08-2021	Mycobacterium avium, par séquençage	-1
+422672	16677683	05-08-2021	Mycobacterium avium, par séquençage	-1
+97746246	16660043	05-08-2021	Klebsiella pneumoniae complexe	0
+97275510	16668727	05-08-2021	Enterobacter cloacae Complex	0
+97275510	16668727	05-08-2021	Enterobacter cloacae Complex	0
+97275510	16668727	05-08-2021	Enterobacter cloacae Complex	0
+97275510	16668727	05-08-2021	Enterobacter cloacae Complex	0
+1113969	16681608	05-08-2021	Propionibacterium acnes (Cutibacterium a-)	1
+97746246	16660043	06-08-2021	Klebsiella pneumoniae complexe	0
+324433	16681698	06-08-2021	Escherichia coli	0
+97746246	16660043	06-08-2021	Klebsiella pneumoniae complexe	0
+331037	16681802	06-08-2021	S- aureus méticilline-résistant (MRSA)	0
+97275510	16668727	06-08-2021	Enterobacter cloacae Complex	0
+97275510	16668727	06-08-2021	Enterobacter cloacae Complex	0
+97275510	16668727	06-08-2021	Enterobacter cloacae Complex	0
+97275510	16668727	06-08-2021	Enterobacter cloacae Complex	0
+22430	16678742	06-08-2021	S- aureus méticilline-sensible (MSSA)	0
+22430	16678742	06-08-2021	S- aureus méticilline-sensible (MSSA)	0
+165712	16682991	06-08-2021	S- aureus méticilline-sensible (MSSA)	0
+165712	16682991	06-08-2021	S- aureus méticilline-sensible (MSSA)	0
+198830	16673250	06-08-2021	Staphylococcus epidermidis	1
+198830	16673250	06-08-2021	Staphylococcus epidermidis	1
+198830	16673250	06-08-2021	Staphylococcus epidermidis	1
+97421887	16683156	06-08-2021	Enterobacter cloacae Complex	0
+98644016	16643543	06-08-2021	Escherichia coli	0
+607900	16682037	06-08-2021	Parvimonas micra (ancien Peptostreptococcus micros)	1
+607900	16682037	06-08-2021	Fusobacterium nucleatum/naviforme	0
+607900	16682037	06-08-2021	Parvimonas micra (ancien Peptostreptococcus micros)	1
+607900	16682037	06-08-2021	Fusobacterium nucleatum/naviforme	0
+172377	16624790	07-08-2021	Acinetobacter baumannii complexe	0
+98739044	16681679	07-08-2021	Staphylococcus epidermidis	1
+22430	16683383	08-08-2021	S- aureus méticilline-sensible (MSSA)	0
+422672	16677683	08-08-2021	Mycobacterium sp, voir commentaire	-1
+422672	16677683	08-08-2021	Mycobacterium avium, par séquençage	-1
+422672	16677683	08-08-2021	Mycobacterium avium, par séquençage	-1
+79613	16649422	08-08-2021	Candida albicans	0
+22430	16683383	09-08-2021	S- aureus méticilline-sensible (MSSA)	0
+179665	16685486	09-08-2021	Klebsiella pneumoniae complexe	0
+179665	16685486	09-08-2021	Klebsiella pneumoniae complexe	0
+828611	16674462	09-08-2021	Citrobacter koseri (C-diversus)	0
+109245	16685027	09-08-2021	Escherichia coli	0
+109245	16685027	09-08-2021	Escherichia coli	0
+97679668	16619970	09-08-2021	Enterobacter cloacae Complex	0
+97717732	16591221	10-08-2021	Staphylococcus epidermidis	1
+32682	16666185	10-08-2021	Staphylococcus epidermidis 2	1
+32682	16666185	10-08-2021	Staphylococcus epidermidis	1
+120995	16665516	10-08-2021	Bacteroides uniformis	0
+120995	16665516	10-08-2021	Bacteroides uniformis	0
+362952	16666679	10-08-2021	Escherichia coli	0
+362952	16666679	10-08-2021	Escherichia coli	0
+179904	16643350	10-08-2021	Pseudomonas putida complexe	0
+179904	16643350	10-08-2021	Pseudomonas putida complexe	0
+925294	16631440	10-08-2021	Staphylococcus epidermidis	1
+97087090	16688414	11-08-2021	Klebsiella pneumoniae complexe	0
+97717732	16591221	11-08-2021	Staphylococcus epidermidis	1
+637865	16688312	11-08-2021	Escherichia coli	0
+637865	16688312	11-08-2021	Escherichia coli	0
+32682	16666185	11-08-2021	Staphylococcus epidermidis	1
+32682	16666185	11-08-2021	Citrobacter koseri (C-diversus)	0
+32682	16666185	11-08-2021	Staphylococcus epidermidis	1
+98739954	16689251	11-08-2021	Enterococcus faecalis	0
+98739954	16689251	11-08-2021	Enterococcus faecalis	0
+98739954	16689251	11-08-2021	Enterococcus faecalis	0
+98738461	16677280	11-08-2021	Staphylococcus haemolyticus	1
+98739954	16689251	11-08-2021	Enterococcus faecalis	0
+98738707	16688881	11-08-2021	Staphylococcus hominis	1
+98739820	16688324	11-08-2021	Staphylococcus epidermidis	1
+97232228	16664558	12-08-2021	Escherichia coli	0
+97717732	16591221	12-08-2021	Staphylococcus epidermidis	1
+407533	16679571	12-08-2021	Escherichia coli	0
+407533	16679571	12-08-2021	Escherichia coli	0
+98739954	16689251	12-08-2021	Enterococcus faecalis	0
+98739954	16689251	12-08-2021	Enterococcus faecalis	0
+96023934	16690682	12-08-2021	Escherichia coli	0
+96023934	16690682	12-08-2021	Staphylococcus epidermidis	1
+96023934	16690682	12-08-2021	Enterococcus faecalis	0
+96023934	16690682	12-08-2021	Escherichia coli	0
+98739954	16689251	12-08-2021	Enterococcus faecalis	0
+98739954	16689251	12-08-2021	Enterococcus faecalis	0
+637504	16691275	12-08-2021	Pseudomonas aeruginosa	0
+620482	16691024	12-08-2021	Escherichia coli	0
+407533	16679571	12-08-2021	Staphylococcus epidermidis	1
+407533	16679571	12-08-2021	Escherichia coli	0
+407533	16679571	12-08-2021	Escherichia coli	0
+637504	16691275	13-08-2021	Pseudomonas aeruginosa	0
+769890	16683407	13-08-2021	Escherichia coli	0
+769890	16683407	13-08-2021	Escherichia coli	0
+290274	16674492	13-08-2021	S- aureus méticilline-sensible (MSSA)	0
+290274	16674492	13-08-2021	S- aureus méticilline-sensible (MSSA)	0
+98731335	16691955	14-08-2021	Staphylococcus epidermidis	1
+98731335	16691955	14-08-2021	Staphylococcus pasteuri	1
+344307	16693562	14-08-2021	Escherichia coli	0
+344307	16693562	14-08-2021	Klebsiella pneumoniae complexe	0
+344307	16693562	14-08-2021	Escherichia coli	0
+344307	16693562	14-08-2021	Klebsiella pneumoniae complexe	0
+404207	16693611	14-08-2021	Staphylococcus coagulase-negatifs	1
+641211	16693832	14-08-2021	Citrobacter freundii/braakii	0
+641211	16693832	14-08-2021	Proteus mirabilis	0
+641211	16693832	14-08-2021	Escherichia coli	0
+641211	16693832	14-08-2021	Citrobacter freundii/braakii	0
+290274	16674492	14-08-2021	S- aureus méticilline-sensible (MSSA)	0
+290274	16674492	14-08-2021	S- aureus méticilline-sensible (MSSA)	0
+290274	16674492	14-08-2021	S- aureus méticilline-sensible (MSSA)	0
+290274	16674492	15-08-2021	S- aureus méticilline-sensible (MSSA)	0
+290274	16674492	15-08-2021	S- aureus méticilline-sensible (MSSA)	0
+290274	16674492	15-08-2021	S- aureus méticilline-sensible (MSSA)	0
+290274	16674492	15-08-2021	S- aureus méticilline-sensible (MSSA)	0
+899495	16694676	15-08-2021	Aerococcus sanguinicola	0
+899495	16694676	15-08-2021	Aerococcus sanguinicola	0
+98731711	16681176	15-08-2021	Salmonella sp	0
+98731711	16681176	15-08-2021	Staphylococcus warneri	1
+98731711	16681176	15-08-2021	Salmonella sérogroupe D (non-Typhi)	0
+53213	16676501	15-08-2021	Streptococcus salivarius (groupe salivarius)	1
+1126320	16234966	16-08-2021	Escherichia coli	0
+97894980	16464906	16-08-2021	Salmonella sp	0
+97894980	16464906	16-08-2021	Salmonella sp	0
+97011877	16686982	16-08-2021	Escherichia coli	0
+97011877	16686982	16-08-2021	Escherichia coli	0
+97011877	16686982	16-08-2021	Escherichia coli	0
+491701	16614368	16-08-2021	Escherichia coli	0
+491701	16614368	16-08-2021	Escherichia coli	0
+356589	16693549	16-08-2021	Streptococcus anginosus Group	1
+294202	16681591	17-08-2021	Escherichia coli	0
+97894980	16696136	17-08-2021	Staphylococcus hominis	1
+97894980	16696136	17-08-2021	Salmonella sp	0
+97894980	16696136	17-08-2021	Salmonella sp	0
+278908	16697234	17-08-2021	Acinetobacter sp	0
+278908	16697234	17-08-2021	Staphylococcus warneri	1
+166957	16699199	18-08-2021	Staphylococcus epidermidis	1
+98740534	16694355	18-08-2021	Streptococcus pneumoniae	0
+345682	16687366	18-08-2021	Escherichia coli	0
+345682	16687366	18-08-2021	Escherichia coli	0
+24948	16701427	19-08-2021	Escherichia coli	0
+283438	16694883	19-08-2021	Pseudomonas aeruginosa	0
+283438	16694883	19-08-2021	Pseudomonas aeruginosa	0
+97427265	16700079	19-08-2021	Escherichia coli	0
+97022887	16703710	19-08-2021	Escherichia coli	0
+98740534	16694355	20-08-2021	Staphylococcus epidermidis	1
+97398709	16704166	20-08-2021	S- aureus méticilline-sensible (MSSA)	0
+97398709	16704166	20-08-2021	S- aureus méticilline-sensible (MSSA)	0
+97624409	16695183	20-08-2021	Pseudomonas aeruginosa	0
+97624409	16695183	20-08-2021	Pseudomonas aeruginosa	0
+818099	16691943	20-08-2021	Streptococcus pneumoniae	0
+818099	16691943	20-08-2021	Streptococcus pneumoniae	0
+818099	16691943	20-08-2021	Streptococcus pneumoniae	0
+146544	16705142	20-08-2021	Escherichia coli	0
+98740023	16689904	20-08-2021	Staphylococcus epidermidis	1
+472147	16706139	20-08-2021	Pseudomonas aeruginosa	0
+97496885	16704796	20-08-2021	Clostridium perfringens	0
+97496885	16704796	20-08-2021	Clostridium perfringens	0
+283438	16694883	21-08-2021	Enterococcus faecium	0
+163708	16706439	21-08-2021	Klebsiella pneumoniae complexe	0
+163708	16706439	21-08-2021	Klebsiella pneumoniae complexe	0
+96006416	16677883	21-08-2021	Staphylococcus epidermidis	1
+96006416	16677883	21-08-2021	Staphylococcus epidermidis	1
+97364720	16706750	21-08-2021	S- aureus méticilline-sensible (MSSA)	0
+97364720	16706750	21-08-2021	S- aureus méticilline-sensible (MSSA)	0
+273480	16668057	21-08-2021	Klebsiella oxytoca complexe/Raoultella sp	-1
+97018578	16706813	21-08-2021	Bacillus sp	1
+97018578	16706813	21-08-2021	Capnocytophaga ochracea	0
+97496885	16704796	21-08-2021	Clostridium perfringens	0
+97496885	16704796	21-08-2021	Clostridium perfringens	0
+97496885	16704796	21-08-2021	Clostridium perfringens	0
+97496885	16704796	21-08-2021	Clostridium perfringens	0
+33435	16699305	21-08-2021	Staphylococcus epidermidis	1
+734532	16695038	22-08-2021	S- aureus méticilline-sensible (MSSA)	0
+734532	16695038	22-08-2021	S- aureus méticilline-sensible (MSSA)	0
+283438	16694883	22-08-2021	Enterococcus faecium	0
+734532	16695038	22-08-2021	S- aureus méticilline-sensible (MSSA)	0
+97313620	16707773	22-08-2021	Staphylococcus epidermidis	1
+86978	16695843	22-08-2021	S- aureus méticilline-sensible (MSSA)	0
+520943	16704037	22-08-2021	Staphylococcus epidermidis	1
+926909	16707869	23-08-2021	Staphylococcus epidermidis	1
+926909	16707869	23-08-2021	Staphylococcus epidermidis	1
+926909	16707869	23-08-2021	Staphylococcus hominis	1
+9884	16707865	23-08-2021	Klebsiella pneumoniae complexe	0
+1118041	16707866	23-08-2021	Staphylococcus capitis	1
+734532	16695038	23-08-2021	S- aureus méticilline-sensible (MSSA)	0
+734532	16695038	23-08-2021	Staphylococcus epidermidis	1
+734532	16695038	23-08-2021	S- aureus méticilline-sensible (MSSA)	0
+86978	16695843	23-08-2021	S- aureus méticilline-sensible (MSSA)	0
+94143761	16684332	23-08-2021	Staphylococcus epidermidis	1
+94143761	16684332	23-08-2021	Staphylococcus epidermidis	1
+97526130	16703599	23-08-2021	Staphylococcus epidermidis	1
+53213	16676501	24-08-2021	Bacteroides fragilis	0
+98310899	16710114	24-08-2021	Klebsiella oxytoca complexe/Raoultella sp	-1
+843784	16710735	24-08-2021	S- aureus méticilline-sensible (MSSA)	0
+843784	16710735	24-08-2021	S- aureus méticilline-sensible (MSSA)	0
+20621	16610910	24-08-2021	Escherichia coli	0
+20621	16610910	24-08-2021	Escherichia coli	0
+94143761	16684332	24-08-2021	Staphylococcus epidermidis	1
+94143761	16684332	24-08-2021	Staphylococcus epidermidis	1
+97614778	16710932	24-08-2021	Streptococcus agalactiae groupe B	0
+183918	16712413	25-08-2021	Streptococcus dysgalactiae	0
+183918	16712413	25-08-2021	Streptococcus dysgalactiae	0
+843784	16710735	25-08-2021	S- aureus méticilline-sensible (MSSA)	0
+843784	16710735	25-08-2021	S- aureus méticilline-sensible (MSSA)	0
+79105	16713440	25-08-2021	Streptococcus salivarius (groupe salivarius)	1
+79105	16713440	25-08-2021	Streptococcus salivarius (groupe salivarius)	1
+97236055	16698929	25-08-2021	Staphylococcus capitis	1
+97236055	16698929	25-08-2021	Staphylococcus epidermidis	1
+94143761	16684332	25-08-2021	Staphylococcus epidermidis	1
+843784	16710735	26-08-2021	S- aureus méticilline-sensible (MSSA)	0
+79105	16713440	26-08-2021	Candida albicans	0
+98743038	16714861	26-08-2021	Escherichia coli	0
+97832260	16715142	26-08-2021	Staphylococcus epidermidis	1
+97832260	16715142	26-08-2021	Staphylococcus epidermidis	1
+79105	16713440	27-08-2021	Candida albicans	0
+98572252	16680694	28-08-2021	Rothia mucilaginosa (ancien Stomatococcus mucilaginosus)	1
+98572252	16680694	28-08-2021	Streptococcus mitis ou S- oralis  S- peroris S- pseudopneumoniae	1
+98572252	16680694	28-08-2021	Rothia mucilaginosa (ancien Stomatococcus mucilaginosus)	1
+98572252	16680694	28-08-2021	Streptococcus mitis ou S- oralis  S- peroris S- pseudopneumoniae	1
+97091135	16715956	28-08-2021	Escherichia coli	0
+97091135	16715956	28-08-2021	Escherichia coli	0
+177454	16718625	28-08-2021	Proteus vulgaris complexe	0
+97091135	16715956	30-08-2021	Escherichia coli	0
+97091135	16715956	30-08-2021	Escherichia coli	0
+446019	16718004	30-08-2021	Streptococcus gordonii (groupe mitis)	1
+446019	16718004	30-08-2021	Streptococcus gordonii (groupe mitis)	1
+97348247	16720724	30-08-2021	Klebsiella pneumoniae complexe	0
+97348247	16720724	30-08-2021	Streptococcus salivarius (groupe salivarius)	1
+97348247	16720724	30-08-2021	Streptococcus mitis ou S- oralis  S- peroris S- pseudopneumoniae	1
+97348247	16720724	30-08-2021	Escherichia coli	0
+97348247	16720724	30-08-2021	Klebsiella pneumoniae complexe	0
+97348247	16720724	30-08-2021	Streptococcus mitis ou S- oralis  S- peroris S- pseudopneumoniae	1
+97348247	16720724	30-08-2021	Streptococcus salivarius (groupe salivarius)	1
+97348247	16720724	30-08-2021	Escherichia coli	0
+98742903	16713830	30-08-2021	S- aureus méticilline-sensible (MSSA)	0
+313275	16721170	30-08-2021	Staphylococcus epidermidis	1
+313275	16721170	30-08-2021	Staphylococcus hominis	1
+97429857	16700087	30-08-2021	Escherichia coli	0
+97429857	16700087	30-08-2021	Clostridium perfringens	0
+97429857	16700087	30-08-2021	Klebsiella pneumoniae complexe	0
+97429857	16700087	30-08-2021	Escherichia coli	0
+97429857	16700087	30-08-2021	Klebsiella pneumoniae complexe	0
+97429857	16700087	30-08-2021	Clostridium perfringens	0
+98733817	16713770	31-08-2021	Staphylococcus warneri	1
+613051	16722233	01-09-2021	Escherichia coli	0
+92372	16724340	01-09-2021	Bacteroides thetaiotaomicron	0
+92372	16724340	01-09-2021	Bacteroides thetaiotaomicron	0
+323292	16724741	01-09-2021	Staphylococcus hominis	1
+92477	16725144	01-09-2021	Enterococcus faecalis	0
+92477	16725144	01-09-2021	Enterococcus faecalis	0
+716276	16704704	02-09-2021	Staphylococcus epidermidis	1
+97560467	16687559	02-09-2021	Escherichia coli	0
+288643	16725591	02-09-2021	Escherichia coli	0
+288643	16725591	02-09-2021	Escherichia coli	0
+97137741	16721503	03-09-2021	Staphylococcus epidermidis	1
+716276	16704704	03-09-2021	Staphylococcus epidermidis	1
+716276	16704704	03-09-2021	Staphylococcus epidermidis	1
+590819	16727120	03-09-2021	Propionibacterium acnes (Cutibacterium a-)	1
+590819	16727120	03-09-2021	Propionibacterium acnes (Cutibacterium a-)	1
+778692	16699009	03-09-2021	Staphylococcus epidermidis	1
+590819	16727120	04-09-2021	Propionibacterium acnes (Cutibacterium a-)	1
+590819	16727120	04-09-2021	Propionibacterium acnes (Cutibacterium a-)	1
+818099	16691943	06-09-2021	Lactobacillus rhamnosus	0
+97137741	16721503	06-09-2021	Staphylococcus epidermidis	1
+97137741	16721503	06-09-2021	Staphylococcus epidermidis	1
+109496	16532631	07-09-2021	Klebsiella pneumoniae complexe	0
+109496	16532631	07-09-2021	Klebsiella pneumoniae complexe	0
+109496	16532631	07-09-2021	Klebsiella pneumoniae complexe	0
+97429857	16700087	10-09-2021	Escherichia coli	0
+874804	16668697	10-09-2021	Streptococcus mitis ou S- oralis  S- peroris S- pseudopneumoniae	1
+874804	16668697	10-09-2021	Staphylococcus epidermidis	1
+874804	16668697	10-09-2021	Streptococcus mitis ou S- oralis  S- peroris S- pseudopneumoniae	1
+97429857	16700087	10-09-2021	Escherichia coli	0
+97429857	16700087	10-09-2021	Escherichia coli	0
+874804	16668697	11-09-2021	Staphylococcus epidermidis	1
+874804	16668697	11-09-2021	Streptococcus mitis ou S- oralis  S- peroris S- pseudopneumoniae	1
+874804	16668697	11-09-2021	Staphylococcus epidermidis	1
+874804	16668697	11-09-2021	Streptococcus mitis ou S- oralis  S- peroris S- pseudopneumoniae	1
+368750	16730945	15-09-2021	Staphylococcus epidermidis	1
+368750	16730945	15-09-2021	Staphylococcus epidermidis	1
+96023934	16727898	23-09-2021	Staphylococcus epidermidis	1
+96023934	16727898	23-09-2021	Staphylococcus epidermidis	1
+96023934	16727898	23-09-2021	Staphylococcus hominis	1
+526875	16721933	01-10-2021	Escherichia coli	0
+526875	16721933	01-10-2021	Escherichia coli	0
+874804	16740216	01-10-2021	Pseudomonas aeruginosa	0
+874804	16740216	01-10-2021	Pseudomonas aeruginosa	0
+874804	16740216	02-10-2021	Pseudomonas aeruginosa	0
+874804	16740216	02-10-2021	Pseudomonas aeruginosa	0
+97421887	16757087	13-10-2021	Escherichia coli	0
+97421887	16798939	14-10-2021	Escherichia coli	0
+97421887	16798939	14-10-2021	Escherichia coli	0
+112407	16812778	22-10-2021	Klebsiella pneumoniae complexe	0
+112407	16812778	22-10-2021	Klebsiella pneumoniae complexe	0
+97421887	16798939	10-11-2021	Klebsiella pneumoniae complexe	0
+97421887	16798939	10-11-2021	Klebsiella pneumoniae complexe	0
+112407	16850915	19-12-2021	Klebsiella pneumoniae complexe	0
+537452	15889462	19-03-2022	Staphylococcus capitis	1
+537452	15889462	23-05-2022	Proteus mirabilis	0
+537452	17279844	09-08-2022	Klebsiella pneumoniae complexe	0
+537452	15889462	02-09-2022	Enterococcus faecalis	0
+537452	15889462	02-09-2022	Proteus mirabilis	0
+537452	15889462	02-09-2022	Proteus mirabilis	0
+537452	15889462	02-09-2022	Enterococcus faecalis	0

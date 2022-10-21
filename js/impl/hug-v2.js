@@ -76,6 +76,7 @@ function hug_implementation_v2(parameters, positive_hemos) {
                             episode_open.addCopyStrainEvidence(current_ph);
                             current_ph_processed = true;
                         }
+
                         //If it a different germ, but on the same day
                         else if (episode_open.labo_sample_date == current_ph.labo_sample_date) {
                             episode_open.addPolymicrobialEvidence(current_ph);
@@ -225,7 +226,6 @@ function hug_implementation_v2(parameters, positive_hemos) {
     var data = {
         episodes: cases
     }
-    console.log(data);
 
     return data;
 

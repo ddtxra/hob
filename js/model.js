@@ -1,13 +1,18 @@
 class Scenario {
 
-    constructor(description) {
-        this.description = description;
+    constructor() {
+        this.description = "";
         this.positive_hemocultures = [];
     }
 
     addPositiveHemoculture(positive_hemoculture) {
         return this.positive_hemocultures.push(positive_hemoculture);
     }
+
+    addDescription(description) {
+        this.description += description + "<br>";
+    }
+
 
 }
 

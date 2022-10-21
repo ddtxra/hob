@@ -1,7 +1,7 @@
 patient_id	stay_id	labo_sample_date	labo_germ_name	labo_commensal
 
+>
 # Two positive hemocultures with a same pathogene should not be repeated within 14 days from the first episodepatient_1001
-
 patient_1001	stay_A	2021-01-01	pathA	0
 patient_1001	stay_A	2021-01-05	pathA	0
 patient_1001	stay_A	2021-01-10	pathA	0
@@ -9,66 +9,88 @@ patient_1001	stay_A	2021-01-14	pathA	0
 patient_1001	stay_A	2021-01-15	pathA	0	
 patient_1001	stay_A	2021-01-16	pathA	0	
 
-# If the two positive hemocultures appear in different stays for the same patient it should count as 2 episodes to investigate for HUG <span style='color:red'> but only 1 for PRAISE </span>patient_1002					
+> 
+#weird example
+4762	xxx	07-01-2021	Enterobacter cloacae Complex	0
+4762	xxx	07-01-2021	Klebsiella oxytoca/Raoultella sp	0
+4762	xxx	07-01-2021	Enterobacter cloacae Complex	0
+4762	xxx	08-01-2021	Klebsiella oxytoca/Raoultella sp	0
 
+>
+# If the two positive hemocultures appear in different stays for the same patient it should count as 2 episodes to investigate for HUG 
+#! Only 1 for PRAISE
 patient_1002	stay_B	2021-01-01	pathA	0
 patient_1002	stay_C	2021-01-05	pathA	0
 
-# Two positive hemocultures with a different pathogene should count as 2 episodespatient_1003
+>
+# Two positive hemocultures with a different pathogene should count as 2 episodes
 
 patient_1003	stay_D	2021-01-01	pathA	0
 patient_1003	stay_D	2021-01-05	pathB	0
 
-# Two positive hemocultures with a different pathogene in two different days should count as 2 episodes for HUG because there is no link between pathogenes <span style='color:red'> but only 1 for PRAISE because they are within the 3 days time window</span>patient_1004					
+>
+# Two positive hemocultures with a different pathogene in two different days should count as 2 episodes for HUG because there is no link between pathogenes 
+#! Only 1 for PRAISE because they are within the 3 days time window
 
 patient_1004	stay_E	2021-01-04	pathA	0
 patient_1004	stay_E	2021-01-05	pathB	0
 
-#Two positive hemocultures with a different pathogene in the same day counts as 1 polymicrobial episode for both HUG and PRAISEpatient_10041
+>
+#Two positive hemocultures with a different pathogene in the same day counts as 1 polymicrobial episode for both HUG and PRAISE
 patient_10041		2021-01-04	pathA	0
 patient_10041		2021-01-04	pathB	0
-#Three or more positive hemocultures with a different pathogene in the same day counts as 1 polymicrobial episode for both HUG and PRAISEpatient_10042
+
+>
+#Three or more positive hemocultures with a different pathogene in the same day counts as 1 polymicrobial episode for both HUG and PRAISE
 patient_10042		2021-01-04	pathA	0
 patient_10042		2021-01-04	pathB	0
 patient_10042		2021-01-04	pathC	0
 
-#For HUG there is 1 polymicrobial episode (pathA + pathC) and 1 mono episode (pathB): pathC and pathA is a polymicrobial on day 4. <br>For PRAISE there is only 1 polymicrobial episode.<span style='color:red'> FIXME!!!</span>patient_10043
+>
+#For HUG there is 1 polymicrobial episode (pathA + pathC) and 1 mono episode (pathB): pathC and pathA is a polymicrobial on day 4.
+#For PRAISE there is only 1 polymicrobial episode.
+
+#!FIXME !!!
+
 patient_10043		2021-01-04	pathA	0
 patient_10043		2021-01-05	pathB	0
 patient_10043		2021-01-06	pathC	0
 patient_10043		2021-01-06	pathA	0
 
-#1 polymicrobial episode on day 1 (pathA+pathC) because less than 14 days. And 1 mono episode on day 15.<span style='color:red'> FIXME!!!</span>
-
+>
+#1 polymicrobial episode on day 1 (pathA+pathC) because less than 14 days. And 1 mono episode on day 15.
+#!FIXME!!!
 patient_10044		2021-01-01	pathA	0
 patient_10044		2021-01-14	pathC	0
 patient_10044		2021-01-14	pathA	0
 patient_10044		2021-01-15	pathC	0
 
 
+>
 #1 HUG: 2 episodes (1 pathA and 1 pathB)
 patient_1005	stay_E	2021-01-01	pathA	0
 patient_1005	stay_E	2021-01-03	pathB	0
 patient_1005	stay_E	2021-01-04	pathA	0
 
-
+>
 #scenario (basics) 101 patient_1006patient_1006					
 patient_1006	stay_E	2021-01-01	pathA	0
 patient_1006	stay_E	2021-01-04	pathB	0
 patient_1006	stay_E	2021-01-05	pathA	0
 
-
+>
 #scenario (basics) HUG: 1 polymicrobien
-
 patient_1007	stay_E	2021-01-01	pathA	0
 patient_1007	stay_E	2021-01-04	pathB	0
 patient_1007	stay_E	2021-01-04	pathA	0
 
+>
 #HUG: 2 episodes: 1 at day 1 (pathA) and 1 at day 2 (pathB)
 patient_1008	stay_E	2021-01-01	pathA	0
 patient_1008	stay_E	2021-01-02	pathB	0
 patient_1008	stay_E	2021-01-15	pathB	0
 
+>
 # 14 days				
 patient_1009	stay_A	2021-01-01	pathA	0
 patient_1009	stay_A	2021-01-02	pathA	0
@@ -100,12 +122,13 @@ patient_1009	stay_A	2021-01-27	pathA	0
 patient_1009	stay_A	2021-01-28	pathA	0
 patient_1009	stay_A	2021-01-29	pathA	0
 
-
+>
 #HUG: 1 episode on day 1 (comA) and 1 episode on day 22 (comB) 			
 patient_1011	stay_B	2021-01-01	comA	1
 patient_1011	stay_B	2021-01-02	comB	1
 
 
+>
 #HUG: 1 episode on day 1 (comA+comA copy strain day 3) and 1 episode on day 22 (comB+comB copy strain 4)
 patient_1010	stay_A	2021-01-01	comA	1
 patient_1010	stay_A	2021-01-02	comB	1
@@ -113,6 +136,7 @@ patient_1010	stay_A	2021-01-03	comA	1
 patient_1010	stay_A	2021-01-04	comB	1
 
 
+>
 #HUG: Expect 1 episode on day 1 and one on day 15 
 patient_1012	stay_A	2021-01-01	comA	1
 patient_1012	stay_A	2021-01-03	comA	1
@@ -124,94 +148,127 @@ patient_1012	stay_A	2021-01-13	comA	1
 patient_1012	stay_A	2021-01-15	comA	1
 patient_1012	stay_A	2021-01-17	comA	1
 
-#HUG: Expect 1 episode on day 1 and one on day 17  <span style='color:orange'>What about the classification? in BSI vs contaminent</span>			
+>
+#HUG: Expect 1 episode on day 1 and one on day 17  
+#? What about the classification? in BSI vs contaminent
+
 patient_1013	stay_B	2021-01-01	comA	1
 patient_1013	stay_B	2021-01-05	comA	1
 patient_1013	stay_B	2021-01-09	comA	1
 patient_1013	stay_B	2021-01-13	comA	1
 patient_1013	stay_B	2021-01-17	comA	1
 
-#scenario polymicrobials patient_1014patient_1014					
+>
+#scenario polymicrobials				
 patient_1014	stay_A	2021-01-01	pathA	0
 patient_1014	stay_A	2021-01-01	pathB	0
 
-#scenario polymicrobials 2 (requires some work?) patient_1015patient_1015					
+>
+#scenario polymicrobials 2 (requires some work?)				
 patient_1015	stay_A	2021-01-01	pathA	0
 patient_1015	stay_A	2021-01-02	pathA	0
 patient_1015	stay_A	2021-01-02	pathB	0
 
-#Polymicrobial with commensals (IN PROGRESS) patient_1016patient_1016					
+>
+#Polymicrobial with commensals (IN PROGRESS)			
 patient_1016		2021-01-01	pathA	0
 patient_1016		2021-01-02	pathB	0
 
-#Polymicrobial with commensals (IN PROGRESS) patient_1017patient_1017					
+>
+#Polymicrobial with commensals (IN PROGRESS)				
 patient_1017		2021-01-01	pathA	0
 patient_1017		2021-01-02	pathA	0
 patient_1017		2021-01-02	pathB	0
 patient_1017		2021-01-05	pathB	0
 patient_1017		2021-01-05	pathC	0
-#Polymicrobial with commensals (IN PROGRESS) patient_1018patient_1018					
+
+>
+#Polymicrobial with commensals (IN PROGRESS)		
 patient_1018		2021-01-01	pathA	0
 patient_1018		2021-01-02	pathA	0
 patient_1018		2021-01-02	pathB	0
 patient_1018		2021-01-05	pathB	0
 patient_1018		2021-01-05	pathC	0
 patient_1018		2021-01-16	pathC	0
-#Polymicrobial with commensals (IN PROGRESS) patient_1019patient_1019					
+
+>
+#Polymicrobial with commensals (IN PROGRESS)
 patient_1019		2021-01-01	pathA	0
 patient_1019		2021-01-02	pathA	0
 patient_1019		2021-01-02	pathB	0
 patient_1019		2021-01-05	pathB	0
 patient_1019		2021-01-05	comA	0
-#Polymicrobial with commensals (IN PROGRESS) patient_1020patient_1020					
+
+>
+#Polymicrobial with commensals (IN PROGRESS)					
 patient_1020		2021-01-01	pathA	0
 patient_1020		2021-01-02	pathA	0
 patient_1020		2021-01-02	pathB	0
 patient_1020		2021-01-05	pathB	0
 patient_1020		2021-01-06	comA	0
-#scenario polymicrobials 4 (requires some work?) patient_1021patient_1021					
+
+>
+#scenario polymicrobials 4 (requires some work?)				
 patient_1021	stay_A	2021-01-01	pathA	0
 patient_1021	stay_A	2021-01-02	pathA	0
 patient_1021	stay_A	2021-01-02	pathB	0
 patient_1021	stay_A	2021-01-05	pathB	0
 patient_1021	stay_A	2021-01-05	comA	1
-#hob case vignettes (case 1 and 2) patient_1022patient_1022					
+
+>
+#hob case vignettes (case 1 and 2)			
 patient_1022	case_1	2021-01-05	pathA	0
 patient_1022	case_1	2021-01-07	pathB	0
-#hob case vignettes (case 1 and 2) patient_1023patient_1023					
+
+>
+#hob case vignettes (case 1 and 2)			
 patient_1023	case_2	2021-01-05	pathA	0
 patient_1023	case_2	2021-01-05	pathB	0
 patient_1023	case_2	2021-01-09	PathC	0
-#hob case vignettes (case 3) patient_1024patient_1024					
+
+>
+#hob case vignettes (case 3)
 patient_1024	case_3	2021-01-05	pathA	0
 patient_1024	case_3	2021-01-05	comA	1
 patient_1024	case_3	2021-01-06	pathA	0
 patient_1024	case_3	2021-01-06	comA	1
 patient_1024	case_3	2021-01-13	comB	1
 patient_1024	case_3	2021-01-15	comB	1
-#hob case vignettes (case 4 and 5) patient_1025patient_1025					
+
+>
+#hob case vignettes (case 4 and 5)			
 patient_1025	case_4	2021-01-05	pathA	0
 patient_1025	case_4	2021-01-17	pathA	0
 patient_1025	case_4	2021-01-23	pathA	0
-#hob case vignettes (case 4 and 5) patient_1026patient_1026					
+
+>
+#hob case vignettes (case 4 and 5)			
 patient_1026	case_5	2021-01-02	pathA	0
 patient_1026	case_5	2021-01-04	comA	1
 patient_1026	case_5	2021-01-05	comA	1
 patient_1026	case_5	2021-01-06	pathA	0
-#hob case vignettes (case 6) patient_1027patient_1027					
+
+>
+#hob case vignettes (case 6)			
 patient_1027	stay_A	2021-01-05	pathA	0
 patient_1027	stay_B	2021-01-14	pathA	0
-#poly commensals (real) patient_1028patient_1028					
+
+>
+#poly commensals (real)
 patient_1028	stay_A	2021-01-01	comA	1
 patient_1028	stay_A	2021-01-04	comA	1
 patient_1028	stay_A	2021-01-06	comA	1
 patient_1028	stay_A	2021-01-06	comB	1
 patient_1028	stay_A	2021-01-07	comB	1
 patient_1028	stay_A	2021-01-08	comA	1
-#poly commensals (fake) patient_1029patient_1029					
+
+>
+#poly commensals (fake)
 patient_1029	stay_A	2021-01-01	comA	1
 patient_1029	stay_A	2021-01-02	comA	1
-#poly commensals (fake2) patient_1030patient_1030					
+
+>
+#poly commensals (fake2)
 patient_1030	stay_A	2021-01-01	comA	1
 patient_1030	stay_A	2021-01-02	comB	1
 patient_1030	stay_A	2021-01-06	comA	1
@@ -219,26 +276,36 @@ patient_1030	stay_A	2021-01-06	comB	1
 patient_1030	stay_A	2021-01-07	comB	1
 patient_1030	stay_A	2021-01-08	comA	1
 
-#seven case patient_1031patient_1031					
 
+>
+#seven case
 patient_1031	stay_A	2021-01-01	comA	1
 patient_1031	stay_A	2021-01-03	comA	1
 patient_1031	stay_A	2021-01-05	comB	1
 patient_1031	stay_A	2021-01-06	comB	1
-#seven case e-mail patient_1032patient_1032					
+
+>
+#seven case e-mail
 patient_1032	stay_A	2021-01-04	pathA	0
 patient_1032	stay_A	2021-01-05	pathB	0
 patient_1032	stay_A	2021-01-06	comA	1
 patient_1032	stay_A	2021-01-08	comA	1
-#seven case e-mail patient_1033patient_1033					
+
+
+>
+#seven case e-mail
 patient_1033	stay_B	2021-01-04	pathA	0
 patient_1033	stay_B	2021-01-05	pathB	0
 patient_1033	stay_B	2021-01-06	comA	1
 patient_1033	stay_B	2021-01-08	comB	1
-#seven case e-mail patient_1034patient_1034					
+
+>
+#seven case e-mail
 patient_1034	stay_C	2021-01-04	pathA	0
 patient_1034	stay_C	2021-01-05	pathB	0
 patient_1034	stay_C	2021-01-06	comA	1
-#seven case e-mail patient_1035patient_1035					
+
+>
+#seven case e-mail
 patient_1035	stay_D	2021-01-03	pathA	0
 patient_1035	stay_D	2021-01-05	pathB	0
