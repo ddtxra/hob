@@ -31,33 +31,45 @@ patient_10041		2021-01-04	pathB	0
 patient_10042		2021-01-04	pathA	0
 patient_10042		2021-01-04	pathB	0
 patient_10042		2021-01-04	pathC	0
-#For HUG there is 1 polymicrobial episode and 1 mono episode: pathC and pathA is a polymicrobial on day 6. For PRAISE there is only 1 polymicrobial episode.<span style='color:red'> FIXME!!!</span>patient_10043
+
+#For HUG there is 1 polymicrobial episode (pathA + pathC) and 1 mono episode (pathB): pathC and pathA is a polymicrobial on day 4. <br>For PRAISE there is only 1 polymicrobial episode.<span style='color:red'> FIXME!!!</span>patient_10043
 patient_10043		2021-01-04	pathA	0
 patient_10043		2021-01-05	pathB	0
 patient_10043		2021-01-06	pathC	0
 patient_10043		2021-01-06	pathA	0
-#1 polymicrobial episode on day 1 and 1 mono on day 15 as well for HUG. One one day 1 episode.<span style='color:red'> FIXME!!!</span>patient_10044
+
+#1 polymicrobial episode on day 1 (pathA+pathC) because less than 14 days. And 1 mono episode on day 15.<span style='color:red'> FIXME!!!</span>
+
 patient_10044		2021-01-01	pathA	0
 patient_10044		2021-01-14	pathC	0
 patient_10044		2021-01-14	pathA	0
 patient_10044		2021-01-15	pathC	0
-#scenario (basics) 101 patient_1005patient_1005					
+
+
+#1 HUG: 2 episodes (1 pathA and 1 pathB)
 patient_1005	stay_E	2021-01-01	pathA	0
 patient_1005	stay_E	2021-01-03	pathB	0
 patient_1005	stay_E	2021-01-04	pathA	0
+
+
 #scenario (basics) 101 patient_1006patient_1006					
 patient_1006	stay_E	2021-01-01	pathA	0
 patient_1006	stay_E	2021-01-04	pathB	0
 patient_1006	stay_E	2021-01-05	pathA	0
-#scenario (basics) 101 patient_1007patient_1007					
+
+
+#scenario (basics) HUG: 1 polymicrobien
+
 patient_1007	stay_E	2021-01-01	pathA	0
 patient_1007	stay_E	2021-01-04	pathB	0
 patient_1007	stay_E	2021-01-04	pathA	0
-#scenario (basics) 101 patient_1008patient_1008					
+
+#HUG: 2 episodes: 1 at day 1 (pathA) and 1 at day 2 (pathB)
 patient_1008	stay_E	2021-01-01	pathA	0
 patient_1008	stay_E	2021-01-02	pathB	0
 patient_1008	stay_E	2021-01-15	pathB	0
-#scenario repeat interval (long HOB) patient_1009patient_1009					
+
+# 14 days				
 patient_1009	stay_A	2021-01-01	pathA	0
 patient_1009	stay_A	2021-01-02	pathA	0
 patient_1009	stay_A	2021-01-03	pathA	0
@@ -87,15 +99,21 @@ patient_1009	stay_A	2021-01-26	pathA	0
 patient_1009	stay_A	2021-01-27	pathA	0
 patient_1009	stay_A	2021-01-28	pathA	0
 patient_1009	stay_A	2021-01-29	pathA	0
-#scenario 2 different commensals patient_1010patient_1010					
+
+
+#HUG: 1 episode on day 1 (comA) and 1 episode on day 22 (comB) 			
+patient_1011	stay_B	2021-01-01	comA	1
+patient_1011	stay_B	2021-01-02	comB	1
+
+
+#HUG: 1 episode on day 1 (comA+comA copy strain day 3) and 1 episode on day 22 (comB+comB copy strain 4)
 patient_1010	stay_A	2021-01-01	comA	1
 patient_1010	stay_A	2021-01-02	comB	1
 patient_1010	stay_A	2021-01-03	comA	1
 patient_1010	stay_A	2021-01-04	comB	1
-#scenario 2 different commensals patient_1011patient_1011					
-patient_1011	stay_B	2021-01-01	comA	1
-patient_1011	stay_B	2021-01-02	comB	1
-#scenario commensals (repeat intervals) (requires some work?) patient_1012patient_1012					
+
+
+#HUG: Expect 1 episode on day 1 and one on day 15 
 patient_1012	stay_A	2021-01-01	comA	1
 patient_1012	stay_A	2021-01-03	comA	1
 patient_1012	stay_A	2021-01-05	comA	1
@@ -105,22 +123,27 @@ patient_1012	stay_A	2021-01-11	comA	1
 patient_1012	stay_A	2021-01-13	comA	1
 patient_1012	stay_A	2021-01-15	comA	1
 patient_1012	stay_A	2021-01-17	comA	1
-#scenario commensals (repeat intervals) (requires some work?) patient_1013patient_1013					
+
+#HUG: Expect 1 episode on day 1 and one on day 17  <span style='color:orange'>What about the classification? in BSI vs contaminent</span>			
 patient_1013	stay_B	2021-01-01	comA	1
 patient_1013	stay_B	2021-01-05	comA	1
 patient_1013	stay_B	2021-01-09	comA	1
 patient_1013	stay_B	2021-01-13	comA	1
 patient_1013	stay_B	2021-01-17	comA	1
+
 #scenario polymicrobials patient_1014patient_1014					
 patient_1014	stay_A	2021-01-01	pathA	0
 patient_1014	stay_A	2021-01-01	pathB	0
+
 #scenario polymicrobials 2 (requires some work?) patient_1015patient_1015					
 patient_1015	stay_A	2021-01-01	pathA	0
 patient_1015	stay_A	2021-01-02	pathA	0
 patient_1015	stay_A	2021-01-02	pathB	0
+
 #Polymicrobial with commensals (IN PROGRESS) patient_1016patient_1016					
 patient_1016		2021-01-01	pathA	0
 patient_1016		2021-01-02	pathB	0
+
 #Polymicrobial with commensals (IN PROGRESS) patient_1017patient_1017					
 patient_1017		2021-01-01	pathA	0
 patient_1017		2021-01-02	pathA	0
