@@ -63,6 +63,19 @@ class Episode {
 
     }
 
+    getClassification(){
+        //If only 1 commensal
+        if(this.evidences.filter(e => e.labo_commensal == 1).length == 1){
+            return "[C]"; //contamination
+        }
+        if(this.evidences.filter(e => e.labo_commensal != 1) > 0 && this.distinct_germs.length > 1){
+            //what if 2 contaminations in same day? is it a polymicrobial or 2 contaminations?
+            return "[P]"; //contamination
+        }
+
+        return "";
+    }
+
     containsGerm(germ_name) {
         return _.includes(this.distinct_germs, germ_name)
     }

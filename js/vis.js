@@ -41,9 +41,16 @@ function updateVis(scenario_id, description, positive_hemos, episodes_implementa
 
     function addEpisodes(ft, episodes, name) {
 
-        let feature_episodes = episodes.map(function(ph) {
-            let day_of_year = ph.labo_sample_datetime_moment.dayOfYear();
-            let label = ((ph.distinct_germs) ? ph.distinct_germs.join("+") : ph.labo_germ_name);
+        let feature_episodes = episodes.map(function(epi) {
+            let day_of_year = epi.labo_sample_datetime_moment.dayOfYear();
+            let label = ((epi.distinct_germs) ? epi.distinct_germs.join("+") : epi.labo_germ_name);
+            if(typeof epi.getClassification !== "undefined"){
+                label += " | " + epi.getClassification()
+                if(epi.evidences){
+                    label += epi.evidences.length
+                }
+            }
+            
             return {
                 x: day_of_year,
                 y: day_of_year + 0.999,

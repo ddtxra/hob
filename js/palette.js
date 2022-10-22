@@ -15,7 +15,7 @@ function getColorFromPalette(name) {
         return hash % orderedPalette.length;
     }
 
-    var hashUnit = hashUnitColor(name);
+    var hashUnit = hashUnitColor(name.split("|")[0].trim());
     return orderedPalette[++hashUnit];
 
 }
