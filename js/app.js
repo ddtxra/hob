@@ -20,12 +20,9 @@ function showScenarios(scenarios) {
     $("#fv_episodes").empty();
     $("#fv_expected").empty();
 
-    let tableData = {};
     var scenarioCounter = 0;
 
     scenarios.forEach(function(s) {
-
-        let episode_implementations = getEpsiodesForAllAglorithms(s.positive_hemocultures);
 
         ["HUG", "HUGV2"].forEach(function (algo) {
             let episodes = computeBSIEpisodes({implementation: algo}, deepCopy(s.positive_hemocultures))["episodes"];
@@ -33,20 +30,12 @@ function showScenarios(scenarios) {
         })
 
         updateVis(scenarioCounter++, s.description, s.positive_hemocultures, s.episodes_computations);
-
-        //for each impl
-        episode_implementations.forEach(impl => {
-            if (!tableData[impl.name]) {
-                tableData[impl.name] = { "episodes_count": 0 };
-            }
-            tableData[impl.name]["episodes_count"] = (tableData[impl.name]["episodes_count"] + impl.episodes.length);
-        })
     })
 
     console.log(scenarios);
 
 
-    Object.keys(tableData).forEach(key => {
+    ["HUG", "HUGV2"].forEach(key => {
         let number_distinct_patients = _.uniq(_.flatMap(scenarios, s => s.positive_hemocultures).map(c => c.patient_id)).length;
         let number_of_stays = _.uniq(_.flatMap(scenarios, s => s.positive_hemocultures).map(c => c.patient_id + "#" + c.stay_id)).length;
         let number_positive_hemocultures = _.flatMap(scenarios, s => s.positive_hemocultures).length;
@@ -55,10 +44,12 @@ function showScenarios(scenarios) {
         $("#" + key + "_ROW").find("td:eq(1)").text(number_of_stays);
         $("#" + key + "_ROW").find("td:eq(2)").text(number_positive_hemocultures)
 
-        if (key == "HUG_SIMPLIFIED") {
-            $("#" + key + "_ROW").find("td:eq(4)").text(tableData[key].episodes_count)
+        let number_episodes = _.flatMap(scenarios, s => s.episodes_computations[key]).length;
+
+        if (key == "HUG") {
+            $("#" + key + "_ROW").find("td:eq(5)").text(number_episodes)
         } else {
-            $("#" + key + "_ROW").find("td:eq(3)").text(tableData[key].episodes_count)
+            $("#" + key + "_ROW").find("td:eq(3)").text(number_episodes)
         }
     })
 
