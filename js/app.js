@@ -24,7 +24,7 @@ function showScenarios(scenarios) {
 
     scenarios.forEach(function(s) {
 
-        ["HUG", "HUGV2"].forEach(function (algo) {
+        ["HUG", "HUG_v2022"].forEach(function (algo) {
             let episodes = computeBSIEpisodes({implementation: algo}, deepCopy(s.positive_hemocultures))["episodes"];
             s.addEpsiodeComputation(algo, episodes);
         })
@@ -35,7 +35,7 @@ function showScenarios(scenarios) {
     console.log(scenarios);
 
 
-    ["HUG", "HUGV2"].forEach(key => {
+    ["HUG", "HUG_v2022"].forEach(key => {
         let number_distinct_patients = _.uniq(_.flatMap(scenarios, s => s.positive_hemocultures).map(c => c.patient_id)).length;
         let number_of_stays = _.uniq(_.flatMap(scenarios, s => s.positive_hemocultures).map(c => c.patient_id + "#" + c.stay_id)).length;
         let number_positive_hemocultures = _.flatMap(scenarios, s => s.positive_hemocultures).length;
@@ -46,11 +46,7 @@ function showScenarios(scenarios) {
 
         let number_episodes = _.flatMap(scenarios, s => s.episodes_computations[key]).length;
 
-        if (key == "HUG") {
-            $("#" + key + "_ROW").find("td:eq(5)").text(number_episodes)
-        } else {
-            $("#" + key + "_ROW").find("td:eq(3)").text(number_episodes)
-        }
+        $("#" + key + "_ROW").find("td:eq(3)").text(number_episodes)
     })
 
 
@@ -62,7 +58,7 @@ function showScenarios(scenarios) {
 function getEpsiodesForAllAglorithms(positive_hemocultures) {
 
     let algos = [{ name: "HUG", description: "HUG_SIMPLIFIED" },
-        { name: "HUGV2", description: "HUGV2" } //,
+        { name: "HUG_v2022", description: "HUG_v2022" } //,
         // { name: "PRAISE", description: "PRAISE" }
     ]
 

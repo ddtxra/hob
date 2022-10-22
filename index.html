@@ -7,7 +7,7 @@
 <script src="js/lib/moment.min.js"></script>
 <script src="js/model.js"></script>
 <script src="js/impl/hug.js"></script>
-<script src="js/impl/hug-v2.js"></script>
+<script src="js/impl/hug-v2022.js"></script>
 <script src="js/impl/praise.js"></script>
 <script src="js/impl/template.js"></script>
 <script src="js/palette.js"></script>
@@ -19,12 +19,13 @@
 <html lang="en">
 <div class="container">
     <h2>HOB calculator</h2>
-    <p>This cacluator is being developed by <a target="_blank" href="https://www.hug.ch/en/prevention-and-control-infection">HUG PCI group</a> and PRAISE network and is still a work in progress.
+    <p>This calculator is being developed by <a target="_blank" href="https://www.hug.ch/en/prevention-and-control-infection">HUG PCI group</a> in collaboration with PRAISE network and is <b>still a work in progress</b>.
     </p>
     <div class="form-group">
-        <label for="exampleFormControlTextarea1">Data (copy paste your own data BYO ! use tabs to separate values). <br>Use the char ">" to visualise a scenario</label>
+        <label for="exampleFormControlTextarea1">Data: You can safely copy paste your own data (it is never stored and sent anywhere, it stays in memory in your brower). 
+            <br>Use tabs to separate values. Use the char ">" to visualise a scenario</label>
         <textarea style="font-size: 10px;" rows="6" class="form-control" id="dataText" rows="3"></textarea>
-        <button style="margin-top: 10px;" id="compute" type="button" class="btn btn-outline-secondary">Re-compute with text data</button>
+        <button style="margin-top: 10px;" id="compute" type="button" class="btn btn-outline-secondary">Re-compute</button>
     </div>
 
     <form>
@@ -34,13 +35,15 @@
                 <thead>
                     <tr>
                         <th scope="col">Algorithm</th>
-                        <th scope="col">#Patients</th>
-                        <th scope="col">#Stays</th>
-                        <th scope="col">#Positive hemocultures</th>
-                        <th scope="col">#Episodes</th>
-                        <th scope="col">#Episodes (poly)</th>
-                        <th scope="col">#BSI</th>
-                        <th scope="col">#HOB (requires date of admission)</th>
+                        <th scope="col">#patients</th>
+                        <th scope="col">#stays</th>
+                        <th scope="col">#pos. hemo</th>
+                        <th scope="col">#episodes</th>
+                        <th scope="col">#ep. (cont)</th>
+                        <th scope="col">#ep. (mon)</th>
+                        <th scope="col">#ep. (poly)</th>
+                        <th scope="col">#BSI (mono + poly)</th>
+                        <th scope="col">#HOB (BSI + 2D from adm)</th>
                     </tr>
                 </thead>
                 <tbody>
@@ -53,9 +56,12 @@
                         <td></td>
                         <td></td>
                         <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
                     </tr>
-                    <tr id="HUGV2_ROW">
-                        <th scope="row">HUG_V2</th>
+                    <tr id="HUG_v2022_ROW">
+                        <th scope="row">HUG_v2022</th>
                         <td></td>
                         <td></td>
                         <td></td>
@@ -63,6 +69,10 @@
                         <td></td>
                         <td></td>
                         <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+
                     </tr>
                     <tr id="PRAISE_ROW">
                         <th scope="row">PRAISE</th>
@@ -73,6 +83,10 @@
                         <td></td>
                         <td></td>
                         <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+
                     </tr>
                 </tbody>
             </table>

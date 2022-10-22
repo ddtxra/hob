@@ -1,4 +1,4 @@
-function hug_implementation_v2(parameters, positive_hemos) {
+function hug_implementation_v2022(parameters, positive_hemos) {
 
     var VALID_NEW_CASES_DAYS = parameters.valid_new_cases_days ? parameters.valid_new_cases_days : 14;
     var DAYS_TO_AGG_COMMENSALS_TOGETHER = 3;
@@ -50,7 +50,6 @@ function hug_implementation_v2(parameters, positive_hemos) {
     function filterBSICases(pos_hemocultures) {
 
         let episodes_to_investigate = {};
-        let common_skin_commensals = {};
 
         pos_hemocultures.forEach(function(current_ph) {
 
@@ -62,7 +61,8 @@ function hug_implementation_v2(parameters, positive_hemos) {
             var patient_episode_flow = episodes_to_investigate[patient_stay];
 
             //If it is not a commensal or we don't know if it is one, we treat him as true BSI
-            if (current_ph.labo_commensal == "0" || current_ph.labo_commensal == "-1") {
+//            if (current_ph.labo_commensal == "0" || current_ph.labo_commensal == "-1") {
+                if (true) {
 
                 //If it is empty push the first
                 if (patient_episode_flow.isEmpty()) {
@@ -103,7 +103,7 @@ function hug_implementation_v2(parameters, positive_hemos) {
                 }
                     
 
-            } else if (current_ph.labo_commensal == "1") {
+            }/* else if (current_ph.labo_commensal == "1") {
 
 
                 //TODO remove me!
@@ -118,10 +118,6 @@ function hug_implementation_v2(parameters, positive_hemos) {
                 let valid_commensal_cases = common_skin_commensals[patient_stay].filter(c => c.used_for_cases);
                 let last_valid_commensal_case = valid_commensal_cases[valid_commensal_cases.length - 1];
                 let existing_case_in_same_day = patient_episode_flow.getEpisodeOnSameDay(current_ph).length > 0;
-
-                /*if (last_valid_commensal_case) {
-                    console.log((current_ph.days - last_valid_commensal_case.days))
-                }*/
 
                 //if there is not a valid commensal used as true pathogene yet OR
                 // that the last
@@ -146,7 +142,7 @@ function hug_implementation_v2(parameters, positive_hemos) {
                 }
                 //Add the commensal to the list
                 common_skin_commensals[patient_stay].push(current_ph);
-            }
+            }*/
         });
 
 
@@ -192,28 +188,8 @@ function hug_implementation_v2(parameters, positive_hemos) {
 
     var casesMap = filterBSICases(positive_hemocultures);
 
-    //    console.log("paf");
-    //    console.log(casesMap);
-
     var cases = mapKeysToArray(casesMap)
 
-    //    console.log("Pos hemo");
-    //    console.log(JSON.stringify(cases, null, 2))
-
-
-    /*var exportData = {
-        consolidated_episodes: consolidated_episodes,
-        known_pathogenes_episodes: casesKnownPathogen,
-        commensals_episodes: casesCommensals,
-        not_classified_episodes: casesNotKnown,
-        result: bsi_cases,
-        positive_hemocultures: data["positive_hemocultures"],
-        equipments: data["equipments"],
-        distinct_equipments: data["distinct_equipments"],
-        distinct_materials: data["distinct_materials"]
-    }
-
-    return exportData;*/
 
     var data = {
         episodes: cases
