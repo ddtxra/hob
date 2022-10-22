@@ -26,7 +26,13 @@ function showScenarios(scenarios) {
     scenarios.forEach(function(s) {
 
         let episode_implementations = getEpsiodesForAllAglorithms(s.positive_hemocultures);
-        updateVis(scenarioCounter++, s.description, s.positive_hemocultures, episode_implementations);
+
+        ["HUG", "HUGV2"].forEach(function (algo) {
+            let episodes = computeBSIEpisodes({implementation: algo}, deepCopy(s.positive_hemocultures))["episodes"];
+            s.addEpsiodeComputation(algo, episodes);
+        })
+
+        updateVis(scenarioCounter++, s.description, s.positive_hemocultures, s.episodes_computations);
 
         //for each impl
         episode_implementations.forEach(impl => {
@@ -36,6 +42,8 @@ function showScenarios(scenarios) {
             tableData[impl.name]["episodes_count"] = (tableData[impl.name]["episodes_count"] + impl.episodes.length);
         })
     })
+
+    console.log(scenarios);
 
 
     Object.keys(tableData).forEach(key => {

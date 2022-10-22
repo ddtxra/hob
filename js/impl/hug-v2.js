@@ -39,9 +39,12 @@ function hug_implementation_v2(parameters, positive_hemos) {
 
 
 
-    function buildEpisodeFromPositiveHemoculture(pos_hemoculture) {
-        //TODO pass just required attributes
-        return new Episode(pos_hemoculture);
+    function raise_error_if_more_than_one(array){
+        if(array.length > 1){
+            alert("There must be an error with this!")
+            console.log(array);
+        }
+
     }
 
     function filterBSICases(pos_hemocultures) {
@@ -53,64 +56,52 @@ function hug_implementation_v2(parameters, positive_hemos) {
 
             let patient_stay = "P-" + current_ph.patient_id + "-S-" + current_ph.stay_id;
             if (!episodes_to_investigate[patient_stay]) {
-                episodes_to_investigate[patient_stay] = [];
+                episodes_to_investigate[patient_stay] = new EpisodeFlow(patient_stay, VALID_NEW_CASES_DAYS);
             }
 
-            //If it is not a commansal or we don't know if it is one, we treat him as true BSI
+            var patient_episode_flow = episodes_to_investigate[patient_stay];
+
+            //If it is not a commensal or we don't know if it is one, we treat him as true BSI
             if (current_ph.labo_commensal == "0" || current_ph.labo_commensal == "-1") {
+
                 //If it is empty push the first
-                if (episodes_to_investigate[patient_stay].length == 0) {
+                if (patient_episode_flow.isEmpty()) {
+                   patient_episode_flow.createNewEpisodeFromPositiveHemoculture(current_ph);
+                } else {
 
-                    let epi = buildEpisodeFromPositiveHemoculture(current_ph);
-                    episodes_to_investigate[patient_stay].push(epi);
-                }
+                    //Check first if there is already an episode on the same day and add it as a polymicrobial evidence in case it happens (no need to create a new episode)
+                    var episode_on_same_day = patient_episode_flow.getEpisodeOnSameDay(current_ph) ;
+                    if(episode_on_same_day.length > 0) {
+                        raise_error_if_more_than_one(episode_on_same_day);
+                        patient_episode_flow.addPolymicrobialEvidenceToExistingEpisode(current_ph, episode_on_same_day[0]);
 
-                //If not empty let's find the cases that are still valid (no more than 14 days)
-                else if (episodes_to_investigate[patient_stay].length > 0) {
+                        var previous_episode_still_valid = patient_episode_flow.getStillValidEpisodeWithSameGerm(current_ph);
+                        if(previous_episode_still_valid.length > 0) {
+                            console.log("patient concerned " + patient_stay);
+                            patient_episode_flow.addCopyStrainEvidenceToExistingEpisode(current_ph, previous_episode_still_valid[0])
+                            patient_episode_flow.combinePolymicrobialEpisodeWithCopyStrain(episode_on_same_day[0], previous_episode_still_valid[0])
+                        } 
 
-                    let current_ph_processed = false;
-                    let episodes_to_investigate_still_open = episodes_to_investigate[patient_stay].filter(c => (current_ph.days - c.days) < VALID_NEW_CASES_DAYS);
-                    episodes_to_investigate_still_open.forEach(function(episode_open) {
-                        //If it is the same germ or it is the same day we add a copy strain evidence (same germ within the 14 days)
-                        if (episode_open.containsGerm(current_ph.labo_germ_name)) {
-                            episode_open.addCopyStrainEvidence(current_ph);
-                            current_ph_processed = true;
+                        //check if it can be merged with copy strain!
+
+                    } else {
+
+                        var episodes_still_valid_with_same_germ = patient_episode_flow.getStillValidEpisodeWithSameGerm(current_ph, VALID_NEW_CASES_DAYS);
+                        if(episodes_still_valid_with_same_germ.length > 0) {
+                            patient_episode_flow.addCopyStrainEvidenceToExistingEpisode(current_ph, episodes_still_valid_with_same_germ[0])
+                            raise_error_if_more_than_one(episodes_still_valid_with_same_germ);
+
+                        } else {
+
+                            patient_episode_flow.createNewEpisodeFromPositiveHemoculture(current_ph);
+
                         }
 
-                        //If it a different germ, but on the same day
-                        else if (episode_open.labo_sample_date == current_ph.labo_sample_date) {
-                            episode_open.addPolymicrobialEvidence(current_ph);
-                            current_ph_processed = true;
-                        }
-                    })
-
-                    if (!current_ph_processed) {
-                        let epi = buildEpisodeFromPositiveHemoculture(current_ph);
-                        episodes_to_investigate[patient_stay].push(epi);
-                    }
-
-
-
-                    //TODO check if cases can be merged !
+                        
+                    } 
 
                 }
-
-
-                /*                else if (cases[patient_stay].length > 0) {
-
-                                    console.log("BOOOOOUM", l);
-
-                                    let cases_with_same_germ = cases[patient_stay].filter(c => c.labo_germ_name == l.labo_germ_name);
-                                    let last_valid_case_with_same_germ = cases_with_same_germ[cases_with_same_germ.length - 1];
-                                    let existing_case_in_same_day = cases[patient_stay].filter(c => c.days == l.days).length > 0;
-
-                                    //If there is not a valid case for the same germ or that is more than 14 (VALID_NEW_CASES_DAYS) days we can add it)
-                                    if ((!last_valid_case_with_same_germ || ((l.days - last_valid_case_with_same_germ.days) > VALID_NEW_CASES_DAYS)) && !existing_case_in_same_day) {
-                                        cases[patient_stay].push(l);
-                                    }
-
-                                    let cases_with_different_germ = cases[patient_stay].filter(c => c.labo_germ_name != l.labo_germ_name);
-                                }*/
+                    
 
             } else if (current_ph.labo_commensal == "1") {
 
@@ -126,7 +117,7 @@ function hug_implementation_v2(parameters, positive_hemos) {
                 let last_commensals_for_patient = commensals_for_patient_same_germ[commensals_for_patient_same_germ.length - 1];
                 let valid_commensal_cases = common_skin_commensals[patient_stay].filter(c => c.used_for_cases);
                 let last_valid_commensal_case = valid_commensal_cases[valid_commensal_cases.length - 1];
-                let existing_case_in_same_day = episodes_to_investigate[patient_stay].filter(c => c.days == current_ph.days).length > 0;
+                let existing_case_in_same_day = patient_episode_flow.getEpisodeOnSameDay(current_ph).length > 0;
 
                 /*if (last_valid_commensal_case) {
                     console.log((current_ph.days - last_valid_commensal_case.days))
@@ -137,7 +128,7 @@ function hug_implementation_v2(parameters, positive_hemos) {
                 if ((!last_valid_commensal_case || ((current_ph.days - last_valid_commensal_case.days) > VALID_NEW_CASES_DAYS)) && !existing_case_in_same_day) {
 
 
-                    let existing_case_in_same_day_of_last_commensal = last_commensals_for_patient ? episodes_to_investigate[patient_stay].map(c => c.days).indexOf(last_commensals_for_patient.days) != -1 : false;
+                    let existing_case_in_same_day_of_last_commensal = last_commensals_for_patient ? episodes_to_investigate[patient_stay].episodes.map(c => c.days).indexOf(last_commensals_for_patient.days) != -1 : false;
                     if (last_commensals_for_patient && !last_commensals_for_patient.used_for_cases && !existing_case_in_same_day_of_last_commensal) {
 
                         //Check the time between last commensal and this one
@@ -149,7 +140,7 @@ function hug_implementation_v2(parameters, positive_hemos) {
                         if (diff >= 1 && diff <= DAYS_TO_AGG_COMMENSALS_TOGETHER) {
                             last_commensals_for_patient.used_for_cases = true;
                             //Add the commensal to the cases
-                            episodes_to_investigate[patient_stay].push(buildEpisodeFromPositiveHemoculture(last_commensals_for_patient));
+                            patient_episode_flow.createNewEpisodeFromPositiveHemoculture(last_commensals_for_patient);
                         }
                     }
                 }
@@ -158,6 +149,7 @@ function hug_implementation_v2(parameters, positive_hemos) {
             }
         });
 
+
         return episodes_to_investigate;
     }
 
@@ -165,7 +157,7 @@ function hug_implementation_v2(parameters, positive_hemos) {
     function mapKeysToArray(gpsd) {
         let all_cases = [];
         Object.keys(gpsd).forEach(patient_stays => {
-            let cases_for_patient = gpsd[patient_stays];
+            let cases_for_patient = gpsd[patient_stays].episodes;
             all_cases = all_cases.concat(cases_for_patient);
         });
         return all_cases;

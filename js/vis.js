@@ -80,8 +80,8 @@ function updateVis(scenario_id, description, positive_hemos, episodes_implementa
         type: "path" // ['rect', 'path', 'line']
     });
 
-    episodes_implementations.forEach(function(epi) {
-        addEpisodes(feat_v, epi.episodes, epi.name);
+    Object.keys(episodes_implementations).forEach(function(key) {
+        addEpisodes(feat_v, episodes_implementations[key], key);
     });
 
     //addFeature(new FeatureViewer.createFeature(fv_length, "#fv_classification", fvParams), episodes, true);
