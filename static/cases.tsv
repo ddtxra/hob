@@ -1,7 +1,7 @@
 patient_id	stay_id	labo_sample_date	labo_germ_name	labo_commensal
 
 >
-# Two positive hemocultures with a same pathogene should not be repeated within 14 days from the first episodepatient_1001
+# Two positive hemocultures with a same pathogene should not be repeated within 14 days from the first episode
 patient_1001	stay_A	2021-01-01	pathA	0
 patient_1001	stay_A	2021-01-05	pathA	0
 patient_1001	stay_A	2021-01-10	pathA	0
@@ -9,17 +9,33 @@ patient_1001	stay_A	2021-01-14	pathA	0
 patient_1001	stay_A	2021-01-15	pathA	0	
 patient_1001	stay_A	2021-01-16	pathA	0	
 
+#expected.HUG_v2022
+#expected.HUG_v2022	patient_1001	2021-01-01	pathA
+#expected.HUG_v2022	patient_1001	2021-01-15	pathA
+
 >
 # If the two positive hemocultures appear in different stays for the same patient it should count as 2 episodes to investigate for HUG 
 #! Only 1 for PRAISE
 patient_1002	stay_B	2021-01-01	pathA	0
 patient_1002	stay_C	2021-01-05	pathA	0
 
+#expected.HUG_v2022
+#expected.HUG_v2022	patient_1002	2021-01-01	pathA
+#expected.HUG_v2022	patient_1002	2021-01-05	pathA
+
+#expected.PRAISE
+#expected.PRAISE	patient_1002	2021-01-01	pathA
+
 >
 # Two positive hemocultures with a different pathogene should count as 2 episodes
 
 patient_1003	stay_D	2021-01-01	pathA	0
 patient_1003	stay_D	2021-01-05	pathB	0
+
+#expected.HUG_v2022
+#expected.HUG_v2022	patient_1003	2021-01-01	pathA
+#expected.HUG_v2022	patient_1003	2021-01-05	pathB
+
 
 >
 # Two positive hemocultures with a different pathogene in two different days should count as 2 episodes for HUG because there is no link between pathogenes 
@@ -28,10 +44,22 @@ patient_1003	stay_D	2021-01-05	pathB	0
 patient_1004	stay_E	2021-01-04	pathA	0
 patient_1004	stay_E	2021-01-05	pathB	0
 
+
+#expected.HUG_v2022
+#expected.HUG_v2022	patient_1004	2021-01-04	pathA
+#expected.HUG_v2022	patient_1004	2021-01-05	pathB
+
+
+#expected.PRAISE
+#expected.PRAISE	patient_1004	2021-01-04	pathA
+
 >
 #Two positive hemocultures with a different pathogene in the same day counts as 1 polymicrobial episode for both HUG and PRAISE
 patient_10041		2021-01-04	pathA	0
 patient_10041		2021-01-04	pathB	0
+
+#expected.HUG_v2022
+#expected.HUG_v2022	patient_10041	2021-01-04	pathA+pathB
 
 >
 #Three or more positive hemocultures with a different pathogene in the same day counts as 1 polymicrobial episode for both HUG and PRAISE
@@ -39,9 +67,14 @@ patient_10042		2021-01-04	pathA	0
 patient_10042		2021-01-04	pathB	0
 patient_10042		2021-01-04	pathC	0
 
+
+#expected.HUG_v2022
+#expected.HUG_v2022	patient_10042	2021-01-04	pathA+pathB+pathC
+
+
 >
 #For HUG there is 1 polymicrobial episode (pathA + pathC) and 1 mono episode (pathB): pathC and pathA is a polymicrobial on day 4.
-#For PRAISE there is only 1 polymicrobial episode.
+#For PRAISE there is only 1 polymicrobial episode because they are grouped together.
 
 #!Tricky but working now with V2
 
@@ -50,8 +83,13 @@ patient_10043		2021-01-05	pathB	0
 patient_10043		2021-01-06	pathC	0
 patient_10043		2021-01-06	pathA	0
 
+
+#expected.HUG_v2022
+#expected.HUG_v2022	patient_10043	2021-01-04	pathA+pathC
+#expected.HUG_v2022	patient_10043	2021-01-05	pathB
+
 >
-#1 polymicrobial episode on day 1 (pathA+pathC) because less than 14 days. And 1 mono episode on day 15.
+#This one is an extreme case: 1 polymicrobial episode on day 1 (pathA+pathC) because less than 14 days. And 1 mono episode on day 15.
 #!Tricky but working now with V2
 
 patient_10044		2021-01-01	pathA	0
@@ -59,6 +97,9 @@ patient_10044		2021-01-14	pathC	0
 patient_10044		2021-01-14	pathA	0
 patient_10044		2021-01-15	pathC	0
 
+#expected.HUG_v2022
+#expected.HUG_v2022	patient_10044	2021-01-01	pathA+pathC
+#expected.HUG_v2022	patient_10044	2021-01-15	pathC
 
 >
 #1 HUG: 2 episodes (1 pathA and 1 pathB)
@@ -86,11 +127,9 @@ patient_1008	stay_E	2021-01-15	pathB	0
 
 >
 # 14 days			
-#! FIXME does not work if we add a new pathogene v2022, should be polymicrobial	
 patient_1009	stay_A	2021-01-01	pathA	0
 patient_1009	stay_A	2021-01-02	pathA	0
 patient_1009	stay_A	2021-01-03	pathA	0
-patient_1009	stay_A	2021-01-03	pathC	0
 patient_1009	stay_A	2021-01-04	pathA	0
 patient_1009	stay_A	2021-01-05	pathA	0
 patient_1009	stay_A	2021-01-06	pathA	0
@@ -117,6 +156,51 @@ patient_1009	stay_A	2021-01-26	pathA	0
 patient_1009	stay_A	2021-01-27	pathA	0
 patient_1009	stay_A	2021-01-28	pathA	0
 patient_1009	stay_A	2021-01-29	pathA	0
+
+#expected.HUG_v2022
+#expected.HUG_v2022	patient_1009	2021-01-01	pathA
+#expected.HUG_v2022	patient_1009	2021-01-15	pathA
+#expected.HUG_v2022	patient_1009	2021-01-29	pathA
+
+
+>
+# 14 days			
+#! FIXME does not work if we add a new pathogene v2022, should be polymicrobial	
+patient_1019	stay_A	2021-01-01	pathA	0
+patient_1019	stay_A	2021-01-02	pathA	0
+patient_1019	stay_A	2021-01-03	pathA	0
+patient_1019	stay_A	2021-01-03	pathC	0
+patient_1019	stay_A	2021-01-04	pathA	0
+patient_1019	stay_A	2021-01-05	pathA	0
+patient_1019	stay_A	2021-01-06	pathA	0
+patient_1019	stay_A	2021-01-07	pathA	0
+patient_1019	stay_A	2021-01-08	pathA	0
+patient_1019	stay_A	2021-01-09	pathA	0
+patient_1019	stay_A	2021-01-10	pathA	0
+patient_1019	stay_A	2021-01-11	pathA	0
+patient_1019	stay_A	2021-01-12	pathA	0
+patient_1019	stay_A	2021-01-13	pathA	0
+patient_1019	stay_A	2021-01-14	pathA	0
+patient_1019	stay_A	2021-01-15	pathA	0
+patient_1019	stay_A	2021-01-16	pathA	0
+patient_1019	stay_A	2021-01-17	pathA	0
+patient_1019	stay_A	2021-01-18	pathA	0
+patient_1019	stay_A	2021-01-19	pathA	0
+patient_1019	stay_A	2021-01-20	pathA	0
+patient_1019	stay_A	2021-01-21	pathA	0
+patient_1019	stay_A	2021-01-22	pathA	0
+patient_1019	stay_A	2021-01-23	pathA	0
+patient_1019	stay_A	2021-01-24	pathA	0
+patient_1019	stay_A	2021-01-25	pathA	0
+patient_1019	stay_A	2021-01-26	pathA	0
+patient_1019	stay_A	2021-01-27	pathA	0
+patient_1019	stay_A	2021-01-28	pathA	0
+patient_1019	stay_A	2021-01-29	pathA	0
+
+#expected.HUG_v2022
+#expected.HUG_v2022	patient_1019	2021-01-01	pathA
+#expected.HUG_v2022	patient_1019	2021-01-15	pathA
+#expected.HUG_v2022	patient_1019	2021-01-29	pathA
 
 >
 #HUG: 1 episode on day 1 (comA) and 1 episode on day 22 (comB) 			

@@ -1,12 +1,35 @@
 patient_id	stay_id	labo_sample_date	labo_germ_name	labo_commensal
 
 >
-#For HUG there is 1 polymicrobial episode (pathA + pathC) and 1 mono episode (pathB). If there was not pathA on day 6, there would be 3 mono episode for HUG, but since pathA on day 6 is a polymicrobial with pathC and is also makes the link with pathA on day 4 (copy strain). It becomes a polymicrobial (with 3 evidences)
-#For PRAISE there is only 1 polymicrobial episode.
+# 14 days			
+#! FIXME does not work if we add a new pathogene v2022, should be polymicrobial	
+patient_1009	stay_A	2021-01-01	pathA	0
+patient_1009	stay_A	2021-01-02	pathA	0
+patient_1009	stay_A	2021-01-03	pathA	0
+patient_1009	stay_A	2021-01-04	pathA	0
+patient_1009	stay_A	2021-01-05	pathA	0
+patient_1009	stay_A	2021-01-06	pathA	0
+patient_1009	stay_A	2021-01-07	pathA	0
+patient_1009	stay_A	2021-01-08	pathA	0
+patient_1009	stay_A	2021-01-09	pathA	0
+patient_1009	stay_A	2021-01-10	pathA	0
+patient_1009	stay_A	2021-01-11	pathA	0
+patient_1009	stay_A	2021-01-12	pathA	0
+patient_1009	stay_A	2021-01-13	pathA	0
+patient_1009	stay_A	2021-01-14	pathA	0
+patient_1009	stay_A	2021-01-15	pathA	0
+patient_1009	stay_A	2021-01-16	pathA	0
+patient_1009	stay_A	2021-01-17	pathA	0
+patient_1009	stay_A	2021-01-18	pathA	0
+patient_1009	stay_A	2021-01-19	pathA	0
+patient_1009	stay_A	2021-01-20	pathA	0
+patient_1009	stay_A	2021-01-21	pathA	0
+patient_1009	stay_A	2021-01-22	pathA	0
+patient_1009	stay_A	2021-01-23	pathA	0
+patient_1009	stay_A	2021-01-24	pathA	0
+patient_1009	stay_A	2021-01-25	pathA	0
+patient_1009	stay_A	2021-01-26	pathA	0
+patient_1009	stay_A	2021-01-27	pathA	0
+patient_1009	stay_A	2021-01-28	pathA	0
+patient_1009	stay_A	2021-01-29	pathA	0
 
-#!FIXME !!!
-
-patient_10043		2021-01-04	pathA	0
-patient_10043		2021-01-05	pathB	0
-patient_10043		2021-01-06	pathC	0
-patient_10043		2021-01-06	pathA	0

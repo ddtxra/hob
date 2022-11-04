@@ -3,7 +3,8 @@ class Scenario {
     constructor() {
         this.description = "";
         this.positive_hemocultures = [];
-        this.episodes_computations = {};
+        this.episodes_computed = {};
+        this.episodes_expected = {};
     }
 
     addPositiveHemoculture(positive_hemoculture) {
@@ -14,8 +15,12 @@ class Scenario {
         this.description += description + "<br>";
     }
 
-    addEpsiodeComputation(algo_name, episodes) {
-        this.episodes_computations[algo_name] = episodes;
+    addEpisodeComputation(algo_name, episodes) {
+        this.episodes_computed[algo_name] = episodes;
+    }
+
+    setEpisodesExpectedByAlgo(episodes_by_algo) {
+        this.episodes_expected = episodes_by_algo;
     }
 
 
@@ -31,7 +36,7 @@ class PositiveHemoculture {
         this.labo_germ_name = labo_germ_name;
         this.labo_commensal = labo_commensal;
         this.labo_sample_datetime_moment = moment(labo_sample_date, "YYYY-MM-DD", true);
-        if(!this.labo_sample_datetime_moment.isValid()) {
+        if (!this.labo_sample_datetime_moment.isValid()) {
             alert("Not a valid date in format 'YYYY-MM-DD' for '" + labo_sample_date + "' patient_id " + patient_id)
         }
         this.labo_sample_datetime_timestamp = this.labo_sample_datetime_moment.valueOf();
@@ -60,20 +65,27 @@ class Episode {
         this.labo_sample_datetime_moment = moment(pos_hemoculture.labo_sample_date, "YYYY-MM-DD");
         this.labo_sample_datetime_timestamp = this.labo_sample_datetime_moment.valueOf();
         this.days = pos_hemoculture.days;
-
     }
 
-    getClassification(){
+    getClassification() {
         //If only 1 commensal
-        if(this.evidences.filter(e => e.labo_commensal == 1).length == 1){
+        if (this.evidences.filter(e => e.labo_commensal == 1).length == 1) {
             return "[C]"; //contamination
         }
-        if(this.evidences.filter(e => e.labo_commensal != 1) > 0 && this.distinct_germs.length > 1){
+        if (this.evidences.filter(e => e.labo_commensal != 1) > 0 && this.distinct_germs.length > 1) {
             //what if 2 contaminations in same day? is it a polymicrobial or 2 contaminations?
             return "[P]"; //contamination
         }
 
         return "";
+    }
+
+    distinct_germs_label() {
+        return this.distinct_germs.join("+")
+    }
+
+    episode_date() {
+        this.labo_sample_date
     }
 
     containsGerm(germ_name) {
@@ -116,23 +128,23 @@ class EpisodeFlow {
         return this.episodes.length == 0;
     }
 
-    getValidEpisodesForPositiveHemoculture(pos_hemoculture){
+    getValidEpisodesForPositiveHemoculture(pos_hemoculture) {
         return this.episodes.filter(c => (pos_hemoculture.days - c.days) < this.valid_days)
     }
 
-    getStillValidEpisodeWithSameGerm(pos_hemoculture){
+    getStillValidEpisodeWithSameGerm(pos_hemoculture) {
         return this.getValidEpisodesForPositiveHemoculture(pos_hemoculture).filter(c => (pos_hemoculture.labo_germ_name == c.labo_germ_name))
     }
 
-    getEpisodeOnSameDay(pos_hemoculture){
+    getEpisodeOnSameDay(pos_hemoculture) {
         return this.episodes.filter(c => (pos_hemoculture.days == c.days))
     }
 
-    addPolymicrobialEvidenceToExistingEpisode(pos_hemoculture, episode){
+    addPolymicrobialEvidenceToExistingEpisode(pos_hemoculture, episode) {
         episode.addPolymicrobialEvidence(pos_hemoculture);
     }
 
-    addCopyStrainEvidenceToExistingEpisode(pos_hemoculture, episode){
+    addCopyStrainEvidenceToExistingEpisode(pos_hemoculture, episode) {
         episode.addCopyStrainEvidence(pos_hemoculture);
     }
 
@@ -141,18 +153,18 @@ class EpisodeFlow {
         patient_10043		2021-01-06	pathC	0
         patient_10043		2021-01-06	pathA	0
     */
-    combinePolymicrobialEpisodeWithCopyStrain(polymicrobial, previous_copy_strain){
-        polymicrobial.evidences.forEach(function (e){
+    combinePolymicrobialEpisodeWithCopyStrain(polymicrobial, previous_copy_strain) {
+        polymicrobial.evidences.forEach(function(e) {
             previous_copy_strain.addPolymicrobialEvidence(e);
         })
 
         //remove the polymicrobial
         var idx = 0;
-        this.episodes.forEach(function (e){
-            if(e == polymicrobial)return
+        this.episodes.forEach(function(e) {
+            if (e == polymicrobial) return
             idx++;
         })
-        this.episodes = this.episodes.slice(0, idx).concat(this.episodes.slice(idx+1, ))
+        this.episodes = this.episodes.slice(0, idx).concat(this.episodes.slice(idx + 1, ))
     }
 
 

@@ -1,4 +1,4 @@
-function updateVis(scenario_id, description, positive_hemos, episodes_implementations, expected) {
+function updateVis(scenario_id, description, positive_hemos, episodes_computed, episodes_expected) {
 
     var positive_hemocultures = deepCopy((positive_hemos));
 
@@ -39,18 +39,41 @@ function updateVis(scenario_id, description, positive_hemos, episodes_implementa
 
     }
 
+    function addExpected(ft, expected, name) {
+
+        debugger;
+
+        let feature_episodes = expected.map(function(epi) {
+            let day_of_year = moment(epi.episode_date, "YYYY-MM-DD").dayOfYear();
+            let label = epi.distinct_germs_label;
+            return {
+                x: day_of_year,
+                y: day_of_year + 0.999,
+                description: label,
+                color: getColorFromPalette(label)
+            }
+        });
+
+        ft.addFeature({
+            data: feature_episodes,
+            name: name,
+            className: "test",
+            type: "rect" // ['rect', 'path', 'line']
+        });
+    }
+
     function addEpisodes(ft, episodes, name) {
 
         let feature_episodes = episodes.map(function(epi) {
             let day_of_year = epi.labo_sample_datetime_moment.dayOfYear();
             let label = ((epi.distinct_germs) ? epi.distinct_germs.join("+") : epi.labo_germ_name);
-            if(typeof epi.getClassification !== "undefined"){
+            if (typeof epi.getClassification !== "undefined") {
                 label += " | " + epi.getClassification()
-                if(epi.evidences){
+                if (epi.evidences) {
                     label += epi.evidences.length
                 }
             }
-            
+
             return {
                 x: day_of_year,
                 y: day_of_year + 0.999,
@@ -74,32 +97,102 @@ function updateVis(scenario_id, description, positive_hemos, episodes_implementa
 
     var div_id = "fv_pos_hemo_" + scenario_id;
 
-    $('#fv_pos_hemo').append($('<div class="panel panel-default"><p>' + description + '</p><div style="margin-top: -35px;" id=' + div_id + '></div></div>'));
+    var expected_txt = "";
+
+    if (episodes_expected && Object.keys(episodes_expected).length > 0) {
+
+        Object.keys(episodes_computed).forEach(function(algo) {
+
+            if (episodes_expected[algo]) {
+
+                var computed = episodes_computed[algo];
+                var expected = episodes_expected[algo];
+
+                var computedOnlyComparableFields = computed.map(g => {
+                    return {
+                        patient_id: g.patient_id,
+                        date: g.labo_sample_date,
+                        germs: g.distinct_germs_label()
+                    }
+                })
+
+
+                var expectednlyComparableFields = expected.map(g => {
+                    return {
+                        patient_id: g.patient_id,
+                        date: g.episode_date,
+                        germs: g.distinct_germs_label
+                    }
+                })
+
+                computed_str = JSON.stringify(computedOnlyComparableFields);
+                expected_str = JSON.stringify(expectednlyComparableFields);
+
+                var comparison = (computed_str == expected_str);
+                expected_txt += comparison ? "<span style='color:green'><br>OK for " + algo + "</>" : "<span style='color:red'><br>NOT_OK for " + algo + "<br><ul>computed (" + computedOnlyComparableFields.length + "): " + computed_str + "<br></ul><ul>expected (" + expectednlyComparableFields.length + "): " + expected_str + " </ul></>";
+            }
+        })
+
+    }
+
+    $('#fv_pos_hemo').append($('<div class="panel panel-default"><br><h3>' + positive_hemocultures[0].patient_id + '</h3><p>' + description + '</p><div style="margin-top: -35px;" id=' + div_id + '></div><i>' + expected_txt + '</i></div>'));
     var feat_v = new FeatureViewer.createFeature(fv_length, "#" + div_id, fvParams);
 
-    addPositiveHemocultures(feat_v, positive_hemocultures);
 
     feat_v.addFeature({
         data: [{ x: 1, y: fv_length }],
-        name: "EPISODES",
+        name: "POSITIVE HEMO",
+        description: "paf",
+        color: "black",
+        type: "path" // ['rect', 'path', 'line']
+    });
+
+    addPositiveHemocultures(feat_v, positive_hemocultures);
+
+
+
+
+    feat_v.addFeature({
+        data: [{ x: 1, y: fv_length }],
+        name: "COMP. EPISODES",
         description: "paf",
         color: "green",
         type: "path" // ['rect', 'path', 'line']
     });
 
-    Object.keys(episodes_implementations).forEach(function(key) {
-        addEpisodes(feat_v, episodes_implementations[key], key);
+    Object.keys(episodes_computed).forEach(function(key) {
+        addEpisodes(feat_v, episodes_computed[key], key);
     });
+
+
+
+    if (episodes_expected && Object.keys(episodes_expected).length > 0) {
+
+        feat_v.addFeature({
+            data: [{ x: 1, y: fv_length }],
+            name: "EXPECTED EPIS.",
+            description: "paf",
+            color: "blue",
+            type: "path" // ['rect', 'path', 'line']
+        });
+
+
+        Object.keys(episodes_expected).forEach(function(key) {
+            addExpected(feat_v, episodes_expected[key], key);
+        });
+    }
 
     //addFeature(new FeatureViewer.createFeature(fv_length, "#fv_classification", fvParams), episodes, true);
 
-    /*if (expected && expected.data && expected.data.length > 0) {
-        addFeature(new FeatureViewer.createFeature(fv_length, "#fv_expected", fvParams), prepareData(expected.data), true);
+    /*if (episodes_expected && episodes_expected.data && episodes_expected.data.length > 0) {
+        addFeature(new FeatureViewer.createFeature(fv_length, "#fv_episodes_expected", fvParams), prepareData(episodes_expected.data), true);
     }*/
 
-    if (expected && expected.description) {
-        $("#explanation_expected").html(expected.description);
+
+    $("#explanation_episodes_expected").html("pifpaf");
+    if (episodes_expected && episodes_expected.description) {
+        $("#explanation_episodes_expected").html(episodes_expected.description);
     } else {
-        $("#explanation_expected").html("");
+        $("#explanation_episodes_expected").html("");
     }
 }

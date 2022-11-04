@@ -1,11 +1,14 @@
-$.get("static/cases.tsv", function(tsv_cases) {
-    //$.get("static/data.tsv", function(tsv_cases) {
+//$.get("static/single_case.tsv", function(tsv_cases) {
+//$.get("static/cases.tsv", function(tsv_cases) {
 
-    //$.get("static/cases.tsv", function(tsv_cases) {
+$.get("static/cases.tsv", function(tsv_cases) {
     $("#dataText").val(tsv_cases);
     let json_scenarios = parseTSVAndConvertToJSON(tsv_cases, "\t");
+    console.log(json_scenarios);
     showScenarios(json_scenarios);
 });
+
+var ALGOS = ["HUG", "HUG_v2022", "PRAISE"];
 
 
 $("#compute").click(function() {
@@ -24,18 +27,21 @@ function showScenarios(scenarios) {
 
     scenarios.forEach(function(s) {
 
-        ["HUG", "HUG_v2022"].forEach(function (algo) {
-            let episodes = computeBSIEpisodes({implementation: algo}, deepCopy(s.positive_hemocultures))["episodes"];
-            s.addEpsiodeComputation(algo, episodes);
+        ALGOS.forEach(function(algo) {
+            let episodes = computeBSIEpisodes({ implementation: algo }, deepCopy(s.positive_hemocultures))["episodes"];
+            s.addEpisodeComputation(algo, episodes);
         })
 
-        updateVis(scenarioCounter++, s.description, s.positive_hemocultures, s.episodes_computations);
+        if (s.positive_hemocultures.length > 0) {
+            updateVis(scenarioCounter++, s.description, s.positive_hemocultures, s.episodes_computed, s.episodes_expected);
+        }
+
     })
 
-    console.log(scenarios);
+    //console.log(scenarios);
 
 
-    ["HUG", "HUG_v2022"].forEach(key => {
+    ALGOS.forEach(key => {
         let number_distinct_patients = _.uniq(_.flatMap(scenarios, s => s.positive_hemocultures).map(c => c.patient_id)).length;
         let number_of_stays = _.uniq(_.flatMap(scenarios, s => s.positive_hemocultures).map(c => c.patient_id + "#" + c.stay_id)).length;
         let number_positive_hemocultures = _.flatMap(scenarios, s => s.positive_hemocultures).length;
@@ -44,7 +50,7 @@ function showScenarios(scenarios) {
         $("#" + key + "_ROW").find("td:eq(1)").text(number_of_stays);
         $("#" + key + "_ROW").find("td:eq(2)").text(number_positive_hemocultures)
 
-        let number_episodes = _.flatMap(scenarios, s => s.episodes_computations[key]).length;
+        let number_episodes = _.flatMap(scenarios, s => s.episodes_computed[key]).length;
 
         $("#" + key + "_ROW").find("td:eq(3)").text(number_episodes)
     })
@@ -57,18 +63,14 @@ function showScenarios(scenarios) {
 
 function getEpsiodesForAllAglorithms(positive_hemocultures) {
 
-    let algos = [{ name: "HUG", description: "HUG_SIMPLIFIED" },
-        { name: "HUG_v2022", description: "HUG_v2022" } //,
-        // { name: "PRAISE", description: "PRAISE" }
-    ]
 
-    let episodes_implementations = algos.map(function(algo) {
+    let episodes_implementations = ALGOS.map(function(algo) {
         let episodes = computeBSIEpisodes({
-            implementation: algo.name
+            implementation: algo
         }, deepCopy(positive_hemocultures))["episodes"];
 
         return {
-            name: algo.description,
+            name: algo,
             episodes: episodes
         }
     })
@@ -98,26 +100,62 @@ function parseTSVAndConvertToJSON(cases_tsv, separator) {
         let current_scenario = new Scenario();
         scenarios.push(current_scenario);
 
+        var expected_episodes = [];
+
+
         for (let current_line = 1; current_line < lines.length; current_line++) {
 
             let content = lines[current_line].trim();
             if (content.startsWith(">")) {
+                var expected_line = false;
+                expected_episodes = [];
+
                 current_scenario = new Scenario();
                 scenarios.push(current_scenario);
             } else if (content.startsWith("#")) {
 
                 var comment = content.replace("#", "").trim();
                 if (comment.startsWith("!")) {
+                    expected_line = false;
                     comment = "<span style='color:red'>" + comment.slice(1, ).trim() + "</span>";
                 }
 
                 if (comment.startsWith("?")) {
+                    expected_line = false;
                     comment = "<span style='color:orange'>" + comment.slice(1, ).trim() + "</span>";
                 }
 
-                current_scenario.addDescription(comment);
+                if (!expected_line && comment.startsWith("expected")) {
+                    expected_line = true; //première ligne
+                } else if (comment.startsWith("expected")) {
+                    var expectedValues = comment.split("\t");
+
+                    console.log(comment);
+                    var expected_epi = {
+                        algo: expectedValues[0].split(".")[1],
+                        patient_id: expectedValues[1],
+                        episode_date: expectedValues[2],
+                        distinct_germs_label: expectedValues[3],
+                    }
+
+                    if (typeof expected_epi.patient_id != "undefined") {
+                        expected_episodes.push(expected_epi);
+                    }
+                    expected_episodes_by_algo = _.groupBy(expected_episodes, "algo");
+
+                    current_scenario.setEpisodesExpectedByAlgo(expected_episodes_by_algo)
+
+
+
+                } else {
+                    current_scenario.addDescription(comment);
+                }
+
 
             } else {
+
+                var expected_line = false;
+
 
                 let values = content.split(separator);
                 let object = {};
@@ -134,6 +172,8 @@ function parseTSVAndConvertToJSON(cases_tsv, separator) {
         }
 
     } else {
+
+        var expected_line = false;
 
         var data = [];
         for (let current_line = 1; current_line < lines.length; current_line++) {
