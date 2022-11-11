@@ -51,6 +51,8 @@ class Episode {
     evidences = [];
     polymicrobial_evidences = [];
     copy_strains_evidences = [];
+    evidences_based_on_non_repeated_intervals = [];
+
     labo_sample_datetime_moment
     is_polymicrobial = false; // by default it is false
 
@@ -103,6 +105,11 @@ class Episode {
         this.addEvidence(pos_hemoculture);
     }
 
+    addEvidenceBasedOnNonRepeatInterval(pos_hemoculture) {
+        this.evidences_based_on_non_repeated_intervals.push(deepCopy(pos_hemoculture));
+        this.addEvidence(pos_hemoculture);
+    }
+
     //private
     addEvidence(pos_hemoculture) {
         this.evidences.push(deepCopy(pos_hemoculture));
@@ -113,9 +120,9 @@ class Episode {
 
 class EpisodeFlow {
 
-    constructor(id, valid_days) {
+    constructor(id, valid_days, episodes) {
         this.id = id;
-        this.episodes = [];
+        this.episodes = episodes ? episodes : [];
         this.valid_days = valid_days ? valid_days : 14;
     }
 
@@ -138,6 +145,13 @@ class EpisodeFlow {
 
     getEpisodeOnSameDay(pos_hemoculture) {
         return this.episodes.filter(c => (pos_hemoculture.days == c.days))
+    }
+
+    //check whether there is already an episode on same day
+    getEpisodeWithEvidencesOnSameDay(pos_hemoculture) {
+        return this.episodes.filter(function(e) {
+            return e.evidences.filter(c => (pos_hemoculture.days == c.days) > 0)
+        })
     }
 
     addPolymicrobialEvidenceToExistingEpisode(pos_hemoculture, episode) {

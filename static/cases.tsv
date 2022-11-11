@@ -249,10 +249,13 @@ patient_1014	stay_A	2021-01-01	pathA	0
 patient_1014	stay_A	2021-01-01	pathB	0
 
 >
-#scenario polymicrobials 2 (requires some work?)				
+#scenario polymicrobials 2 
 patient_1015	stay_A	2021-01-01	pathA	0
 patient_1015	stay_A	2021-01-02	pathA	0
 patient_1015	stay_A	2021-01-02	pathB	0
+
+#expected.HUG_v2022
+#expected.HUG_v2022	patient_1015	2021-01-01	pathA+pathB
 
 >
 #Polymicrobial with commensals (IN PROGRESS)			

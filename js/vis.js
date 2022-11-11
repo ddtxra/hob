@@ -41,8 +41,6 @@ function updateVis(scenario_id, description, positive_hemos, episodes_computed, 
 
     function addExpected(ft, expected, name) {
 
-        debugger;
-
         let feature_episodes = expected.map(function(epi) {
             let day_of_year = moment(epi.episode_date, "YYYY-MM-DD").dayOfYear();
             let label = epi.distinct_germs_label;

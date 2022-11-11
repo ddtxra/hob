@@ -1,7 +1,7 @@
-//$.get("static/single_case.tsv", function(tsv_cases) {
-//$.get("static/cases.tsv", function(tsv_cases) {
+$.get("static/single_case.tsv", function(tsv_cases) {
+    //$.get("static/cases.tsv", function(tsv_cases) {
 
-$.get("static/cases.tsv", function(tsv_cases) {
+    //$.get("static/cases.tsv", function(tsv_cases) {
     $("#dataText").val(tsv_cases);
     let json_scenarios = parseTSVAndConvertToJSON(tsv_cases, "\t");
     console.log(json_scenarios);
