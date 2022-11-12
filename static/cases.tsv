@@ -113,11 +113,29 @@ patient_1006	stay_E	2021-01-01	pathA	0
 patient_1006	stay_E	2021-01-04	pathB	0
 patient_1006	stay_E	2021-01-05	pathA	0
 
+#expected.HUG_v2022
+#expected.HUG_v2022	patient_1006	2021-01-01	pathA
+#expected.HUG_v2022	patient_1006	2021-01-04	pathB
+
 >
 #scenario (basics) HUG: 1 polymicrobien
 patient_1007	stay_E	2021-01-01	pathA	0
 patient_1007	stay_E	2021-01-04	pathB	0
 patient_1007	stay_E	2021-01-04	pathA	0
+
+#expected.HUG_v2022
+#expected.HUG_v2022	patient_1007	2021-01-01	pathA+pathB
+
+>
+#poly (fake2)
+#! CHECK THIS ONE WITH MARIE-NO !!!!!!!!!!!!!
+patient_1071	stay_A	2021-01-01	pathA	1
+patient_1071	stay_A	2021-01-02	pathB	1
+patient_1071	stay_A	2021-01-06	pathA	1
+patient_1071	stay_A	2021-01-06	pathB	1
+patient_1071	stay_A	2021-01-07	pathB	1
+patient_1071	stay_A	2021-01-08	pathA	1
+
 
 >
 #HUG: 2 episodes: 1 at day 1 (pathA) and 1 at day 2 (pathB)
@@ -198,7 +216,7 @@ patient_1019	stay_A	2021-01-28	pathA	0
 patient_1019	stay_A	2021-01-29	pathA	0
 
 #expected.HUG_v2022
-#expected.HUG_v2022	patient_1019	2021-01-01	pathA
+#expected.HUG_v2022	patient_1019	2021-01-01	pathA+pathC
 #expected.HUG_v2022	patient_1019	2021-01-15	pathA
 #expected.HUG_v2022	patient_1019	2021-01-29	pathA
 
@@ -258,12 +276,13 @@ patient_1015	stay_A	2021-01-02	pathB	0
 #expected.HUG_v2022	patient_1015	2021-01-01	pathA+pathB
 
 >
-#Polymicrobial with commensals (IN PROGRESS)			
+# ok?
 patient_1016		2021-01-01	pathA	0
 patient_1016		2021-01-02	pathB	0
 
 >
-#Polymicrobial with commensals (IN PROGRESS)				
+# ok?
+#! check with marie-no				
 patient_1017		2021-01-01	pathA	0
 patient_1017		2021-01-02	pathA	0
 patient_1017		2021-01-02	pathB	0
@@ -271,7 +290,8 @@ patient_1017		2021-01-05	pathB	0
 patient_1017		2021-01-05	pathC	0
 
 >
-#Polymicrobial with commensals (IN PROGRESS)		
+# ok?
+#! check with marie-no				
 patient_1018		2021-01-01	pathA	0
 patient_1018		2021-01-02	pathA	0
 patient_1018		2021-01-02	pathB	0
@@ -280,28 +300,23 @@ patient_1018		2021-01-05	pathC	0
 patient_1018		2021-01-16	pathC	0
 
 >
-#Polymicrobial with commensals (IN PROGRESS)
+# ok?
+#! check with marie-no				
 patient_1019		2021-01-01	pathA	0
 patient_1019		2021-01-02	pathA	0
 patient_1019		2021-01-02	pathB	0
 patient_1019		2021-01-05	pathB	0
-patient_1019		2021-01-05	comA	0
+patient_1019		2021-01-05	comA	1
 
 >
-#Polymicrobial with commensals (IN PROGRESS)					
+# ok?
+#! check with marie-no				
 patient_1020		2021-01-01	pathA	0
 patient_1020		2021-01-02	pathA	0
 patient_1020		2021-01-02	pathB	0
 patient_1020		2021-01-05	pathB	0
 patient_1020		2021-01-06	comA	0
 
->
-#scenario polymicrobials 4 (requires some work?)				
-patient_1021	stay_A	2021-01-01	pathA	0
-patient_1021	stay_A	2021-01-02	pathA	0
-patient_1021	stay_A	2021-01-02	pathB	0
-patient_1021	stay_A	2021-01-05	pathB	0
-patient_1021	stay_A	2021-01-05	comA	1
 
 >
 #hob case vignettes (case 1 and 2)			
@@ -312,7 +327,7 @@ patient_1022	case_1	2021-01-07	pathB	0
 #hob case vignettes (case 1 and 2)			
 patient_1023	case_2	2021-01-05	pathA	0
 patient_1023	case_2	2021-01-05	pathB	0
-patient_1023	case_2	2021-01-09	PathC	0
+patient_1023	case_2	2021-01-09	pathC	0
 
 >
 #hob case vignettes (case 3)
@@ -358,6 +373,7 @@ patient_1029	stay_A	2021-01-02	comA	1
 
 >
 #poly commensals (fake2)
+#! CHECK THIS ONE WITH MARIE-NO !!!!!!!!!!!!!
 patient_1030	stay_A	2021-01-01	comA	1
 patient_1030	stay_A	2021-01-02	comB	1
 patient_1030	stay_A	2021-01-06	comA	1

@@ -1,4 +1,4 @@
-$.get("static/single_case.tsv", function(tsv_cases) {
+$.get("static/cases.tsv", function(tsv_cases) {
     //$.get("static/cases.tsv", function(tsv_cases) {
 
     //$.get("static/cases.tsv", function(tsv_cases) {

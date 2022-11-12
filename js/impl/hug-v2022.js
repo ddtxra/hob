@@ -58,7 +58,6 @@ function hug_implementation_v2022(parameters, positive_hemos) {
             var pos_hemocultures_for_patient_by_days = _.groupBy(pos_hemocultures_by_patient_stay[patient_stay], "labo_sample_date");
             Object.keys(pos_hemocultures_for_patient_by_days).sort( /* TODO */ ).forEach(function(day) {
                 //puis groupe par jour
-                debugger;
                 var pos_hemocultures_for_patient_for_single_days = pos_hemocultures_for_patient_by_days[day];
                 var first_pos_hemoculture_for_day = pos_hemocultures_for_patient_for_single_days[0];
                 var episode = new Episode(first_pos_hemoculture_for_day);
@@ -83,8 +82,8 @@ function hug_implementation_v2022(parameters, positive_hemos) {
 
             })
 
-            var consolidated_episodes_for_patient = consolidateEpisodesBasedOnNonRepatedIntervals(episodes_for_patient)
 
+            consolidated_episodes_for_patient = consolidateEpisodesBasedOnNonRepatedIntervalsRecursively(episodes_for_patient);
             episodes = episodes.concat(consolidated_episodes_for_patient)
 
         })
@@ -93,9 +92,24 @@ function hug_implementation_v2022(parameters, positive_hemos) {
 
     }
 
-    function consolidateEpisodesBasedOnNonRepatedIntervals(episodes) {
+    function consolidateEpisodesBasedOnNonRepatedIntervalsRecursively(episodes){
+        var consolidated_count = episodes.length;
+        var test_episodes = episodes;
+        do{
+            var consolidated_episodes = consolidateEpisodesBasedOnNonRepatedIntervals(test_episodes);
+            fullRescanIfOptimisation = consolidated_episodes.length < consolidated_count;
+            if(fullRescanIfOptimisation) {
+                test_episodes = consolidated_episodes;
+                consolidated_count = consolidated_episodes.length;
+            }
+            
+        }while(fullRescanIfOptimisation);
 
-        console.log(episodes);
+        return consolidated_episodes;
+
+    }
+
+    function consolidateEpisodesBasedOnNonRepatedIntervals(episodes) {
 
         var consolidated_episodes = [];
 
@@ -107,23 +121,26 @@ function hug_implementation_v2022(parameters, positive_hemos) {
                 //si il y a déjà un épisode antérieur, 
                 // on va regarder pour les evidences de l'episode courant
                 // si il y a une évidence antérieur avec le même germe 
+
+                var processedEpisode = false;
                 current_episode.distinct_germs.forEach(function(germ) {
-                    var processed = false;
+
                     consolidated_episodes.forEach(function(consolidated_episode) {
+
                         //si on a un episode consolidé avec le meme germe dans l'interval de temps des 14 jours
-                        if (!processed && consolidated_episode.containsGerm(germ) && (current_episode.days - consolidated_episode.days) < VALID_NEW_CASES_DAYS) {
+                        if (!processedEpisode && consolidated_episode.containsGerm(germ) && (current_episode.days - consolidated_episode.days) < VALID_NEW_CASES_DAYS) {
                             // add all evidences from the current episode to the consolidated (even the ones with different germ)
-                            processed = true;
+                            processedEpisode = true;
                             current_episode.evidences.forEach(function(epi) {
                                 consolidated_episode.addEvidenceBasedOnNonRepeatInterval(epi)
                             })
                         }
                     })
-
-                    if (!processed) {
-                        consolidated_episodes.push(current_episode);
-                    }
                 })
+                if (!processedEpisode) {
+                    processedEpisode = true;
+                    consolidated_episodes.push(current_episode);
+                }
             }
         })
         return consolidated_episodes;
