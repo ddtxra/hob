@@ -5,40 +5,120 @@
 <script src="js/lib/feature-viewer.bundle.js"></script>
 <script src="js/lib/lodash.min.js"></script>
 <script src="js/lib/moment.min.js"></script>
+<script src="js/model.js"></script>
 <script src="js/impl/hug.js"></script>
-<script src="js/impl/hug-v2.js"></script>
+<script src="js/impl/hug-v2022.js"></script>
 <script src="js/impl/praise.js"></script>
 <script src="js/impl/template.js"></script>
 <script src="js/palette.js"></script>
 <script src="js/hob.js"></script>
 <script src="js/vis.js"></script>
 
-
 </script>
 
 <html lang="en">
 <div class="container">
-    <h2>Bacteremia episodes algorithm simulator</h2>
-    <p>This simulator is being developed by <a target="_blank" href="https://www.hug.ch/en/prevention-and-control-infection">HUG PCI group</a> and is still a work in progress. If you see issues or have questions, don't hesitate to
-        <a target="_blank" href="https://github.com/ddtxra/hob/issues">open an issue</a>.
-        <br>The source code of the HUG_v0 algorithm can be found <a href="https://github.com/ddtxra/hob/blob/gh-pages/js/impl/hug.js">here</a>. Other algorithm implementations can be added, contributions are welcome.
-        <br>Test scenarios can be found and added
-        <a target="_blank" href="https://github.com/ddtxra/hob/blob/gh-pages/static/test_scenarios.json">here</a> (feel free to add yours).
-        <br>Note: The simulator only deals with the identification of bacteremias (the "counting" part): It transforms positive hemocultures (raw data) into episodes, taking into account repeated blood cultures, copy strains, polymicrobial and commensals.
-        The classification of an episode in HOB (hospital-onset bacteremia), secondary, primary, catheter related (CRBSI), catheter associated (CLASI) or contaminant is not part of the simulator.
+    <h2>HOB calculator</h2>
+    <p>This calculator is being developed by <a target="_blank" href="https://www.hug.ch/en/prevention-and-control-infection">HUG PCI group</a> in collaboration with PRAISE network and is <b>still a work in progress</b>.
     </p>
+    <div class="form-group">
+        <label for="exampleFormControlTextarea1">Data: You can safely copy paste your own data (it is never stored and sent anywhere, it stays in memory in your brower). 
+            <br>Use tabs to separate values. Use the char ">" to visualise a scenario</label>
+        <textarea style="font-size: 10px;" rows="6" class="form-control" id="dataText" rows="3"></textarea>
+        <button style="margin-top: 10px;" id="compute" type="button" class="btn btn-outline-secondary">Re-compute</button>
+    </div>
 
     <form>
         <br>
         <div class="container" id="scenarioContainer">
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th scope="col">Algorithm</th>
+                        <th scope="col">#patients</th>
+                        <th scope="col">#stays</th>
+                        <th scope="col">#pos. hemo</th>
+                        <th scope="col">#episodes</th>
+                        <th scope="col">#ep. (cont)</th>
+                        <th scope="col">#ep. (mon)</th>
+                        <th scope="col">#ep. (poly)</th>
+                        <th scope="col">#BSI (mono + poly)</th>
+                        <th scope="col">#HOB (BSI + 2D from adm)</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr id="HUG_ROW">
+                        <th scope="row">HUG</th>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr id="HUG_v2022_ROW">
+                        <th scope="row">HUG_v2022</th>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+
+                    </tr>
+                    <tr id="PRAISE_ROW">
+                        <th scope="row">PRAISE</th>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+
+                    </tr>
+                </tbody>
+            </table>
+
             <div id="fv_pos_hemo"></div>
             <div class="container">
-
     </form>
     </div>
+
     <script src="./js/app.js"></script>
 
+    <p>Source code can be found <a href="https://github.com/ddtxra/hob/blob/gh-pages/js/impl/hug.js">here</a>.</p>
+
 </html>
+
+<script>
+    document.getElementById('dataText').addEventListener('keydown', function(e) {
+        if (e.key == 'Tab') {
+            e.preventDefault();
+            var start = this.selectionStart;
+            var end = this.selectionEnd;
+
+            // set textarea value to: text before caret + tab + text after caret
+            this.value = this.value.substring(0, start) +
+                "\t" + this.value.substring(end);
+
+            // put caret at right position again
+            this.selectionStart =
+                this.selectionEnd = start + 1;
+        }
+    });
+</script>
 
 <style>
     .svgHeader {

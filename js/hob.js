@@ -4,23 +4,28 @@ function computeBSIEpisodes(parameters, positive_hemocultures) {
         return hug_implementation(parameters, positive_hemocultures);
     } else if (parameters.implementation == "PRAISE") {
         return praise_implementation(parameters, positive_hemocultures);
-    } else if (parameters.implementation == "HUGV2") {
-        return hug_implementation_v2(parameters, positive_hemocultures);
+    } else if (parameters.implementation == "HUG_v2022") {
+        return hug_implementation_v2022(parameters, positive_hemocultures);
     } else {
         alert("No implementation for" + parameters.implementation);
     }
 }
 
-//Done for optimisation reasons
-function prepareData(data) {
-    data.forEach(function(d) {
-        d.labo_sample_datetime_moment = moment(d.labo_sample_date, "YYYY-MM-DD");
-        //d.labo_patient_id_sample_calendar_day = d.patient_id + "-" + formatMomentDateToStringForGranularity(d.labo_sample_datetime_moment, "day");
-        d.labo_sample_datetime_timestamp = d.labo_sample_datetime_moment.valueOf();
-    })
-    return data;
+
+function parseObjectPropertiesAndConvertToMoment(obj, parse) {
+    for (let k in obj) {
+        if (typeof obj[k] === 'object' && obj[k] !== null) {
+            parseObjectPropertiesAndConvertToMoment(obj[k], parse)
+        } else if (obj.hasOwnProperty(k)) {
+            if (k.endsWith("_moment")) {
+                obj[k] = moment(obj[k]);
+            }
+        }
+    }
 }
 
 function deepCopy(object) {
-    return JSON.parse(JSON.stringify(object));
+    let copy = JSON.parse(JSON.stringify(object));
+    parseObjectPropertiesAndConvertToMoment(copy);
+    return copy;
 }
