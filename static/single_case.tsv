@@ -9,6 +9,6 @@ patient_10043		2021-01-06	pathC	0
 patient_10043		2021-01-06	pathA	0
 
 
-#expected.HUG_v2022
-#expected.HUG_v2022	patient_10043	2021-01-04	pathA+pathC
-#expected.HUG_v2022	patient_10043	2021-01-05	pathB
+#expected.HUG_v2023
+#expected.HUG_v2023	patient_10043	2021-01-04	pathA+pathC
+#expected.HUG_v2023	patient_10043	2021-01-05	pathB
