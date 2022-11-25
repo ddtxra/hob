@@ -4,8 +4,8 @@ function computeBSIEpisodes(parameters, positive_hemocultures) {
         return hug_implementation(parameters, positive_hemocultures);
     } else if (parameters.implementation == "PRAISE") {
         return praise_implementation(parameters, positive_hemocultures);
-    } else if (parameters.implementation == "HUG_v2022") {
-        return hug_implementation_v2022(parameters, positive_hemocultures);
+    } else if (parameters.implementation == "HUG_v2023") {
+        return hug_implementation_v2023(parameters, positive_hemocultures);
     } else {
         alert("No implementation for" + parameters.implementation);
     }

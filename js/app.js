@@ -8,7 +8,7 @@ $.get("static/cases.tsv", function(tsv_cases) {
     showScenarios(json_scenarios);
 });
 
-var ALGOS = ["HUG", "HUG_v2022", "PRAISE"];
+var ALGOS = ["HUG", "HUG_v2023", "PRAISE"];
 
 
 $("#compute").click(function() {

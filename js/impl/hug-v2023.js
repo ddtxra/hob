@@ -1,4 +1,4 @@
-function hug_implementation_v2022(parameters, positive_hemos) {
+function hug_implementation_v2023(parameters, positive_hemos) {
 
     var VALID_NEW_CASES_DAYS = parameters.valid_new_cases_days ? parameters.valid_new_cases_days : 14;
     var DAYS_TO_AGG_COMMENSALS_TOGETHER = 3;
@@ -92,18 +92,18 @@ function hug_implementation_v2022(parameters, positive_hemos) {
 
     }
 
-    function consolidateEpisodesBasedOnNonRepatedIntervalsRecursively(episodes){
+    function consolidateEpisodesBasedOnNonRepatedIntervalsRecursively(episodes) {
         var consolidated_count = episodes.length;
         var test_episodes = episodes;
-        do{
+        do {
             var consolidated_episodes = consolidateEpisodesBasedOnNonRepatedIntervals(test_episodes);
             fullRescanIfOptimisation = consolidated_episodes.length < consolidated_count;
-            if(fullRescanIfOptimisation) {
+            if (fullRescanIfOptimisation) {
                 test_episodes = consolidated_episodes;
                 consolidated_count = consolidated_episodes.length;
             }
-            
-        }while(fullRescanIfOptimisation);
+
+        } while (fullRescanIfOptimisation);
 
         return consolidated_episodes;
 
