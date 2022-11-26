@@ -45,18 +45,19 @@ class PositiveHemoculture {
 
 }
 
+
 class Episode {
 
-    distinct_germs = [];
-    evidences = [];
-    polymicrobial_evidences = [];
-    copy_strains_evidences = [];
-    evidences_based_on_non_repeated_intervals = [];
-
-    labo_sample_datetime_moment
-    is_polymicrobial = false; // by default it is false
 
     constructor(pos_hemoculture) {
+
+        this.distinct_germs = [];
+        this.evidences = [];
+        this.polymicrobial_evidences = [];
+        this.copy_strains_evidences = [];
+        this.evidences_based_on_non_repeated_intervals = [];
+        this.is_polymicrobial = false; // by default it is false
+
         this.addEvidence(pos_hemoculture)
         this.first_evidence = deepCopy(pos_hemoculture);
         this.patient_id = pos_hemoculture.patient_id;
@@ -116,6 +117,8 @@ class Episode {
         this.distinct_germs = _.uniq(this.evidences.map(e => e.labo_germ_name));
     }
 }
+
+
 
 
 class EpisodeFlow {
