@@ -1,5 +1,5 @@
-$.get("static/cases.tsv", function(tsv_cases) {
-    //$.get("static/cases.tsv", function(tsv_cases) {
+//$.get("static/single_case.tsv", function(tsv_cases) {
+    $.get("static/cases.tsv", function(tsv_cases) {
 
     //$.get("static/cases.tsv", function(tsv_cases) {
     $("#dataText").val(tsv_cases);
@@ -43,7 +43,7 @@ function showScenarios(scenarios) {
 
     ALGOS.forEach(key => {
         let number_distinct_patients = _.uniq(_.flatMap(scenarios, s => s.positive_hemocultures).map(c => c.patient_id)).length;
-        let number_of_stays = _.uniq(_.flatMap(scenarios, s => s.positive_hemocultures).map(c => c.patient_id + "#" + c.stay_id)).length;
+        let number_of_stays = _.uniq(_.flatMap(scenarios, s => s.positive_hemocultures).map(c => c.patient_id + "#" + c.stay_begin_date)).length;
         let number_positive_hemocultures = _.flatMap(scenarios, s => s.positive_hemocultures).length;
 
         $("#" + key + "_ROW").find("td:eq(0)").text(number_distinct_patients)
@@ -85,7 +85,7 @@ function parseTSVAndConvertToJSON(cases_tsv, separator) {
     let lines = cases_tsv.replace(/\r/gm, '').split("\n").filter(l => l.trim().length != 0);
     let column_names = lines[0].split(separator);
 
-    ["patient_id", "stay_id", "labo_sample_date", "labo_germ_name", "labo_commensal"].forEach(function(col) {
+    ["patient_id", "stay_begin_date", "labo_sample_date", "labo_germ_name", "labo_commensal"].forEach(function(col) {
         if (column_names.indexOf(col) == -1) {
             let msg = "Can't find " + col + " in tsv file";
             window.alert(msg);
@@ -164,7 +164,7 @@ function parseTSVAndConvertToJSON(cases_tsv, separator) {
                     object[col_name] = values[c];
                 }
 
-                let ph = new PositiveHemoculture(object.patient_id, object.stay_id, object.labo_sample_date, object.labo_germ_name, object.labo_commensal);
+                let ph = new PositiveHemoculture(object.patient_id, object.stay_begin_date, object.labo_sample_date, object.labo_germ_name, object.labo_commensal);
                 current_scenario.addPositiveHemoculture(ph);
 
             }
@@ -184,10 +184,10 @@ function parseTSVAndConvertToJSON(cases_tsv, separator) {
                 let col_name = column_names[c];
                 object[col_name] = values[c];
             }
-            data.push(new PositiveHemoculture(object.patient_id, object.stay_id, object.labo_sample_date, object.labo_germ_name, object.labo_commensal));
+            data.push(new PositiveHemoculture(object.patient_id, object.stay_begin_date, object.labo_sample_date, object.labo_germ_name, object.labo_commensal));
         }
 
-        //var dataGroupedByStays = _.groupBy(data, d => d.patient_id + "@" + d.stay_id);
+        //var dataGroupedByStays = _.groupBy(data, d => d.patient_id + "@" + d.stay_sample_date);
         var dataGroupedByStays = _.groupBy(data, d => d.patient_id);
 
         Object.keys(dataGroupedByStays).forEach(function(key) {

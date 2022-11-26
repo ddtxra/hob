@@ -29,13 +29,16 @@ class Scenario {
 
 class PositiveHemoculture {
 
-    constructor(patient_id, stay_id, labo_sample_date, labo_germ_name, labo_commensal) {
+    constructor(patient_id, stay_begin_date, labo_sample_date, labo_germ_name, labo_commensal) {
         this.patient_id = patient_id;
-        this.stay_id = stay_id;
+        this.stay_begin_date = stay_begin_date;
         this.labo_sample_date = labo_sample_date;
         this.labo_germ_name = labo_germ_name;
         this.labo_commensal = labo_commensal;
         this.labo_sample_datetime_moment = moment(labo_sample_date, "YYYY-MM-DD", true);
+
+        this.days_since_begin_stay = moment(labo_sample_date, "YYYY-MM-DD").diff(moment(stay_begin_date, "YYYY-MM-DD"), "days")
+
         if (!this.labo_sample_datetime_moment.isValid()) {
             alert("Not a valid date in format 'YYYY-MM-DD' for '" + labo_sample_date + "' patient_id " + patient_id)
         }
@@ -43,6 +46,9 @@ class PositiveHemoculture {
         //d.labo_patient_id_sample_calendar_day = d.patient_id + "-" + formatMomentDateToStringForGranularity(d.labo_sample_datetime_moment, "day");
     }
 
+    isNosocomial(){
+        return this.days_since_begin_stay >= 2;
+    }
 }
 
 
@@ -61,13 +67,12 @@ class Episode {
         this.addEvidence(pos_hemoculture)
         this.first_evidence = deepCopy(pos_hemoculture);
         this.patient_id = pos_hemoculture.patient_id;
-        this.stay_id = pos_hemoculture.stay_id;
+        this.stay_begin_date = pos_hemoculture.stay_begin_date;
         this.labo_sample_date = pos_hemoculture.labo_sample_date;
         this.labo_germ_name = pos_hemoculture.labo_germ_name;
         this.labo_commensal = pos_hemoculture.labo_commensal;
         this.labo_sample_datetime_moment = moment(pos_hemoculture.labo_sample_date, "YYYY-MM-DD");
         this.labo_sample_datetime_timestamp = this.labo_sample_datetime_moment.valueOf();
-        this.days = pos_hemoculture.days;
     }
 
     getClassification() {
@@ -81,6 +86,13 @@ class Episode {
         }
 
         return "";
+    }
+
+    /** Takes the first episode from the evidences */
+    getEpisodeDate(){
+        var min = Number.MAX_VALUE;
+        this.evidences.forEach(e => min = Math.min(e.labo_sample_datetime_timestamp, min));
+        return new Date(min);
     }
 
     distinct_germs_label() {
@@ -139,7 +151,7 @@ class EpisodeFlow {
     }
 
     getValidEpisodesForPositiveHemoculture(pos_hemoculture) {
-        return this.episodes.filter(c => (pos_hemoculture.days - c.days) < this.valid_days)
+        return this.episodes.filter(e => (pos_hemoculture.labo_sample_date - e.labo_sample_date) < this.valid_days)
     }
 
     getStillValidEpisodeWithSameGerm(pos_hemoculture) {
@@ -147,13 +159,13 @@ class EpisodeFlow {
     }
 
     getEpisodeOnSameDay(pos_hemoculture) {
-        return this.episodes.filter(c => (pos_hemoculture.days == c.days))
+        return this.episodes.filter(c => (pos_hemoculture.labo_sample_date.format("YYYY-MM-DD") == c.labo_sample_date.format("YYYY-MM-DD")))
     }
 
     //check whether there is already an episode on same day
     getEpisodeWithEvidencesOnSameDay(pos_hemoculture) {
         return this.episodes.filter(function(e) {
-            return e.evidences.filter(c => (pos_hemoculture.days == c.days) > 0)
+            return e.evidences.filter(c => (pos_hemoculture.labo_sample_date.format("YYYY-MM-DD") == c.days.format("YYYY-MM-DD")) > 0)
         })
     }
 

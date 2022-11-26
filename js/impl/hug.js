@@ -7,11 +7,11 @@ function hug_implementation(parameters, positive_hemos) {
     var REPEAT_INTERVAL_DAYS_COMMENSALS = parameters.valid_new_cases_hours ? parameters.valid_new_cases_hours : 3;
 
     function keyToGroupEvidences(ep) {
-        return ep.patient_id + ep.stay_id
+        return ep.patient_id + ep.stay_begin_date
     }
 
     function keyToGroupEpisodes(ep) {
-        return ep.patient_id + ep.stay_id + ep.labo_sample_date
+        return ep.patient_id + ep.stay_begin_date + ep.labo_sample_date
     }
 
     /** Pour 1 patient donné on ne répéte le même germe si il arrive dans les 14 jours */
