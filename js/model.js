@@ -37,7 +37,7 @@ class PositiveHemoculture {
         this.labo_commensal = labo_commensal;
         this.labo_sample_datetime_moment = moment(labo_sample_date, "YYYY-MM-DD", true);
 
-        this.days_since_begin_stay = moment(labo_sample_date, "YYYY-MM-DD").diff(moment(stay_begin_date, "YYYY-MM-DD"), "days")
+        this.days_since_begin_stay = moment(labo_sample_date, "YYYY-MM-DD").diff(moment(stay_begin_date, "YYYYMMDD"), "days")
 
         if (!this.labo_sample_datetime_moment.isValid()) {
             alert("Not a valid date in format 'YYYY-MM-DD' for '" + labo_sample_date + "' patient_id " + patient_id)
