@@ -14,7 +14,7 @@ function updateVis(positive_hemos, expected_episodes, computed_episodes) {
 
 
     function addFeature(ft, series, epi) {
-        var lines = _.groupBy(series, epi ? "patient_id" : function(p) { return p.patient_id + "@" + p.stay_id });
+        var lines = _.groupBy(series, epi ? "patient_id" : function(p) { return p.patient_id + "@" + p.stay_begin_date });
         Object.keys(lines).sort().forEach(pat => {
 
             var pos_hem = lines[pat];

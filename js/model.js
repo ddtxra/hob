@@ -1,72 +1,56 @@
-class Scenario {
-
-    constructor() {
-        this.description = "";
-        this.positive_hemocultures = [];
-        this.episodes_computed = {};
-        this.episodes_expected = {};
-    }
-
-    addPositiveHemoculture(positive_hemoculture) {
-        return this.positive_hemocultures.push(positive_hemoculture);
-    }
-
-    addDescription(description) {
-        this.description += description + "<br>";
-    }
-
-    addEpisodeComputation(algo_name, episodes) {
-        this.episodes_computed[algo_name] = episodes;
-    }
-
-    setEpisodesExpectedByAlgo(episodes_by_algo) {
-        this.episodes_expected = episodes_by_algo;
-    }
-
-
-}
-
-
 class PositiveHemoculture {
 
-    constructor(patient_id, stay_id, labo_sample_date, labo_germ_name, labo_commensal) {
+    constructor(patient_id, stay_begin_date, labo_sample_date, labo_germ_name, labo_commensal, specific_info) {
         this.patient_id = patient_id;
-        this.stay_id = stay_id;
+        this.stay_begin_date = stay_begin_date;
         this.labo_sample_date = labo_sample_date;
         this.labo_germ_name = labo_germ_name;
         this.labo_commensal = labo_commensal;
+        this.specific_info = specific_info; //require to keep specific information (not required for the algorithm)
         this.labo_sample_datetime_moment = moment(labo_sample_date, "YYYY-MM-DD", true);
+        this.stay_begin_date_moment = moment(stay_begin_date, "YYYYMMDD", true);
+
+        this.days_since_begin_stay = this.labo_sample_datetime_moment.clone().diff(this.stay_begin_date_moment.clone(), "days");
+        
         if (!this.labo_sample_datetime_moment.isValid()) {
             alert("Not a valid date in format 'YYYY-MM-DD' for '" + labo_sample_date + "' patient_id " + patient_id)
         }
+
+        if (!this.stay_begin_date_moment.isValid()) {
+            alert("Not a valid date in format 'YYYYMMDD' for '" + stay_begin_date + "' patient_id " + patient_id)
+        }
+        
         this.labo_sample_datetime_timestamp = this.labo_sample_datetime_moment.valueOf();
         //d.labo_patient_id_sample_calendar_day = d.patient_id + "-" + formatMomentDateToStringForGranularity(d.labo_sample_datetime_moment, "day");
     }
 
+    isNosocomial(){
+        return this.days_since_begin_stay >= 2;
+    }
 }
+
 
 class Episode {
 
-    distinct_germs = [];
-    evidences = [];
-    polymicrobial_evidences = [];
-    copy_strains_evidences = [];
-    evidences_based_on_non_repeated_intervals = [];
-
-    labo_sample_datetime_moment
-    is_polymicrobial = false; // by default it is false
 
     constructor(pos_hemoculture) {
+
+        this.distinct_germs = [];
+        this.evidences = [];
+        this.polymicrobial_evidences = [];
+        this.copy_strains_evidences = [];
+        this.evidences_based_on_non_repeated_intervals = [];
+        this.is_polymicrobial = false; // by default it is false
+
         this.addEvidence(pos_hemoculture)
         this.first_evidence = deepCopy(pos_hemoculture);
         this.patient_id = pos_hemoculture.patient_id;
-        this.stay_id = pos_hemoculture.stay_id;
+        this.stay_begin_date = pos_hemoculture.stay_begin_date;
         this.labo_sample_date = pos_hemoculture.labo_sample_date;
         this.labo_germ_name = pos_hemoculture.labo_germ_name;
         this.labo_commensal = pos_hemoculture.labo_commensal;
         this.labo_sample_datetime_moment = moment(pos_hemoculture.labo_sample_date, "YYYY-MM-DD");
         this.labo_sample_datetime_timestamp = this.labo_sample_datetime_moment.valueOf();
-        this.days = pos_hemoculture.days;
     }
 
     getClassification() {
@@ -80,6 +64,18 @@ class Episode {
         }
 
         return "";
+    }
+
+    /** Takes the first episode from the evidences, since they are always sorted from the method addEvidence */
+    getFirstEvidence(){
+        this.evidences[0];
+    }
+
+    /** Takes the first episode from the evidences */
+    getEpisodeDate(){
+        var min = Number.MAX_VALUE;
+        this.evidences.forEach(e => min = Math.min(e.labo_sample_datetime_timestamp, min));
+        return new Date(min);
     }
 
     distinct_germs_label() {
@@ -110,77 +106,12 @@ class Episode {
         this.addEvidence(pos_hemoculture);
     }
 
-    //private
+    //private adds an evidence and ensures the array is sorted
     addEvidence(pos_hemoculture) {
         this.evidences.push(deepCopy(pos_hemoculture));
+        this.evidences = this.evidences.sort(function (e1, e2){
+            return e1.labo_sample_datetime_moment.valueOf() - e2.labo_sample_datetime_moment.valueOf() 
+        })
         this.distinct_germs = _.uniq(this.evidences.map(e => e.labo_germ_name));
     }
-}
-
-
-class EpisodeFlow {
-
-    constructor(id, valid_days, episodes) {
-        this.id = id;
-        this.episodes = episodes ? episodes : [];
-        this.valid_days = valid_days ? valid_days : 14;
-    }
-
-
-    createNewEpisodeFromPositiveHemoculture(pos_hemoculture) {
-        this.episodes.push(new Episode(pos_hemoculture));
-    }
-
-    isEmpty() {
-        return this.episodes.length == 0;
-    }
-
-    getValidEpisodesForPositiveHemoculture(pos_hemoculture) {
-        return this.episodes.filter(c => (pos_hemoculture.days - c.days) < this.valid_days)
-    }
-
-    getStillValidEpisodeWithSameGerm(pos_hemoculture) {
-        return this.getValidEpisodesForPositiveHemoculture(pos_hemoculture).filter(c => (pos_hemoculture.labo_germ_name == c.labo_germ_name))
-    }
-
-    getEpisodeOnSameDay(pos_hemoculture) {
-        return this.episodes.filter(c => (pos_hemoculture.days == c.days))
-    }
-
-    //check whether there is already an episode on same day
-    getEpisodeWithEvidencesOnSameDay(pos_hemoculture) {
-        return this.episodes.filter(function(e) {
-            return e.evidences.filter(c => (pos_hemoculture.days == c.days) > 0)
-        })
-    }
-
-    addPolymicrobialEvidenceToExistingEpisode(pos_hemoculture, episode) {
-        episode.addPolymicrobialEvidence(pos_hemoculture);
-    }
-
-    addCopyStrainEvidenceToExistingEpisode(pos_hemoculture, episode) {
-        episode.addCopyStrainEvidence(pos_hemoculture);
-    }
-
-    /* this case is the most tricky, it happens when you start having a pathA on day 1 and then on day 3 you have a different pathogene (so it counts as 2 evidences). but later during the day you have the same pathogene A, so it should be fusionned
-        patient_10043		2021-01-04	pathA	0
-        patient_10043		2021-01-06	pathC	0
-        patient_10043		2021-01-06	pathA	0
-    */
-    combinePolymicrobialEpisodeWithCopyStrain(polymicrobial, previous_copy_strain) {
-        polymicrobial.evidences.forEach(function(e) {
-            previous_copy_strain.addPolymicrobialEvidence(e);
-        })
-
-        //remove the polymicrobial
-        var idx = 0;
-        this.episodes.forEach(function(e) {
-            if (e == polymicrobial) return
-            idx++;
-        })
-        this.episodes = this.episodes.slice(0, idx).concat(this.episodes.slice(idx + 1, ))
-    }
-
-
-
 }

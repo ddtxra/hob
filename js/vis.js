@@ -13,7 +13,7 @@ function updateVis(scenario_id, description, positive_hemos, episodes_computed, 
     };
 
     function addPositiveHemocultures(ft, positive_hemocultures) {
-        var lines = _.groupBy(positive_hemocultures, function(p) { return p.patient_id + "@" + p.stay_id });
+        var lines = _.groupBy(positive_hemocultures, function(p) { return p.patient_id + "@" + p.stay_begin_date });
         Object.keys(lines).sort().forEach(pat => {
             var pos_hem = lines[pat];
             var feature_pos_hemo = pos_hem.map(function(ph) {

@@ -1,57 +1,18 @@
-function hug_implementation_v2023(parameters, positive_hemos) {
+/*****
+ * DISCLAIMER: DO NOT CHANGE THIS CODE DIRECTLY IN HERE
+ * You must change in here first:  https://github.com/ddtxra/hob/blob/gh-pages/js/impl/hug-v2023.js
+ * test the use cases before any modification: 
+ */
+ function hug_implementation_v2023(parameters, positive_hemos) {
 
     var VALID_NEW_CASES_DAYS = parameters.valid_new_cases_days ? parameters.valid_new_cases_days : 14;
-    var DAYS_TO_AGG_COMMENSALS_TOGETHER = 3;
-
     var positive_hemocultures = deepCopy(positive_hemos);
-
-    var date_str = "2021-01-02";
-    var date = moment(date_str);
-
-    positive_hemocultures.forEach(function(ph) {
-        ph.days = moment(ph.labo_sample_date, "YYYY-MM-DD").diff(moment("2020-12-25", "YYYY-MM-DD"), "days")
-    })
-
-    function countEpisodes(pos_hemocultures) {
-        var episodes = {};
-        pos_hemocultures.forEach(function(ph) {
-            //TODO check with Marie No if we need to filter by stay?
-            var patient_stay = "P-" + ph.patient_id + "-S-" + ph.stay_id;
-            if (!episodes[patient_stay]) {
-                episodes[patient_stay] = [];
-            }
-            //If it is empty push the first
-            if (episodes[patient_stay].length == 0) {
-                episodes[patient_stay].push(ph);
-            } else if (episodes[patient_stay].length > 0) {
-                //If not empty let's find the previous case for the same germ and check if it is more than 14 days before
-                let episodes_with_same_germ = episodes[patient_stay].filter(e => e.labo_germ_name == ph.labo_germ_name);
-                let last_valid_case_with_same_germ = episodes_with_same_germ[episodes_with_same_germ.length - 1];
-                let existing_case_in_same_day = episodes[patient_stay].filter(e => e.days == ph.days).length > 0;
-                //If there is not a valid case for the same germ or that is more than 14 (VALID_NEW_CASES_DAYS) days we can add it)
-                if ((!last_valid_case_with_same_germ || ((ph.days - last_valid_case_with_same_germ.days) > VALID_NEW_CASES_DAYS)) && !existing_case_in_same_day) {
-                    episodes[patient_stay].push(ph);
-                }
-            }
-        });
-        return episodes;
-    }
-
-
-
-    function raise_error_if_more_than_one(array) {
-        if (array.length > 1) {
-            alert("There must be an error with this!")
-            console.log(array);
-        }
-
-    }
 
     function identifiyEpisodes(pos_hemocultures) {
 
         var episodes = [];
 
-        var pos_hemocultures_by_patient_stay = _.groupBy(pos_hemocultures, function(p) { return "P-" + p.patient_id + "-S-" + p.stay_id });
+        var pos_hemocultures_by_patient_stay = _.groupBy(pos_hemocultures, function(p) { return "P-" + p.patient_id + "-S-" + p.stay_begin_date });
         Object.keys(pos_hemocultures_by_patient_stay).forEach(function(patient_stay) {
             //groupe par patient
             var episodes_for_patient = [];
@@ -73,7 +34,7 @@ function hug_implementation_v2023(parameters, positive_hemos) {
                     var posHemoSameGerm = pos_hemocultures_for_patient_for_single_days.filter(ph => ph.labo_germ_name == first_pos_hemoculture_for_day.labo_germ_name);
                     posHemoSameGerm.forEach(function(phsg) {
                         if (phsg != first_pos_hemoculture_for_day) {
-                            episode.addCopyStrainEvidence(phdg);
+                            episode.addCopyStrainEvidence(phsg);
                         }
                     })
 
@@ -128,7 +89,7 @@ function hug_implementation_v2023(parameters, positive_hemos) {
                     consolidated_episodes.forEach(function(consolidated_episode) {
 
                         //si on a un episode consolidé avec le meme germe dans l'interval de temps des 14 jours
-                        if (!processedEpisode && consolidated_episode.containsGerm(germ) && (current_episode.days - consolidated_episode.days) < VALID_NEW_CASES_DAYS) {
+                        if (!processedEpisode && consolidated_episode.containsGerm(germ) && (moment(current_episode.getEpisodeDate()).diff(moment(consolidated_episode.getEpisodeDate()), "days")) < VALID_NEW_CASES_DAYS) {
                             // add all evidences from the current episode to the consolidated (even the ones with different germ)
                             processedEpisode = true;
                             current_episode.evidences.forEach(function(epi) {
