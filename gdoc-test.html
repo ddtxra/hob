@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Google Sheets API Example</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://apis.google.com/js/api.js"></script>
+</head>
+
+<body>
+    <h1>Google Sheets API Example</h1>
+    <table id="sheet-data">
+        <thead>
+            <tr>
+                <th>Name</th>
+                <th>Email</th>
+                <th>Phone</th>
+            </tr>
+        </thead>
+        <tbody>
+            <!-- Data from Sheet 1 will be appended here -->
+        </tbody>
+    </table>
+
+    <script>
+        // Client ID for OAuth 2.0 authentication
+        const CLIENT_ID = '506244930589-2dms77c97vtpmmfk2nn6qvolpm5ph9ts.apps.googleusercontent.com';
+
+        // Fetch Google Sheets API library and initialize client with OAuth 2.0
+        gapi.load('client', () => {
+            gapi.client.init({
+                clientId: CLIENT_ID,
+                scope: 'https://www.googleapis.com/auth/spreadsheets.readonly'
+            }).then(() => {
+                // Fetch data from Google Sheets API
+                gapi.client.sheets.spreadsheets.values.get({
+                    spreadsheetId: '14FIGjHOghyqhl6ybC7eJQ6pU0pz2WdKIIThBDocetHA',
+                    range: 'Sheet1'
+                }).then(response => {
+                    const sheetData = response.result.values;
+                    const tbody = document.querySelector('#sheet-data tbody');
+
+                    // Iterate through each row of data and append to the table
+                    sheetData.forEach(row => {
+                        const newRow = document.createElement('tr');
+                        row.forEach(cellData => {
+                            const newCell = document.createElement('td');
+                            newCell.textContent = cellData;
+                            newRow.appendChild(newCell);
+                        });
+                        tbody.appendChild(newRow);
+                    });
+                }).catch(error => {
+                    console.error('Error fetching data:', error);
+                });
+            });
+        });
+    </script>
+</body>
+
+</html>
