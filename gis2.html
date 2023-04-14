@@ -1,0 +1,93 @@
+<html>
+
+<head>
+    <script>
+        var tokenClient;
+        var access_token;
+
+        function gapiStart() {
+            gapi.client.init({}).then(function() {
+                gapi.client.load('sheets', 'v4');
+            }).then(function(response) {
+                console.log('discovery document loaded');
+            }, function(reason) {
+                console.log('Error: ' + reason.result.error.message);
+            });
+        }
+
+        function gapiLoad() {
+            gapi.load('client', gapiStart)
+        }
+
+        function gisInit() {
+            tokenClient = google.accounts.oauth2.initTokenClient({
+                client_id: '506244930589-2dms77c97vtpmmfk2nn6qvolpm5ph9ts.apps.googleusercontent.com',
+                scope: 'https://www.googleapis.com/auth/spreadsheets.readonly',
+                callback: (tokenResponse) => {
+                    access_token = tokenResponse.access_token;
+                },
+            });
+        }
+
+        function getToken() {
+            console.log(tokenClient);
+            tokenClient.requestAccessToken();
+        }
+
+        function listMajors() {
+            gapi.client.sheets.spreadsheets.values.get({
+                spreadsheetId: '1BxiMVs0XRA5nFMdKvBdBZjgmUUqptlbs74OgvE2upms',
+                range: 'Class Data!A2:E',
+            }).then(function(response) {
+                var range = response.result;
+                console.log(range);
+            });
+        }
+
+        function listMajorsPlainJS() {
+            var spreadsheetId = '1BxiMVs0XRA5nFMdKvBdBZjgmUUqptlbs74OgvE2upms';
+            var range = 'Class Data!A2:E';
+            var xhr = new XMLHttpRequest();
+            xhr.onreadystatechange = function() {
+                if (this.readyState == 4 && this.status == 200) {
+                    console.log(this.responseText);
+                }
+            };
+            xhr.open('GET', `https://sheets.googleapis.com/v4/spreadsheets/${spreadsheetId}/values/${range}`);
+            xhr.setRequestHeader('Authorization', 'Bearer ' + access_token);
+            xhr.send();
+        }
+
+        function listMajorsPlainJQuery() {
+            var spreadsheetId = '1BxiMVs0XRA5nFMdKvBdBZjgmUUqptlbs74OgvE2upms';
+            var range = 'Class Data!A2:E';
+            var xhr = new XMLHttpRequest();
+            xhr.onreadystatechange = function() {
+                if (this.readyState == 4 && this.status == 200) {
+                    console.log(this.responseText);
+                }
+            };
+            xhr.open('GET', `https://sheets.googleapis.com/v4/spreadsheets/${spreadsheetId}/values/${range}`);
+            xhr.setRequestHeader('Authorization', 'Bearer ' + access_token);
+            xhr.send();
+        }
+
+
+        /*function revokeToken() {
+            google.accounts.oauth2.revoke(access_token, () => {
+                console.log('access token revoked')
+            });
+        }*/
+    </script>
+    <script src="https://accounts.google.com/gsi/client" onload="gisInit()" async defer></script>
+    <script src="https://apis.google.com/js/api.js" onload="gapiLoad()" async defer></script>
+</head>
+
+<body>
+
+    <h1>Google Identity Services Authorization and GAPI</h1>
+    <button onclick="getToken();">Get access token</button> <br><br>
+    <button onclick="listMajors();">Load data from MDS</button> <br><br>
+</body>
+
+</html>

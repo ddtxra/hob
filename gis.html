@@ -1,0 +1,57 @@
+<html>
+
+<head>
+    <script src="https://accounts.google.com/gsi/client" async defer></script>
+    <div id="g_id_onload" data-client_id="506244930589-2dms77c97vtpmmfk2nn6qvolpm5ph9ts.apps.googleusercontent.com" data-callback="listData"></div>
+    <div class="g_id_signin" data-type="standard"></div>
+
+</head>
+
+<body>
+    <script>
+        var client;
+        var access_token;
+
+        function initClient() {
+            client = google.accounts.oauth2.initTokenClient({
+                client_id: '506244930589-2dms77c97vtpmmfk2nn6qvolpm5ph9ts.apps.googleusercontent.com',
+                scope: 'https://www.googleapis.com/auth/spreadsheets.readonly',
+                callback: (tokenResponse) => {
+                    access_token = tokenResponse.access_token;
+                },
+            });
+        }
+
+        function getToken() {
+            client.requestAccessToken();
+        }
+
+        function revokeToken() {
+            google.accounts.oauth2.revoke(access_token, () => {
+                console.log('access token revoked')
+            });
+        }
+
+        function listData(response) {
+
+            var id_token = response.credential;
+            var spreadsheetId = '1BxiMVs0XRA5nFMdKvBdBZjgmUUqptlbs74OgvE2upms';
+            var range = 'Class Data!A2:E';
+            var xhr = new XMLHttpRequest();
+            xhr.onreadystatechange = function() {
+                if (this.readyState == 4 && this.status == 200) {
+                    console.log(this.responseText);
+                }
+            };
+            xhr.open('GET', `https://sheets.googleapis.com/v4/spreadsheets/${spreadsheetId}/values/${range}`);
+            xhr.setRequestHeader('Authorization', 'Bearer ' + id_token);
+            xhr.send();
+        }
+    </script>
+    <h1>Google Identity Services Authorization Token model</h1>
+    <button onclick="getToken();">Get access token</button> <br><br>
+    <button onclick="listMajors();">Call Sheets API</button> <br><br>
+    <button onclick="revokeToken();">Revoke token</button>
+</body>
+
+</html>
